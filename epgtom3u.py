@@ -8,10 +8,11 @@ import io
 # ==========================================
 # KONFIGURASI MULTI-EPG & M3U
 # ==========================================
+# PRIORITAS 1: EPG INDONESIA (Agar jadwal beIN Sports cocok dengan siaran lokal)
 EPG_URLS = [
-    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
-    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",            
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
+    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",            
+    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
     "https://epg.pw/api/epg.xml?channel_id=397400",                                         
     "https://epg.pw/xmltv/epg_lite.xml.gz"                                                  
 ]
@@ -46,7 +47,7 @@ def is_sport(text):
     return any(k in text.lower() for k in SPORT_KEYWORDS)
 
 def is_fresh_live(prog, title, channel_name):
-    """Filter Ketat Anti-Siaran Ulang"""
+    """Filter Ketat Anti-Siaran Ulang & Anti-Highlight"""
     if prog.find("previously-shown") is not None:
         return False
     if not title: 
@@ -59,31 +60,40 @@ def is_fresh_live(prog, title, channel_name):
         
     if any(network in c for network in ['bein', 'spotv', 'astro', 'champions', 'premier', 'hub']):
         if 'vs' in t or ' v ' in t:
-            if not re.search(r'\b(live|\(l\)|\[l\])\b', t):
+            # Tambahan deteksi "(Live)" atau "Langsung" untuk EPG lokal
+            if not re.search(r'\b(live|\(l\)|\[l\]|langsung)\b', t):
                 return False 
                 
     return True
 
 def is_match_akurat(epg_name, m3u_name):
+    """Sistem Pencocokan Channel yang Lebih Cerdas & Ketat"""
     if not epg_name or not m3u_name: return False
         
     epg_name = epg_name.lower().strip()
     m3u_name = m3u_name.lower().strip()
 
-    num_epg_match = re.search(r'\d+', epg_name)
+    # PENTING: Hapus tag kualitas gambar & kata sport DULU agar tidak terbaca sebagai angka channel
+    hapus_kualitas = r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports)\b'
+    epg_clean = re.sub(hapus_kualitas, '', epg_name)
+    m3u_clean = re.sub(hapus_kualitas, '', m3u_name)
+
+    # BARU ekstrak angkanya (Contoh: beIN 1 akan menghasilkan angka 1)
+    num_epg_match = re.search(r'\d+', epg_clean)
     num_epg = num_epg_match.group() if num_epg_match else ""
-    num_m3u_match = re.search(r'\d+', m3u_name)
+    num_m3u_match = re.search(r'\d+', m3u_clean)
     num_m3u = num_m3u_match.group() if num_m3u_match else ""
 
-    if num_epg != num_m3u: return False
+    # Syarat Mutlak: Angka channel HARUS sama persis (Bein 1 harus ketemu Bein 1, Bein 2 harus Bein 2)
+    if num_epg != num_m3u: 
+        return False
 
-    m3u_clean = re.sub(r'\b(hd|fhd|uhd|4k|tv|hevc|raw|plus|max)\b', '', m3u_name)
-    epg_clean = re.sub(r'\b(hd|fhd|uhd|4k|tv|hevc|raw|plus|max)\b', '', epg_name)
-    m3u_clean = re.sub(r'[^a-z0-9]', '', m3u_clean)
-    epg_clean = re.sub(r'[^a-z0-9]', '', epg_clean)
+    # Bersihkan sisa karakter aneh (seperti tanda kurung atau spasi) untuk pencocokan akhir
+    m3u_clean_text = re.sub(r'[^a-z0-9]', '', m3u_clean)
+    epg_clean_text = re.sub(r'[^a-z0-9]', '', epg_clean)
 
-    if epg_clean and m3u_clean:
-        return epg_clean in m3u_clean or m3u_clean in epg_clean
+    if epg_clean_text and m3u_clean_text:
+        return epg_clean_text in m3u_clean_text or m3u_clean_text in epg_clean_text
     return False
 
 def parse_epg_time(time_str):
@@ -111,13 +121,13 @@ def main():
     jadwal_live = {}
     jadwal_upcoming = {}
 
-    # Batas jadwal hingga jam 05:00 WIB
+    # KALKULASI BATAS WAKTU: Menampilkan Jadwal Hingga Jam 5 Pagi Saja
     if now_wib.hour < 5:
         batas_waktu_upcoming = now_wib.replace(hour=5, minute=0, second=0, microsecond=0)
     else:
         batas_waktu_upcoming = (now_wib + timedelta(days=1)).replace(hour=5, minute=0, second=0, microsecond=0)
 
-    print("1. Mengunduh dan memproses daftar EPG (Multi-Source)...")
+    print("1. Mengunduh dan memproses daftar EPG (Prioritas Indonesia)...")
     for url in EPG_URLS:
         print(f" -> Sedang memproses: {url.split('/')[-1].split('?')[0]} ...")
         try:
@@ -135,8 +145,10 @@ def main():
             for ch in root.findall("channel"):
                 ch_id = ch.get("id")
                 ch_name = ch.findtext("display-name")
+                # Jangan menimpa channel ID yang sudah ada dari prioritas atas (Indonesia)
                 if ch_id and ch_name and is_sport(ch_name):
-                    epg_channels[ch_id] = ch_name.strip()
+                    if ch_id not in epg_channels:
+                        epg_channels[ch_id] = ch_name.strip()
                     
             for prog in root.findall("programme"):
                 ch_id = prog.get("channel")
@@ -154,6 +166,7 @@ def main():
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 if stop_dt <= now_wib: continue 
                 
+                # Buang jadwal yang tayangnya melewati jam 05:00 Pagi berikutnya
                 if start_dt >= batas_waktu_upcoming: continue
 
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
@@ -170,20 +183,17 @@ def main():
                 jam_str = f"{start_dt.strftime('%H:%M')}-{stop_dt.strftime('%H:%M')} WIB"
 
                 if is_live:
-                    # Pastikan kita ambil jadwal terbaru (menghindari placeholder/jadwal kosong EPG)
-                    if ch_id not in jadwal_live or start_dt > jadwal_live[ch_id]["start"]:
+                    if ch_id not in jadwal_live or start_dt < jadwal_live[ch_id]["start"]:
                         jadwal_live[ch_id] = {
                             "title": title.strip(), "start": start_dt, "stop": stop_dt,
                             "display_time": f"{hari_str} {jam_str}"
                         }
                 else:
-                    # Tampung SEMUA rentetan jadwal ke dalam dictionary, gunakan waktu sebagai key agar bebas duplikat
-                    if ch_id not in jadwal_upcoming:
-                        jadwal_upcoming[ch_id] = {}
-                    jadwal_upcoming[ch_id][start_dt] = {
-                        "title": title.strip(), "start": start_dt, "stop": stop_dt,
-                        "display_time": f"{hari_str} {jam_str}"
-                    }
+                    if ch_id not in jadwal_upcoming or start_dt < jadwal_upcoming[ch_id]["start"]:
+                        jadwal_upcoming[ch_id] = {
+                            "title": title.strip(), "start": start_dt, "stop": stop_dt,
+                            "display_time": f"{hari_str} {jam_str}"
+                        }
         except Exception as e:
             print(f"    [Error] Melewati URL ini karena: {e}")
             continue
@@ -197,7 +207,7 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Mencocokkan EPG dan Meracik Channel...")
+    print("3. Mencocokkan EPG dan Menggandakan Channel...")
     
     hasil_akhir = []
     channel_block = []
@@ -233,7 +243,6 @@ def main():
                             clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                             clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
 
-                            # GENERATE BARIS LIVE 
                             if ch_id in jadwal_live:
                                 acara = jadwal_live[ch_id]
                                 judul_final = f"🔴 LIVE {acara['title']} ({acara['display_time']})"
@@ -249,32 +258,32 @@ def main():
                                 })
                                 match_found = True
 
-                            # GENERATE RENTETAN BARIS UPCOMING 
                             if ch_id in jadwal_upcoming:
-                                # Proses semua jadwal yang tersimpan di memori untuk channel ini
-                                for waktu_mulai, acara in jadwal_upcoming[ch_id].items():
-                                    judul_final = f"⏳ NEXT {acara['title']} ({acara['display_time']})"
-                                    
-                                    block_upcoming = list(channel_block) 
-                                    block_upcoming[extinf_idx] = f'{clean_attrs} group-title="📅 ACARA SELANJUTNYA" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
-                                    
-                                    hasil_akhir.append({
-                                        "kategori_order": 1,
-                                        "sort_name": get_sort_key(nama_asli_m3u),
-                                        "start_time": acara["start"],
-                                        "baris_lengkap": block_upcoming + [LINK_UPCOMING] 
-                                    })
-                                    match_found = True
+                                acara = jadwal_upcoming[ch_id]
+                                judul_final = f"⏳ NEXT {acara['title']} ({acara['display_time']})"
+                                
+                                block_upcoming = list(channel_block) 
+                                block_upcoming[extinf_idx] = f'{clean_attrs} group-title="📅 ACARA SELANJUTNYA" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
+                                
+                                hasil_akhir.append({
+                                    "kategori_order": 1,
+                                    "sort_name": get_sort_key(nama_asli_m3u),
+                                    "start_time": acara["start"],
+                                    "baris_lengkap": block_upcoming + [LINK_UPCOMING] 
+                                })
+                                match_found = True
                             
+                            # Hanya ambil kecocokan PERTAMA (yang diprioritaskan) lalu break
                             if match_found:
                                 break
             
             channel_block = []
 
     def sorting_logic(x):
-        # KEDUA KATEGORI (LIVE & UPCOMING) diurutkan dengan rapi:
-        # Abjad Channel Name (Bein 1 sama Bein 1) -> Baru Jam Tayang
-        return (x["kategori_order"], x["sort_name"], x["start_time"].timestamp())
+        if x["kategori_order"] == 0:
+            return (0, x["sort_name"], x["start_time"].timestamp())
+        else:
+            return (1, x["start_time"].timestamp(), x["sort_name"])
 
     print("4. Menyortir Abjad & Jam Tayang, lalu Menyimpan File M3U Final...")
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -290,7 +299,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} pertandingan berhasil diracik (Tersusun sangat rapi!).")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} pertandingan segar berhasil diracik.")
 
 if __name__ == "__main__":
     main()
