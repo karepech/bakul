@@ -23,7 +23,7 @@ OUTPUT_FILE = "live_matches_only.m3u"
 # KONFIGURASI LINK VIDEO MANUAL
 # ==========================================
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" # Diputar jika playlist benar-benar kosong
-LINK_UPCOMING = "https://raw.githubusercontent.com/karepech/bakul/main/5menit.mp4.mp4" # <--- GANTI LINK UNTUK UPCOMING DI SINI
+LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" # Video custom untuk jadwal yang belum mulai
 
 # ==========================================
 # KATA KUNCI FILTERING
@@ -46,7 +46,7 @@ def is_sport(text):
     return any(k in text.lower() for k in SPORT_KEYWORDS)
 
 def is_fresh_live(prog, title, channel_name):
-    """Filter Ketat Anti-Siaran Ulang"""
+    """Filter Ketat Anti-Siaran Ulang & Anti-Highlight"""
     if prog.find("previously-shown") is not None:
         return False
     if not title: 
@@ -111,12 +111,10 @@ def main():
     jadwal_live = {}
     jadwal_upcoming = {}
 
-    # KALKULASI BATAS WAKTU: Jam 5 Pagi Waktu Berikutnya
+    # KALKULASI BATAS WAKTU: Menampilkan Jadwal Hingga Jam 5 Pagi Saja
     if now_wib.hour < 5:
-        # Jika sekarang jam 01:00 dini hari, batasnya jam 05:00 pagi ini
         batas_waktu_upcoming = now_wib.replace(hour=5, minute=0, second=0, microsecond=0)
     else:
-        # Jika sekarang jam 19:00 malam, batasnya jam 05:00 besok pagi
         batas_waktu_upcoming = (now_wib + timedelta(days=1)).replace(hour=5, minute=0, second=0, microsecond=0)
 
     print("1. Mengunduh dan memproses daftar EPG (Multi-Source)...")
@@ -157,8 +155,13 @@ def main():
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 if stop_dt <= now_wib: continue 
                 
-                # Buang jadwal yang tayang melebihi batas waktu (Jam 05:00 Pagi)
+                # Buang jadwal yang tayangnya melewati jam 05:00 Pagi berikutnya
                 if start_dt >= batas_waktu_upcoming: continue
+
+                # FILTER MUTLAK: HANYA IZINKAN ACARA JAM 17:00 s/d 04:59 WIB (Menolak Siaran Ulang Siang Bolong)
+                jam_mulai = start_dt.hour
+                if not (jam_mulai >= 17 or jam_mulai < 5):
+                    continue 
 
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
@@ -229,12 +232,13 @@ def main():
                     for ch_id, nama_epg in epg_channels.items():
                         if is_match_akurat(nama_epg, nama_asli_m3u):
                             
+                            # PEMBERSIHAN ATRIBUT LEBIH AGRESIF: Menghancurkan folder "SPORTS"
                             clean_attrs = re.sub(r'(?i)\s*group-title=(["\']?)[^"\'\s]+\1', '', bagian_atribut)
                             clean_attrs = re.sub(r'(?i)\s*tvg-id=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                             clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                             clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
 
-                            # GENERATE BARIS LIVE (Pakai Stream Asli M3U)
+                            # BARIS LIVE (Gunakan Siaran Asli)
                             if ch_id in jadwal_live:
                                 acara = jadwal_live[ch_id]
                                 judul_final = f"🔴 LIVE {acara['title']} ({acara['display_time']})"
@@ -246,11 +250,11 @@ def main():
                                     "kategori_order": 0,
                                     "sort_name": get_sort_key(nama_asli_m3u),
                                     "start_time": acara["start"],
-                                    "baris_lengkap": block_live + [stream_url] # <--- Link Asli
+                                    "baris_lengkap": block_live + [stream_url] # <--- Pakai Link Stream Asli
                                 })
                                 match_found = True
 
-                            # GENERATE BARIS UPCOMING (Pakai Link Manual Video Anda)
+                            # BARIS UPCOMING (Gunakan Link Video Manual Anda)
                             if ch_id in jadwal_upcoming:
                                 acara = jadwal_upcoming[ch_id]
                                 judul_final = f"⏳ NEXT {acara['title']} ({acara['display_time']})"
@@ -262,7 +266,7 @@ def main():
                                     "kategori_order": 1,
                                     "sort_name": get_sort_key(nama_asli_m3u),
                                     "start_time": acara["start"],
-                                    "baris_lengkap": block_upcoming + [LINK_UPCOMING] # <--- Link Manual Custom
+                                    "baris_lengkap": block_upcoming + [LINK_UPCOMING] # <--- Pakai Link Video Manual 5menit
                                 })
                                 match_found = True
                             
@@ -273,7 +277,7 @@ def main():
 
     def sorting_logic(x):
         """
-        Kategori 0 (LIVE): Diurutkan berdasarkan Abjad Channel (Bein 1 kumpul dengan Bein 1)
+        Kategori 0 (LIVE): Diurutkan berdasarkan Abjad Channel
         Kategori 1 (UPCOMING): Diurutkan murni berdasarkan Jam Tayang Terdekat
         """
         if x["kategori_order"] == 0:
@@ -289,14 +293,13 @@ def main():
             f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL\n')
             f.write(f'{LINK_STANDBY}\n')
         else:
-            # Gunakan logika pengurutan custom yang baru
             hasil_akhir.sort(key=sorting_logic)
             
             for item in hasil_akhir:
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} pertandingan berhasil diracik (Telah dibatasi hingga 05:00 WIB).")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} pertandingan segar berhasil diracik.")
 
 if __name__ == "__main__":
     main()
