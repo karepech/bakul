@@ -33,24 +33,34 @@ SPORT_KEYWORDS = [
 REPLAY_KEYWORDS = [
     "highlight", "replay", "classic", "best of", "re-run", "siaran ulang", 
     "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", 
-    "rewind", "recap", "recorded", "archives"
+    "rewind", "recap", "recorded", "archives", "ulangan"
 ]
 
 def is_sport(text):
     if not text: return False
     return any(k in text.lower() for k in SPORT_KEYWORDS)
 
-def is_fresh_live(prog, title):
-    """Filter ketat untuk membuang siaran ulang/highlight."""
-    # Buang jika ada tag previously-shown dari EPG
+def is_fresh_live(prog, title, channel_name):
+    """Filter Ketat Anti-Siaran Ulang, Termasuk 'Silent Replay' dari beIN/SpoTV"""
     if prog.find("previously-shown") is not None:
         return False
     if not title: 
         return False
     t = title.lower()
-    # Buang jika judul mengandung kata siaran ulang/highlight
+    c = channel_name.lower()
+    
+    # 1. Cek kata kunci replay standar
     if any(k in t for k in REPLAY_KEYWORDS):
         return False
+        
+    # 2. PENDETEKSI REPLAY SILUMAN (Khusus channel olahraga premium)
+    # Jika judul ada kata "vs" (berarti pertandingan), tapi TIDAK ADA label (L) / LIVE
+    if any(network in c for network in ['bein', 'spotv', 'astro', 'champions', 'premier', 'hub']):
+        if 'vs' in t or ' v ' in t:
+            # Cari kata live, (l), atau [l]
+            if not re.search(r'\b(live|\(l\)|\[l\])\b', t):
+                return False # Tolak! Ini pasti siaran ulang tadi malam.
+                
     return True
 
 def is_match_akurat(epg_name, m3u_name):
@@ -68,7 +78,6 @@ def is_match_akurat(epg_name, m3u_name):
 
     m3u_clean = re.sub(r'\b(hd|fhd|uhd|4k|tv|hevc|raw|plus|max)\b', '', m3u_name)
     epg_clean = re.sub(r'\b(hd|fhd|uhd|4k|tv|hevc|raw|plus|max)\b', '', epg_name)
-
     m3u_clean = re.sub(r'[^a-z0-9]', '', m3u_clean)
     epg_clean = re.sub(r'[^a-z0-9]', '', epg_clean)
 
@@ -126,21 +135,22 @@ def main():
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
                     
+                ch_name = epg_channels[ch_id]
                 title = prog.findtext("title") or ""
                 
-                # FILTER 1: Buang siaran ulang / Highlight
-                if not is_fresh_live(prog, title): 
+                # FILTER 1: Buang Siaran Ulang / Highlight / Silent Replay
+                if not is_fresh_live(prog, title, ch_name): 
                     continue
                     
                 start_dt = parse_epg_time(prog.get("start"))
                 stop_dt = parse_epg_time(prog.get("stop"))
 
-                # FILTER 2: Buang data rusak, acara selesai, dan acara placeholder panjang
+                # FILTER 2: Hapus otomatis jika acara sudah selesai atau rusak
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
-                if stop_dt <= now_wib: continue # Hapus otomatis jika acara sudah selesai
+                if stop_dt <= now_wib: continue 
                 if (stop_dt - start_dt).total_seconds() > 12 * 3600: continue
 
-                # FILTER 3: Otomatis masuk LIVE jika 5 Menit sebelum jam tayang
+                # FILTER 3: Pindah ke LIVE jika waktu sudah H-5 Menit!
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
                 
@@ -209,14 +219,15 @@ def main():
                     
                     for ch_id, nama_epg in epg_channels.items():
                         if is_match_akurat(nama_epg, nama_asli_m3u):
-                            # PEMBERSIHAN ATRIBUT LEBIH AGRESIF AGAR FOLDER "SPORTS" MUSNAH
-                            clean_attrs = re.sub(r'group-title="[^"]*"', '', bagian_atribut)
-                            clean_attrs = re.sub(r'tvg-id="[^"]*"', '', clean_attrs)
-                            clean_attrs = re.sub(r'tvg-name="[^"]*"', '', clean_attrs)
-                            # Hapus spasi ganda yang tersisa akibat penghapusan atribut
+                            
+                            # PEMBERSIHAN ATRIBUT AGRESIF AGAR FOLDER "SPORTS" MUSNAH 100%
+                            # Menghapus group-title baik yang memakai kutip ganda, kutip satu, maupun tanpa kutip
+                            clean_attrs = re.sub(r'(?i)\s*group-title=(["\']?)[^"\'\s]+\1', '', bagian_atribut)
+                            clean_attrs = re.sub(r'(?i)\s*tvg-id=(["\']?)[^"\'\s]+\1', '', clean_attrs)
+                            clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                             clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
 
-                            # GENERATE BARIS LIVE
+                            # GENERATE BARIS LIVE (Termasuk yang masuk toleransi H-5 Menit)
                             if ch_id in jadwal_live:
                                 acara = jadwal_live[ch_id]
                                 judul_final = f"🔴 LIVE {acara['title']} ({acara['display_time']})"
