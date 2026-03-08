@@ -236,7 +236,7 @@ def main():
                                 judul_final = f"🔴 LIVE {acara['title']} ({acara['display_time']})"
                                 
                                 block_live = list(channel_block) 
-                                block_live[extinf_idx] = f'{clean_attrs} group-title="🔴 LIVE TV SEKARANG" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
+                                block_live[extinf_idx] = f'{clean_attrs} group-title="🔴 ACARA TV SEKARANG" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
                                 
                                 hasil_akhir.append({
                                     "kategori_order": 0,
