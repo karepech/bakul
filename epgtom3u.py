@@ -48,7 +48,14 @@ LOGO_DB = {
 }
 
 SPORT_KEYWORDS = ["sport", "bein", "spotv", "astro", "hub", "arena", "premier", "champions", "euro", "football", "soccer", "liga", "nba", "motogp", "badminton", "voli", "basket", "tennis", "f1", "ufc", "wwe"]
-REPLAY_KEYWORDS = ["highlight", "replay", "classic", "best of", "re-run", "siaran ulang", "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", "rewind", "recap", "recorded", "archives", "ulangan"]
+
+# DITAMBAHKAN: "end of transmission", "off air", "to be announced", dll
+REPLAY_KEYWORDS = [
+    "highlight", "replay", "classic", "best of", "re-run", "siaran ulang", 
+    "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", 
+    "rewind", "recap", "recorded", "archives", "ulangan",
+    "end of transmission", "off air", "sign off", "no broadcast", "to be announced", "tba"
+]
 
 def get_league_logo(title):
     t_lower = title.lower()
@@ -66,7 +73,7 @@ def is_fresh_live(prog, title):
     if not title: return False
     t = title.lower()
     
-    # Hanya hapus kalau EPG dengan jelas menuliskan kata Replay/Ulangan
+    # Memblokir acara Replay dan Jadwal Kosong (End of Transmission)
     if any(k in t for k in REPLAY_KEYWORDS): return False
     return True
 
@@ -88,13 +95,10 @@ def is_match_akurat(epg_name, m3u_name):
         return False
 
     # 3. KUNCI SUB-CHANNEL ASTRO & BEIN (Agar tidak tertukar)
-    # Astro Arena
     if ('arena' in epg_clean and 'arena' not in m3u_clean) or ('arena' in m3u_clean and 'arena' not in epg_clean): 
         return False
-    # Astro Cricket
     if ('cricket' in epg_clean and 'cricket' not in m3u_clean) or ('cricket' in m3u_clean and 'cricket' not in epg_clean): 
         return False
-    # beIN Xtra / Extra
     if ('xtra' in epg_clean or 'extra' in epg_clean) and not ('xtra' in m3u_clean or 'extra' in m3u_clean): 
         return False
     if ('xtra' in m3u_clean or 'extra' in m3u_clean) and not ('xtra' in epg_clean or 'extra' in epg_clean): 
@@ -115,25 +119,21 @@ def parse_epg_time(time_str):
     if not time_str: return None
     try:
         time_str = time_str.strip()
-        # Format XMLTV: "20260308190000 +0800"
         if ' ' in time_str:
             parts = time_str.split(' ')
             dt_str = parts[0][:14]
             tz_str = parts[1] if len(parts) > 1 else "+0000"
         else:
-            # Jika tidak ada timezone, asumsikan itu UTC (+0000)
             dt_str = time_str[:14]
             tz_str = "+0000"
             
         dt = datetime.strptime(dt_str, "%Y%m%d%H%M%S")
         
-        # Ekstrak jam dan menit dari timezone offset (+0800, +0700, dll)
         sign = 1 if tz_str[0] == '+' else -1
         hours = int(tz_str[1:3])
         minutes = int(tz_str[3:5])
         offset = sign * timedelta(hours=hours, minutes=minutes)
         
-        # Konversi ke waktu dunia (UTC) lalu ubah ke Waktu Indonesia Barat (+7)
         dt_utc = dt - offset
         dt_wib = dt_utc + timedelta(hours=7)
         
@@ -148,13 +148,11 @@ def bersihkan_judul_event(title):
     return bersih
 
 def main():
-    # Mengambil patokan waktu SAAT INI (Real-time Indonesia)
     now_wib = datetime.utcnow() + timedelta(hours=7)
     epg_channels = {}
     
     jadwal_per_channel = {}
 
-    # BATAS WAKTU UPCOMING: Ditarik hingga jam 06:00 Pagi Esok Hari
     if now_wib.hour < 6:
         batas_waktu_upcoming = now_wib.replace(hour=6, minute=0, second=0, microsecond=0)
     else:
@@ -193,18 +191,12 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 
-                # ========================================================
-                # PENGHANCUR MASA LALU:
-                # Jika waktu 'stop' (selesai acara) sudah lebih kecil atau
-                # sama dengan waktu SEKARANG, otomatis dibuang (continue)
-                # ========================================================
+                # PENGHANCUR MASA LALU
                 if stop_dt <= now_wib: 
                     continue 
                 
-                # Jangan tampilkan jadwal yang terlalu jauh (lewat dari jam 6 pagi)
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Pindah ke folder LIVE mulai 5 menit sebelum Kick-Off
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
@@ -265,7 +257,6 @@ def main():
                     bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
-                    # Sedot logo TV asli
                     logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
                     if logo_asli_match:
                         logo_asli = logo_asli_match.group(2)
@@ -273,7 +264,6 @@ def main():
                         logo_asli_match_no_quotes = re.search(r'(?i)tvg-logo=([^"\'\s]+)', bagian_atribut)
                         logo_asli = logo_asli_match_no_quotes.group(1) if logo_asli_match_no_quotes else ""
                     
-                    # Bersihkan sisa kotoran atribut M3U bawaan
                     clean_attrs = re.sub(r'(?i)\s*group-title=(["\']?)[^"\'\s]+\1', '', bagian_atribut)
                     clean_attrs = re.sub(r'(?i)\s*tvg-id=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                     clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
