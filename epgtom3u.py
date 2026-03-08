@@ -13,9 +13,6 @@ M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/s
 OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4"
 
-# ==========================================
-# KATA KUNCI UNTUK MENYARING CHANNEL OLAHRAGA
-# ==========================================
 SPORT_KEYWORDS = [
     "sport", "sports", "bein", "spotv", "astro", "hub", "arena", "premier", 
     "champions", "euro", "football", "soccer", "liga", "nba", "motogp", 
@@ -23,13 +20,10 @@ SPORT_KEYWORDS = [
 ]
 
 def is_sport(text):
-    """Mengecek apakah nama channel mengandung unsur olahraga."""
     if not text: return False
-    t = text.lower()
-    return any(k in t for k in SPORT_KEYWORDS)
+    return any(k in text.lower() for k in SPORT_KEYWORDS)
 
 def is_match_akurat(epg_name, m3u_name):
-    """Logika pencocokan ketat: Angka harus sama, embel-embel (HD, FHD) diabaikan."""
     if not epg_name or not m3u_name: return False
         
     epg_name = epg_name.lower().strip()
@@ -49,81 +43,104 @@ def is_match_akurat(epg_name, m3u_name):
     epg_clean = re.sub(r'[^a-z0-9]', '', epg_clean)
 
     if epg_clean and m3u_clean:
-        if epg_clean in m3u_clean or m3u_clean in epg_clean:
-            return True
+        return epg_clean in m3u_clean or m3u_clean in epg_clean
     return False
 
 def parse_epg_time(time_str):
-    """Membaca format zona waktu EPG (misal: +0000) dan mengonversinya MUTLAK ke WIB (+0700)."""
     if not time_str: return None
     try:
-        dt = datetime.strptime(time_str.strip(), "%Y%m%d%H%M%S %z")
-        dt_wib = dt.astimezone(timezone(timedelta(hours=7)))
-        return dt_wib.replace(tzinfo=None)
-    except ValueError:
-        try:
-            return datetime.strptime(time_str[:14], "%Y%m%d%H%M%S")
-        except:
-            return None
+        time_str = time_str.strip()
+        # Cek jika EPG membawa data Timezone eksplisit (+0000 dll)
+        if len(time_str) >= 20 and ('+' in time_str or '-' in time_str):
+            dt = datetime.strptime(time_str[:20], "%Y%m%d%H%M%S %z")
+            dt_wib = dt.astimezone(timezone(timedelta(hours=7)))
+            return dt_wib.replace(tzinfo=None)
+        else:
+            # PERBAIKAN: Jika EPG tidak bawa zona waktu, PASTI itu UTC. Tambah 7 jam untuk WIB.
+            dt = datetime.strptime(time_str[:14], "%Y%m%d%H%M%S")
+            return dt + timedelta(hours=7)
+    except Exception:
+        return None
 
 def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
 
-    print("1. Mengunduh data EPG raksasa dari epg.pw (bisa memakan waktu)...")
+    print("1. Mengunduh data EPG (epg.pw)...")
     try:
-        # Timeout dinaikkan jadi 120 detik karena file dari epg.pw sangat besar
         r_epg = requests.get(EPG_URL, timeout=120)
         r_epg.raise_for_status()
-        
-        # Penanganan khusus jika server mengirimkan file dalam format terkompresi (GZIP)
         content = r_epg.content
         if content[:2] == b'\x1f\x8b':
-            print("   -> File terkompresi (GZIP) terdeteksi, mengekstrak di memori...")
             content = gzip.GzipFile(fileobj=io.BytesIO(content)).read()
-            
         root = ET.fromstring(content)
     except Exception as e:
         print(f"❌ Gagal mengambil EPG: {e}")
         return
 
-    print("2. Menyaring hanya channel Olahraga...")
+    print("2. Menyaring channel Olahraga...")
     epg_channels = {}
     for ch in root.findall("channel"):
         ch_id = ch.get("id")
         ch_name = ch.findtext("display-name")
-        # HANYA simpan ke memori jika nama channelnya mengandung kata kunci olahraga
         if ch_id and ch_name and is_sport(ch_name):
             epg_channels[ch_id] = ch_name.strip()
-            
-    print(f"   -> Ditemukan {len(epg_channels)} channel olahraga dari total puluhan ribu channel.")
 
-    print("3. Mencari jadwal aktif untuk channel Olahraga tersebut...")
-    jadwal_aktif = {}
+    print("3. Memisahkan kategori LIVE dan UPCOMING...")
+    jadwal_terbaik = {}
     for prog in root.findall("programme"):
         ch_id = prog.get("channel")
-        
-        # Abaikan jadwal jika channelnya BUKAN channel olahraga yang sudah kita saring
-        if ch_id not in epg_channels:
-            continue
+        if ch_id not in epg_channels: continue
             
         start_dt = parse_epg_time(prog.get("start"))
         stop_dt = parse_epg_time(prog.get("stop"))
         title = prog.findtext("title") or "Acara Olahraga"
 
-        if not start_dt or not stop_dt or start_dt >= stop_dt:
-            continue
+        # Buang jika jam mulai lebih dari jam selesai (data rusak)
+        if not start_dt or not stop_dt or start_dt >= stop_dt: continue
+        
+        # Buang jadwal masa lalu
+        if stop_dt <= now_wib: continue
 
-        if start_dt <= now_wib < stop_dt:
-            jadwal_aktif[ch_id] = {"title": title.strip(), "start": start_dt, "stop": stop_dt, "status": "🔴 LIVE"}
-        elif start_dt > now_wib:
-            if ch_id not in jadwal_aktif:
-                jadwal_aktif[ch_id] = {"title": title.strip(), "start": start_dt, "stop": stop_dt, "status": "⏳ NEXT"}
-            else:
-                if jadwal_aktif[ch_id].get("status") != "🔴 LIVE":
-                    if start_dt < jadwal_aktif[ch_id]["start"]:
-                        jadwal_aktif[ch_id] = {"title": title.strip(), "start": start_dt, "stop": stop_dt, "status": "⏳ NEXT"}
+        # PERBAIKAN: Buang jadwal "placeholder" yang durasinya lebih dari 12 Jam agar tidak merusak tampilan
+        if (stop_dt - start_dt).total_seconds() > 12 * 3600: continue
 
-    print("4. Mengunduh dan membaca M3U...")
+        is_live = start_dt <= now_wib < stop_dt
+        kategori = "LIVE" if is_live else "UPCOMING"
+        
+        # Format tulisan hari agar lebih enak dibaca (Hari ini / Besok)
+        hari_ini = now_wib.date()
+        if start_dt.date() == hari_ini:
+            hari_str = "Hari ini"
+        elif start_dt.date() == hari_ini + timedelta(days=1):
+            hari_str = "Besok"
+        else:
+            hari_str = start_dt.strftime("%d/%m")
+            
+        jam_str = f"{start_dt.strftime('%H:%M')}-{stop_dt.strftime('%H:%M')} WIB"
+
+        # Tentukan prioritas jadwal untuk masing-masing channel
+        if ch_id not in jadwal_terbaik:
+            jadwal_terbaik[ch_id] = {
+                "title": title.strip(), "start": start_dt, "stop": stop_dt,
+                "kategori": kategori, "display_time": f"{hari_str} {jam_str}"
+            }
+        else:
+            current_best = jadwal_terbaik[ch_id]
+            # Prioritas 1: LIVE (Mengalahkan Upcoming)
+            if is_live and current_best["kategori"] != "LIVE":
+                jadwal_terbaik[ch_id] = {
+                    "title": title.strip(), "start": start_dt, "stop": stop_dt, 
+                    "kategori": "LIVE", "display_time": f"{hari_str} {jam_str}"
+                }
+            # Prioritas 2: Jika sama-sama UPCOMING, ambil jadwal tayang paling dekat
+            elif not is_live and current_best["kategori"] == "UPCOMING":
+                if start_dt < current_best["start"]:
+                    jadwal_terbaik[ch_id] = {
+                        "title": title.strip(), "start": start_dt, "stop": stop_dt, 
+                        "kategori": "UPCOMING", "display_time": f"{hari_str} {jam_str}"
+                    }
+
+    print("4. Mengunduh M3U dan mencocokkan...")
     try:
         r_m3u = requests.get(M3U_URL, timeout=30)
         r_m3u.raise_for_status()
@@ -132,12 +149,12 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("5. Meracik M3U (Sinkronisasi Zona Waktu)...")
+    print("5. Meracik Grup Playlist...")
     channel_diubah = 0
     channel_block = []
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write('#EXTM3U name="🔴 LIVE SPORTS"\n')
+        f.write('#EXTM3U name="🔴 OLAHRAGA AKTIF"\n')
         
         for line in m3u_lines:
             baris = line.strip()
@@ -164,20 +181,30 @@ def main():
                         
                         for ch_id, nama_epg in epg_channels.items():
                             if is_match_akurat(nama_epg, nama_asli_m3u):
-                                if ch_id in jadwal_aktif:
-                                    acara = jadwal_aktif[ch_id]
-                                    jam_tayang = f"{acara['start'].strftime('%H:%M')} - {acara['stop'].strftime('%H:%M')} WIB"
+                                if ch_id in jadwal_terbaik:
+                                    acara = jadwal_terbaik[ch_id]
                                     
-                                    judul_final = f"{acara['status']} {acara['title']} ({jam_tayang})"
+                                    # PENENTUAN KATEGORI/GRUP
+                                    if acara["kategori"] == "LIVE":
+                                        grup_baru = '🔴 LIVE SEKARANG'
+                                        status_icon = '🔴 LIVE'
+                                    else:
+                                        grup_baru = '📅 UPCOMING'
+                                        status_icon = '⏳ NEXT'
+                                        
+                                    judul_final = f"{status_icon} {acara['title']} ({acara['display_time']})"
                                     
-                                    clean_attrs = re.sub(r'\s*tvg-id="[^"]*"', '', bagian_atribut)
+                                    # Hapus atribut grup dan tvg-id lama agar tidak tumpang tindih
+                                    clean_attrs = re.sub(r'\s*group-title="[^"]*"', '', bagian_atribut)
+                                    clean_attrs = re.sub(r'\s*tvg-id="[^"]*"', '', clean_attrs)
                                     clean_attrs = re.sub(r'\s*tvg-name="[^"]*"', '', clean_attrs)
                                     
-                                    channel_block[extinf_idx] = f'{clean_attrs} tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
+                                    # Suntik Grup Baru, Tvg-ID Baru, dan Judul Baru
+                                    channel_block[extinf_idx] = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
                                     match_found = True
                                     break
                 
-                # Jika M3U cocok dengan EPG dan ada jadwal, simpan ke file hasil.
+                # Jika cocok, tulis ke file
                 if match_found:
                     for blk in channel_block:
                         f.write(blk + "\n")
@@ -187,10 +214,10 @@ def main():
                 channel_block = []
 
         if channel_diubah == 0:
-            f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA SIARAN LIVE SAAT INI\n')
+            f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL\n')
             f.write(f'{LINK_STANDBY}\n')
 
-    print(f"\nSELESAI ✔ → {channel_diubah} siaran olahraga langsung berhasil dicocokkan dari epg.pw.")
+    print(f"\nSELESAI ✔ → {channel_diubah} channel berhasil dipisahkan ke grup LIVE dan UPCOMING.")
 
 if __name__ == "__main__":
     main()
