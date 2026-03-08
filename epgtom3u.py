@@ -22,6 +22,7 @@ LINK_STANDBY = "https://bwifi.my.id/live.mp4"
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 def get_flag(m3u_name):
+    """Sistem Bendera Otomatis Berdasarkan Nama Channel"""
     n = m3u_name.lower()
     if any(x in n for x in [' sg', 'starhub', 'singapore']): return "🇸🇬"
     if any(x in n for x in [' my', 'astro', 'malaysia']): return "🇲🇾"
@@ -30,19 +31,23 @@ def get_flag(m3u_name):
     if any(x in n for x in [' hk', 'hong']): return "🇭🇰"
     if any(x in n for x in [' au', 'optus', 'aus']): return "🇦🇺"
     
+    # Jika beIN tanpa embel-embel EN/HK/dll, asumsikan Indonesia
     if 'bein' in n and not any(x in n for x in [' en', ' hk', ' th', ' ph', ' my', ' sg', ' au']): 
         return "🇮🇩"
     if any(x in n for x in [' id', 'indo', 'vidio']): return "🇮🇩"
     
-    return "📺" 
+    return "📺" # Default jika tidak terdeteksi
 
 def is_allowed_sport(title):
+    """FILTER 1: DAFTAR HITAM & PUTIH MUTLAK"""
     if not title: return False
     t = title.lower()
     
+    # 1. HANCURKAN JIKA ADA HURUF CINA / JEPANG / ARAB (Spam EPG Luar)
     if re.search(r'[\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', title):
         return False
 
+    # 2. BLACKLIST KATA SAMPAH & OLAHRAGA HARAM
     haram = [
         "news", "studio", "pre-match", "post-match", "update", "talk", "show", "weekly", 
         "magazine", "highlight", "replay", "classic", "re-run", "siaran ulang", "review", 
@@ -53,6 +58,7 @@ def is_allowed_sport(title):
     ]
     if any(h in t for h in haram): return False
     
+    # 3. WHITELIST OLAHRAGA SAH
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", 
         "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool", 
@@ -64,12 +70,14 @@ def is_allowed_sport(title):
     ]
     is_halal = any(h in t for h in halal)
     
+    # Loloskan jika ada kata halal, ATAU jika ada tulisan " VS "
     if is_halal or ' vs ' in t or ' v ' in t:
         return True
         
     return False
 
 def is_match_akurat(epg_name, m3u_name):
+    """FILTER 2: KUNCI KAMAR MUTLAK (ANTI-NYASAR)"""
     if not epg_name or not m3u_name: return False
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
@@ -77,31 +85,48 @@ def is_match_akurat(epg_name, m3u_name):
     num_e = re.findall(r'\d+', e)
     num_m = re.findall(r'\d+', m)
 
+    # ================= KUNCI ASTRO =================
     if 'astro' in e or 'astro' in m:
         if ('astro' in e) != ('astro' in m): return False
+        
+        # Urutan penting: dari yang terpanjang ke terpendek
         subs = ['arena bola 2', 'arena bola', 'arena', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport 5', 'supersport', 'cricket', 'badminton', 'football', 'golf', 'grandstand', 'premier']
+        
         found_e = next((s for s in subs if s in e), 'none')
         found_m = next((s for s in subs if s in m), 'none')
+        
+        # Jika sub-channel beda (misal "arena bola" vs "arena"), TOLAK!
         if found_e != found_m: return False
+        
+        # Jika angka channel beda, TOLAK!
         if num_e != num_m: return False
         return True
 
+    # ================= KUNCI BEIN =================
     if 'bein' in e or 'bein' in m:
         if ('bein' in e) != ('bein' in m): return False
+        
+        # Jika tidak ada angka, asumsikan beIN 1
         ne = num_e[0] if num_e else '1'
         nm = num_m[0] if num_m else '1'
         if ne != nm: return False
+        
+        # Pisahkan xtra/extra
         if ('xtra' in e or 'extra' in e) != ('xtra' in m or 'extra' in m): return False
         return True
 
+    # ================= KUNCI SPOTV =================
     if 'spotv' in e or 'spotv' in m:
         if ('spotv' in e) != ('spotv' in m): return False
+        
         ne = num_e[0] if num_e else '1'
         nm = num_m[0] if num_m else '1'
         if ne != nm: return False
+        
         if ('now' in e) != ('now' in m): return False
         return True
 
+    # ================= UMUM =================
     e_clean = re.sub(r'[^a-z0-9]', '', e)
     m_clean = re.sub(r'[^a-z0-9]', '', m)
     return e_clean in m_clean or m_clean in e_clean
@@ -171,9 +196,11 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Pembantai Replay Pagi/Siang Eropa
+                # ==========================================================
+                # FILTER PEMBANTAI REPLAY BOLA PAGI/SIANG (Jam 05:00 - 14:59 WIB)
+                # ==========================================================
                 jam_mulai_wib = start_dt.hour
-                if 5 <= jam_mulai_wib < 15: 
+                if 5 <= jam_mulai_wib < 15: # Jam 5 Pagi sampai Jam 3 Sore
                     bola_pagi_sah = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx']
                     bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v', 'afc', 'j-league', 'j1', 'k-league', 'soccer', 'football']
                     
@@ -181,10 +208,15 @@ def main():
                     non_bola_sah = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
                     is_non_bola_sah = any(k in title_raw.lower() for k in non_bola_sah)
 
+                    # Jika terdeteksi sepak bola (bukan badminton/voli)...
                     if is_football and not is_non_bola_sah:
+                        # ...dan BUKAN bola Amerika, berarti itu REPLAY EROPA/ASIA! -> BAKAR!
                         if not any(k in title_raw.lower() for k in bola_pagi_sah):
                             continue 
 
+                # ==========================================================
+                # FILTER DURASI SEPAK BOLA (Wajib >= 85 Menit)
+                # ==========================================================
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
                 if durasi_menit < 30: continue 
 
@@ -223,7 +255,7 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist (Pemusnah Tag Kategori '#EXTGRP' dan 'tvg-group')...")
+    print("3. Meracik Playlist (Bendera Otomatis & Pembersih Folder)...")
     hasil_akhir = []
     channel_block = []
     event_counter = {}
@@ -290,6 +322,7 @@ def main():
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                     
+                                    # LIMIT MAKSIMAL 3 DUPLIKAT PER ACARA
                                     counter_key = f"{ch_id}_{judul_akhir}"
                                     if event_counter.get(counter_key, 0) >= 3:
                                         continue
