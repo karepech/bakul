@@ -83,11 +83,14 @@ def is_match_akurat(epg_name, m3u_name):
     if num_epg != num_m3u: 
         return False
 
-    # PROTEKSI SUB-CHANNEL MUTLAK (Astro, Bein, SpoTV)
-    if ('arena' in epg_clean) != ('arena' in m3u_clean): return False
-    if ('cricket' in epg_clean) != ('cricket' in m3u_clean): return False
-    if ('xtra' in epg_clean or 'extra' in epg_clean) != ('xtra' in m3u_clean or 'extra' in m3u_clean): return False
-    if ('now' in epg_clean) != ('now' in m3u_clean): return False
+    if ('arena' in epg_clean and 'arena' not in m3u_clean) or ('arena' in m3u_clean and 'arena' not in epg_clean): 
+        return False
+    if ('cricket' in epg_clean and 'cricket' not in m3u_clean) or ('cricket' in m3u_clean and 'cricket' not in epg_clean): 
+        return False
+    if ('xtra' in epg_clean or 'extra' in epg_clean) and not ('xtra' in m3u_clean or 'extra' in m3u_clean): 
+        return False
+    if ('xtra' in m3u_clean or 'extra' in m3u_clean) and not ('xtra' in epg_clean or 'extra' in epg_clean): 
+        return False
 
     epg_huruf = re.sub(r'[^a-z]', '', epg_clean)
     m3u_huruf = re.sub(r'[^a-z]', '', m3u_clean)
@@ -103,21 +106,13 @@ def parse_epg_time(time_str):
     if not time_str: return None
     try:
         time_str = time_str.strip()
-        parts = time_str.split(' ')
-        dt_str = parts[0][:14]
-        tz_str = parts[1] if len(parts) > 1 else "+0000"
-        
-        dt = datetime.strptime(dt_str, "%Y%m%d%H%M%S")
-        
-        sign = 1 if tz_str[0] == '+' else -1
-        hours = int(tz_str[1:3])
-        minutes = int(tz_str[3:5]) if len(tz_str) >= 5 else 0
-        offset = sign * timedelta(hours=hours, minutes=minutes)
-        
-        dt_utc = dt - offset
-        dt_wib = dt_utc + timedelta(hours=7)
-        
-        return dt_wib
+        if len(time_str) >= 20 and ('+' in time_str or '-' in time_str):
+            dt = datetime.strptime(time_str[:20], "%Y%m%d%H%M%S %z")
+            dt_wib = dt.astimezone(timezone(timedelta(hours=7)))
+            return dt_wib.replace(tzinfo=None)
+        else:
+            dt = datetime.strptime(time_str[:14], "%Y%m%d%H%M%S")
+            return dt + timedelta(hours=7)
     except Exception:
         return None
 
@@ -169,7 +164,7 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 
-                # Pembuang acara kedaluwarsa
+                # SISTEM PENGHAPUS OTOMATIS: Dibuang kalau jam acara sudah lewat
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
@@ -188,6 +183,7 @@ def main():
                     jadwal_per_channel[ch_id][unik_epg_event] = {
                         "title_display": judul_bersih,
                         "start_dt": start_dt,
+                        "stop_dt": stop_dt, # <--- Menyimpan jam selesai
                         "is_live": is_live,
                         "logo_url": logo_url_liga 
                     }
@@ -251,7 +247,12 @@ def main():
                             if ch_id in jadwal_per_channel:
                                 
                                 for unik_key, event in jadwal_per_channel[ch_id].items():
-                                    jam_str = event["start_dt"].strftime('%H:%M WIB')
+                                    
+                                    # MENYATUKAN JAM MULAI & JAM SELESAI
+                                    jam_mulai = event["start_dt"].strftime('%H:%M')
+                                    jam_selesai = event["stop_dt"].strftime('%H:%M')
+                                    jam_str = f"{jam_mulai}-{jam_selesai} WIB"
+                                    
                                     logo_final = event["logo_url"] if event["logo_url"] else logo_asli
                                     
                                     if event["is_live"]:
@@ -261,7 +262,6 @@ def main():
                                         order = 0
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
-                                        # Menyisipkan kata Besok untuk kejelasan waktu
                                         if event["start_dt"].date() == now_wib.date():
                                             judul_akhir = f"⏳ {jam_str} - {event['title_display']}"
                                         else:
@@ -285,7 +285,6 @@ def main():
             channel_block = []
 
     def sorting_logic(x):
-        # Murni Mengurutkan Berdasarkan Kategori, lalu JAM TAYANG (timestamp), lalu Judul Acara
         return (x["kategori_order"], x["start_time"], x["title_sort"])
 
     print("4. Menyortir Berdasarkan Jam Tayang & Menyimpan File M3U Final...")
