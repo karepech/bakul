@@ -44,8 +44,7 @@ LOGO_DB = {
     "f1": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png",
     "formula 1": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png",
     "badminton": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/BWF_logo_2012.svg/1200px-BWF_logo_2012.svg.png",
-    "bwf": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/BWF_logo_2012.svg/1200px-BWF_logo_2012.svg.png",
-    "default": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Video_Camera_Icon.svg/1024px-Video_Camera_Icon.svg.png"
+    "bwf": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/BWF_logo_2012.svg/1200px-BWF_logo_2012.svg.png"
 }
 
 SPORT_KEYWORDS = ["sport", "bein", "spotv", "astro", "hub", "arena", "premier", "champions", "euro", "football", "soccer", "liga", "nba", "motogp", "badminton", "voli", "basket", "tennis", "f1", "ufc", "wwe"]
@@ -54,11 +53,9 @@ REPLAY_KEYWORDS = ["highlight", "replay", "classic", "best of", "re-run", "siara
 def get_league_logo(title):
     t_lower = title.lower()
     for keyword, url in LOGO_DB.items():
-        if keyword != "default" and keyword in t_lower:
+        if keyword in t_lower:
             return url
-    if ' vs ' in t_lower or ' v ' in t_lower:
-        return LOGO_DB["default"]
-    return LOGO_DB["default"]
+    return None # Kembalikan kosong jika bukan liga top, agar diganti logo asli channel nanti
 
 def is_sport(text):
     if not text: return False
@@ -124,7 +121,6 @@ def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     epg_channels = {}
     
-    # Simpan jadwal per Channel ID
     jadwal_per_channel = {}
 
     # BATAS WAKTU: Menampilkan Jadwal Hingga Jam 06:00 Pagi Saja
@@ -168,20 +164,17 @@ def main():
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 if stop_dt <= now_wib: continue 
                 
-                # Buang jadwal yang tayangnya melewati jam 06:00 Pagi berikutnya
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Toleransi pindah ke LIVE 5 menit sebelum tayang
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
                 judul_bersih = bersihkan_judul_event(title_raw)
-                logo_url = get_league_logo(title_raw)
+                logo_url_liga = get_league_logo(title_raw)
                 
                 if ch_id not in jadwal_per_channel:
                     jadwal_per_channel[ch_id] = {}
                 
-                # Kunci unik per jadwal untuk mencegah duplikat EPG (tapi mengizinkan duplikat M3U/Backup)
                 unik_epg_event = f"{start_dt.strftime('%Y%m%d%H%M')}_{judul_bersih.lower()}"
                 
                 if unik_epg_event not in jadwal_per_channel[ch_id]:
@@ -189,10 +182,10 @@ def main():
                         "title_display": judul_bersih,
                         "start_dt": start_dt,
                         "is_live": is_live,
-                        "logo_url": logo_url
+                        "logo_url": logo_url_liga # Bisa None, nanti diganti logo asli channel
                     }
                 else:
-                    if is_live: # Prioritaskan status LIVE jika ada tumpang tindih EPG
+                    if is_live: 
                         jadwal_per_channel[ch_id][unik_epg_event]["is_live"] = True
 
         except Exception as e:
@@ -207,7 +200,7 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist Event Premium (Mendukung Multi-Link Backup)...")
+    print("3. Meracik Playlist Event Premium (Mendukung Multi-Link Backup & Logo Cerdas)...")
     hasil_akhir = []
     channel_block = []
 
@@ -230,30 +223,47 @@ def main():
             if extinf_idx != -1:
                 extinf = channel_block[extinf_idx]
                 if "," in extinf:
-                    _, nama_asli_m3u = extinf.split(",", 1)
+                    bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
-                    # Cari semua acara dari EPG yang tayang di channel M3U ini
+                    # 1. Ekstrak LOGO ASLI CHANNEL dari M3U jika ada
+                    logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
+                    if logo_asli_match:
+                        logo_asli = logo_asli_match.group(2)
+                    else:
+                        logo_asli_match_no_quotes = re.search(r'(?i)tvg-logo=([^"\'\s]+)', bagian_atribut)
+                        logo_asli = logo_asli_match_no_quotes.group(1) if logo_asli_match_no_quotes else "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Video_Camera_Icon.svg/1024px-Video_Camera_Icon.svg.png"
+                    
+                    # 2. Hancurkan atribut lama agar bersih
+                    clean_attrs = re.sub(r'(?i)\s*group-title=(["\']?)[^"\'\s]+\1', '', bagian_atribut)
+                    clean_attrs = re.sub(r'(?i)\s*tvg-id=(["\']?)[^"\'\s]+\1', '', clean_attrs)
+                    clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
+                    clean_attrs = re.sub(r'(?i)\s*tvg-logo=(["\']?)[^"\'\s]+\1', '', clean_attrs)
+                    clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
+
                     for ch_id, nama_epg in epg_channels.items():
                         if is_match_akurat(nama_epg, nama_asli_m3u):
                             if ch_id in jadwal_per_channel:
                                 
-                                # Proses SEMUA acara yang ada di channel ini
                                 for unik_key, event in jadwal_per_channel[ch_id].items():
                                     jam_str = event["start_dt"].strftime('%H:%M WIB')
+                                    
+                                    # PENENTUAN LOGO FINAL (Jika liga tidak ada, pakai logo asli channel)
+                                    logo_final = event["logo_url"] if event["logo_url"] else logo_asli
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
                                         judul_akhir = f"🔴 {jam_str} {event['title_display']}"
-                                        stream_final = stream_url # Pakai stream M3U asli karena sedang LIVE
+                                        stream_final = stream_url 
                                         order = 0
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
                                         judul_akhir = f"⏳ {jam_str} {event['title_display']}"
-                                        stream_final = LINK_UPCOMING # Pakai link video MP4 5 menit Anda
+                                        stream_final = LINK_UPCOMING 
                                         order = 1
                                         
-                                    baris_extinf = f'#EXTINF:-1 group-title="{grup_baru}" tvg-logo="{event["logo_url"]}", {judul_akhir}'
+                                    # Menyusun ulang baris EXTINF
+                                    baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
                                     
                                     hasil_akhir.append({
                                         "kategori_order": order,
@@ -261,14 +271,11 @@ def main():
                                         "title_sort": event['title_display'],
                                         "baris_lengkap": [baris_extinf, stream_final]
                                     })
-                            break # Cukup ambil kecocokan channel pertama lalu lanjut ke link M3U berikutnya
+                            break 
             
             channel_block = []
 
     def sorting_logic(x):
-        # 1. Pisahkan Folder LIVE dan UPCOMING
-        # 2. Urutkan murni berdasarkan Jam Tayang
-        # 3. Urutkan berdasarkan Nama Pertandingan
         return (x["kategori_order"], x["start_time"], x["title_sort"])
 
     print("4. Menyortir Berdasarkan Jam Tayang & Menyimpan File M3U Final...")
@@ -285,7 +292,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link berhasil diracik (Termasuk link Backup!).")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link berhasil diracik (Dengan Logo Premium & Logo Asli!).")
 
 if __name__ == "__main__":
     main()
