@@ -66,7 +66,6 @@ def is_fresh_live(prog, title):
     if not title: return False
     t = title.lower()
     
-    # Blokir Replay dan Waktu Kosong (End of transmission)
     if any(k in t for k in REPLAY_KEYWORDS): return False
     return True
 
@@ -84,14 +83,11 @@ def is_match_akurat(epg_name, m3u_name):
     if num_epg != num_m3u: 
         return False
 
-    if ('arena' in epg_clean and 'arena' not in m3u_clean) or ('arena' in m3u_clean and 'arena' not in epg_clean): 
-        return False
-    if ('cricket' in epg_clean and 'cricket' not in m3u_clean) or ('cricket' in m3u_clean and 'cricket' not in epg_clean): 
-        return False
-    if ('xtra' in epg_clean or 'extra' in epg_clean) and not ('xtra' in m3u_clean or 'extra' in m3u_clean): 
-        return False
-    if ('xtra' in m3u_clean or 'extra' in m3u_clean) and not ('xtra' in epg_clean or 'extra' in epg_clean): 
-        return False
+    # PROTEKSI SUB-CHANNEL MUTLAK (Astro, Bein, SpoTV)
+    if ('arena' in epg_clean) != ('arena' in m3u_clean): return False
+    if ('cricket' in epg_clean) != ('cricket' in m3u_clean): return False
+    if ('xtra' in epg_clean or 'extra' in epg_clean) != ('xtra' in m3u_clean or 'extra' in m3u_clean): return False
+    if ('now' in epg_clean) != ('now' in m3u_clean): return False
 
     epg_huruf = re.sub(r'[^a-z]', '', epg_clean)
     m3u_huruf = re.sub(r'[^a-z]', '', m3u_clean)
@@ -103,24 +99,29 @@ def is_match_akurat(epg_name, m3u_name):
     return False
 
 def parse_epg_time(time_str):
-    """Mesin Waktu Built-in Python yang Paling Akurat (Anti-Meleset)"""
+    """Sistem Konversi Waktu Anti-Meleset"""
     if not time_str: return None
     try:
         time_str = time_str.strip()
-        if len(time_str) >= 20 and ('+' in time_str or '-' in time_str):
-            # Membaca format XMLTV seperti "20260308190000 +0800"
-            dt = datetime.strptime(time_str[:20], "%Y%m%d%H%M%S %z")
-            # Konversi mutlak ke WIB (+7)
-            dt_wib = dt.astimezone(timezone(timedelta(hours=7)))
-            return dt_wib.replace(tzinfo=None)
-        else:
-            dt = datetime.strptime(time_str[:14], "%Y%m%d%H%M%S")
-            return dt + timedelta(hours=7)
+        parts = time_str.split(' ')
+        dt_str = parts[0][:14]
+        tz_str = parts[1] if len(parts) > 1 else "+0000"
+        
+        dt = datetime.strptime(dt_str, "%Y%m%d%H%M%S")
+        
+        sign = 1 if tz_str[0] == '+' else -1
+        hours = int(tz_str[1:3])
+        minutes = int(tz_str[3:5]) if len(tz_str) >= 5 else 0
+        offset = sign * timedelta(hours=hours, minutes=minutes)
+        
+        dt_utc = dt - offset
+        dt_wib = dt_utc + timedelta(hours=7)
+        
+        return dt_wib
     except Exception:
         return None
 
 def bersihkan_judul_event(title):
-    # Bersihkan EPG dari embel-embel Live dan spasi berantakan
     bersih = re.sub(r'(?i)\b(live|langsung|\(l\)|\[l\]|live on)\b', '', title)
     bersih = re.sub(r'\s+', ' ', bersih).strip()
     bersih = re.sub(r'^[\-\:\,\|]\s*', '', bersih)
@@ -129,10 +130,8 @@ def bersihkan_judul_event(title):
 def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     epg_channels = {}
-    
     jadwal_per_channel = {}
 
-    # BATAS UPCOMING: Jam 6 Pagi Esok Hari
     if now_wib.hour < 6:
         batas_waktu_upcoming = now_wib.replace(hour=6, minute=0, second=0, microsecond=0)
     else:
@@ -170,12 +169,10 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 
-                # Buang Acara yang sudah Selesai (Past Events)
+                # Pembuang acara kedaluwarsa
                 if stop_dt <= now_wib: continue 
-                # Buang acara yang lewat dari jam 6 pagi besok
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Toleransi Live: 5 Menit sebelum tayang
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
@@ -257,7 +254,6 @@ def main():
                                     jam_str = event["start_dt"].strftime('%H:%M WIB')
                                     logo_final = event["logo_url"] if event["logo_url"] else logo_asli
                                     
-                                    # PENENTUAN FORMAT NAMA SESUAI PERMINTAAN
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
                                         judul_akhir = f"🔴 {jam_str} - {event['title_display']}"
@@ -265,7 +261,7 @@ def main():
                                         order = 0
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
-                                        # Jika tayangnya besok, tambahkan kata "Besok"
+                                        # Menyisipkan kata Besok untuk kejelasan waktu
                                         if event["start_dt"].date() == now_wib.date():
                                             judul_akhir = f"⏳ {jam_str} - {event['title_display']}"
                                         else:
@@ -289,6 +285,7 @@ def main():
             channel_block = []
 
     def sorting_logic(x):
+        # Murni Mengurutkan Berdasarkan Kategori, lalu JAM TAYANG (timestamp), lalu Judul Acara
         return (x["kategori_order"], x["start_time"], x["title_sort"])
 
     print("4. Menyortir Berdasarkan Jam Tayang & Menyimpan File M3U Final...")
