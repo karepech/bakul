@@ -1,9 +1,9 @@
 name: Auto Update M3U Jadwal Olahraga
 
 on:
-  schedule:
-    # Berjalan otomatis setiap 1 jam tepat (menit ke-0)
-    - cron: '0 * * * *'
+    schedule:
+    # Berjalan otomatis setiap 30 menit
+    - cron: '*/30 * * * *'
   push:
     branches:
       - main
