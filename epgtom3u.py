@@ -26,39 +26,60 @@ LINK_STANDBY = "https://bwifi.my.id/live.mp4"
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 # ==========================================
-# KATA KUNCI FILTERING
+# FILTER SUPER KETAT (BLACKLIST & WHITELIST)
 # ==========================================
-SPORT_KEYWORDS = ["sport", "bein", "spotv", "astro", "hub", "arena", "premier", "champions", "euro", "football", "soccer", "liga", "nba", "motogp", "badminton", "voli", "basket", "tennis", "f1", "ufc", "wwe"]
-
-# Kata kunci sampah yang Wajib Dihapus
+# 1. Daftar Hitam Acara Sampah (Langsung Dibuang)
 JUNK_KEYWORDS = [
-    "highlight", "replay", "classic", "best of", "re-run", "siaran ulang", 
-    "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", 
+    "news", "studio", "pre-match", "post-match", "today", "update", "warm up", 
+    "ceremony", "talk", "show", "weekly", "daily", "diary", "world sport", 
+    "magazine", "highlight", "replay", "classic", "best of", "re-run", 
+    "siaran ulang", "preview", "review", "delay", "encore", "rpt", "repeat", 
     "rewind", "recap", "recorded", "archives", "ulangan", "end of transmission", 
-    "off air", "to be announced", "tba", "news", "studio", "pre-match", 
-    "post-match", "today", "update", "warm up", "ceremony", "talk", "show",
-    "weekly", "daily", "diary", "world sport"
+    "off air", "to be announced", "tba", "golden fit", "fitness", "workout", 
+    "aerobic", "gym", "yoga", "documentary", "docuseries"
 ]
 
-# Kata kunci olahraga yang DILARANG masuk (Tenis, Basket, dll)
+# 2. Daftar Hitam Olahraga yang Dilarang (Tenis, Tinju, Basket, dll)
 UNWANTED_SPORTS = [
-    "nba", "basketball", "basket", "tennis", "wta", "atp", "golf", "wwe", "ufc", 
-    "boxing", "snooker", "darts", "rugby", "cricket", "mlb", "nhl", "nfl", 
-    "nascar", "indycar", "cycling", "ping pong", "squash"
+    "tennis", "wta", "atp", "wimbledon", "roland garros", "us open", "australian open",
+    "nba", "basketball", "basket", "fiba", "wnba",
+    "golf", "pga", "liv golf", "masters", "ryder cup",
+    "wwe", "ufc", "boxing", "fight", "mma", "wrestling", "smackdown", "raw", "aew", "one championship",
+    "snooker", "darts", "rugby", "cricket", "mlb", "nhl", "nfl", "baseball", "ice hockey",
+    "american football", "nascar", "indycar", "cycling", "ping pong", "squash", "billiard",
+    "athletics", "swimming", "gymnastics", "skiing", "snowboard", "equestrian",
+    "sailing", "horse racing", "poker", "bowling"
 ]
 
-def is_sport(text):
-    if not text: return False
-    return any(k in text.lower() for k in SPORT_KEYWORDS)
-
-def is_fresh_live(prog, title):
-    if prog.find("previously-shown") is not None: return False
+def is_allowed_sport(title):
+    """Filter Berlapis: Wajib Lolos Blacklist, Baru Boleh Masuk"""
     if not title: return False
     t = title.lower()
     
+    # LANGKAH 1: Eksekusi Mati jika mengandung unsur Blacklist
     if any(k in t for k in JUNK_KEYWORDS): return False
     if any(k in t for k in UNWANTED_SPORTS): return False
-    return True
+    
+    # LANGKAH 2: Whitelist Olahraga yang Diizinkan (Bola, Badminton, Voli, Futsal, Balapan)
+    whitelist = [
+        "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1",
+        "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool",
+        "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala",
+        "badminton", "bwf", "all england", "thomas", "uber", "sudirman",
+        "voli", "volley", "vnl", "proliga",
+        "futsal",
+        "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
+    ]
+    
+    if any(k in t for k in whitelist):
+        return True
+        
+    # LANGKAH 3: Jika nama tim tidak ada di whitelist, tapi ada tulisan " VS " (Laga Resmi)
+    # Karena acara tinju/tenis yang pakai "VS" sudah dihancurkan di Langkah 1, sisa "VS" di sini 99% adalah Bola/Voli sah.
+    if ' vs ' in t or ' v ' in t:
+        return True
+        
+    return False
 
 def is_match_akurat(epg_name, m3u_name):
     if not epg_name or not m3u_name: return False
@@ -136,7 +157,8 @@ def main():
             for ch in root.findall("channel"):
                 ch_id = ch.get("id")
                 ch_name = ch.findtext("display-name")
-                if ch_id and ch_name and is_sport(ch_name):
+                # Hanya izinkan nama channel yg berbau olahraga
+                if ch_id and ch_name and any(k in ch_name.lower() for k in ["sport", "bein", "spotv", "astro", "hub", "arena", "premier", "champions"]):
                     if ch_id not in epg_channels:
                         epg_channels[ch_id] = ch_name.strip()
                     
@@ -146,7 +168,10 @@ def main():
                     
                 ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
-                if not is_fresh_live(prog, title_raw): continue
+                
+                # Terapkan Filter Super Ketat di sini
+                if not is_allowed_sport(title_raw): 
+                    continue
                     
                 start_dt = parse_epg_time(prog.get("start"))
                 stop_dt = parse_epg_time(prog.get("stop"))
@@ -157,20 +182,20 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # FILTER DURASI DAN JENIS OLAHRAGA
+                # FILTER DURASI SEPAK BOLA (Wajib >= 85 Menit)
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
+                
+                # Jika acara terlalu pendek (kurang dari 30 menit), buang (mencegah update/news nyasar)
                 if durasi_menit < 30: 
                     continue 
 
-                # Syarat Sepakbola Minimal 90 Menit (Toleransi 85)
-                bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united']
+                bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
                 is_football = any(k in ch_name.lower() or k in title_raw.lower() for k in bola_keywords)
                 
-                # Pengecualian olahraga lain yang sah (bisa di bawah 90 menit)
-                non_bola_sah = ['badminton', 'bwf', 'motogp', 'f1', 'formula 1', 'voli', 'volleyball', 'futsal']
+                non_bola_sah = ['badminton', 'bwf', 'motogp', 'f1', 'formula 1', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
                 is_non_bola_sah = any(k in title_raw.lower() for k in non_bola_sah)
 
-                # Jika itu dipastikan sepak bola (bukan badminton/voli), maka wajib >= 85 menit
+                # Paksa durasi minimal sepak bola
                 if is_football and not is_non_bola_sah:
                     if durasi_menit < 85:
                         continue
@@ -202,11 +227,11 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist (Max 3 Duplikat Per Acara)...")
+    print("3. Meracik Playlist (Max 3 Duplikat Per Channel, Logo Asli M3U)...")
     hasil_akhir = []
     channel_block = []
     
-    # Penghitung untuk membatasi duplikat
+    # Penghitung Pembatas Duplikat Maksimal 3
     event_counter = {}
 
     for line in m3u_lines:
@@ -231,6 +256,7 @@ def main():
                     bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
+                    # Sedot logo TV asli M3U Anda secara mutlak
                     logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
                     if logo_asli_match:
                         logo_asli = logo_asli_match.group(2)
@@ -267,13 +293,14 @@ def main():
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                     
-                                    # SISTEM LIMIT MAKSIMAL 3 DUPLIKAT
-                                    # Format Kunci: "Nama Channel M3U Asli + Judul Acara Lengkap"
-                                    counter_key = f"{nama_asli_m3u}_{judul_akhir}"
+                                    # =========================================================
+                                    # SISTEM LIMIT MAKSIMAL 3 DUPLIKAT PER CHANNEL PER ACARA
+                                    # =========================================================
+                                    # Kunci dihitung berdasarkan: ID Channel EPG + Judul Acara Lengkap
+                                    counter_key = f"{ch_id}_{judul_akhir}"
                                     
-                                    # Jika acara ini sudah dimasukkan 3 kali, lewati!
                                     if event_counter.get(counter_key, 0) >= 3:
-                                        continue
+                                        continue # Jika sudah 3 kali masuk, bakar sisanya!
                                         
                                     event_counter[counter_key] = event_counter.get(counter_key, 0) + 1
                                         
@@ -308,7 +335,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (Duplikat max 3/channel)!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (Telah di-filter ketat & bebas spam!)")
 
 if __name__ == "__main__":
     main()
