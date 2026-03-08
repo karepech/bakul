@@ -9,11 +9,11 @@ import io
 # KONFIGURASI MULTI-EPG & M3U
 # ==========================================
 EPG_URLS = [
-    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", # StarHub dbghelp
-    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",            # Astro AqFad
-    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   # Indonesia AqFad (Diperbaiki ke Raw URL)
-    "https://epg.pw/api/epg.xml?channel_id=397400",                                         # Spesifik Channel 397400
-    "https://epg.pw/xmltv/epg_lite.xml.gz"                                                  # EPG Lite dari epg.pw (GZIP)
+    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
+    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",            
+    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
+    "https://epg.pw/api/epg.xml?channel_id=397400",                                         
+    "https://epg.pw/xmltv/epg_lite.xml.gz"                                                  
 ]
 
 M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
@@ -71,9 +71,16 @@ def parse_epg_time(time_str):
     except Exception:
         return None
 
+def get_sort_key(name):
+    """
+    Fungsi pemisah huruf dan angka untuk Natural Sorting.
+    Memastikan 'Bein 2' berada setelah 'Bein 1' (dan bukan Bein 10).
+    """
+    parts = re.split(r'(\d+)', name.lower())
+    return [int(p) if p.isdigit() else p.strip() for p in parts]
+
 def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
-
     epg_channels = {}
     jadwal_terbaik = {}
 
@@ -81,29 +88,23 @@ def main():
     for url in EPG_URLS:
         print(f" -> Sedang memproses: {url.split('/')[-1].split('?')[0]} ...")
         try:
-            # Timeout 120 detik karena epg_lite.xml.gz ukurannya bisa lumayan besar
             r_epg = requests.get(url, timeout=120)
             if r_epg.status_code != 200:
                 print(f"    [Lewati] Gagal akses, HTTP status: {r_epg.status_code}")
                 continue
                 
             content = r_epg.content
-            # Deteksi otomatis jika file berupa GZIP (.gz)
             if content[:2] == b'\x1f\x8b':
-                print("    [Info] File GZIP terdeteksi, mengekstrak...")
                 content = gzip.GzipFile(fileobj=io.BytesIO(content)).read()
                 
             root = ET.fromstring(content)
             
-            # Kumpulkan Channel Olahraga dari XML ini
             for ch in root.findall("channel"):
                 ch_id = ch.get("id")
                 ch_name = ch.findtext("display-name")
-                # HANYA kumpulkan jika mengandung unsur kata olahraga agar hemat RAM
                 if ch_id and ch_name and is_sport(ch_name):
                     epg_channels[ch_id] = ch_name.strip()
                     
-            # Kumpulkan Jadwal dari XML ini
             for prog in root.findall("programme"):
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
@@ -136,14 +137,13 @@ def main():
                     }
                 else:
                     current_best = jadwal_terbaik[ch_id]
-                    # Prioritas 1: LIVE menang melawan UPCOMING
                     if is_live and current_best["kategori"] != "LIVE":
                         jadwal_terbaik[ch_id] = {
                             "title": title.strip(), "start": start_dt, "stop": stop_dt, 
                             "kategori": "LIVE", "display_time": f"{hari_str} {jam_str}"
                         }
-                    # Prioritas 2: Sama-sama UPCOMING, cari yang tayang paling duluan
                     elif not is_live and current_best["kategori"] == "UPCOMING":
+                        # Tangkap jadwal UPCOMING yang tayang paling duluan
                         if start_dt < current_best["start"]:
                             jadwal_terbaik[ch_id] = {
                                 "title": title.strip(), "start": start_dt, "stop": stop_dt, 
@@ -153,9 +153,7 @@ def main():
             print(f"    [Error] Melewati URL ini karena: {e}")
             continue
 
-    print(f"\n   Total {len(epg_channels)} channel olahraga terkumpul dari {len(EPG_URLS)} sumber.")
-
-    print("\n2. Mengunduh M3U dan mencocokkan...")
+    print("\n2. Mengunduh M3U sumber...")
     try:
         r_m3u = requests.get(M3U_URL, timeout=30)
         r_m3u.raise_for_status()
@@ -164,71 +162,88 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Grup Playlist (🔴 LIVE SEKARANG & 📅 UPCOMING)...")
-    channel_diubah = 0
+    print("3. Mencocokkan EPG dan Mengurutkan Channel secara Alfabetis...")
+    
+    # List memori untuk menyimpan semua baris agar bisa diurutkan (di-sort) nantinya
+    hasil_akhir = []
     channel_block = []
 
+    for line in m3u_lines:
+        baris = line.strip()
+        if not baris: continue
+        if baris.upper().startswith("#EXTM3U"): continue
+
+        if baris.startswith("#"):
+            channel_block.append(baris)
+        else:
+            stream_url = baris
+            match_found = False
+            extinf_idx = -1
+            
+            for i, tag in enumerate(channel_block):
+                if tag.upper().startswith("#EXTINF"):
+                    extinf_idx = i
+                    break
+            
+            if extinf_idx != -1:
+                extinf = channel_block[extinf_idx]
+                if "," in extinf:
+                    bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
+                    nama_asli_m3u = nama_asli_m3u.strip()
+                    
+                    for ch_id, nama_epg in epg_channels.items():
+                        if is_match_akurat(nama_epg, nama_asli_m3u):
+                            if ch_id in jadwal_terbaik:
+                                acara = jadwal_terbaik[ch_id]
+                                
+                                if acara["kategori"] == "LIVE":
+                                    kategori_order = 0  # Prioritas urutan atas
+                                    grup_baru = '🔴 LIVE SEKARANG'
+                                    status_icon = '🔴 LIVE'
+                                else:
+                                    kategori_order = 1  # Prioritas urutan bawah
+                                    grup_baru = '📅 UPCOMING'
+                                    status_icon = '⏳ NEXT'
+                                    
+                                judul_final = f"{status_icon} {acara['title']} ({acara['display_time']})"
+                                
+                                clean_attrs = re.sub(r'\s*group-title="[^"]*"', '', bagian_atribut)
+                                clean_attrs = re.sub(r'\s*tvg-id="[^"]*"', '', clean_attrs)
+                                clean_attrs = re.sub(r'\s*tvg-name="[^"]*"', '', clean_attrs)
+                                
+                                channel_block[extinf_idx] = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
+                                
+                                # Simpan ke dalam memori list dengan data tambahan untuk diurutkan
+                                hasil_akhir.append({
+                                    "kategori_order": kategori_order,
+                                    "sort_name": get_sort_key(nama_asli_m3u),
+                                    "start_time": acara["start"],
+                                    "baris_lengkap": channel_block + [stream_url]
+                                })
+                                match_found = True
+                                break
+            
+            channel_block = [] # Reset untuk channel berikutnya
+
+    print("4. Menyimpan dan Meracik File M3U Final...")
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write('#EXTM3U name="🔴 OLAHRAGA AKTIF"\n')
         
-        for line in m3u_lines:
-            baris = line.strip()
-            if not baris: continue
-            if baris.upper().startswith("#EXTM3U"): continue
-
-            if baris.startswith("#"):
-                channel_block.append(baris)
-            else:
-                stream_url = baris
-                match_found = False
-                extinf_idx = -1
-                
-                for i, tag in enumerate(channel_block):
-                    if tag.upper().startswith("#EXTINF"):
-                        extinf_idx = i
-                        break
-                
-                if extinf_idx != -1:
-                    extinf = channel_block[extinf_idx]
-                    if "," in extinf:
-                        bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
-                        nama_asli_m3u = nama_asli_m3u.strip()
-                        
-                        for ch_id, nama_epg in epg_channels.items():
-                            if is_match_akurat(nama_epg, nama_asli_m3u):
-                                if ch_id in jadwal_terbaik:
-                                    acara = jadwal_terbaik[ch_id]
-                                    
-                                    if acara["kategori"] == "LIVE":
-                                        grup_baru = '🔴 LIVE SEKARANG'
-                                        status_icon = '🔴 LIVE'
-                                    else:
-                                        grup_baru = '📅 UPCOMING'
-                                        status_icon = '⏳ NEXT'
-                                        
-                                    judul_final = f"{status_icon} {acara['title']} ({acara['display_time']})"
-                                    
-                                    clean_attrs = re.sub(r'\s*group-title="[^"]*"', '', bagian_atribut)
-                                    clean_attrs = re.sub(r'\s*tvg-id="[^"]*"', '', clean_attrs)
-                                    clean_attrs = re.sub(r'\s*tvg-name="[^"]*"', '', clean_attrs)
-                                    
-                                    channel_block[extinf_idx] = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}", {judul_final}'
-                                    match_found = True
-                                    break
-                
-                if match_found:
-                    for blk in channel_block:
-                        f.write(blk + "\n")
-                    f.write(stream_url + "\n")
-                    channel_diubah += 1
-                
-                channel_block = []
-
-        if channel_diubah == 0:
+        if not hasil_akhir:
             f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL\n')
             f.write(f'{LINK_STANDBY}\n')
+        else:
+            # PROSES SORTING: 
+            # 1. LIVE di atas, UPCOMING di bawah. 
+            # 2. Diurutkan abjad (Bein 1 sama Bein 1, Astro sama Astro)
+            # 3. Diurutkan berdasarkan jam mulai
+            hasil_akhir.sort(key=lambda x: (x["kategori_order"], x["sort_name"], x["start_time"]))
+            
+            for item in hasil_akhir:
+                for blk in item["baris_lengkap"]:
+                    f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {channel_diubah} channel olahraga berhasil disinkronkan dari Multi-EPG.")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} channel telah diurutkan dengan rapi dan dikelompokkan.")
 
 if __name__ == "__main__":
     main()
