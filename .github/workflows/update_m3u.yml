@@ -1,16 +1,18 @@
 name: Auto Update M3U Jadwal Olahraga
 
 on:
-    schedule:
-    # Berjalan otomatis setiap 30 menit
-    - cron: '*/30 * * * *'
+  schedule:
+    # Berjalan otomatis setiap 15 menit
+    - cron: '*/15 * * * *'
   push:
     branches:
       - main
       - master
+    # Mencegah infinite loop (action berjalan berulang kali saat file M3U di-push oleh bot)
     paths-ignore:
       - '*.m3u'
       - '*.m3u8'
+  # Memungkinkan Anda menjalankan script secara manual via tombol "Run workflow" di tab Actions
   workflow_dispatch:
 
 jobs:
@@ -37,9 +39,9 @@ jobs:
         run: |
           python epgtom3u.py
 
-      - name: 5. Simpan Hasil M3U ke Repo
+      - name: 5. Simpan Hasil M3U ke Repository
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
+          git add live_matches_only.m3u
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update jadwal M3U: $(date +'%Y-%m-%d %H:%M:%S')" && git push)
