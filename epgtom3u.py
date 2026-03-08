@@ -62,35 +62,45 @@ def is_sport(text):
     return any(k in text.lower() for k in SPORT_KEYWORDS)
 
 def is_fresh_live(prog, title):
-    """Filter Siaran Ulang - ATURAN DIPERLONGGAR AGAR BEIN TIDAK KOSONG"""
     if prog.find("previously-shown") is not None: return False
     if not title: return False
     t = title.lower()
     
-    # Hanya hapus kalau EPG dengan jelas menuliskan kata "Replay/Ulangan"
+    # Hanya hapus kalau EPG dengan jelas menuliskan kata Replay/Ulangan
     if any(k in t for k in REPLAY_KEYWORDS): return False
     return True
 
 def is_match_akurat(epg_name, m3u_name):
-    """SISTEM ANTI-NGACAK MUTLAK: BEIN 1 WAJIB KETEMU BEIN 1"""
+    """SISTEM ANTI-NGACAK KHUSUS ASTRO & BEIN"""
     if not epg_name or not m3u_name: return False
-    epg_name = str(epg_name).lower().strip()
-    m3u_name = str(m3u_name).lower().strip()
+    epg = str(epg_name).lower().strip()
+    m3u = str(m3u_name).lower().strip()
 
-    # Hapus jebakan batman (kualitas, nama negara, dll)
+    # 1. Hapus kualitas gambar & kata identitas negara
     hapus_kualitas = r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|id|my|sg)\b'
-    epg_clean = re.sub(hapus_kualitas, '', epg_name).strip()
-    m3u_clean = re.sub(hapus_kualitas, '', m3u_name).strip()
+    epg_clean = re.sub(hapus_kualitas, '', epg).strip()
+    m3u_clean = re.sub(hapus_kualitas, '', m3u).strip()
 
-    # Ekstrak Angka (Bein 1 -> ['1'], Bein tanpa angka -> [])
+    # 2. EKSTRAK ANGKA: Angka harus sama persis (Bein 1 wajib Bein 1)
     num_epg = re.findall(r'\d+', epg_clean)
     num_m3u = re.findall(r'\d+', m3u_clean)
-
-    # 1. ATURAN MUTLAK ANGKA: Kalau angkanya beda, LANGSUNG TOLAK!
     if num_epg != num_m3u: 
         return False
 
-    # 2. ATURAN HURUF: Bein harus ketemu Bein
+    # 3. KUNCI SUB-CHANNEL ASTRO & BEIN (Agar tidak tertukar)
+    # Astro Arena
+    if ('arena' in epg_clean and 'arena' not in m3u_clean) or ('arena' in m3u_clean and 'arena' not in epg_clean): 
+        return False
+    # Astro Cricket
+    if ('cricket' in epg_clean and 'cricket' not in m3u_clean) or ('cricket' in m3u_clean and 'cricket' not in epg_clean): 
+        return False
+    # beIN Xtra / Extra
+    if ('xtra' in epg_clean or 'extra' in epg_clean) and not ('xtra' in m3u_clean or 'extra' in m3u_clean): 
+        return False
+    if ('xtra' in m3u_clean or 'extra' in m3u_clean) and not ('xtra' in epg_clean or 'extra' in epg_clean): 
+        return False
+
+    # 4. Pencocokan akhir berdasarkan sisa huruf
     epg_huruf = re.sub(r'[^a-z]', '', epg_clean)
     m3u_huruf = re.sub(r'[^a-z]', '', m3u_clean)
 
@@ -101,16 +111,33 @@ def is_match_akurat(epg_name, m3u_name):
     return False
 
 def parse_epg_time(time_str):
+    """Mesin Konversi Zona Waktu Anti-Meleset"""
     if not time_str: return None
     try:
         time_str = time_str.strip()
-        if len(time_str) >= 20 and ('+' in time_str or '-' in time_str):
-            dt = datetime.strptime(time_str[:20], "%Y%m%d%H%M%S %z")
-            dt_wib = dt.astimezone(timezone(timedelta(hours=7)))
-            return dt_wib.replace(tzinfo=None)
+        # Format XMLTV: "20260308190000 +0800"
+        if ' ' in time_str:
+            parts = time_str.split(' ')
+            dt_str = parts[0][:14]
+            tz_str = parts[1] if len(parts) > 1 else "+0000"
         else:
-            dt = datetime.strptime(time_str[:14], "%Y%m%d%H%M%S")
-            return dt + timedelta(hours=7)
+            # Jika tidak ada timezone, asumsikan itu UTC (+0000)
+            dt_str = time_str[:14]
+            tz_str = "+0000"
+            
+        dt = datetime.strptime(dt_str, "%Y%m%d%H%M%S")
+        
+        # Ekstrak jam dan menit dari timezone offset (+0800, +0700, dll)
+        sign = 1 if tz_str[0] == '+' else -1
+        hours = int(tz_str[1:3])
+        minutes = int(tz_str[3:5])
+        offset = sign * timedelta(hours=hours, minutes=minutes)
+        
+        # Konversi ke waktu dunia (UTC) lalu ubah ke Waktu Indonesia Barat (+7)
+        dt_utc = dt - offset
+        dt_wib = dt_utc + timedelta(hours=7)
+        
+        return dt_wib
     except Exception:
         return None
 
@@ -121,12 +148,13 @@ def bersihkan_judul_event(title):
     return bersih
 
 def main():
+    # Mengambil patokan waktu SAAT INI (Real-time Indonesia)
     now_wib = datetime.utcnow() + timedelta(hours=7)
     epg_channels = {}
     
     jadwal_per_channel = {}
 
-    # BATAS WAKTU: Menampilkan Jadwal Hingga Jam 06:00 Pagi Esok Hari
+    # BATAS WAKTU UPCOMING: Ditarik hingga jam 06:00 Pagi Esok Hari
     if now_wib.hour < 6:
         batas_waktu_upcoming = now_wib.replace(hour=6, minute=0, second=0, microsecond=0)
     else:
@@ -158,18 +186,25 @@ def main():
                     
                 title_raw = prog.findtext("title") or ""
                 
-                # Gunakan filter yang sudah diperlonggar
                 if not is_fresh_live(prog, title_raw): continue
                     
                 start_dt = parse_epg_time(prog.get("start"))
                 stop_dt = parse_epg_time(prog.get("stop"))
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
-                if stop_dt <= now_wib: continue 
                 
+                # ========================================================
+                # PENGHANCUR MASA LALU:
+                # Jika waktu 'stop' (selesai acara) sudah lebih kecil atau
+                # sama dengan waktu SEKARANG, otomatis dibuang (continue)
+                # ========================================================
+                if stop_dt <= now_wib: 
+                    continue 
+                
+                # Jangan tampilkan jadwal yang terlalu jauh (lewat dari jam 6 pagi)
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Pindah ke folder LIVE 5 menit sebelum Kick-Off
+                # Pindah ke folder LIVE mulai 5 menit sebelum Kick-Off
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
@@ -230,6 +265,7 @@ def main():
                     bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
+                    # Sedot logo TV asli
                     logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
                     if logo_asli_match:
                         logo_asli = logo_asli_match.group(2)
@@ -237,6 +273,7 @@ def main():
                         logo_asli_match_no_quotes = re.search(r'(?i)tvg-logo=([^"\'\s]+)', bagian_atribut)
                         logo_asli = logo_asli_match_no_quotes.group(1) if logo_asli_match_no_quotes else ""
                     
+                    # Bersihkan sisa kotoran atribut M3U bawaan
                     clean_attrs = re.sub(r'(?i)\s*group-title=(["\']?)[^"\'\s]+\1', '', bagian_atribut)
                     clean_attrs = re.sub(r'(?i)\s*tvg-id=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                     clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
@@ -273,7 +310,6 @@ def main():
                                         "title_sort": event['title_display'],
                                         "baris_lengkap": block_final + [stream_final]
                                     })
-                            # TIDAK ADA 'break' DI SINI! M3U dibiarkan mencari semua kemungkinan backup
             
             channel_block = []
 
