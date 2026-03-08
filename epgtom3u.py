@@ -22,8 +22,8 @@ OUTPUT_FILE = "live_matches_only.m3u"
 # ==========================================
 # KONFIGURASI LINK VIDEO MANUAL
 # ==========================================
-LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
-LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
+LINK_STANDBY = "https://bwifi.my.id/live.mp4" # Diputar jika playlist benar-benar kosong
+LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" # Video custom untuk jadwal yang belum mulai
 
 # ==========================================
 # KATA KUNCI FILTERING
