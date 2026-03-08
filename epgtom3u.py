@@ -21,12 +21,29 @@ OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
+def get_flag(m3u_name):
+    """Sistem Bendera Otomatis Berdasarkan Nama Channel"""
+    n = m3u_name.lower()
+    if any(x in n for x in [' sg', 'starhub', 'singapore']): return "🇸🇬"
+    if any(x in n for x in [' my', 'astro', 'malaysia']): return "🇲🇾"
+    if any(x in n for x in [' en', 'english', ' uk']): return "🇬🇧"
+    if any(x in n for x in [' th', 'thai']): return "🇹🇭"
+    if any(x in n for x in [' hk', 'hong']): return "🇭🇰"
+    if any(x in n for x in [' au', 'optus', 'aus']): return "🇦🇺"
+    
+    # Jika beIN tanpa embel-embel EN/HK/dll, asumsikan Indonesia
+    if 'bein' in n and not any(x in n for x in [' en', ' hk', ' th', ' ph', ' my', ' sg', ' au']): 
+        return "🇮🇩"
+    if any(x in n for x in [' id', 'indo', 'vidio']): return "🇮🇩"
+    
+    return "📺" # Default jika tidak terdeteksi
+
 def is_allowed_sport(title):
-    """FILTER 1: PENYARINGAN SUPER KETAT"""
+    """FILTER 1: DAFTAR HITAM & PUTIH MUTLAK"""
     if not title: return False
     t = title.lower()
     
-    # 1. HANCURKAN JIKA ADA HURUF CINA / JEPANG / ARAB
+    # 1. HANCURKAN JIKA ADA HURUF CINA / JEPANG / ARAB (Spam EPG Luar)
     if re.search(r'[\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', title):
         return False
 
@@ -41,57 +58,75 @@ def is_allowed_sport(title):
     ]
     if any(h in t for h in haram): return False
     
-    # 3. WHITELIST OLAHRAGA SAH (Bola, Voli, Futsal, Badminton, Motogp, F1)
+    # 3. WHITELIST OLAHRAGA SAH
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", 
         "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool", 
         "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala", 
-        "afc", "aff", "fifa", "uefa", 
+        "afc", "aff", "fifa", "uefa", "mls", 
         "badminton", "bwf", "all england", "thomas", "uber", "sudirman", 
         "voli", "volley", "vnl", "proliga", "futsal", 
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
     is_halal = any(h in t for h in halal)
     
-    # Loloskan jika ada kata halal, ATAU jika ada tulisan " VS " (Laga resmi)
+    # Loloskan jika ada kata halal, ATAU jika ada tulisan " VS "
     if is_halal or ' vs ' in t or ' v ' in t:
         return True
         
     return False
 
 def is_match_akurat(epg_name, m3u_name):
-    """FILTER 2: PENGUNCI KAMAR MUTLAK (ANTI-NYASAR)"""
+    """FILTER 2: KUNCI KAMAR MUTLAK (ANTI-NYASAR)"""
     if not epg_name or not m3u_name: return False
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
 
-    # KUNCI ASTRO
-    if 'astro' in e:
-        if 'astro' not in m: return False
-        subs = ['arena bola 2', 'arena bola', 'arena', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport 5', 'supersport', 'cricket', 'grandstand', 'badminton', 'football', 'golf']
-        s_e = next((s for s in subs if s in e), 'unknown')
-        s_m = next((s for s in subs if s in m), 'unknown')
-        return s_e == s_m
+    num_e = re.findall(r'\d+', e)
+    num_m = re.findall(r'\d+', m)
+
+    # ================= KUNCI ASTRO =================
+    if 'astro' in e or 'astro' in m:
+        if ('astro' in e) != ('astro' in m): return False
         
-    # KUNCI BEIN
-    if 'bein' in e:
-        if 'bein' not in m: return False
-        n_e = re.findall(r'\d+', e)
-        n_m = re.findall(r'\d+', m)
-        if n_e and n_m and n_e[0] != n_m[0]: return False
+        # Urutan penting: dari yang terpanjang ke terpendek
+        subs = ['arena bola 2', 'arena bola', 'arena', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport 5', 'supersport', 'cricket', 'badminton', 'football', 'golf', 'grandstand', 'premier']
+        
+        found_e = next((s for s in subs if s in e), 'none')
+        found_m = next((s for s in subs if s in m), 'none')
+        
+        # Jika sub-channel beda (misal "arena bola" vs "arena"), TOLAK!
+        if found_e != found_m: return False
+        
+        # Jika angka channel beda, TOLAK!
+        if num_e != num_m: return False
+        return True
+
+    # ================= KUNCI BEIN =================
+    if 'bein' in e or 'bein' in m:
+        if ('bein' in e) != ('bein' in m): return False
+        
+        # Jika tidak ada angka, asumsikan beIN 1
+        ne = num_e[0] if num_e else '1'
+        nm = num_m[0] if num_m else '1'
+        if ne != nm: return False
+        
+        # Pisahkan xtra/extra
         if ('xtra' in e or 'extra' in e) != ('xtra' in m or 'extra' in m): return False
         return True
+
+    # ================= KUNCI SPOTV =================
+    if 'spotv' in e or 'spotv' in m:
+        if ('spotv' in e) != ('spotv' in m): return False
         
-    # KUNCI SPOTV
-    if 'spotv' in e:
-        if 'spotv' not in m: return False
-        n_e = re.findall(r'\d+', e)
-        n_m = re.findall(r'\d+', m)
-        if n_e and n_m and n_e[0] != n_m[0]: return False
+        ne = num_e[0] if num_e else '1'
+        nm = num_m[0] if num_m else '1'
+        if ne != nm: return False
+        
         if ('now' in e) != ('now' in m): return False
         return True
-        
-    # KUNCI UMUM (Sportstars, Soccer Channel, dll)
+
+    # ================= UMUM =================
     e_clean = re.sub(r'[^a-z0-9]', '', e)
     m_clean = re.sub(r'[^a-z0-9]', '', m)
     return e_clean in m_clean or m_clean in e_clean
@@ -121,7 +156,6 @@ def main():
     epg_channels = {}
     jadwal_per_channel = {}
 
-    # SIKLUS 24 JAM (05:00 - 04:59 Besok)
     if now_wib.hour < 5:
         batas_waktu_upcoming = now_wib.replace(hour=5, minute=0, second=0, microsecond=0)
     else:
@@ -152,7 +186,6 @@ def main():
                 ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
                 
-                # UJI SARINGAN KETAT
                 if not is_allowed_sport(title_raw): continue
                     
                 start_dt = parse_epg_time(prog.get("start"))
@@ -160,34 +193,38 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 
-                # Buang Masa Lalu dan Masa Depan (Lebih dari jam 04:59 besok)
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
                 # ==========================================================
-                # FILTER PEMBANTAI REPLAY LIGA EROPA (Jam 05:00 - 17:59 WIB)
+                # FILTER PEMBANTAI REPLAY BOLA PAGI/SIANG (Jam 05:00 - 14:59 WIB)
                 # ==========================================================
                 jam_mulai_wib = start_dt.hour
-                if 5 <= jam_mulai_wib < 18:
-                    bola_eropa = ['premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'la liga', 'laliga', 'uefa', 'europa']
-                    is_eropa = any(k in title_raw.lower() or k in ch_name.lower() for k in bola_eropa)
+                if 5 <= jam_mulai_wib < 15: # Jam 5 Pagi sampai Jam 3 Sore
+                    bola_pagi_sah = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx']
+                    bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v', 'afc', 'j-league', 'j1', 'k-league', 'soccer', 'football']
                     
-                    # Jika itu liga Eropa dan tayang jam 5 pagi s/d 6 sore = PASTI REPLAY! BUANG!
-                    if is_eropa:
-                        continue
+                    is_football = any(k in ch_name.lower() or k in title_raw.lower() for k in bola_keywords)
+                    non_bola_sah = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
+                    is_non_bola_sah = any(k in title_raw.lower() for k in non_bola_sah)
+
+                    # Jika terdeteksi sepak bola (bukan badminton/voli)...
+                    if is_football and not is_non_bola_sah:
+                        # ...dan BUKAN bola Amerika, berarti itu REPLAY EROPA/ASIA! -> BAKAR!
+                        if not any(k in title_raw.lower() for k in bola_pagi_sah):
+                            continue 
 
                 # ==========================================================
                 # FILTER DURASI SEPAK BOLA (Wajib >= 85 Menit)
                 # ==========================================================
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
-                if durasi_menit < 30: continue # Buang berita 15-20 menit
-                
+                if durasi_menit < 30: continue 
+
                 bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
                 is_football = any(k in ch_name.lower() or k in title_raw.lower() for k in bola_keywords)
                 non_bola_sah = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
                 is_non_bola_sah = any(k in title_raw.lower() for k in non_bola_sah)
 
-                # Paksa bola minimal 85 menit
                 if is_football and not is_non_bola_sah:
                     if durasi_menit < 85: continue
 
@@ -218,7 +255,7 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist...")
+    print("3. Meracik Playlist (Bendera Otomatis & Pembersih Folder)...")
     hasil_akhir = []
     channel_block = []
     event_counter = {}
@@ -245,16 +282,18 @@ def main():
                     bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
-                    # LOGO ASLI 100%
                     logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
                     logo_asli = logo_asli_match.group(2) if logo_asli_match else ""
                     
-                    # PEMBERSIHAN ATRIBUT YANG MENGHANCURKAN FOLDER TIVIMATE TELAH DIPERBAIKI (Pakai format ["\'][^"\']*["\'])
-                    clean_attrs = re.sub(r'(?i)\s*group-title=["\'][^"\']*["\']', '', bagian_atribut)
-                    clean_attrs = re.sub(r'(?i)\s*tvg-id=["\'][^"\']*["\']', '', clean_attrs)
-                    clean_attrs = re.sub(r'(?i)\s*tvg-name=["\'][^"\']*["\']', '', clean_attrs)
-                    clean_attrs = re.sub(r'(?i)\s*tvg-logo=["\'][^"\']*["\']', '', clean_attrs)
+                    # PEMBERSIH KATEGORI "SPORTS" NYASAR SECARA MUTLAK
+                    clean_attrs = bagian_atribut
+                    attrs_to_remove = ['group-title', 'tvg-id', 'tvg-name', 'tvg-logo']
+                    for attr in attrs_to_remove:
+                        clean_attrs = re.sub(rf'(?i)\s*{attr}=(["\']?)[^"\',]*\1', '', clean_attrs)
+                        clean_attrs = re.sub(rf'(?i)\s*{attr}=[^"\'\s,]+', '', clean_attrs)
                     clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
+
+                    bendera = get_flag(nama_asli_m3u)
 
                     for ch_id, nama_epg in epg_channels.items():
                         if is_match_akurat(nama_epg, nama_asli_m3u):
@@ -267,24 +306,25 @@ def main():
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
-                                        judul_akhir = f"🔴 {jam_str} - {event['title_display']}"
+                                        judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']}"
                                         stream_final = stream_url 
                                         order = 0
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
                                         if event["start_dt"].date() == now_wib.date():
-                                            judul_akhir = f"⏳ {jam_str} - {event['title_display']}"
+                                            judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
                                         else:
-                                            judul_akhir = f"⏳ Besok {jam_str} - {event['title_display']}"
+                                            judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                     
-                                    # LIMIT DUPLIKAT MAKSIMAL 3 PER ACARA
+                                    # LIMIT MAKSIMAL 3 DUPLIKAT PER ACARA
                                     counter_key = f"{ch_id}_{judul_akhir}"
                                     if event_counter.get(counter_key, 0) >= 3:
                                         continue
                                     event_counter[counter_key] = event_counter.get(counter_key, 0) + 1
                                         
+                                    # Merakit ulang tanpa ada unsur folder SPORTS nyasar
                                     baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
                                     
                                     block_final = list(channel_block)
