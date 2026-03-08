@@ -48,14 +48,7 @@ LOGO_DB = {
 }
 
 SPORT_KEYWORDS = ["sport", "bein", "spotv", "astro", "hub", "arena", "premier", "champions", "euro", "football", "soccer", "liga", "nba", "motogp", "badminton", "voli", "basket", "tennis", "f1", "ufc", "wwe"]
-
-# DITAMBAHKAN: "end of transmission", "off air", "to be announced", dll
-REPLAY_KEYWORDS = [
-    "highlight", "replay", "classic", "best of", "re-run", "siaran ulang", 
-    "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", 
-    "rewind", "recap", "recorded", "archives", "ulangan",
-    "end of transmission", "off air", "sign off", "no broadcast", "to be announced", "tba"
-]
+REPLAY_KEYWORDS = ["highlight", "replay", "classic", "best of", "re-run", "siaran ulang", "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", "rewind", "recap", "recorded", "archives", "ulangan", "end of transmission", "off air", "to be announced", "tba"]
 
 def get_league_logo(title):
     t_lower = title.lower()
@@ -73,28 +66,24 @@ def is_fresh_live(prog, title):
     if not title: return False
     t = title.lower()
     
-    # Memblokir acara Replay dan Jadwal Kosong (End of Transmission)
+    # Blokir Replay dan Waktu Kosong (End of transmission)
     if any(k in t for k in REPLAY_KEYWORDS): return False
     return True
 
 def is_match_akurat(epg_name, m3u_name):
-    """SISTEM ANTI-NGACAK KHUSUS ASTRO & BEIN"""
     if not epg_name or not m3u_name: return False
     epg = str(epg_name).lower().strip()
     m3u = str(m3u_name).lower().strip()
 
-    # 1. Hapus kualitas gambar & kata identitas negara
     hapus_kualitas = r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|id|my|sg)\b'
     epg_clean = re.sub(hapus_kualitas, '', epg).strip()
     m3u_clean = re.sub(hapus_kualitas, '', m3u).strip()
 
-    # 2. EKSTRAK ANGKA: Angka harus sama persis (Bein 1 wajib Bein 1)
     num_epg = re.findall(r'\d+', epg_clean)
     num_m3u = re.findall(r'\d+', m3u_clean)
     if num_epg != num_m3u: 
         return False
 
-    # 3. KUNCI SUB-CHANNEL ASTRO & BEIN (Agar tidak tertukar)
     if ('arena' in epg_clean and 'arena' not in m3u_clean) or ('arena' in m3u_clean and 'arena' not in epg_clean): 
         return False
     if ('cricket' in epg_clean and 'cricket' not in m3u_clean) or ('cricket' in m3u_clean and 'cricket' not in epg_clean): 
@@ -104,7 +93,6 @@ def is_match_akurat(epg_name, m3u_name):
     if ('xtra' in m3u_clean or 'extra' in m3u_clean) and not ('xtra' in epg_clean or 'extra' in epg_clean): 
         return False
 
-    # 4. Pencocokan akhir berdasarkan sisa huruf
     epg_huruf = re.sub(r'[^a-z]', '', epg_clean)
     m3u_huruf = re.sub(r'[^a-z]', '', m3u_clean)
 
@@ -115,33 +103,24 @@ def is_match_akurat(epg_name, m3u_name):
     return False
 
 def parse_epg_time(time_str):
-    """Mesin Konversi Zona Waktu Anti-Meleset"""
+    """Mesin Waktu Built-in Python yang Paling Akurat (Anti-Meleset)"""
     if not time_str: return None
     try:
         time_str = time_str.strip()
-        if ' ' in time_str:
-            parts = time_str.split(' ')
-            dt_str = parts[0][:14]
-            tz_str = parts[1] if len(parts) > 1 else "+0000"
+        if len(time_str) >= 20 and ('+' in time_str or '-' in time_str):
+            # Membaca format XMLTV seperti "20260308190000 +0800"
+            dt = datetime.strptime(time_str[:20], "%Y%m%d%H%M%S %z")
+            # Konversi mutlak ke WIB (+7)
+            dt_wib = dt.astimezone(timezone(timedelta(hours=7)))
+            return dt_wib.replace(tzinfo=None)
         else:
-            dt_str = time_str[:14]
-            tz_str = "+0000"
-            
-        dt = datetime.strptime(dt_str, "%Y%m%d%H%M%S")
-        
-        sign = 1 if tz_str[0] == '+' else -1
-        hours = int(tz_str[1:3])
-        minutes = int(tz_str[3:5])
-        offset = sign * timedelta(hours=hours, minutes=minutes)
-        
-        dt_utc = dt - offset
-        dt_wib = dt_utc + timedelta(hours=7)
-        
-        return dt_wib
+            dt = datetime.strptime(time_str[:14], "%Y%m%d%H%M%S")
+            return dt + timedelta(hours=7)
     except Exception:
         return None
 
 def bersihkan_judul_event(title):
+    # Bersihkan EPG dari embel-embel Live dan spasi berantakan
     bersih = re.sub(r'(?i)\b(live|langsung|\(l\)|\[l\]|live on)\b', '', title)
     bersih = re.sub(r'\s+', ' ', bersih).strip()
     bersih = re.sub(r'^[\-\:\,\|]\s*', '', bersih)
@@ -153,6 +132,7 @@ def main():
     
     jadwal_per_channel = {}
 
+    # BATAS UPCOMING: Jam 6 Pagi Esok Hari
     if now_wib.hour < 6:
         batas_waktu_upcoming = now_wib.replace(hour=6, minute=0, second=0, microsecond=0)
     else:
@@ -183,7 +163,6 @@ def main():
                 if ch_id not in epg_channels: continue
                     
                 title_raw = prog.findtext("title") or ""
-                
                 if not is_fresh_live(prog, title_raw): continue
                     
                 start_dt = parse_epg_time(prog.get("start"))
@@ -191,12 +170,12 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 
-                # PENGHANCUR MASA LALU
-                if stop_dt <= now_wib: 
-                    continue 
-                
+                # Buang Acara yang sudah Selesai (Past Events)
+                if stop_dt <= now_wib: continue 
+                # Buang acara yang lewat dari jam 6 pagi besok
                 if start_dt >= batas_waktu_upcoming: continue
 
+                # Toleransi Live: 5 Menit sebelum tayang
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
@@ -231,7 +210,7 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist Event Premium (Duplikat Backup Diizinkan)...")
+    print("3. Meracik Playlist Event Premium...")
     hasil_akhir = []
     channel_block = []
 
@@ -278,14 +257,20 @@ def main():
                                     jam_str = event["start_dt"].strftime('%H:%M WIB')
                                     logo_final = event["logo_url"] if event["logo_url"] else logo_asli
                                     
+                                    # PENENTUAN FORMAT NAMA SESUAI PERMINTAAN
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
-                                        judul_akhir = f"🔴 {jam_str} {event['title_display']}"
+                                        judul_akhir = f"🔴 {jam_str} - {event['title_display']}"
                                         stream_final = stream_url 
                                         order = 0
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
-                                        judul_akhir = f"⏳ {jam_str} {event['title_display']}"
+                                        # Jika tayangnya besok, tambahkan kata "Besok"
+                                        if event["start_dt"].date() == now_wib.date():
+                                            judul_akhir = f"⏳ {jam_str} - {event['title_display']}"
+                                        else:
+                                            judul_akhir = f"⏳ Besok {jam_str} - {event['title_display']}"
+                                            
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                         
