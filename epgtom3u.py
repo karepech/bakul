@@ -26,36 +26,24 @@ LINK_STANDBY = "https://bwifi.my.id/live.mp4"
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 # ==========================================
-# DATABASE LOGO LIGA (PREMIUM LOOK)
+# KATA KUNCI FILTERING
 # ==========================================
-LOGO_DB = {
-    "premier league": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png",
-    "epl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png",
-    "serie a": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Serie_A_logo_2022.svg/1200px-Serie_A_logo_2022.svg.png",
-    "laliga": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/LaLiga_logo_2023.svg/1200px-LaLiga_logo_2023.svg.png",
-    "la liga": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/LaLiga_logo_2023.svg/1200px-LaLiga_logo_2023.svg.png",
-    "bundesliga": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png",
-    "ligue 1": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ligue1.svg/1200px-Ligue1.svg.png",
-    "fa cup": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/FA_Cup_logo.svg/1200px-FA_Cup_logo.svg.png",
-    "champions league": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1200px-UEFA_Champions_League_logo_2.svg.png",
-    "europa league": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/UEFA_Europa_League_logo_2021.svg/1200px-UEFA_Europa_League_logo_2021.svg.png",
-    "nba": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/105px-National_Basketball_Association_logo.svg.png",
-    "motogp": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/MotoGP_logo.svg/1200px-MotoGP_logo.svg.png",
-    "f1": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png",
-    "formula 1": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png",
-    "badminton": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/BWF_logo_2012.svg/1200px-BWF_logo_2012.svg.png",
-    "bwf": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/BWF_logo_2012.svg/1200px-BWF_logo_2012.svg.png"
-}
-
 SPORT_KEYWORDS = ["sport", "bein", "spotv", "astro", "hub", "arena", "premier", "champions", "euro", "football", "soccer", "liga", "nba", "motogp", "badminton", "voli", "basket", "tennis", "f1", "ufc", "wwe"]
-REPLAY_KEYWORDS = ["highlight", "replay", "classic", "best of", "re-run", "siaran ulang", "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", "rewind", "recap", "recorded", "archives", "ulangan", "end of transmission", "off air", "to be announced", "tba"]
 
-def get_league_logo(title):
-    t_lower = title.lower()
-    for keyword, url in LOGO_DB.items():
-        if keyword in t_lower:
-            return url
-    return None
+# Kata kunci untuk memblokir acara sampah / siaran ulang / bukan pertandingan utuh
+JUNK_KEYWORDS = [
+    "highlight", "replay", "classic", "best of", "re-run", "siaran ulang", 
+    "magazine", "preview", "review", "delay", "encore", "rpt", "repeat", 
+    "rewind", "recap", "recorded", "archives", "ulangan", "end of transmission", 
+    "off air", "to be announced", "tba", "news", "studio", "pre-match", 
+    "post-match", "today", "update", "warm up", "ceremony", "talk", "show"
+]
+
+# Kata kunci olahraga yang tidak diinginkan (Akan diblokir)
+UNWANTED_SPORTS = [
+    "nba", "basketball", "basket", "tennis", "golf", "wwe", "ufc", 
+    "boxing", "snooker", "darts", "rugby", "cricket"
+]
 
 def is_sport(text):
     if not text: return False
@@ -66,7 +54,9 @@ def is_fresh_live(prog, title):
     if not title: return False
     t = title.lower()
     
-    if any(k in t for k in REPLAY_KEYWORDS): return False
+    # Blokir junk dan olahraga yang tidak diinginkan
+    if any(k in t for k in JUNK_KEYWORDS): return False
+    if any(k in t for k in UNWANTED_SPORTS): return False
     return True
 
 def is_match_akurat(epg_name, m3u_name):
@@ -91,6 +81,8 @@ def is_match_akurat(epg_name, m3u_name):
         return False
     if ('xtra' in m3u_clean or 'extra' in m3u_clean) and not ('xtra' in epg_clean or 'extra' in epg_clean): 
         return False
+    if ('now' in epg_clean) != ('now' in m3u_clean): 
+        return False
 
     epg_huruf = re.sub(r'[^a-z]', '', epg_clean)
     m3u_huruf = re.sub(r'[^a-z]', '', m3u_clean)
@@ -102,7 +94,6 @@ def is_match_akurat(epg_name, m3u_name):
     return False
 
 def parse_epg_time(time_str):
-    """Sistem Konversi Waktu Anti-Meleset"""
     if not time_str: return None
     try:
         time_str = time_str.strip()
@@ -127,10 +118,11 @@ def main():
     epg_channels = {}
     jadwal_per_channel = {}
 
-    if now_wib.hour < 6:
-        batas_waktu_upcoming = now_wib.replace(hour=6, minute=0, second=0, microsecond=0)
+    # SIKLUS 24 JAM (Jam 05:00 s/d 04:59 esok harinya)
+    if now_wib.hour < 5:
+        batas_waktu_upcoming = now_wib.replace(hour=5, minute=0, second=0, microsecond=0)
     else:
-        batas_waktu_upcoming = (now_wib + timedelta(days=1)).replace(hour=6, minute=0, second=0, microsecond=0)
+        batas_waktu_upcoming = (now_wib + timedelta(days=1)).replace(hour=5, minute=0, second=0, microsecond=0)
 
     print("1. Mengunduh dan memproses daftar EPG...")
     for url in EPG_URLS:
@@ -156,6 +148,7 @@ def main():
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
                     
+                ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
                 if not is_fresh_live(prog, title_raw): continue
                     
@@ -164,28 +157,44 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 
-                # SISTEM PENGHAPUS OTOMATIS: Dibuang kalau jam acara sudah lewat
+                # Buang acara yang sudah selesai atau di luar batas 24 jam (05:00 pagi)
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
+
+                # ========================================================
+                # FILTER DURASI CERDAS (Mencegah News & Highlight Masuk)
+                # ========================================================
+                durasi_menit = (stop_dt - start_dt).total_seconds() / 60
+                
+                # Buang absolut jika di bawah 30 menit
+                if durasi_menit < 30: 
+                    continue 
+
+                # Aturan Khusus Sepak Bola (Minimal 90 menit, kita pakai 85 untuk toleransi)
+                bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united']
+                if any(k in ch_name.lower() or k in title_raw.lower() for k in bola_keywords):
+                    if durasi_menit < 85:
+                        continue
+                # ========================================================
 
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
                 judul_bersih = bersihkan_judul_event(title_raw)
-                logo_url_liga = get_league_logo(title_raw)
                 
                 if ch_id not in jadwal_per_channel:
                     jadwal_per_channel[ch_id] = {}
                 
-                unik_epg_event = f"{start_dt.strftime('%Y%m%d%H%M')}_{judul_bersih.lower()}"
+                # KUNCI ANTI-DUPLIKAT MUTLAK: Menggunakan Jam Tayang saja!
+                # Jika ada 2 nama beda di jam yang sama, script hanya ambil 1
+                unik_epg_event = start_dt.strftime('%Y%m%d%H%M')
                 
                 if unik_epg_event not in jadwal_per_channel[ch_id]:
                     jadwal_per_channel[ch_id][unik_epg_event] = {
                         "title_display": judul_bersih,
                         "start_dt": start_dt,
-                        "stop_dt": stop_dt, # <--- Menyimpan jam selesai
-                        "is_live": is_live,
-                        "logo_url": logo_url_liga 
+                        "stop_dt": stop_dt,
+                        "is_live": is_live
                     }
                 else:
                     if is_live: 
@@ -203,7 +212,7 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist Event Premium...")
+    print("3. Meracik Playlist Event Premium (Logo Asli Channel & Format Jam Lengkap)...")
     hasil_akhir = []
     channel_block = []
 
@@ -229,6 +238,7 @@ def main():
                     bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
+                    # Sedot logo TV asli M3U Anda secara mutlak
                     logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
                     if logo_asli_match:
                         logo_asli = logo_asli_match.group(2)
@@ -236,6 +246,7 @@ def main():
                         logo_asli_match_no_quotes = re.search(r'(?i)tvg-logo=([^"\'\s]+)', bagian_atribut)
                         logo_asli = logo_asli_match_no_quotes.group(1) if logo_asli_match_no_quotes else ""
                     
+                    # Bersihkan atribut
                     clean_attrs = re.sub(r'(?i)\s*group-title=(["\']?)[^"\'\s]+\1', '', bagian_atribut)
                     clean_attrs = re.sub(r'(?i)\s*tvg-id=(["\']?)[^"\'\s]+\1', '', clean_attrs)
                     clean_attrs = re.sub(r'(?i)\s*tvg-name=(["\']?)[^"\'\s]+\1', '', clean_attrs)
@@ -248,12 +259,9 @@ def main():
                                 
                                 for unik_key, event in jadwal_per_channel[ch_id].items():
                                     
-                                    # MENYATUKAN JAM MULAI & JAM SELESAI
                                     jam_mulai = event["start_dt"].strftime('%H:%M')
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
-                                    
-                                    logo_final = event["logo_url"] if event["logo_url"] else logo_asli
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
@@ -262,6 +270,7 @@ def main():
                                         order = 0
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
+                                        # Jika tayangnya besok, tambahkan kata "Besok"
                                         if event["start_dt"].date() == now_wib.date():
                                             judul_akhir = f"⏳ {jam_str} - {event['title_display']}"
                                         else:
@@ -270,7 +279,7 @@ def main():
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                         
-                                    baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
+                                    baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
                                     
                                     block_final = list(channel_block)
                                     block_final[extinf_idx] = baris_extinf
