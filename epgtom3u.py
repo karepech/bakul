@@ -16,7 +16,7 @@ EPG_URLS = [
 
 M3U_URLS = [
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u"
 ]
 
 OUTPUT_FILE = "live_matches_only.m3u"
