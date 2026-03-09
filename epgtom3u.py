@@ -89,16 +89,12 @@ def is_match_akurat(epg_name, m3u_name):
     if 'astro' in e or 'astro' in m:
         if ('astro' in e) != ('astro' in m): return False
         
-        # Urutan penting: dari yang terpanjang ke terpendek
         subs = ['arena bola 2', 'arena bola', 'arena', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport 5', 'supersport', 'cricket', 'badminton', 'football', 'golf', 'grandstand', 'premier']
         
         found_e = next((s for s in subs if s in e), 'none')
         found_m = next((s for s in subs if s in m), 'none')
         
-        # Jika sub-channel beda (misal "arena bola" vs "arena"), TOLAK!
         if found_e != found_m: return False
-        
-        # Jika angka channel beda, TOLAK!
         if num_e != num_m: return False
         return True
 
@@ -106,12 +102,10 @@ def is_match_akurat(epg_name, m3u_name):
     if 'bein' in e or 'bein' in m:
         if ('bein' in e) != ('bein' in m): return False
         
-        # Jika tidak ada angka, asumsikan beIN 1
         ne = num_e[0] if num_e else '1'
         nm = num_m[0] if num_m else '1'
         if ne != nm: return False
         
-        # Pisahkan xtra/extra
         if ('xtra' in e or 'extra' in e) != ('xtra' in m or 'extra' in m): return False
         return True
 
@@ -200,7 +194,7 @@ def main():
                 # FILTER PEMBANTAI REPLAY BOLA PAGI/SIANG (Jam 05:00 - 14:59 WIB)
                 # ==========================================================
                 jam_mulai_wib = start_dt.hour
-                if 5 <= jam_mulai_wib < 15: # Jam 5 Pagi sampai Jam 3 Sore
+                if 5 <= jam_mulai_wib < 15: 
                     bola_pagi_sah = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx']
                     bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v', 'afc', 'j-league', 'j1', 'k-league', 'soccer', 'football']
                     
@@ -208,9 +202,7 @@ def main():
                     non_bola_sah = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
                     is_non_bola_sah = any(k in title_raw.lower() for k in non_bola_sah)
 
-                    # Jika terdeteksi sepak bola (bukan badminton/voli)...
                     if is_football and not is_non_bola_sah:
-                        # ...dan BUKAN bola Amerika, berarti itu REPLAY EROPA/ASIA! -> BAKAR!
                         if not any(k in title_raw.lower() for k in bola_pagi_sah):
                             continue 
 
@@ -255,10 +247,9 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist (Bendera Otomatis & Pembersih Folder)...")
+    print("3. Meracik Playlist (Unlimited Backups & Pembersih Folder)...")
     hasil_akhir = []
     channel_block = []
-    event_counter = {}
 
     for line in m3u_lines:
         baris = line.strip()
@@ -291,9 +282,7 @@ def main():
                     clean_attrs = bagian_atribut
                     attrs_to_remove = ['group-title', 'tvg-group', 'tvg-id', 'tvg-name', 'tvg-logo']
                     for attr in attrs_to_remove:
-                        # Hapus yang menggunakan tanda kutip ("SPORTS" atau 'SPORTS')
                         clean_attrs = re.sub(rf'(?i)\s*{attr}=(["\']).*?\1', '', clean_attrs)
-                        # Hapus yang TANPA tanda kutip (SPORTS)
                         clean_attrs = re.sub(rf'(?i)\s*{attr}=[^"\'\s,]+', '', clean_attrs)
                     clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
 
@@ -322,23 +311,17 @@ def main():
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                     
-                                    # LIMIT MAKSIMAL 3 DUPLIKAT PER ACARA
-                                    counter_key = f"{ch_id}_{judul_akhir}"
-                                    if event_counter.get(counter_key, 0) >= 3:
-                                        continue
-                                    event_counter[counter_key] = event_counter.get(counter_key, 0) + 1
+                                    # BATASAN MAKSIMAL 3 DUPLIKAT TELAH DIHAPUS (UNLIMITED BACKUP)
                                         
                                     baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
                                     
-                                    # ====================================================================
-                                    # PEMBUNUH TAG #EXTGRP (INI BIANG KEROK FOLDER "SPORTS" MUNCUL TERUS!)
-                                    # ====================================================================
+                                    # PEMBUNUH TAG #EXTGRP 
                                     block_final = []
                                     for tag in channel_block:
                                         if tag.upper().startswith("#EXTINF"):
                                             block_final.append(baris_extinf)
                                         elif tag.upper().startswith("#EXTGRP"):
-                                            pass # BAKAR BARIS EXTGRP LAMA!!
+                                            pass 
                                         else:
                                             block_final.append(tag)
                                     
@@ -368,7 +351,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (Dengan Unlimited Backups)!")
 
 if __name__ == "__main__":
     main()
