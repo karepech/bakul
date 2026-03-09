@@ -17,7 +17,7 @@ EPG_URLS = [
     ""
 ]
 
-M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
+M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u","https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
