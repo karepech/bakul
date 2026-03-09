@@ -6,18 +6,19 @@ import gzip
 import io
 
 # ==========================================
-# KONFIGURASI MULTI-EPG & M3U
+# KONFIGURASI MULTI-EPG & M3U (SUDAH DIPERBAIKI)
 # ==========================================
 EPG_URLS = [
-
-         "",                   
-    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",            
-    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml", 
-    "https://warningfm.github.io/x1/epg/guide.xml.gz",                                         
-    ""
+    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
+    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",            
+    "https://warningfm.github.io/x1/epg/guide.xml.gz"                                                  
 ]
 
-M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u","https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
+M3U_URLS = [
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
+]
+
 OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
@@ -266,13 +267,20 @@ def main():
         except Exception as e:
             continue
 
-    print("\n2. Mengunduh M3U master Anda...")
-    try:
-        r_m3u = requests.get(M3U_URL, timeout=30)
-        r_m3u.raise_for_status()
-        m3u_lines = r_m3u.text.splitlines()
-    except Exception as e:
-        print(f"❌ Gagal mengambil file M3U: {e}")
+    print("\n2. Menggabungkan file Multi M3U master Anda...")
+    m3u_lines = []
+    for url in M3U_URLS:
+        print(f" -> Sedot M3U: {url.split('/')[-1]} ...")
+        try:
+            r_m3u = requests.get(url, timeout=30)
+            r_m3u.raise_for_status()
+            m3u_lines.extend(r_m3u.text.splitlines())
+        except Exception as e:
+            print(f"❌ Gagal menarik M3U dari {url}: {e}")
+            continue
+
+    if not m3u_lines:
+        print("❌ Semua file M3U gagal diunduh. Script Berhenti.")
         return
 
     print("3. Meracik Playlist (Live: FULL BACKUP | Upcoming: MUTLAK 1 WAKIL)...")
@@ -287,135 +295,3 @@ def main():
         baris = line.strip()
         if not baris: continue
         if baris.upper().startswith("#EXTM3U"): continue
-
-        if baris.startswith("#"):
-            channel_block.append(baris)
-        else:
-            stream_url = baris
-            extinf_idx = -1
-            
-            for i, tag in enumerate(channel_block):
-                if tag.upper().startswith("#EXTINF"):
-                    extinf_idx = i
-                    break
-            
-            if extinf_idx != -1:
-                extinf = channel_block[extinf_idx]
-                if "," in extinf:
-                    bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
-                    nama_asli_m3u = nama_asli_m3u.strip()
-                    
-                    logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
-                    logo_asli = logo_asli_match.group(2) if logo_asli_match else ""
-                    
-                    # PEMBERSIH MUTLAK FOLDER "SPORTS"
-                    clean_attrs = bagian_atribut
-                    attrs_to_remove = ['group-title', 'tvg-group', 'tvg-id', 'tvg-name', 'tvg-logo']
-                    for attr in attrs_to_remove:
-                        clean_attrs = re.sub(rf'(?i)\s*{attr}=(["\']).*?\1', '', clean_attrs)
-                        clean_attrs = re.sub(rf'(?i)\s*{attr}=[^"\'\s,]+', '', clean_attrs)
-                    clean_attrs = re.sub(r'\s+', ' ', clean_attrs).strip()
-
-                    bendera = get_flag(nama_asli_m3u)
-
-                    for ch_id, nama_epg in epg_channels.items():
-                        if is_match_akurat(nama_epg, nama_asli_m3u):
-                            if ch_id in jadwal_per_channel:
-                                
-                                for event in jadwal_per_channel[ch_id]:
-                                    jam_mulai = event["start_dt"].strftime('%H:%M')
-                                    jam_selesai = event["stop_dt"].strftime('%H:%M')
-                                    jam_str = f"{jam_mulai}-{jam_selesai} WIB"
-                                    
-                                    # ===================================================
-                                    # JIKA LIVE: MUNCULKAN SELURUH CHANNEL & BACKUP 100%
-                                    # ===================================================
-                                    if event["is_live"]:
-                                        grup_baru = "🔴 LIVE EVENT SPORTS"
-                                        judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
-                                        stream_final = stream_url 
-                                        order = 0
-                                        
-                                        baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
-                                        
-                                        block_final = []
-                                        for tag in channel_block:
-                                            if tag.upper().startswith("#EXTINF"):
-                                                block_final.append(baris_extinf)
-                                            elif tag.upper().startswith("#EXTGRP"): pass 
-                                            else: block_final.append(tag)
-                                        
-                                        hasil_akhir.append({
-                                            "kategori_order": order,
-                                            "start_time": event["start_dt"].timestamp(),
-                                            "title_sort": event['title_display'],
-                                            "baris_lengkap": block_final + [stream_final]
-                                        })
-                                        
-                                    # ===================================================
-                                    # JIKA UPCOMING: MUTLAK HANYA BOLEH 1 WAKIL!
-                                    # ===================================================
-                                    else:
-                                        grup_baru = "📅 UPCOMING EVENT"
-                                        if event["start_dt"].date() == now_wib.date():
-                                            judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
-                                        else:
-                                            judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
-                                        stream_final = LINK_UPCOMING 
-                                        order = 1
-                                        
-                                        # Kunci 1: Cegah 1 Channel masuk 2 kali untuk acara yg sama
-                                        kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
-                                        
-                                        # Kunci 2: Cegah Acara yg sama diulang-ulang di berbagai channel
-                                        t_norm = event['title_display'].lower()
-                                        t_norm = re.sub(r'\b(vs|v)\b', '', t_norm)
-                                        t_norm = re.sub(r'[^a-z0-9]', '', t_norm)
-                                        kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm[:10]}"
-                                        
-                                        # Jika Kunci 1 ATAU Kunci 2 sudah ada, LEWATI (Buang Duplikatnya!)
-                                        if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara:
-                                            continue 
-                                            
-                                        upcoming_tracker_backup.add(kunci_backup)
-                                        upcoming_tracker_acara.add(kunci_acara)
-                                        
-                                        baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
-                                        
-                                        block_final = []
-                                        for tag in channel_block:
-                                            if tag.upper().startswith("#EXTINF"):
-                                                block_final.append(baris_extinf)
-                                            elif tag.upper().startswith("#EXTGRP"): pass 
-                                            else: block_final.append(tag)
-                                        
-                                        hasil_akhir.append({
-                                            "kategori_order": order,
-                                            "start_time": event["start_dt"].timestamp(),
-                                            "title_sort": event['title_display'],
-                                            "baris_lengkap": block_final + [stream_final]
-                                        })
-            
-            channel_block = []
-
-    def sorting_logic(x):
-        return (x["kategori_order"], x["start_time"], x["title_sort"])
-
-    print("4. Menyortir Berdasarkan Jam Tayang & Menyimpan File M3U Final...")
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write('#EXTM3U name="🔴 OLAHRAGA AKTIF"\n')
-        
-        if not hasil_akhir:
-            f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL\n')
-            f.write(f'{LINK_STANDBY}\n')
-        else:
-            hasil_akhir.sort(key=sorting_logic)
-            
-            for item in hasil_akhir:
-                for blk in item["baris_lengkap"]:
-                    f.write(blk + "\n")
-
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (SUPER BERSIH)!")
-
-if __name__ == "__main__":
-    main()
