@@ -91,7 +91,6 @@ def is_match_akurat(epg_name, m3u_name):
     # KUNCI ASTRO
     if 'astro' in e_clean or 'astro' in m_clean:
         if ('astro' in e_clean) != ('astro' in m_clean): return False
-        # Pengunci Sub-Channel Astro (Cegah Arena Bola campur Arena Biasa)
         subs = ['arena bola 2', 'arena bola', 'arena', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport 5', 'supersport', 'cricket', 'badminton', 'football', 'golf', 'grandstand', 'premier']
         found_e = next((s for s in subs if s in e_clean), 'none')
         found_m = next((s for s in subs if s in m_clean), 'none')
@@ -117,7 +116,7 @@ def is_match_akurat(epg_name, m3u_name):
         if ('now' in e_clean) != ('now' in m_clean): return False
         return True
 
-    # KUNCI UMUM (Cegah Bug String Kosong penyebab nyasar massal)
+    # KUNCI UMUM
     e_alpha = re.sub(r'[^a-z0-9]', '', e_clean)
     m_alpha = re.sub(r'[^a-z0-9]', '', m_clean)
 
@@ -167,19 +166,14 @@ def is_valid_time(start_dt, title, ch_name):
     non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
     is_non_bola = any(k in t for k in non_bola)
 
-    # ATURAN SEPAK BOLA
     if is_football and not is_non_bola:
         if is_eropa:
-            # Eropa dilarang tayang jam 05:00 s/d 18:29 WIB
             if 5.0 <= waktu_float < 18.5: return False
         elif is_asia:
-            # Asia dilarang tayang jam 05:00 s/d 14:59 WIB
             if 5.0 <= waktu_float < 15.0: return False
         elif is_amerika:
-            # Amerika Bebas Tayang Pagi
             pass
         else:
-            # Jika liga tidak terdeteksi namanya (tapi jelas ini bola), buang jika tayang jam 09:00 s/d 14:59 WIB (Jam rawan Replay)
             if 9.0 <= waktu_float < 15.0: return False
 
     return True
@@ -228,11 +222,9 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Uji Hukum Waktu Liga Dunia
                 if not is_valid_time(start_dt, title_raw, ch_name):
                     continue
 
-                # Uji Durasi Sepak Bola (Wajib >= 85 menit)
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
                 if durasi_menit < 30: continue 
 
@@ -271,9 +263,14 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist (Unlimited Backups, Bebas Kategori Spam)...")
+    print("3. Meracik Playlist (Fitur: Smart Load Balancer)...")
     hasil_akhir = []
     channel_block = []
+    
+    # =========================================================
+    # TRACKER PENGHEMAT BEBAN KHUSUS UPCOMING EVENT
+    # =========================================================
+    upcoming_tracker = set()
 
     for line in m3u_lines:
         baris = line.strip()
@@ -300,7 +297,6 @@ def main():
                     logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
                     logo_asli = logo_asli_match.group(2) if logo_asli_match else ""
                     
-                    # PEMBERSIH MUTLAK FOLDER "SPORTS"
                     clean_attrs = bagian_atribut
                     attrs_to_remove = ['group-title', 'tvg-group', 'tvg-id', 'tvg-name', 'tvg-logo']
                     for attr in attrs_to_remove:
@@ -319,11 +315,36 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
+                                    # ===================================================
+                                    # LOGIKA 1: JIKA LIVE, TAMPILKAN 100% LINK BACKUP!
+                                    # ===================================================
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
                                         judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']}"
                                         stream_final = stream_url 
                                         order = 0
+                                        
+                                        baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
+                                        
+                                        block_final = []
+                                        for tag in channel_block:
+                                            if tag.upper().startswith("#EXTINF"):
+                                                block_final.append(baris_extinf)
+                                            elif tag.upper().startswith("#EXTGRP"):
+                                                pass 
+                                            else:
+                                                block_final.append(tag)
+                                        
+                                        hasil_akhir.append({
+                                            "kategori_order": order,
+                                            "start_time": event["start_dt"].timestamp(),
+                                            "title_sort": event['title_display'],
+                                            "baris_lengkap": block_final + [stream_final]
+                                        })
+                                        
+                                    # ===================================================
+                                    # LOGIKA 2: JIKA UPCOMING, CUMA BOLEH 1 LINK WAKILAN!
+                                    # ===================================================
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
                                         if event["start_dt"].date() == now_wib.date():
@@ -332,27 +353,34 @@ def main():
                                             judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
                                         stream_final = LINK_UPCOMING 
                                         order = 1
-                                    
-                                    # BATASAN DUPLIKAT DIHAPUS (SEMUA BACKUP MASUK)
                                         
-                                    baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
-                                    
-                                    # BAKAR TAG #EXTGRP PENYEBAB FOLDER HANTU
-                                    block_final = []
-                                    for tag in channel_block:
-                                        if tag.upper().startswith("#EXTINF"):
-                                            block_final.append(baris_extinf)
-                                        elif tag.upper().startswith("#EXTGRP"):
-                                            pass 
-                                        else:
-                                            block_final.append(tag)
-                                    
-                                    hasil_akhir.append({
-                                        "kategori_order": order,
-                                        "start_time": event["start_dt"].timestamp(),
-                                        "title_sort": event['title_display'],
-                                        "baris_lengkap": block_final + [stream_final]
-                                    })
+                                        # KUNCI UNIK: Gabungan Waktu + Judul Acara
+                                        kunci_unik_upcoming = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{event['title_display']}"
+                                        
+                                        # Jika acara ini sudah pernah dimasukkan ke Upcoming, LANGSUNG LOMPATI (Skip)
+                                        if kunci_unik_upcoming in upcoming_tracker:
+                                            continue
+                                            
+                                        # Jika belum ada, masukkan ke daftar tracker agar tidak diduplikat lagi
+                                        upcoming_tracker.add(kunci_unik_upcoming)
+                                        
+                                        baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
+                                        
+                                        block_final = []
+                                        for tag in channel_block:
+                                            if tag.upper().startswith("#EXTINF"):
+                                                block_final.append(baris_extinf)
+                                            elif tag.upper().startswith("#EXTGRP"):
+                                                pass 
+                                            else:
+                                                block_final.append(tag)
+                                        
+                                        hasil_akhir.append({
+                                            "kategori_order": order,
+                                            "start_time": event["start_dt"].timestamp(),
+                                            "title_sort": event['title_display'],
+                                            "baris_lengkap": block_final + [stream_final]
+                                        })
             
             channel_block = []
 
@@ -373,7 +401,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (Bebas Bug!)")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (Telah di-optimasi super ringan)!")
 
 if __name__ == "__main__":
     main()
