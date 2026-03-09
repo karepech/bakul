@@ -69,7 +69,6 @@ def is_allowed_sport(title, ch_name):
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
     
-    # Jika ada di whitelist ATAU merupakan laga resmi (ada VS)
     if any(h in t for h in halal) or ' vs ' in t or ' v ' in t:
         return True
         
@@ -263,13 +262,9 @@ def main():
         print(f"❌ Gagal mengambil file M3U: {e}")
         return
 
-    print("3. Meracik Playlist (Fitur: Smart Load Balancer)...")
+    print("3. Meracik Playlist (Live: All Channels, Upcoming: Strictly 1)...")
     hasil_akhir = []
     channel_block = []
-    
-    # =========================================================
-    # TRACKER PENGHEMAT BEBAN KHUSUS UPCOMING EVENT
-    # =========================================================
     upcoming_tracker = set()
 
     for line in m3u_lines:
@@ -315,12 +310,13 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    # ===================================================
-                                    # LOGIKA 1: JIKA LIVE, TAMPILKAN 100% LINK BACKUP!
-                                    # ===================================================
+                                    # =============================================================
+                                    # JIKA LIVE: TAMPILKAN SEMUA CHANNEL & BACKUP (TanPA BATASAN)
+                                    # =============================================================
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
-                                        judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']}"
+                                        # NAMA CHANNEL M3U DITAMBAHKAN AGAR TIVIMATE TIDAK MERGING (NUMPUK)
+                                        judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
                                         stream_final = stream_url 
                                         order = 0
                                         
@@ -330,10 +326,8 @@ def main():
                                         for tag in channel_block:
                                             if tag.upper().startswith("#EXTINF"):
                                                 block_final.append(baris_extinf)
-                                            elif tag.upper().startswith("#EXTGRP"):
-                                                pass 
-                                            else:
-                                                block_final.append(tag)
+                                            elif tag.upper().startswith("#EXTGRP"): pass 
+                                            else: block_final.append(tag)
                                         
                                         hasil_akhir.append({
                                             "kategori_order": order,
@@ -342,9 +336,9 @@ def main():
                                             "baris_lengkap": block_final + [stream_final]
                                         })
                                         
-                                    # ===================================================
-                                    # LOGIKA 2: JIKA UPCOMING, CUMA BOLEH 1 LINK WAKILAN!
-                                    # ===================================================
+                                    # =============================================================
+                                    # JIKA UPCOMING: MUTLAK HANYA 1 ITEM WAKILAN SAJA
+                                    # =============================================================
                                     else:
                                         grup_baru = "📅 UPCOMING EVENT"
                                         if event["start_dt"].date() == now_wib.date():
@@ -354,14 +348,15 @@ def main():
                                         stream_final = LINK_UPCOMING 
                                         order = 1
                                         
-                                        # KUNCI UNIK: Gabungan Waktu + Judul Acara
-                                        kunci_unik_upcoming = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{event['title_display']}"
+                                        # KUNCI UNIK EKSTREM (Abaikan spasi, kata vs/v, agar tulisan yg beda dikit tetap dianggap sama)
+                                        t_norm = event['title_display'].lower()
+                                        t_norm = re.sub(r'\b(vs|v)\b', '', t_norm)
+                                        t_norm = re.sub(r'[^a-z0-9]', '', t_norm)
+                                        kunci_unik_upcoming = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
                                         
-                                        # Jika acara ini sudah pernah dimasukkan ke Upcoming, LANGSUNG LOMPATI (Skip)
+                                        # Jika sudah pernah ditulis, lewati (skip)
                                         if kunci_unik_upcoming in upcoming_tracker:
                                             continue
-                                            
-                                        # Jika belum ada, masukkan ke daftar tracker agar tidak diduplikat lagi
                                         upcoming_tracker.add(kunci_unik_upcoming)
                                         
                                         baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_asli}", {judul_akhir}'
@@ -370,10 +365,8 @@ def main():
                                         for tag in channel_block:
                                             if tag.upper().startswith("#EXTINF"):
                                                 block_final.append(baris_extinf)
-                                            elif tag.upper().startswith("#EXTGRP"):
-                                                pass 
-                                            else:
-                                                block_final.append(tag)
+                                            elif tag.upper().startswith("#EXTGRP"): pass 
+                                            else: block_final.append(tag)
                                         
                                         hasil_akhir.append({
                                             "kategori_order": order,
@@ -401,7 +394,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (Telah di-optimasi super ringan)!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik!")
 
 if __name__ == "__main__":
     main()
