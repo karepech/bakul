@@ -12,7 +12,7 @@ EPG_URLS = [
 
          "",                   
     "",            
-    "https://epg.pw/xmltv/epg_lite.xml.gz", 
+    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml", 
     "",                                         
     ""
 ]
