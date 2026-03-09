@@ -135,12 +135,6 @@ https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&chann
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
 https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="mjh-tvnz-duke-plus1" tvg-name="TVNZ DUKE+1" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVwKYXcSz09ufcG77IlHkiT_pI7AF1BhrTg&s", 📺 🔴 01:00-05:30 WIB - Milano Cortina Winter Paralympics [tvN Sports]
-#https://setting.qkim.net/alive/api/url.m3u8?m=url&s=tving&i=C51404&q=SD&apikey=TQDUYRMX4P&u=Y
-EXTINF:-1 group-title="WORLD SPORTS" tvg-logo="",SN 1
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="mjh-tvnz-duke-plus1" tvg-name="TVNZ DUKE+1" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVwKYXcSz09ufcG77IlHkiT_pI7AF1BhrTg&s", 📺 🔴 01:00-05:30 WIB - Milano Cortina Winter Paralympics [tvN Sports]
-#https://setting.qkim.net/alive/api/url.m3u8?m=url&s=tving&i=C51404&q=SD&apikey=TQDUYRMX4P&u=Y
-EXTINF:-1 group-title="WORLD SPORTS" tvg-logo="",SN 1
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FanDuel Racing.us" tvg-name="FanDuel Racing.us" tvg-logo="https://i.imgur.com/84lMjSj.png", 📺 🔴 01:00-07:00 WIB - Racing! International [FanDuel Racing]
 https://d3ehq1uaxory6w.cloudfront.net/out/v1/35c05f080f4e49a4b4eb031b5a14e505/TVG2index_2.m3u8
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FanDuel Racing.us" tvg-name="FanDuel Racing.us" tvg-logo="", 📺 🔴 01:00-07:00 WIB - Racing! International [FANDUEL RACING]
@@ -1526,32 +1520,6 @@ https://qw.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/cllekigzzn/out/v
 ##KODIPROP:inputstream.adaptive.license_key=https://vidd.semar.my.id/cobaduarr.mpd?id=9182&type=drm
 ##KODIPROP:inputstream.adaptive.license_key=f5edbe4006617c5a576a61b592437469:b8c47aa4f0ff958aaac5e655845c7834
 https://manamedian.serv00.net/antaubospanel.php/manifest.mpd?id=9182&type=dash
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://i.ibb.co.com/4s30xbj/fxspmx.png", 📺 🔴 04:30-05:30 WIB - MotoGP [FOX SPORTS 🇲🇽]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx1UKe022fvF_pNu1QchKqKX8fM4yvF3YrS_rERpPDfSuJzUE1qoEwLbF6OJmjziBSIUOhDF6uJTJ5UeY9EJDWdfVJDtslOWyDD7BsUlemCmwMKSt-EvAMSaaijGUrwvEgWZjYQD1wpFuc-08s3dDyr1Vi-S6x7PeExiTDnlTzcqIyBej9e63CNTjt2B_4/s700/FOX%20SPORTS.png", 📺 🔴 04:30-05:30 WIB - MotoGP [FOX SPORTS]
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 radio="false" group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/eA1hiR0.png", 📺 🔴 04:30-05:30 WIB - MotoGP [Fox Sports 506 FHD]
-https://7pal.short.gy/fox506au
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://i.ibb.co.com/4s30xbj/fxspmx.png", 📺 🔴 04:30-05:30 WIB - MotoGP: Thailand Race [FOX SPORTS 🇲🇽]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx1UKe022fvF_pNu1QchKqKX8fM4yvF3YrS_rERpPDfSuJzUE1qoEwLbF6OJmjziBSIUOhDF6uJTJ5UeY9EJDWdfVJDtslOWyDD7BsUlemCmwMKSt-EvAMSaaijGUrwvEgWZjYQD1wpFuc-08s3dDyr1Vi-S6x7PeExiTDnlTzcqIyBej9e63CNTjt2B_4/s700/FOX%20SPORTS.png", 📺 🔴 04:30-05:30 WIB - MotoGP: Thailand Race [FOX SPORTS]
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 radio="false" group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/eA1hiR0.png", 📺 🔴 04:30-05:30 WIB - MotoGP: Thailand Race [Fox Sports 506 FHD]
-https://7pal.short.gy/fox506au
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Hub Sports 2 HD.sg" tvg-name="Hub Sports 2 HD.sg" tvg-logo="https://poster.starhubgo.com/Linear_channels2/202_1920x1080_HTV.png?w=272", 📺 🔴 04:30-06:30 WIB - Ryukyu Golden Kings vs Taoyuan Pauian Pilots [Hub Sports 2 HD]
 https://012v4.goiptv.us.ci/stream/starhub/hubsports2hd/
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Hub.Sports.2.HD.sg" tvg-name="Hub Sports 2 HD" tvg-logo="https://poster.starhubgo.com/Linear_channels2/202_1920x1080_HTV.png?w=272", 📺 🔴 04:30-06:30 WIB - Ryukyu Golden Kings vs Taoyuan Pauian Pilots [Hub Sports 2 HD]
@@ -2973,16 +2941,107 @@ https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/
 https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/tepjqej1ys/out/v1/c9c9159baee749a19612b1598495859a/cenc.mpd
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Fox Sports 2.us" tvg-name="Fox Sports 2.us" tvg-logo="", 📺 🔴 05:00-06:00 WIB - Snowmobile Racing [FOX SPORTS 2]
 http://dragon1977.com:80/047306b75f/b5a06cc482d6/469343
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 ⏳ 05:30-08:10 WIB - PL: Man Utd vs Crystal Palace
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 🔴 05:30-08:10 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2-e6JN1iocQj8_f6bi_xX5bXN3OKNTjGoiaJzudwDVwhHgkaq-7-uKC2HSCvjVkEW1hXi6eVgtPfDr5P5lVY3STpYpulKFNac8PaU00peSY69hhOvN7gF3zYIsL6VYEMECzi9aysAm7JOqJ8lfZIKKuCs_9me7VCU9H1VGI19BNCQoRz3T0zJK9tvFwPP/s700/ONE%20SPORTS%20HD.png", 📺 ⏳ 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Grandstand.my" tvg-name="Astro Grandstand.my" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Grandstand.my" tvg-name="Astro Grandstand.my" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 🔴 05:30-08:10 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro.Grandstand.my" tvg-name="Astro Grandstand" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_PW_3S536pZLM27dgeANjMf9n_v52KtdKqmdeKgUbBkZlX9pSeIITBU0njryIbhem7tDPjAQPZrrF7ug1tA2Me-4uBz5p7G8YhF-VUPPSMfg8GXpiwU1Ci_TVomp5CtJJETdHgndJmXdkx4mVasucdZzhC561IKo4eZy3mfM8G9KXkz2x3ZbuRFyNGCkf/s700/ASTRO%20GRANDSTAND.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png", 🇲🇾 🔴 05:30-08:10 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Grandstand.my" tvg-name="Astro Grandstand.my" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Grandstand.my" tvg-name="Astro Grandstand.my" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png", 🇲🇾 🔴 05:30-08:10 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro.Grandstand.my" tvg-name="Astro Grandstand" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png", 🇲🇾 🔴 05:30-08:00 WIB - PL: Man Utd vs Crystal Palace [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2-e6JN1iocQj8_f6bi_xX5bXN3OKNTjGoiaJzudwDVwhHgkaq-7-uKC2HSCvjVkEW1hXi6eVgtPfDr5P5lVY3STpYpulKFNac8PaU00peSY69hhOvN7gF3zYIsL6VYEMECzi9aysAm7JOqJ8lfZIKKuCs_9me7VCU9H1VGI19BNCQoRz3T0zJK9tvFwPP/s700/ONE%20SPORTS%20HD.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORTS]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
 #https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd
-https://bwifi.my.id/5menit.mp4
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/One_Sports_logo.svg/1200px-One_Sports_logo.svg.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORTS+]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=322d06e9326f4753a7ec0908030c13d8:1e3e0ca32d421fbfec86feced0efefda
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesportsplus_hd1/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTfs0jCRr_gY8LZpS1txmy8PXnvM9D64OxiyZNjVaLHatBahCArLiUeDe3kDwnWGlkPrc3Re6uH-ebMjJwTrhn0aqT4kMXQ6sbld8yBwE1URPpvOawmAAR2-PQ8Odwf_KMGENxEsQjAmmZGp_6AGTh14B3Ep8IK7giF3LAmyZVrFUFcAi-wEbdCb2XgR8t/s700/ONE%20SPORTS+.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORTS+]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f00bd0122a8a4da1a49ea6c49f7098ad:a4079f3667ba4c2bcfdeb13e45a6e9c6
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesportsplus_hd1/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/One_Sports_logo.svg/1200px-One_Sports_logo.svg.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORTS HD]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/One_Sports_logo.svg/1200px-One_Sports_logo.svg.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORTS HD]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2-e6JN1iocQj8_f6bi_xX5bXN3OKNTjGoiaJzudwDVwhHgkaq-7-uKC2HSCvjVkEW1hXi6eVgtPfDr5P5lVY3STpYpulKFNac8PaU00peSY69hhOvN7gF3zYIsL6VYEMECzi9aysAm7JOqJ8lfZIKKuCs_9me7VCU9H1VGI19BNCQoRz3T0zJK9tvFwPP/s700/ONE%20SPORTS%20HD.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORT]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTfs0jCRr_gY8LZpS1txmy8PXnvM9D64OxiyZNjVaLHatBahCArLiUeDe3kDwnWGlkPrc3Re6uH-ebMjJwTrhn0aqT4kMXQ6sbld8yBwE1URPpvOawmAAR2-PQ8Odwf_KMGENxEsQjAmmZGp_6AGTh14B3Ep8IK7giF3LAmyZVrFUFcAi-wEbdCb2XgR8t/s700/ONE%20SPORTS+.png", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORT+]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f00bd0122a8a4da1a49ea6c49f7098ad:a4079f3667ba4c2bcfdeb13e45a6e9c6
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesportsplus_hd1/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://i.imgur.com/k307aBr.jpg", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORT ᴴᴰ 🇵🇭]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="JUSOne.in" tvg-name="JUSOne" tvg-logo="https://i.imgur.com/4ffp4qg.jpg", 📺 🔴 05:30-07:00 WIB - Rehras Sahib - from Jersey City Gurdwara [ONE SPORTS+ 🇵🇭]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=322d06e9326f4753a7ec0908030c13d8:1e3e0ca32d421fbfec86feced0efefda
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesportsplus_hd1/default/index.mpd
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="Zhejiang.id" tvg-name="Zhejiang TV" tvg-logo="https://live.fanmingming.com/tv/浙江民生休闲.png", 📺 ⏳ 05:40-07:15 WIB - Trump Card VS Trump Card S9
 https://bwifi.my.id/5menit.mp4
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
