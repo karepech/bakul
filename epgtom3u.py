@@ -11,7 +11,7 @@ import io
 EPG_URLS = [
 
          "",                   
-    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",            
+    "",            
     "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
     "",                                         
     ""
