@@ -12,7 +12,7 @@ EPG_URLS = [
 
          "",                   
     "",            
-    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
+    "https://epg.pw/xmltv/epg_lite.xml.gz", 
     "",                                         
     ""
 ]
