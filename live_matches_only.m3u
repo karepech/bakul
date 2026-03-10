@@ -1618,24 +1618,480 @@ https://dash2.antik.sk/stream/nvidia_eurosport2/playlist_cenc.mpd
 #KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="https://w7.pngwing.com/pngs/1003/693/png-transparent-eurosport-2-television-channel-logo-live-stream-miscellaneous-television-blue.png", 📺 🔴 06:30-08:30 WIB - New York City FC at LA Galaxy-MLS [Eurosport Asia]
 https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="683df56f5195c2a60a3f5559" tvg-name="Swerve Sports" tvg-logo="https://images.pluto.tv/series/6903c8e8a1646a6c55883d32/tile_1773061469230.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 06:49-08:26 WIB - Athletes Unlimited Pro Volleyball
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRER.jpg", 🇲🇾 ⏳ 07:00-08:00 WIB - BWF Malaysia Open: HL
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="683df56f5195c2a60a3f5559" tvg-name="Swerve Sports" tvg-logo="https://images.pluto.tv/series/6903c8e8a1646a6c55883d32/tile_1773061469230.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 06:49-08:26 WIB - Athletes Unlimited Pro Volleyball [Swerve Combat (1080p)]
+https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRER.jpg", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 ⏳ 07:00-13:30 WIB - BWF Terbuka All England 2026: Akhir
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRER.jpg", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/dba41aKVRER.jpg", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Badminton.my" tvg-name="Astro Badminton.my" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdU9OYH93jgUwrlRQlY63-r0UHMEhDmJz6WlOfeZIXrzP4Hh85Kbg62wA3WE21ifLqZ1px1NiwvO5aNk549_wCOlxL6QhxjzYPn5nMHodLvwLzD8b2Mszzl7rnMCOfwlkp7XNWw-TTk9XY9wF7MS5bf2XYtAIJMMM0Osipyxdcd3o99RwKkZWeEz8yRCPj/s700/ASTRO%20BADMINTON.png", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Badminton.my" tvg-name="Astro Badminton.my" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdU9OYH93jgUwrlRQlY63-r0UHMEhDmJz6WlOfeZIXrzP4Hh85Kbg62wA3WE21ifLqZ1px1NiwvO5aNk549_wCOlxL6QhxjzYPn5nMHodLvwLzD8b2Mszzl7rnMCOfwlkp7XNWw-TTk9XY9wF7MS5bf2XYtAIJMMM0Osipyxdcd3o99RwKkZWeEz8yRCPj/s700/ASTRO%20BADMINTON.png", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro.Badminton.my" tvg-name="Astro Badminton" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdU9OYH93jgUwrlRQlY63-r0UHMEhDmJz6WlOfeZIXrzP4Hh85Kbg62wA3WE21ifLqZ1px1NiwvO5aNk549_wCOlxL6QhxjzYPn5nMHodLvwLzD8b2Mszzl7rnMCOfwlkp7XNWw-TTk9XY9wF7MS5bf2XYtAIJMMM0Osipyxdcd3o99RwKkZWeEz8yRCPj/s700/ASTRO%20BADMINTON.png", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-13:30 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 ⏳ 07:00-10:00 WIB - Best Of Badminton
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/aaee4cKWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Arena.my" tvg-name="Astro Arena.my" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJTg7cpNEer-x3VF84thO0WLClpN3UROonu1r8ukStW2VhvHrqWCn8KRyJbaPIpuTxjIW6QdypKPtEzd9YGA2lweoWD6vDrHh3rIN7BAQLkCpmSqYsvi7NqxDtQyhNnZlXYue5t7BDB3LWmWFA4KziFwX8eWcZf8CI1adP4euWlX4s2JB9F02xRlqeVpp2/s700/ASTRO%20ARENA.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Arena.my" tvg-name="Astro Arena.my" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJTg7cpNEer-x3VF84thO0WLClpN3UROonu1r8ukStW2VhvHrqWCn8KRyJbaPIpuTxjIW6QdypKPtEzd9YGA2lweoWD6vDrHh3rIN7BAQLkCpmSqYsvi7NqxDtQyhNnZlXYue5t7BDB3LWmWFA4KziFwX8eWcZf8CI1adP4euWlX4s2JB9F02xRlqeVpp2/s700/ASTRO%20ARENA.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro.Arena.my" tvg-name="Astro Arena" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJTg7cpNEer-x3VF84thO0WLClpN3UROonu1r8ukStW2VhvHrqWCn8KRyJbaPIpuTxjIW6QdypKPtEzd9YGA2lweoWD6vDrHh3rIN7BAQLkCpmSqYsvi7NqxDtQyhNnZlXYue5t7BDB3LWmWFA4KziFwX8eWcZf8CI1adP4euWlX4s2JB9F02xRlqeVpp2/s700/ASTRO%20ARENA.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-13:30 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/aaee4cKWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Arena.my" tvg-name="Astro Arena.my" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/235_144.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Arena.my" tvg-name="Astro Arena.my" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/235_144.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro.Arena.my" tvg-name="Astro Arena" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/235_144.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-13:30 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/aaee4cKWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Arena.my" tvg-name="Astro Arena.my" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Astro_Arena_1_%282024%29.png/960px-Astro_Arena_1_%282024%29.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro Arena.my" tvg-name="Astro Arena.my" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Astro_Arena_1_%282024%29.png/960px-Astro_Arena_1_%282024%29.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Astro.Arena.my" tvg-name="Astro Arena" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Astro_Arena_1_%282024%29.png/960px-Astro_Arena_1_%282024%29.png", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4]
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://visionplus.id/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.beIN.Sports.Xtra.en.Español.plex" tvg-name="beIN Sports Xtra en Español" tvg-logo="https://d2kakeqiyyphsw.cloudfront.net/beINSPORTS-XTRA-ESPANOL_DEFAULT-IMAGE_1920x1080.jpg", 🇮🇩 ⏳ 07:00-09:00 WIB - Copa Sudamericana - First Round
-https://bwifi.my.id/5menit.mp4
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4 ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4 ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4 ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4 ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4 ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [Sportstars 4 ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 HD]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 HD]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 HD]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 HD]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 HD]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 HD]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://mimipipi22.github.io/logo/sports/sportstars4.jpg", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 iPhone (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 iPhone (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 iPhone (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 iPhone (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 iPhone (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsTwfjLcTtXKEpFA0dwlGr1faj7jkA248mQv7ZZREjOSalX_jgBHQCu15oUY5I-UWsMDH9I0ljcStDKQYdbglSc-XOPjQZ55C_AWgrlUsbx8gi-yVEUHWb_voFyDO2EqNGk8-uon19p6UOgsn4cqpQjJVQJpzEkUqTKA_dRJjbsv6W9ng95XFYfBjXZPtO/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 iPhone (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=MDA5MmI1NjctOWMyMS0zNDYyLTk0NDAtODM5NGQ1ZjdlZWRi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+#https://av-ch-cdn.mncnow.id/live/eds/VplusLiveRplus/sa_dash/VplusLiveRplus.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=MDA5MmI1NjctOWMyMS0zNDYyLTk0NDAtODM5NGQ1ZjdlZWRi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+#https://av-ch-cdn.mncnow.id/live/eds/VplusLiveRplus/sa_dash/VplusLiveRplus.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=MDA5MmI1NjctOWMyMS0zNDYyLTk0NDAtODM5NGQ1ZjdlZWRi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+#https://av-ch-cdn.mncnow.id/live/eds/VplusLiveRplus/sa_dash/VplusLiveRplus.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.id" tvg-name="Sportstars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=MDA5MmI1NjctOWMyMS0zNDYyLTk0NDAtODM5NGQ1ZjdlZWRi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+#https://av-ch-cdn.mncnow.id/live/eds/VplusLiveRplus/sa_dash/VplusLiveRplus.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Sportstars.4.HD.id" tvg-name="Sportstars 4 HD" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=MDA5MmI1NjctOWMyMS0zNDYyLTk0NDAtODM5NGQ1ZjdlZWRi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+#https://av-ch-cdn.mncnow.id/live/eds/VplusLiveRplus/sa_dash/VplusLiveRplus.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=MDA5MmI1NjctOWMyMS0zNDYyLTk0NDAtODM5NGQ1ZjdlZWRi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+#https://av-ch-cdn.mncnow.id/live/eds/VplusLiveRplus/sa_dash/VplusLiveRplus.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SportStars4.id" tvg-name="SportStars 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_9knowlsd4XtCxrSDmrFb9Wp115YNmhdOUEBHZKVLvqNiPmzwfKdjCBeqcmqDvx4Kx7FLaeJMmxgsJRhmQeq7FCiFVAtjZ2FouopKrH00ipAxmZTtNto8sS28ABddUH85pd-Hcn3S_cX85-ZNwXa4R7NN0sTb5O20ffr8tkX723I7O3MtC0dvthhBYbVL/s700/SPORTSTARS%204.png", 📺 🔴 07:00-10:00 WIB - Best Of Badminton [SPORTSTARS 4+ HD OF]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="plex.tv.beIN.Sports.Xtra.en.Español.plex" tvg-name="beIN Sports Xtra en Español" tvg-logo="https://d2kakeqiyyphsw.cloudfront.net/beINSPORTS-XTRA-ESPANOL_DEFAULT-IMAGE_1920x1080.jpg", 🇮🇩 🔴 07:00-09:00 WIB - Copa Sudamericana - First Round [BEIN SPORT XTRA]
+https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="plex.tv.beIN.Sports.Xtra.en.Español.plex" tvg-name="beIN Sports Xtra en Español" tvg-logo="https://d2kakeqiyyphsw.cloudfront.net/beINSPORTS-XTRA-ESPANOL_DEFAULT-IMAGE_1920x1080.jpg", 🇮🇩 🔴 07:00-09:00 WIB - Copa Sudamericana - First Round [BEIN SPORTS XTRA]
+http://104.238.205.58:9090/279421_.m3u8
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjybmmOLSaU-GT1VuodMC2QFMtvtGExIgAmoc_SYbJLWXS-JKux6GrHKScHPym7mkK0ooKJ_8yFK0rIEwgZ8GkKttmVU6uzeWULT9bwzLcf7HSy6Db_wNCvdY01Nkocua6pp4AIYNXStx5Cebyn1zOjdGj9oAwI1hhQ4xEtQyyRDEXTRevJbPqAt0Oenblc/s700/SPOTV.png", 📺 ⏳ 07:30-09:30 WIB - A-League Men: NEW Vs WSW
