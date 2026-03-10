@@ -76,7 +76,7 @@ def is_allowed_sport(title, ch_name):
     
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
-        "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool",  "vs",  "Indonesia",  "bri",  "sea games",  "asean games", 
+        "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool",  "vs",  "indonesia",  "bri",  "sea games",  "asean games", 
         "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala",  "live",  "league", "fifa series",
         "afc", "aff", "fifa", "uefa", "mls", 
         "badminton", "bwf", "all england", "thomas", "uber", "sudirman", 
@@ -95,6 +95,13 @@ def is_match_akurat(epg_name, m3u_name):
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
 
+    # ========================================================
+    # SISTEM TRANSLATOR (ALIAS): Mengubah singkatan M3U jadi EPG
+    # ========================================================
+    m = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', m)
+    e = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', e)
+    # ========================================================
+
     hapus_kualitas = r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|id|my|sg|network)\b'
     e_clean = re.sub(hapus_kualitas, '', e).strip()
     m_clean = re.sub(hapus_kualitas, '', m).strip()
@@ -102,7 +109,7 @@ def is_match_akurat(epg_name, m3u_name):
     num_e = re.findall(r'\d+', e_clean)
     num_m = re.findall(r'\d+', m_clean)
 
-    strict_nets = ['astro', 'bein', 'spotv', 'sportstars', 'soccer channel', 'fight']
+    strict_nets = ['astro', 'bein', 'spotv', 'sportstars', 'soccer channel', 'fight', 'champions']
     
     for net in strict_nets:
         if net in e_clean or net in m_clean:
@@ -207,13 +214,9 @@ def main():
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
                 
-                # ========================================================
                 # SENJATA BARU: X-RAY TAG TERSEMBUNYI XMLTV
-                # Jika XMLTV memberi kode "previously-shown", INI PASTI REPLAY!
-                # ========================================================
                 if prog.find("previously-shown") is not None:
                     continue
-                # ========================================================
 
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
@@ -412,7 +415,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (SUPER KETAT)!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik!")
 
 if __name__ == "__main__":
     main()
