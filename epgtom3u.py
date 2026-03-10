@@ -80,7 +80,7 @@ def is_allowed_sport(title, ch_name):
         "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala",  "live",  "league", "fifa series",
         "afc", "aff", "fifa", "uefa", "mls", 
         "badminton", "bwf", "all england", "thomas", "uber", "sudirman", 
-        "voli", "volley", "vnl", "proliga", "futsal", 
+        "voli", "volley", "vnl", "proliga", "futsal", "Yonex", "Li-Ning", "Victor", "open",
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
     
