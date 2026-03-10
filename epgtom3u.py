@@ -45,11 +45,9 @@ def is_allowed_sport(title, ch_name):
     t = title.lower()
     c = ch_name.lower()
     
-    # 1. HANCURKAN HURUF RUSIA/CINA/JEPANG/ARAB SECARA MUTLAK
     if re.search(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', title):
         return False
 
-    # 2. DAFTAR HARAM: Tambahan kata "Tunda", "Tayangan Ulang", "Rekap"
     haram = [
         "(d)", "[d]", "delay", "replay", "re-run", "siaran ulang", "recorded", "archives", "tunda", "tayangan ulang", "rekap",
         "news", "studio", "pre-match", "post-match", "update", "talk", "show", "weekly", 
@@ -61,13 +59,11 @@ def is_allowed_sport(title, ch_name):
     ]
     if any(h in t for h in haram): return False
 
-    # 3. PENGUNCI DOMAIN (BWF dilarang masuk channel Bola)
     bola_channels = ['arena bola', 'football', 'soccer', 'premier', 'laliga']
     if any(x in c for x in bola_channels):
         if any(x in t for x in ['badminton', 'bwf', 'motogp', 'f1', 'basket', 'tennis']):
             return False
     
-    # 4. DAFTAR HALAL OLAHRAGA
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
         "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool", 
@@ -78,7 +74,6 @@ def is_allowed_sport(title, ch_name):
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
     
-    # Loloskan jika ada di daftar Halal ATAU merupakan laga resmi (ada VS)
     if any(h in t for h in halal) or ' vs ' in t or ' v ' in t:
         return True
         
@@ -153,12 +148,10 @@ def is_valid_time(start_dt, title, ch_name):
     t = title.lower()
     c = ch_name.lower()
 
-    # 1. Pengecualian mutlak: Olahraga Non-Bola bebas tayang kapan saja
     non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint']
     if any(k in t for k in non_bola):
         return True
 
-    # 2. Daftar Liga Pagi/Siang yang SAH
     bola_pagi_sah = [
         'mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil',
         'j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea',
@@ -166,12 +159,8 @@ def is_valid_time(start_dt, title, ch_name):
     ]
     is_bola_pagi_sah = any(k in t or k in c for k in bola_pagi_sah)
 
-    # 3. HUKUM EKSEKUSI MATI: 
-    # Jika acara mulai antara jam 04:30 Pagi s/d 17:00 Sore WIB...
     if 4.5 <= waktu_mulai < 17.0:
-        # Dan ternyata BUKAN liga Amerika/Asia/Australia yang terdaftar di atas...
         if not is_bola_pagi_sah:
-            # MAKA MUTLAK ITU ADALAH SIARAN ULANG (REPLAY) LIGA EROPA! DIBUANG!
             return False 
 
     return True
@@ -207,6 +196,17 @@ def main():
             for prog in root.findall("programme"):
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
+                
+                # ========================================================
+                # IDE JENIUS USER: WAJIB ADA POSTER EPG (TANDA LIVE)
+                # ========================================================
+                icon_node = prog.find("icon")
+                epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
+                
+                # JIKA EPG TIDAK MENYEDIAKAN LOGO ACARA, ANGGAP BUKAN LIVE -> BAKAR!
+                if not epg_prog_logo or epg_prog_logo.strip() == "":
+                    continue
+                # ========================================================
                     
                 ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
@@ -220,9 +220,6 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # ========================================================
-                # AKTIVASI HUKUM GUILLOTINE ANTI-REPLAY PAGI/SIANG
-                # ========================================================
                 if not is_valid_time(start_dt, title_raw, ch_name):
                     continue
 
@@ -241,9 +238,6 @@ def main():
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
 
                 judul_bersih = bersihkan_judul_event(title_raw)
-                
-                icon_node = prog.find("icon")
-                epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
                 
                 if ch_id not in jadwal_per_channel:
                     jadwal_per_channel[ch_id] = []
@@ -275,7 +269,7 @@ def main():
         print("❌ Semua file M3U gagal diunduh. Script Berhenti.")
         return
 
-    print("3. Meracik Playlist (Live: FULL BACKUP | Upcoming: MUTLAK 1 WAKIL)...")
+    print("3. Meracik Playlist (Filter Logo Acara Super Ketat)...")
     hasil_akhir = []
     channel_block = []
     
@@ -325,7 +319,8 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    logo_final = event["prog_logo"] if event["prog_logo"] else logo_asli
+                                    # Karena sudah di-filter di atas, event["prog_logo"] PASTI ADA isinya
+                                    logo_final = event["prog_logo"]
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 LIVE EVENT SPORTS"
@@ -405,7 +400,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (DENGAN PEMBANTAI REPLAY EKSTREM)!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (HANYA YANG BERPOSTER)!")
 
 if __name__ == "__main__":
     main()
