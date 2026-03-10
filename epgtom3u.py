@@ -76,8 +76,8 @@ def is_allowed_sport(title, ch_name):
     
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
-        "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool", 
-        "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala", 
+        "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool",  "vs",  "Indonesia",  "bri",  "sea games",  "asean games", 
+        "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala",  "live",  "league", "fifa series",
         "afc", "aff", "fifa", "uefa", "mls", 
         "badminton", "bwf", "all england", "thomas", "uber", "sudirman", 
         "voli", "volley", "vnl", "proliga", "futsal", 
