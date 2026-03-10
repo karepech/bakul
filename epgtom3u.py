@@ -330,7 +330,7 @@ def main():
                                     logo_final = event["prog_logo"]
                                     
                                     if event["is_live"]:
-                                        grup_baru = "🔴 LIVE EVENT SPORTS"
+                                        grup_baru = "🔴 ACARA SEDANG TAYANG"
                                         judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
                                         stream_final = stream_url 
                                         order = 0
@@ -352,7 +352,7 @@ def main():
                                         })
                                         
                                     else:
-                                        grup_baru = "📅 UPCOMING EVENT"
+                                        grup_baru = "📅 ACARA AKAN DATANG"
                                         if event["start_dt"].date() == now_wib.date():
                                             judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
                                         else:
