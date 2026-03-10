@@ -12,7 +12,12 @@ EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
     "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz",                   
-    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml"                                                  
+    "https://epgshare01.online/epgshare01/epg_ripper_SPORTS1.xml.gz",
+    "",
+    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
+    "https://epg.pw/api/epg.xml?channel_id=397400",                                         
+    "https://epg.pw/xmltv/epg_lite.xml.gz",
+    "https://warningfm.github.io/x1/epg/guide.xml.gz"                                                  
 ]
 
 M3U_URLS = [
@@ -29,7 +34,6 @@ LINK_STANDBY = "https://bwifi.my.id/live.mp4"
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 def get_flag(m3u_name):
-    """Sistem Bendera Otomatis"""
     n = m3u_name.lower()
     if any(x in n for x in [' sg', 'starhub', 'singapore']): return "🇸🇬"
     if any(x in n for x in [' my', 'astro', 'malaysia']): return "🇲🇾"
@@ -45,7 +49,6 @@ def get_flag(m3u_name):
     return "📺" 
 
 def is_allowed_sport(title, ch_name):
-    """FILTER 1: PEMBANTAI ACARA SAMPAH & HURUF DEWA"""
     if not title: return False
     t = title.lower()
     c = ch_name.lower()
@@ -86,7 +89,6 @@ def is_allowed_sport(title, ch_name):
     return False
 
 def is_match_akurat(epg_name, m3u_name):
-    """FILTER 2: PENGUNCI KAMAR MUTLAK LEVEL DEWA (ANTI-NYASAR)"""
     if not epg_name or not m3u_name: return False
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
@@ -126,18 +128,15 @@ def is_match_akurat(epg_name, m3u_name):
             
             return True
 
-    # ========================================================
-    # SISTEM BARU: PENCOCOKAN KATA PER KATA (WORD-BY-WORD)
-    # ========================================================
+    # PENCOCOKAN KATA PER KATA (WORD-BY-WORD SUBSET)
     e_words = set(re.findall(r'[a-z0-9]+', e_clean))
     m_words = set(re.findall(r'[a-z0-9]+', m_clean))
     
     if e_words and m_words:
-        # Jika semua kata EPG ada di M3U, atau semua kata M3U ada di EPG -> COCOK!
         if e_words.issubset(m_words) or m_words.issubset(e_words):
             return True
 
-    # FALLBACK: Jika pencocokan kata gagal karena tulisan digabung (misal: "beinsports" vs "bein sports")
+    # FALLBACK JIKA KATA DIGABUNG (misal: "beinsports" vs "bein sports")
     e_alpha = "".join(e_words)
     m_alpha = "".join(m_words)
     if not e_alpha or not m_alpha: return False
@@ -165,7 +164,6 @@ def bersihkan_judul_event(title):
     return bersih
 
 def is_valid_time(start_dt, title, ch_name):
-    """FILTER 3: HUKUM GUILLOTINE WAKTU (PEMBANTAI REPLAY EKSTREM)"""
     waktu_mulai = start_dt.hour + (start_dt.minute / 60.0)
     t = title.lower()
     c = ch_name.lower()
@@ -220,11 +218,11 @@ def main():
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
                 
-                # SENJATA X-RAY TAG TERSEMBUNYI XMLTV (Tolak Replay)
+                # TOLAK REPLAY (X-RAY)
                 if prog.find("previously-shown") is not None:
                     continue
 
-                # WAJIB ADA POSTER EPG (Tolak Filler/Acara Sampah)
+                # WAJIB ADA POSTER EPG
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
                 
@@ -240,7 +238,14 @@ def main():
                 stop_dt = parse_epg_time(prog.get("stop"))
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
-                if stop_dt <= now_wib: continue 
+                
+                # =========================================================
+                # HAPUS TEPAT WAKTU (PAS SELESAI ACARANYA)
+                # =========================================================
+                if stop_dt <= now_wib: 
+                    continue 
+                # =========================================================
+                
                 if start_dt >= batas_waktu_upcoming: continue
 
                 if not is_valid_time(start_dt, title_raw, ch_name):
@@ -293,7 +298,7 @@ def main():
         print("❌ Semua file M3U gagal diunduh. Script Berhenti.")
         return
 
-    print("3. Meracik Playlist (Sistem Pencocokan Kata per Kata Aktif)...")
+    print("3. Meracik Playlist...")
     hasil_akhir = []
     channel_block = []
     
