@@ -1,23 +1,4 @@
-#EXTM3U name="🔴 OLAHRAGA AKTIF"
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SkyRacing2.au" tvg-name="Sky Racing 2" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/1/8af0t.jpg", 📺 🔴 04:00-08:00 WIB - Sky Racing 2 Racemorning [SKY SPORTS]
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=335511dfdf0d03bc06f1fdead5870b5a:1a022fb33ad3de4d4579b04966551488
-https://zap-live1-ott.izzigo.tv/3/out/u/dash/SKYSPORTSHD/default.mpd
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SkyRacing2.au" tvg-name="Sky Racing 2" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/1/8af0t.jpg", 📺 🔴 04:00-08:00 WIB - Sky Racing 2 Racemorning [Sky Sport Racing]
-https://zamlb.tgaadi.workers.dev/3102.ts
-#EXTINF:-1 radio="false" group-title="🔴 LIVE EVENT SPORTS" tvg-id="SkyRacing2.au" tvg-name="Sky Racing 2" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/1/8af0t.jpg", 📺 🔴 04:00-08:00 WIB - Sky Racing 2 Racemorning [SKY SPORTS+]
-https://zamlb.tgaadi.workers.dev/1777.ts
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SkyRacing2.au" tvg-name="Sky Racing 2" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/1/8af0t.jpg", 📺 🔴 04:00-08:00 WIB - Sky Racing 2 Racemorning [Sky Sports+ FHD]
-https://7pal.short.gy/ssportplus
-#EXTINF:-1 radio="false" group-title="🔴 LIVE EVENT SPORTS" tvg-id="SkyRacing2.au" tvg-name="Sky Racing 2" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/1/8af0t.jpg", 📺 🔴 04:00-08:00 WIB - Sky Racing 2 Racemorning [SKY SPORTS RACING]
-https://zamlb.tgaadi.workers.dev/3102.ts
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/COPA%20LIBERTADORES.jpg", 🇮🇩 🔴 06:00-08:00 WIB - Copa Libertadores - Qualifying Round 3 (1st Leg) [BEIN SPORT XTRA]
-https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/COPA%20LIBERTADORES.jpg", 🇮🇩 🔴 06:00-08:00 WIB - Copa Libertadores - Qualifying Round 3 (1st Leg) [BEIN SPORTS XTRA]
-http://104.238.205.58:9090/279421_.m3u8
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/COPA%20LIBERTADORES.jpg", 🇮🇩 🔴 06:00-08:00 WIB - Copa Libertadores - Qualifying Round 3 (1st Leg) [BEIN SPORT XTRA]
-https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
+#EXTM3U url-tvg="https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml" name="🔴 OLAHRAGA AKTIF"
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FoxSports505.au" tvg-name="Fox Sports 505" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/ksewo1.png", 📺 🔴 06:30-08:30 WIB - F1: Australia Race [FOX SPORTS 🇲🇽]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -75,6 +56,8 @@ http://151.80.18.177:86/Eurosport_HD/index.m3u8
 #KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [EUROSPORT]
 https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [Eurosport 1]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1167
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [EUROSPORT 1 🇸🇰]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -86,6 +69,8 @@ https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
 #KODIPROP:inputstream.adaptive.license_key=657707bbd1e240e08bd6969df27fef7c:364e00581c1432f4175e4a2e8e0cd57e
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [EUROSPORT 2]
 https://v4-kun-v13-cdn-02.live.cdn.cgates.lt/live/dash/561705/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [Eurosport 2]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1166
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [EUROSPORT 2 🇸🇰]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone14,6; U; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/19E241 Safari/602.1
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -93,26 +78,20 @@ https://v4-kun-v13-cdn-02.live.cdn.cgates.lt/live/dash/561705/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
 https://dash2.antik.sk/stream/nvidia_eurosport2/playlist_cenc.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [Eurosport 4k]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/25803
 #EXTVLCOPT:http-referrer=https://www.firstmedia.com
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [Eurosport Asia]
 https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="683df56f5195c2a60a3f5559" tvg-name="Swerve Sports" tvg-logo="https://images.pluto.tv/series/6903c8e8a1646a6c55883d32/tile_1773061469230.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 06:49-08:26 WIB - Athletes Unlimited Pro Volleyball [Swerve Combat (1080p)]
-https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRER.jpg", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
-https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRER.jpg", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
-https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/dba41aKVRER.jpg", 🇲🇾 🔴 07:00-08:00 WIB - BWF Malaysia Open: HL [ASTRO BADMINTON]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
-https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.firstmedia.com
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8e3b8a136e94244dc265adcf7d91547f.jpg", 📺 🔴 06:30-08:30 WIB - MLS [Eurosport Asia]
+https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-13:30 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
@@ -140,6 +119,21 @@ http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
 ##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
 ##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
 http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-13:30 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/aaee4cKWKRQ.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: Akhir [Astro Arena]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
@@ -198,10 +192,11 @@ https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/in
 #KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
 #EXTVLCOPT:http-referrer=https://visionplus.id
 https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SpoTV]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://visionplus.id
-#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SPOTV]
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SpoTV 🇵🇭]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
@@ -215,6 +210,16 @@ https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd
 #KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SpoTV (V+)]
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SpoTV (V+)]
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SpoTV 1 PH]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
+https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
 #EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 07:30-09:30 WIB - 25/26 A-League Men Round 20 Newcastle Jets FC vs Western Sydney Wanderers FC [SPOTV HD FM]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -253,20 +258,131 @@ https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 ⏳ 08:00-10:10 WIB - AFC Elite: JDT vs Sanfrecce
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 🔴 08:00-10:10 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQV.jpg", 🇲🇾 ⏳ 08:00-11:05 WIB - BWF England Open: QF 2 (Crt 2)
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/180dfbKWJED.jpg", 🇲🇾 🔴 08:00-10:10 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 🔴 08:00-10:10 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/180dfbKWJED.jpg", 🇲🇾 🔴 08:00-10:10 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQV.jpg", 🇲🇾 🔴 08:00-11:05 WIB - BWF England Open: QF 2 (Crt 2) [ASTRO BADMINTON]
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
-https://bwifi.my.id/5menit.mp4
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQV.jpg", 🇲🇾 🔴 08:00-11:00 WIB - BWF England Open: QF 2 (Crt 2) [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/b0b210KVLQV.jpg", 🇲🇾 🔴 08:00-11:00 WIB - BWF England Open: QF 2 (Crt 2) [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 ⏳ 08:00-08:30 WIB - BWF Martial Arts
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 ⏳ 08:10-10:10 WIB - AFC Elite: JDT vs Sanfrecce
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT SPORT]
+http://202.80.222.20/cdn/iptv/Tvod/001/channel2000163/1024.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [MATCH! FIGHT 🇷🇺]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=660a37a91aa00b7e2e0bc7dca349b982:3593a4a2bfbd7d9585efff083b769cf5
+https://video.beeline.tv/live/d/channel377.isml/manifest-stb.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT NETWORK]
+#https://d12a2vxqkkh1bo.cloudfront.net/hls/main.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT NETWORK]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00208c93f4358213b52220898b962385:8ae6063167228e350dd132d4a1573102
+http://cors.tundracast.com:2000/https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc106wh3yw)/master.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [Arena Fight Test]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/19615
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [DSPORTS FIGHT]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"b770d5b4bb6b594daf985845aae9aa5f":"b0cb46d2d31cf044bc73db71e9865f6f","45bbd582f220f438f896450d8306a3f2":"582c6ba7f64bbc0f2d91c6b0c265760c"}
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT BOX 🇸🇰]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referer=https://webtv.sk/
+#EXTVLCOPT:http-origin=https://webtv.sk
+https://dash3.antik.sk/live/test_fightbox_medium_atk/playlist.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [Fight Network (PIXEL)]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTVLCOPT:http-referrer=https://pixelsport.tv/
+#EXTVLCOPT:http-icy-metadata=1
+https://hd.pixelhd.online:443/play/pAVJjXWDXadNqa4ml_eoyAiyN-O_xDpFlaxGznH--Jk/.m3u8
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT SPORTS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT SPORTS]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=2f4c7790660c4a0ea82f38ca1998da13:9186a4ec6c2c2af731de820bf517e4e0
+https://cdn08jtedge.indihometv.com/dassdvr/133/fightsport/manifest.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT SPORTS]
+http://cdn.nng.cloudns.us/live/m3u8/sprt/d7d981d1df08d72.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT SPORTS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [Fight Sports]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [Fight Sports]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT SPORTS HD]
+https://012v4.goiptv.us.ci/stream/starhub/fightsportshd/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://terson.treshold.workers.dev/
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Xstream XGO/1.22 (Linux;Android 9) ExoPlayerLib/2.10.5
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT TV PREMIUM]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6857fe540a1018060a0c34340b6/manifest.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [SK Fight Channel]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1288
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [Fight Network (PIXEL)]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTVLCOPT:http-referrer=https://pixelsport.tv/
+#EXTVLCOPT:http-icy-metadata=1
+https://hd.pixelhd.online:443/play/pAVJjXWDXadNqa4ml_eoyAiyN-O_xDpFlaxGznH--Jk/.m3u8
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="FightSports.us" tvg-name="Fight Sports" tvg-logo="https://poster.starhubgo.com/Linear_channels2/241_1920x1080_HTV.png?w=341&h=192", 📺 🔴 08:00-08:30 WIB - BWF Martial Arts [FIGHT TV]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Xstream XGO/1.22 (Linux;Android 9) ExoPlayerLib/2.10.5
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://terson.treshold.workers.dev/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6857fe540a1018060a0c34340b6/manifest.mpd
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 🔴 08:10-10:10 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-https://bwifi.my.id/5menit.mp4
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
+#EXTINF:-1 group-title="🔴 LIVE EVENT SPORTS" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 🔴 08:10-10:10 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRES.jpg", 🇲🇾 ⏳ 11:00-12:00 WIB - BWF Malaysia Open: HL
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
@@ -381,8 +497,6 @@ https://bwifi.my.id/5menit.mp4
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroFootball_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 17:00-19:40 WIB - Scottish Cup: Rangers vs Celtic
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.Swerve.Combat.plex" tvg-name="Swerve Combat" tvg-logo="https://images.frequency.com/video/7426797512017463518/solid/rectangle/w1920_h1080/whqlsdbmvpbk10xlwnoa4y168.jpg", 📺 ⏳ 17:17-21:17 WIB - BKFC: Knucklemania VI: Rothwell vs. Arlovski
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 17:25-19:15 WIB - LaLiga : Sevilla Vs Rayo Vallecano
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
@@ -525,8 +639,6 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.ACCDN.plex" tvg-name="ACCDN" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c2ab5a2e-1fe9-49a9-b07d-6e1e5021f591/ACCDN_Hero_Image_-_Mathew_Carstens.jpg", 📺 ⏳ 19:30-21:00 WIB - 1997 ACC MBB Championship: NC State vs. North Carolina
-https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="Sony.Ten.5.HD.in" tvg-name="Sony Ten 5 HD" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/13512b6684f696eb3ae8e8ab8b6b3f15.jpg", 📺 ⏳ 19:30-20:30 WIB - Asian Le Mans Racing Series
 #https://tataplay.slivcdn.com/hls/live/2020593/SONYSIXHD/master.m3u8
 #http://app.hughag.store/api/d74ec2f219/playlist.m3u8
@@ -565,8 +677,6 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.ITV.Deportes.plex" tvg-name="ITV Deportes" tvg-logo="http://www.tmsimg.com/assets/p7884645_i_h8_aa.jpg?w=3840&h=2160", 📺 ⏳ 20:00-23:00 WIB - Béisbol Liga Mexicana
-https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.Fubo.Sports.Network.plex" tvg-name="Fubo Sports Network" tvg-logo="https://metadata-static.plex.tv/6/gracenote/6720bb5ac87ff4ceaf9bc7d7a8f5f2e5.jpg", 📺 ⏳ 20:00-21:00 WIB - Real Madrid Pass
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -602,8 +712,6 @@ https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="Hub.Sports.2.HD.sg" tvg-name="Hub Sports 2 HD" tvg-logo="https://poster.starhubgo.com/poster/WEST_HAM_vs_BRENTFORD.jpg?w=960&h=540", 📺 ⏳ 20:30-22:30 WIB - R5: West Ham United vs Brentford
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="202" tvg-name="Hub Sports 2 HD" tvg-logo="https://poster.starhubgo.com/poster/WEST_HAM_vs_BRENTFORD.jpg?w=960&h=540", 📺 ⏳ 20:30-22:30 WIB - The Emirates FA Cup 2025/26 R5: West Ham United vs Brentford
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.ACCDN.plex" tvg-name="ACCDN" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c2ab5a2e-1fe9-49a9-b07d-6e1e5021f591/ACCDN_Hero_Image_-_Mathew_Carstens.jpg", 📺 ⏳ 21:00-23:00 WIB - 1998 ACC MBB Championship: Duke vs. North Carolina
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/Porsche%20Sprint%20Challenge_1920x1080.jpg", 🇮🇩 ⏳ 21:00-22:00 WIB - 2026 Porsche Sprint Challenge
 https://bwifi.my.id/5menit.mp4
@@ -686,8 +794,6 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.ACCDN.plex" tvg-name="ACCDN" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c2ab5a2e-1fe9-49a9-b07d-6e1e5021f591/ACCDN_Hero_Image_-_Mathew_Carstens.jpg", 📺 ⏳ 23:00-01:00 WIB - 1999 ACC MBB Championship: North Carolina vs. Duke
-https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/COPA%20LIBERTADORES.jpg", 🇮🇩 ⏳ 23:00-01:00 WIB - 2026 Copa Libertadores
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="FoxSports505.au" tvg-name="Fox Sports 505" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/7jzfqq.png", 📺 ⏳ 23:00-00:00 WIB - F1: Australia Practice 2
@@ -737,8 +843,6 @@ https://bwifi.my.id/5menit.mp4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.ACCDN.plex" tvg-name="ACCDN" tvg-logo="https://d1s3lrqxlyz0xd.cloudfront.net/ACCDN-ACCDNR/THUMB_ACCMBBFULLGAME_031200_MARvsDUKE.jpg", 📺 ⏳ Besok 01:00-03:00 WIB - 2000 ACC MBB Championship: Maryland vs. Duke
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVMKN.jpg", 🇲🇾 ⏳ Besok 01:00-03:00 WIB - AFC Elite: Al Hilal vs Al Sadd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
@@ -808,8 +912,6 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.ACCDN.plex" tvg-name="ACCDN" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c2ab5a2e-1fe9-49a9-b07d-6e1e5021f591/ACCDN_Hero_Image_-_Mathew_Carstens.jpg", 📺 ⏳ Besok 03:00-05:00 WIB - 2001 ACC MBB Championship: Duke vs. North Carolina
-https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/Porsche%20Sprint%20Challenge_1920x1080.jpg", 🇮🇩 ⏳ Besok 03:00-04:00 WIB - 2026 Porsche Sprint Challenge
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KULHF.jpg", 🇲🇾 ⏳ Besok 03:00-04:00 WIB - BWF: French Open: HL
@@ -826,8 +928,6 @@ https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="Hub.Premier.1.sg" tvg-name="Hub Premier 1" tvg-logo="https://poster.starhubgo.com/poster/ch221_classic_match_rewind.jpg?w=341&h=192", 📺 ⏳ Besok 04:00-06:00 WIB - ARS v EVE
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="Hub.Sports.2.HD.sg" tvg-name="Hub Sports 2 HD" tvg-logo="https://poster.starhubgo.com/poster/ch202_easl.jpg?w=960&h=540", 📺 ⏳ Besok 04:00-06:00 WIB - Alvark Tokyo vs New Taipei Kings
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="plex.tv.Stadium.plex" tvg-name="Stadium" tvg-logo="http://www.tmsimg.com/assets/p25327946_b_h2_ab.jpg", 📺 ⏳ Besok 04:00-08:00 WIB - BKFC 49: Slaveski vs. Lindsey
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 UPCOMING EVENT" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KQLDI.jpg", 🇲🇾 ⏳ Besok 04:00-05:00 WIB - BWF: Orleans Masters: HL
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
