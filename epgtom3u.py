@@ -16,9 +16,11 @@ EPG_URLS = [
 
 M3U_URLS = [
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
+
+# SUNTIKAN EPG GLOBAL UNTUK TIVIMATE/PLAYER LAINNYA
+GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml"
 
 OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
@@ -204,7 +206,6 @@ def main():
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
                 
-                # JIKA EPG TIDAK MENYEDIAKAN LOGO ACARA, ANGGAP BUKAN LIVE -> BAKAR!
                 if not epg_prog_logo or epg_prog_logo.strip() == "":
                     continue
                 # ========================================================
@@ -389,7 +390,8 @@ def main():
 
     print("4. Menyortir Berdasarkan Jam Tayang & Menyimpan File M3U Final...")
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write('#EXTM3U name="🔴 OLAHRAGA AKTIF"\n')
+        # MENYISIPKAN URL EPG GLOBAL DI SINI!
+        f.write(f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 OLAHRAGA AKTIF"\n')
         
         if not hasil_akhir:
             f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL\n')
@@ -401,7 +403,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (HANYA YANG BERPOSTER)!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (DENGAN EPG GLOBAL)!")
 
 if __name__ == "__main__":
     main()
