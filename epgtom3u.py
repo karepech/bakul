@@ -12,7 +12,7 @@ EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
     "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz",                   
-    "",            
+    "https://raw.githubusercontent.com/karepech/BakulwifiTV/refs/heads/main/live.m3u",            
     "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml", 
     "https://epg.pw/api/epg.xml?channel_id=397400",                                         
     "https://epg.pw/xmltv/epg_lite.xml.gz",
