@@ -11,269 +11,72 @@ https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&chann
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
 https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-http://202.80.222.20/cdn/iptv/Tvod/001/channel2000160/1024.m3u8
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-http://202.80.222.20/cdn/iptv/Tvod/001/channel2000160/1024.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV 1 PH]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV 1 PH]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://visionplus.id
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://visionplus.id
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-id= "SPOTV HD - [Channel 427].id" tvg-url="https://www.bevy.be/bevyfiles/indonesia.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-id= "SPOTV HD - [Channel 427].id" tvg-url="https://www.bevy.be/bevyfiles/indonesia.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
-#EXTVLCOPT:http-referrer=https://visionplus.id
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV]
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
-#EXTVLCOPT:http-referrer=https://visionplus.id
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV 🇵🇭]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://cignalplay.com/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV 🇵🇭]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://cignalplay.com/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV (V+)]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV (V+)]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV (V+)]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV (V+)]
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV 1 PH]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SpoTV 1 PH]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV HD FM]
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV HD FM]
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV PH]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV PH]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV PRIME+ KR]
-http://208.87.242.55/livehttpplay?channel_id=28017
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV PRIME+ KR]
-http://208.87.242.55/livehttpplay?channel_id=28017
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV PRIME KR]
-http://208.87.242.55/livehttpplay?channel_id=28003
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV PRIME KR]
-http://208.87.242.55/livehttpplay?channel_id=28003
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV V+]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="209" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/Linear_channels2/209_1920x1080_HTV.png?w=341&h=192", 📺 🔴 13:30-15:30 WIB - 25/26 A-League Men Round 20 Auckland FC vs Perth Glory [SPOTV V+]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 13:30-15:30 WIB - AFC Women's Asian Cup 2026: TPE lwn VIE [ASTRO ARENA 2]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 15:50-18:00 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE [ASTRO ARENA 2]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/400.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 13:30-15:30 WIB - AFC Women's Asian Cup 2026: TPE lwn VIE [ASTRO ARENA 2]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 15:50-18:00 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE [ASTRO ARENA 2]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/400.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 13:30-15:30 WIB - AFC Women's Asian Cup 2026: TPE lwn VIE [ASTRO ARENA 2]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 15:50-18:00 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE [ASTRO ARENA 2]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 ##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
 #https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
 http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 13:30-15:30 WIB - AFC Women's Asian Cup 2026: TPE lwn VIE [ASTRO ARENA 2]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 15:50-18:00 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE [ASTRO ARENA 2]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 ##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
 #https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
 http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/Porsche%20Sprint%20Challenge_1920x1080.jpg", 🇮🇩 🔴 15:00-16:00 WIB - 2026 Porsche Sprint Challenge [BEIN SPORT XTRA]
-https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/Porsche%20Sprint%20Challenge_1920x1080.jpg", 🇮🇩 🔴 15:00-16:00 WIB - 2026 Porsche Sprint Challenge [BEIN SPORTS XTRA]
-http://104.238.205.58:9090/279421_.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/74/70/92/747092_p18944992_b_h9_aa_360.jpg", 📺 🔴 15:00-15:30 WIB - F1 Mini [FOX SPORTS 🇲🇽]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSportsMore.alt.au" tvg-name="Fox Sports More" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/81/52/09/815209_p691060_b_h9_bu_360.jpg", 📺 🔴 16:00-18:00 WIB - F1 [FOX SPORTS 🇲🇽]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
 https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/74/70/92/747092_p18944992_b_h9_aa_360.jpg", 📺 🔴 15:00-15:30 WIB - F1 Mini [FOX SPORTS]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSportsMore.alt.au" tvg-name="Fox Sports More" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/81/52/09/815209_p691060_b_h9_bu_360.jpg", 📺 🔴 16:00-18:00 WIB - F1 [FOX SPORTS]
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
 https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 radio="false" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/74/70/92/747092_p18944992_b_h9_aa_360.jpg", 📺 🔴 15:00-15:30 WIB - F1 Mini [Fox Sports 506 FHD]
-https://7pal.short.gy/fox506au
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/loj69u.png", 📺 🔴 15:00-15:30 WIB - F1 Mini: Australia [FOX SPORTS 🇲🇽]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSportsMore.au" tvg-name="Fox Sports More" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/qoel2b.png", 📺 🔴 16:00-18:00 WIB - F1: Australia Race [FOX SPORTS 🇲🇽]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
 https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/loj69u.png", 📺 🔴 15:00-15:30 WIB - F1 Mini: Australia [FOX SPORTS]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSportsMore.au" tvg-name="Fox Sports More" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/qoel2b.png", 📺 🔴 16:00-18:00 WIB - F1: Australia Race [FOX SPORTS]
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
 https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
-#EXTINF:-1 radio="false" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/loj69u.png", 📺 🔴 15:00-15:30 WIB - F1 Mini: Australia [Fox Sports 506 FHD]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/80/43/01/804301_p445587_b_h9_ab_360.jpg", 📺 🔴 16:00-17:00 WIB - MotoGP [FOX SPORTS 🇲🇽]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
+https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/80/43/01/804301_p445587_b_h9_ab_360.jpg", 📺 🔴 16:00-17:00 WIB - MotoGP [FOX SPORTS]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
+https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
+#EXTINF:-1 radio="false" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/80/43/01/804301_p445587_b_h9_ab_360.jpg", 📺 🔴 16:00-17:00 WIB - MotoGP [Fox Sports 506 FHD]
 https://7pal.short.gy/fox506au
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/ixd1xg.png", 📺 ⏳ 15:30-16:00 WIB - F1: Ted's Notebook
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/af0y5z.png", 📺 🔴 16:00-17:00 WIB - MotoGP: Thailand Race [FOX SPORTS 🇲🇽]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 ⏳ 15:50-18:00 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FoxSportsMore.alt.au" tvg-name="Fox Sports More" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/81/52/09/815209_p691060_b_h9_bu_360.jpg", 📺 ⏳ 16:00-18:00 WIB - F1
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/af0y5z.png", 📺 🔴 16:00-17:00 WIB - MotoGP: Thailand Race [FOX SPORTS]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FoxSportsMore.au" tvg-name="Fox Sports More" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/qoel2b.png", 📺 ⏳ 16:00-18:00 WIB - F1: Australia Race
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FoxSports506.alt.au" tvg-name="Fox Sports 506" tvg-logo="https://s3-ap-southeast-2.amazonaws.com/nine-tvmg-images-prod/80/43/01/804301_p445587_b_h9_ab_360.jpg", 📺 ⏳ 16:00-17:00 WIB - MotoGP
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/af0y5z.png", 📺 ⏳ 16:00-17:00 WIB - MotoGP: Thailand Race
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
-https://bwifi.my.id/5menit.mp4
+https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
+#EXTINF:-1 radio="false" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/af0y5z.png", 📺 🔴 16:00-17:00 WIB - MotoGP: Thailand Race [Fox Sports 506 FHD]
+https://7pal.short.gy/fox506au
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Unbeaten.plex" tvg-name="Unbeaten" tvg-logo="https://dx07ip8xjim3q.cloudfront.net/MASL_landscape_poster.jpg", 📺 ⏳ 17:00-18:59 WIB - Arena Soccer - St Louis Ambush v Utica City FC - Major Arena Soccer League 2025/26 - Game 60
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="63d025db4e83e700086eaa96" tvg-name="LiveNOW from FOX" tvg-logo="https://images.pluto.tv/series/66a2af1b7e51670013385bcc/tile_1751396694304.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 17:00-21:00 WIB - LiveNOW from FOX
