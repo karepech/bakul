@@ -50,8 +50,8 @@ def is_allowed_sport(title, ch_name):
         "(d)", "[d]", "(r)", "[r]", "delay", "replay", "re-run", "siaran ulang", "recorded", "archives", 
         "tunda", "tayangan ulang", "rekap", "ulangan", "rakaman", "cuplikan",
         "news", "studio", "pre-match", "post-match", "update", "talk", "show", "weekly", 
-        "magazine", "highlight", "classic", "review", "encore", "tba", 
-        "fitness", "workout", "gym", "golden fit",
+        "magazine", "highlight", "classic", "review", "encore", "tba", "HL",
+        "fitness", "workout", "gym", "golden fit", "rev", "story", "DL",
         "tennis", "wta", "atp", "wimbledon", "golf", "pga", "wwe", "ufc", "boxing", "fight", "mma", 
         "smackdown", "snooker", "darts", "rugby", "cricket", "icc", "mlb", "nhl", "nfl", "baseball", 
         "wbc", "basketball", "nba", "fiba", "movie", "special delivery", "billiard", "t20"
