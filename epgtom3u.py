@@ -20,7 +20,6 @@ M3U_URLS = [
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
 
-# SUNTIKAN EPG GLOBAL UNTUK TIVIMATE/PLAYER LAINNYA
 GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml"
 
 OUTPUT_FILE = "live_matches_only.m3u"
@@ -52,8 +51,10 @@ def is_allowed_sport(title, ch_name):
     if re.search(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', title):
         return False
 
+    # DAFTAR HARAM DIPERLUAS (Tambahan (R), Ulangan, Rakaman, Cuplikan)
     haram = [
-        "(d)", "[d]", "delay", "replay", "re-run", "siaran ulang", "recorded", "archives", "tunda", "tayangan ulang", "rekap",
+        "(d)", "[d]", "(r)", "[r]", "delay", "replay", "re-run", "siaran ulang", "recorded", "archives", 
+        "tunda", "tayangan ulang", "rekap", "ulangan", "rakaman", "cuplikan",
         "news", "studio", "pre-match", "post-match", "update", "talk", "show", "weekly", 
         "magazine", "highlight", "classic", "review", "encore", "tba", 
         "fitness", "workout", "gym", "golden fit",
@@ -141,7 +142,7 @@ def parse_epg_time(time_str):
         return None
 
 def bersihkan_judul_event(title):
-    bersih = re.sub(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\blive\b|\blangsung\b|\blive on\b)', '', title)
+    bersih = re.sub(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\blangsung\b|\blive on\b)', '', title)
     bersih = re.sub(r'\s+', ' ', bersih).strip()
     bersih = re.sub(r'^[\-\:\,\|]\s*', '', bersih)
     return bersih
@@ -202,14 +203,18 @@ def main():
                 if ch_id not in epg_channels: continue
                 
                 # ========================================================
-                # IDE JENIUS USER: WAJIB ADA POSTER EPG (TANDA LIVE)
+                # SENJATA BARU: X-RAY TAG TERSEMBUNYI XMLTV
+                # Jika XMLTV memberi kode "previously-shown", INI PASTI REPLAY!
                 # ========================================================
+                if prog.find("previously-shown") is not None:
+                    continue
+                # ========================================================
+
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
                 
                 if not epg_prog_logo or epg_prog_logo.strip() == "":
                     continue
-                # ========================================================
                     
                 ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
@@ -272,7 +277,7 @@ def main():
         print("❌ Semua file M3U gagal diunduh. Script Berhenti.")
         return
 
-    print("3. Meracik Playlist (Filter Logo Acara Super Ketat)...")
+    print("3. Meracik Playlist (Filter Sinar-X XMLTV)...")
     hasil_akhir = []
     channel_block = []
     
@@ -322,7 +327,6 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    # Karena sudah di-filter di atas, event["prog_logo"] PASTI ADA isinya
                                     logo_final = event["prog_logo"]
                                     
                                     if event["is_live"]:
@@ -391,7 +395,6 @@ def main():
 
     print("4. Menyortir Berdasarkan Jam Tayang & Menyimpan File M3U Final...")
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        # MENYISIPKAN URL EPG GLOBAL DI SINI!
         f.write(f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 OLAHRAGA AKTIF"\n')
         
         if not hasil_akhir:
@@ -404,7 +407,7 @@ def main():
                 for blk in item["baris_lengkap"]:
                     f.write(blk + "\n")
 
-    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (DENGAN EPG GLOBAL)!")
+    print(f"\nSELESAI ✔ → {len(hasil_akhir)} link event premium berhasil diracik (SUPER KETAT)!")
 
 if __name__ == "__main__":
     main()
