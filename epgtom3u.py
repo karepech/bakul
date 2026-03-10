@@ -58,7 +58,6 @@ def is_allowed_sport(title, ch_name):
     if re.search(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', title):
         return False
 
-    # DAFTAR HARAM DIPERLUAS (Tambahan (R), Ulangan, Rakaman, Cuplikan)
     haram = [
         "(d)", "[d]", "(r)", "[r]", "delay", "replay", "re-run", "siaran ulang", "recorded", "archives", 
         "tunda", "tayangan ulang", "rekap", "ulangan", "rakaman", "cuplikan",
@@ -97,12 +96,9 @@ def is_match_akurat(epg_name, m3u_name):
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
 
-    # ========================================================
-    # SISTEM TRANSLATOR (ALIAS): Mengubah singkatan M3U jadi EPG
-    # ========================================================
+    # SISTEM TRANSLATOR (ALIAS)
     m = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', m)
     e = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', e)
-    # ========================================================
 
     hapus_kualitas = r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|id|my|sg|network)\b'
     e_clean = re.sub(hapus_kualitas, '', e).strip()
@@ -135,8 +131,20 @@ def is_match_akurat(epg_name, m3u_name):
             
             return True
 
-    e_alpha = re.sub(r'[^a-z0-9]', '', e_clean)
-    m_alpha = re.sub(r'[^a-z0-9]', '', m_clean)
+    # ========================================================
+    # SISTEM BARU: PENCOCOKAN KATA PER KATA (WORD-BY-WORD)
+    # ========================================================
+    e_words = set(re.findall(r'[a-z0-9]+', e_clean))
+    m_words = set(re.findall(r'[a-z0-9]+', m_clean))
+    
+    if e_words and m_words:
+        # Jika semua kata EPG ada di M3U, atau semua kata M3U ada di EPG -> COCOK!
+        if e_words.issubset(m_words) or m_words.issubset(e_words):
+            return True
+
+    # FALLBACK: Jika pencocokan kata gagal karena tulisan digabung (misal: "beinsports" vs "bein sports")
+    e_alpha = "".join(e_words)
+    m_alpha = "".join(m_words)
     if not e_alpha or not m_alpha: return False
     if len(e_alpha) < 3 or len(m_alpha) < 3: return e_alpha == m_alpha
     return e_alpha in m_alpha or m_alpha in e_alpha
@@ -196,6 +204,7 @@ def main():
 
     print("1. Mengunduh dan memproses daftar EPG...")
     for url in EPG_URLS:
+        if not url: continue
         try:
             r_epg = requests.get(url, timeout=120)
             if r_epg.status_code != 200: continue
@@ -216,10 +225,11 @@ def main():
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
                 
-                # SENJATA BARU: X-RAY TAG TERSEMBUNYI XMLTV
+                # SENJATA X-RAY TAG TERSEMBUNYI XMLTV (Tolak Replay)
                 if prog.find("previously-shown") is not None:
                     continue
 
+                # WAJIB ADA POSTER EPG (Tolak Filler/Acara Sampah)
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
                 
@@ -274,6 +284,7 @@ def main():
     print("\n2. Menggabungkan file Multi M3U master Anda...")
     m3u_lines = []
     for url in M3U_URLS:
+        if not url: continue
         print(f" -> Sedot M3U: {url.split('/')[-1]} ...")
         try:
             r_m3u = requests.get(url, timeout=30)
@@ -287,7 +298,7 @@ def main():
         print("❌ Semua file M3U gagal diunduh. Script Berhenti.")
         return
 
-    print("3. Meracik Playlist (Filter Sinar-X XMLTV)...")
+    print("3. Meracik Playlist (Sistem Pencocokan Kata per Kata Aktif)...")
     hasil_akhir = []
     channel_block = []
     
