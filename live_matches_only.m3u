@@ -77,6 +77,19 @@ https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/oboxe53wyo/out/v1/f
 https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
 #EXTINF:-1 radio="false" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FoxSports506.au" tvg-name="Fox Sports 506" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/af0y5z.png", 📺 🔴 16:00-17:00 WIB - MotoGP: Thailand Race [Fox Sports 506 FHD]
 https://7pal.short.gy/fox506au
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 🔴 16:12-19:54 WIB - Australian Open Full Match [TEN SPORTS HD]
+http://125.209.88.166:45793/BRN/TenSports.stream/playlist.m3u8
+#EXTINF:-1 radio="false" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 🔴 16:12-19:54 WIB - Australian Open Full Match [SKY SPORTS TENNIS]
+http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/6546/index.m3u8
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 🔴 16:12-19:54 WIB - Australian Open Full Match [Sky Sports Tennis FHD]
+https://7pal.short.gy/ssportstn
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 🔴 16:12-19:54 WIB - Australian Open Full Match [TV4 Tennis 🇸🇪]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"lXsyUI/srxp/hC6dibx1Nw","kid":"vTKtYI6MNTaNuwrL+pTY4A"}],"type":"temporary"}
+https://live.streaming.a2d.tv/asset/20465727.isml/dash.mpd
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Hub.Sports.3.HD.sg" tvg-name="Hub Sports 3 HD" tvg-logo="https://poster.starhubgo.com/poster/ch203_asian_tour.jpg?w=960&h=540", 📺 ⏳ 17:00-20:00 WIB - 105th New Zealand Open presented by Millbrook Resort Round 3
+https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Unbeaten.plex" tvg-name="Unbeaten" tvg-logo="https://dx07ip8xjim3q.cloudfront.net/MASL_landscape_poster.jpg", 📺 ⏳ 17:00-18:59 WIB - Arena Soccer - St Louis Ambush v Utica City FC - Major Arena Soccer League 2025/26 - Game 60
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="63d025db4e83e700086eaa96" tvg-name="LiveNOW from FOX" tvg-logo="https://images.pluto.tv/series/66a2af1b7e51670013385bcc/tile_1751396694304.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 17:00-21:00 WIB - LiveNOW from FOX
@@ -154,6 +167,8 @@ https://bwifi.my.id/5menit.mp4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2bb7b314771ed5eeddd8f44a9aa42740:01f2a8f11bd891655a752c1749f478ec
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Hub.Sports.1.HD.sg" tvg-name="Hub Sports 1 HD" tvg-logo="https://poster.starhubgo.com/poster/ch201_ATP1000BNPParibasOpen.jpg?w=341&h=192", 📺 ⏳ 18:00-19:30 WIB - BNP Paribas Open (1000) Day 6 R3 S1
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQY.jpg", 🇲🇾 ⏳ 18:00-03:00 WIB - BWF England Open: Finals
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
@@ -413,7 +428,15 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2bb7b314771ed5eeddd8f44a9aa42740:01f2a8f11bd891655a752c1749f478ec
 https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 ⏳ 19:54-21:41 WIB - Australian Open Full Match
+https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="683df56f5195c2a60a3f5559" tvg-name="Swerve Sports" tvg-logo="https://images.pluto.tv/series/6989948ec84badbe81e8bcb9/tile_1773104605528.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 19:58-21:37 WIB - Australian Volleyball Super League
+https://bwifi.my.id/5menit.mp4
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SPOTV.id" tvg-name="SPOTV" tvg-logo="https://poster.starhubgo.com/poster/ch209_golf.jpg?w=960&h=540", 📺 ⏳ 20:00-01:00 WIB - 2026 LET: Ford Women's NSW Open
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Hub.Sports.1.HD.sg" tvg-name="Hub Sports 1 HD" tvg-logo="https://poster.starhubgo.com/poster/ch201_ATP1000BNPParibasOpen.jpg?w=341&h=192", 📺 ⏳ 20:00-23:00 WIB - BNP Paribas Open (1000) Day 6 R3 S2
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQX.jpg", 🇲🇾 ⏳ 20:00-02:00 WIB - BWF England Open: SF 2
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -627,6 +650,8 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_key=https://terson.treshold.workers.dev/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 ⏳ 21:41-00:31 WIB - Australian Open Full Match
+https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 21:55-22:55 WIB - FIA Formula 2 Championship Feature Race 2026
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -698,6 +723,8 @@ https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.ACCDN.plex" tvg-name="ACCDN" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c2ab5a2e-1fe9-49a9-b07d-6e1e5021f591/ACCDN_Hero_Image_-_Mathew_Carstens.jpg", 📺 ⏳ 23:00-01:00 WIB - 1999 ACC MBB Championship: North Carolina vs. Duke
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/COPA%20LIBERTADORES.jpg", 🇮🇩 ⏳ 23:00-01:00 WIB - 2026 Copa Libertadores
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Hub.Sports.1.HD.sg" tvg-name="Hub Sports 1 HD" tvg-logo="https://poster.starhubgo.com/poster/ch201_ATPTour2026DelrayBeachOpen250.jpg?w=960&h=540", 📺 ⏳ 23:00-00:30 WIB - Delray Beach Open (250) Final
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FoxSports505.au" tvg-name="Fox Sports 505" tvg-logo="https://images1.resources.foxtel.com.au/store2/mount1/16/4/7jzfqq.png", 📺 ⏳ 23:00-00:00 WIB - F1: Australia Practice 2
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -779,6 +806,8 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
 #https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd
 https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 ⏳ Besok 00:31-04:23 WIB - Australian Open Full Match
+https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/0c4829KTKEW.jpg", 🇲🇾 ⏳ Besok 00:40-03:30 WIB - PL: Arsenal vs Chelsea
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 https://bwifi.my.id/5menit.mp4
@@ -807,6 +836,8 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Hub.Sports.1.HD.sg" tvg-name="Hub Sports 1 HD" tvg-logo="https://poster.starhubgo.com/poster/ch201_ATP1000BNPParibasOpen.jpg?w=341&h=192", 📺 ⏳ Besok 01:00-03:00 WIB - BNP Paribas Open (1000) Day 7 R16 S1
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://datastore.vr.ctrp.sooka.my/content/images/9df679KUXHF.jpg", 🇲🇾 ⏳ Besok 01:00-02:00 WIB - BWF World Tour: HL
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -946,6 +977,8 @@ https://bwifi.my.id/5menit.mp4
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.beIN.SPORTS.XTRA.plex" tvg-name="beIN SPORTS XTRA" tvg-logo="https://d11zoay7msd9a2.cloudfront.net/Porsche%20Sprint%20Challenge_1920x1080.jpg", 🇮🇩 ⏳ Besok 03:00-04:00 WIB - 2026 Porsche Sprint Challenge
 https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Hub.Sports.1.HD.sg" tvg-name="Hub Sports 1 HD" tvg-logo="https://poster.starhubgo.com/poster/ch201_ATP1000BNPParibasOpen.jpg?w=341&h=192", 📺 ⏳ Besok 03:00-07:00 WIB - BNP Paribas Open (1000) Day 7 R16 S2
+https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KULHF.jpg", 🇲🇾 ⏳ Besok 03:00-04:00 WIB - BWF: French Open: HL
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
@@ -959,6 +992,8 @@ https://bwifi.my.id/5menit.mp4
 #https://tataplay.slivcdn.com//hls/live/2011747/TEN1HD/master.m3u8
 #http://app.hughag.store/api/762cf859a8/playlist.m3u8
 #https://cdn.bdixtv24.com/SonyTen1HD/index.m3u8
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Women`s.Sports.Network.plex" tvg-name="Women`s Sports Network" tvg-logo="https://d2gqmql520my5n.cloudfront.net/WOMCH/Default_1920x1080.png", 📺 ⏳ Besok 03:21-04:39 WIB - 2007 US Women’s Open Film: A Dream Come True
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Eurosport.in" tvg-name="Eurosport" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/ccf4822f49a919f73b0f61ceb94337a0.jpg", 📺 ⏳ Besok 03:30-04:30 WIB - BWF World Tour Badminton
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
@@ -1002,6 +1037,8 @@ https://bwifi.my.id/5menit.mp4
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=335511dfdf0d03bc06f1fdead5870b5a:1a022fb33ad3de4d4579b04966551488
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="plex.tv.Tennis+.plex" tvg-name="Tennis+" tvg-logo="https://d3nz4ni37og2lk.cloudfront.net/Images/S3/tennp/FullMatchLogo.jpg", 📺 ⏳ Besok 04:23-06:26 WIB - Australian Open Full Match
 https://bwifi.my.id/5menit.mp4
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
