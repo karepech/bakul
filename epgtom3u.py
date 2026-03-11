@@ -212,9 +212,9 @@ def is_valid_time(start_dt, title, ch_name):
 def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     epg_channels = {}
+    epg_channel_logos = {} # Penyimpan Logo Channel dari EPG
     jadwal_per_channel = {}
 
-    # Penggabungan EPG_URLS & GLOBAL_EPG_URL agar benar-benar diproses
     ALL_EPG_URLS = EPG_URLS.copy()
     for u in GLOBAL_EPG_URL.split(','):
         if u.strip() and u.strip() not in ALL_EPG_URLS:
@@ -225,7 +225,6 @@ def main():
     else:
         batas_waktu_upcoming = (now_wib + timedelta(days=3)).replace(hour=5, minute=0, second=0, microsecond=0)
 
-    # Optimasi: Gunakan Session agar download lebih cepat & aman dari blokir
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'})
 
@@ -237,18 +236,25 @@ def main():
             if r_epg.status_code != 200: continue
                 
             content = r_epg.content
-            # Optimasi decompress gzip bawaan python (lebih cepat dari IO byte)
             if url.endswith(".gz") or content[:2] == b'\x1f\x8b':
                 content = gzip.decompress(content)
                 
             root = ET.fromstring(content)
             
+            # --- TANGKAP NAMA & LOGO CHANNEL EPG ---
             for ch in root.findall("channel"):
                 ch_id = ch.get("id")
                 ch_name = ch.findtext("display-name")
+                
+                icon_node = ch.find("icon")
+                ch_logo = icon_node.get("src") if icon_node is not None else ""
+                
                 if ch_id and ch_name:
                     epg_channels[ch_id] = ch_name.strip()
-                    
+                    if ch_logo:
+                        epg_channel_logos[ch_id] = ch_logo.strip()
+                        
+            # --- TANGKAP PROGRAM EVENT ---
             for prog in root.findall("programme"):
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
@@ -295,7 +301,6 @@ def main():
                 })
 
         except Exception as e:
-            # Lewati dengan tenang jika 1 link mati, agar proses tidak berhenti total
             continue
 
     print("Step 2: Menggabungkan file Multi M3U master Anda...")
@@ -359,7 +364,13 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    logo_final = event["prog_logo"] if event["prog_logo"] else logo_asli
+                                    # --- PRIORITAS LOGO 3 LAPIS ---
+                                    logo_epg_prog = event["prog_logo"]
+                                    logo_epg_chan = epg_channel_logos.get(ch_id, "")
+                                    
+                                    # Gunakan EPG Program -> lalu EPG Channel -> lalu M3U Asli
+                                    logo_final = logo_epg_prog or logo_epg_chan or logo_asli
+                                    # ------------------------------
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
@@ -407,11 +418,9 @@ def main():
                                             judul_akhir = f"{bendera} ⏳ Lusa {jam_str} - {event['title_display']}"
                                         else:
                                             tanggal_str = event["start_dt"].strftime('%d/%m')
-                                            # PENYELESAIAN KODE TERPOTONG
                                             judul_akhir = f"{bendera} ⏳ {tanggal_str} {jam_str} - {event['title_display']}"
 
                                         order = 1
-                                        # Pakai LINK_UPCOMING untuk jadwal mendatang seperti definisi konfigurasi Anda
                                         stream_final = LINK_UPCOMING 
                                         
                                         baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
@@ -431,10 +440,8 @@ def main():
             channel_block = []
 
     print("Step 4: Mengurutkan dan menyimpan hasil...")
-    # Urutkan: Live duluan (0), baru Upcoming (1). Lalu urutkan berdasarkan jam tayang.
     hasil_akhir.sort(key=lambda x: (x["kategori_order"], x["start_time"], x["title_sort"]))
 
-    # PENYELESAIAN PENULISAN FILE
     try:
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write("#EXTM3U\n")
