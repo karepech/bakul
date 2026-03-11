@@ -9,10 +9,10 @@ import io
 # KONFIGURASI MULTI-EPG & M3U (VERSI RINGAN)
 # ==========================================
 EPG_URLS = [
-    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
-    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",
-    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz",                   
-    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml"                                                  
+    "https://raw.githubusercontent.com/karepech/Epgku/refs/heads/main/epg_wib_sports.xml",                   
+    "",
+    "",                   
+    ""                                                  
 ]
 
 M3U_URLS = [
