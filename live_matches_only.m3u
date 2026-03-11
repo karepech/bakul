@@ -27,64 +27,65 @@ http://208.87.242.55/livehttpplay?channel_id=13301
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQS.jpg", 🇲🇾 🔴 07:10-12:25 WIB - BWF England Open: QF 1 (Crt 1) [ASTRO GRANDSTAND]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVWJL.jpg", 🇲🇾 🔴 07:45-10:00 WIB - FA Cup: Leeds vs Norwich [ASTRO FOOTBALL]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQY.jpg", 🇲🇾 🔴 08:00-14:44 WIB - BWF England Open: Finals [ASTRO BADMINTON]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArenaBola" tvg-name="Astro Arena Bola" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJEG.jpg", 🇲🇾 🔴 10:00-12:00 WIB - AFC Elite 2025/26: FMZ lwn GAN [ASTRO ARENA BOLA]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=fb06bb8266fb4a998e7c4e7e90461556:52242587d8106c4b3ed596c7a56b4e28
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola1fhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHP.jpg", 🇲🇾 🔴 11:00-13:00 WIB - Serie A: Atalanta vs Udinese [ASTRO FOOTBALL]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 ##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
 ##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
 http://208.87.242.55/livehttpplay?channel_id=13300
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVWJL.jpg", 🇲🇾 🔴 07:45-10:00 WIB - FA Cup: Leeds vs Norwich [ASTRO FOOTBALL LIVE]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHP.jpg", 🇲🇾 🔴 11:00-13:00 WIB - Serie A: Atalanta vs Udinese [ASTRO FOOTBALL LIVE]
 http://208.87.242.55/livehttpplay?channel_id=13305
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVWJL.jpg", 🇲🇾 🔴 07:45-10:00 WIB - FA Cup: Leeds vs Norwich [ASTRO FOOTBALL]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHP.jpg", 🇲🇾 🔴 11:00-13:00 WIB - Serie A: Atalanta vs Udinese [ASTRO FOOTBALL]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/158.ts
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVWJL.jpg", 🇲🇾 🔴 07:45-10:00 WIB - FA Cup: Leeds vs Norwich [Astro Football]
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHP.jpg", 🇲🇾 🔴 11:00-13:00 WIB - Serie A: Atalanta vs Udinese [Astro Football]
 https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroFootball.m3u8
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVWJL.jpg", 🇲🇾 🔴 07:45-10:00 WIB - FA Cup: Leeds vs Norwich [Astro Football]
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHP.jpg", 🇲🇾 🔴 11:00-13:00 WIB - Serie A: Atalanta vs Udinese [Astro Football]
 https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroFootball.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQY.jpg", 🇲🇾 🔴 08:00-14:44 WIB - BWF England Open: Finals [ASTRO BADMINTON]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
-https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 09:00-11:00 WIB - AFC Women's Asian Cup 2026: TPE lwn VIE [ASTRO ARENA 2]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 11:15-13:15 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE [ASTRO ARENA 2]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 ##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
 #https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
 http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 09:00-11:00 WIB - AFC Women's Asian Cup 2026: TPE lwn VIE [ASTRO ARENA 2]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 🔴 11:15-13:15 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE [ASTRO ARENA 2]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/400.ts
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArenaBola" tvg-name="Astro Arena Bola" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJEG.jpg", 🇲🇾 ⏳ 10:00-12:00 WIB - AFC Elite 2025/26: FMZ lwn GAN
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=fb06bb8266fb4a998e7c4e7e90461556:52242587d8106c4b3ed596c7a56b4e28
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHP.jpg", 🇲🇾 ⏳ 11:00-13:00 WIB - Serie A: Atalanta vs Udinese
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 ⏳ 11:15-13:15 WIB - AFC Women's Asian Cup 2026: JPN lwn VIE
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
-#https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEU.jpg", 🇲🇾 ⏳ 11:20-14:10 WIB - PL: Man Utd vs Crystal Palace
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEU.jpg", 🇲🇾 🔴 11:20-14:10 WIB - PL: Man Utd vs Crystal Palace [ASTRO PREMIER LEAGUE]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 ##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
 ##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEU.jpg", 🇲🇾 🔴 11:20-14:10 WIB - PL: Man Utd vs Crystal Palace [ASTRO PREMIER LEAGUE]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+http://zozotv.xyz:8080/live/abemohdz8/zoz139/156.ts
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEU.jpg", 🇲🇾 🔴 11:20-14:10 WIB - PL: Man Utd vs Crystal Palace [Astro Premier League]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroPremierLeague.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEU.jpg", 🇲🇾 🔴 11:20-14:10 WIB - PL: Man Utd vs Crystal Palace [Astro Premier League]
+https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroPremierLeague.m3u8
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArenaBola2" tvg-name="Astro Arena Bola 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWCWE.jpg", 🇲🇾 ⏳ 12:00-14:00 WIB - MFL Challenge Cup 2025/26: IFC lwn KTRW
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
