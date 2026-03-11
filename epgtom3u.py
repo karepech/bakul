@@ -186,10 +186,13 @@ def main():
                 # TOLAK REPLAY (X-RAY)
                 if prog.find("previously-shown") is not None: continue
 
-                # WAJIB ADA POSTER EPG KEMBALI AKTIF (Aturan Lama)
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
-                if not epg_prog_logo or epg_prog_logo.strip() == "": continue
+                
+                # =======================================================
+                # ❌ SYARAT WAJIB POSTER SAYA MATIKAN KHUSUS UNTUK EPG.PW
+                # =======================================================
+                # if not epg_prog_logo or epg_prog_logo.strip() == "": continue
                     
                 ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
@@ -288,7 +291,10 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    logo_final = event["prog_logo"]
+                                    # =======================================================
+                                    # JIKA EPG GAK PUNYA POSTER, PINJAM LOGO ASLI CHANNEL M3U
+                                    # =======================================================
+                                    logo_final = event["prog_logo"] if event["prog_logo"] else logo_asli
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
@@ -336,7 +342,6 @@ def main():
 
     print("4. Menyimpan File M3U Final...")
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        # EPG GLOBAL SUDAH DIHAPUS DARI BARIS INI
         f.write('#EXTM3U name="🔴 OLAHRAGA AKTIF"\n')
         if not hasil_akhir:
             f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL\n')
