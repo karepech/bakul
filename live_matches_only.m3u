@@ -1,32 +1,4 @@
 #EXTM3U
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRI.jpg", 🇲🇾 🔴 00:00-04:30 WIB - BWF Terbuka All England 2026: R16 [ASTRO ARENA 2]
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
-#https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
-http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRI.jpg", 🇲🇾 🔴 00:00-04:30 WIB - BWF Terbuka All England 2026: R16 [ASTRO ARENA 2]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-http://zozotv.xyz:8080/live/abemohdz8/zoz139/400.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVQVZ.jpg", 🇲🇾 🔴 00:00-04:30 WIB - BWF Terbuka All England 2026: R32 [ASTRO ARENA]
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
-http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVQVZ.jpg", 🇲🇾 🔴 00:00-04:30 WIB - BWF Terbuka All England 2026: R32 [ASTRO ARENA]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-http://zozotv.xyz:8080/live/abemohdz8/zoz139/154.ts
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVQVZ.jpg", 🇲🇾 🔴 00:00-04:30 WIB - BWF Terbuka All England 2026: R32 [Astro Arena]
-https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVQVZ.jpg", 🇲🇾 🔴 00:00-04:30 WIB - BWF Terbuka All England 2026: R32 [Astro Arena]
-https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="USBA300024TN" tvg-name="LiveNOW from FOX" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_1286108461_1_20250507T082844074Z_115_imageprocessorclient-tvplus-linear-b76dd9bbb-4fr8j.jpeg", 📺 🔴 01:00-05:00 WIB - LiveNOW from FOX [FOX SPORTS 🇲🇽]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -181,58 +153,6 @@ https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/in
 #KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SpoTV 2.id" tvg-name="SpoTV 2.id" tvg-logo="https://www.visionplus.id/images/repository/960/49960-SNAPSHOT-l.png", 📺 🔴 01:00-05:00 WIB - Snow League: Buttermilk Mt. [SpoTV 2 (V+)]
 https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="US600011Q2" tvg-name="Formula 1 Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_947204088_0_20250305T093717692Z_90_imageprocessorclient-tvplus-linear-b76dd9bbb-t8jnc.jpeg", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [SPORT 1 🇸🇰]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [Sky Sports F1 FHD]
-https://7pal.short.gy/ssportsf1
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [SKY_F1]
-https://raw.githubusercontent.com/Cutsiffa/Bin/refs/heads/main/splus/Skyf1.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [Sky Sport F1]
-https://zamlb.tgaadi.workers.dev/1783.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [DAZN F1 IP]
-http://opplex.tv:8080/live/12345678910/12345678910/354195.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [Sky Sport F1]
-https://zamlb.tgaadi.workers.dev/1783.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 🇬🇧 🔴 01:59-04:18 WIB - Formula 1 Racing [SS F1 UK]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1159
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/6631478c6bc9410013409116/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 01:59-04:18 WIB - Formula 1 Racing [Dazn F1 ES TEST]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/25117
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ATAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/AT_DEQY392104A_1180301612_0_20250908T210125973Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-tplqm.jpeg", 📺 🔴 02:00-04:45 WIB - Manchester City TV [SPORTDIGITAL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
-#EXTVLCOPT:http-referrer=https://ntuplay.xyz/
-#https://xyzdddd.mizhls.ru/lb/premium571/index.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ATAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/AT_DEQY392104A_1180301612_0_20250908T210125973Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-tplqm.jpeg", 📺 🔴 02:00-04:45 WIB - Manchester City TV [SPORTDIGITAL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=610ad79e26a84fc782c987455e21a86b:d2d4acc6e79447b55f3f5c0267af06f5
-https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="CHAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/CH_DEQY392104A_1180300232_0_20250908T210125899Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-gkp68.jpeg", 📺 🔴 02:00-04:45 WIB - Manchester City TV [SPORTDIGITAL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
-#EXTVLCOPT:http-referrer=https://ntuplay.xyz/
-#https://xyzdddd.mizhls.ru/lb/premium571/index.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="CHAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/CH_DEQY392104A_1180300232_0_20250908T210125899Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-gkp68.jpeg", 📺 🔴 02:00-04:45 WIB - Manchester City TV [SPORTDIGITAL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=610ad79e26a84fc782c987455e21a86b:d2d4acc6e79447b55f3f5c0267af06f5
-https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="DEAJ0500429A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/DE_DEQY392104A_1180299481_0_20250908T210125354Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-grwzd.jpeg", 📺 🔴 02:00-04:45 WIB - Manchester City TV [SPORTDIGITAL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
-#EXTVLCOPT:http-referrer=https://ntuplay.xyz/
-#https://xyzdddd.mizhls.ru/lb/premium571/index.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="DEAJ0500429A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/DE_DEQY392104A_1180299481_0_20250908T210125354Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-grwzd.jpeg", 📺 🔴 02:00-04:45 WIB - Manchester City TV [SPORTDIGITAL]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=610ad79e26a84fc782c987455e21a86b:d2d4acc6e79447b55f3f5c0267af06f5
-https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEK.jpg", 🇲🇾 🔴 02:00-05:00 WIB - PL: Nottm Forest vs Liverpool [ASTRO GRANDSTAND]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
@@ -242,159 +162,10 @@ http://208.87.242.55/livehttpplay?channel_id=13301
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEK.jpg", 🇲🇾 🔴 02:00-05:00 WIB - PL: Nottm Forest vs Liverpool [ASTRO GRANDSTAND]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 http://zozotv.xyz:8080/live/abemohdz8/zoz139/570.ts
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [Premier Sports 🇵🇭]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [Sky Sport Premier League FHD]
-https://7pal.short.gy/skyspt8nz
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [Now Sports Premier League1 HD]
-https://7pal.short.gy/nowhkp1
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [Premier Sports Rugby]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4751472d3ac45e95e44b5e75480e53de:5f989e3de354630ec7973980f129ed01
-https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fapyi0fj1o/out/v1/6fe7ef7bb5de4033a2b202d9ca62151a/cenc.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER SPORT 1]
-https://raw.githubusercontent.com/B-inal-123/s-eropa/inal-22/Premier1.m3u8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=002046c9a49b9ab1cdb6616bec5d26c3:d2f92f6b7edc9a1a05d393ba0c20ef9e
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [Peacock Premier League]
-https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc1021n07j)/master.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER SPORTS]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER LEAGUE TV]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://sweet-night-1d1d.worst.workers.dev/play?id=9353&type=drm
-#https://sweet-night-1d1d.worst.workers.dev/play.mpd?id=9353&type=dash
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER LEAGUE TV]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=002046c9a49b9ab1cdb6616bec5d26c3:d2f92f6b7edc9a1a05d393ba0c20ef9e
-http://cors.tundracast.com:2000/https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc1021n07j)/master.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [Peacock Premier League]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=002046c9a49b9ab1cdb6616bec5d26c3:d2f92f6b7edc9a1a05d393ba0c20ef9e
-https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc1021n07j)/master.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [PREMIER SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 02:12-04:42 WIB - AFL: Brisbane V Bulldogs [SS Premier League UK]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1162
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLPL.jpg", 🇲🇾 🔴 02:25-11:45 WIB - BWF Malaysia Open: Day 2: Rd32 [ASTRO BADMINTON]
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=0bbb23a5ad81427fa6817864b2383402:81e055a8d6ddf6392ae9033f0f037b98
 https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ES300031A5" tvg-name="GOL CLASSICS" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/ES_USQT620324A_1055331088_1_20250714T163754946Z_111_imageprocessorclient-tvplus-linear-5db7c6bc99-fc88h.jpeg", 📺 🔴 02:26-04:25 WIB - Liga Española 2010/2011 J09 [Gol Classics]
-https://d71gqtnep83vb.cloudfront.net/gol_classics/gol_classics.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORT ᴴᴰ 🇵🇭]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORTS+ 🇵🇭]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=322d06e9326f4753a7ec0908030c13d8:1e3e0ca32d421fbfec86feced0efefda
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesportsplus_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORTS HD]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORTS HD]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORT]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORTS]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-#https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="IT300004KM" tvg-name="Sony One Film d’azione" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IT_USQT620324A_1522696914_0_20260106T025438102Z_46_imageprocessorclient-tvplus-linear-85d7d49859-mtv42.jpeg", 📺 🔴 02:28-04:17 WIB - Interferenze [ONE SPORTS HD]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="63d91d2560bc8f0008a225e4" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6596446070bd3cb7ca/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660c29f80cd4630008f1547c" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6b96446070bd3cc358/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660c29b5aec9680008f5b4a4" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6896446070bd3cbf74/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfc032433010008def35a" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b3566df77b5e1d230d45c8/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997e8d3a4ad20008e50be9" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab39700930013743fe8/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997d18a1b69e00082ee85f" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab19700930013743d59/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997d18a1b69e00082ee85f" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab19700930013743d59/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997d18a1b69e00082ee85f" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab19700930013743d59/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660c2a2d2433010008df7e92" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6d96446070bd3cc742/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfc4424e1d000085b5f93" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35670f77b5e1d230d49a0/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfca524e1d000085b6007" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35674f77b5e1d230d5157/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfcd07bcd860008796ae8" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35676f77b5e1d230d5540/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfc7b2433010008def3e3" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35672f77b5e1d230d4d77/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+ 1]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="63d91d2560bc8f0008a225e4" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6596446070bd3cb7ca/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660c29f80cd4630008f1547c" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6b96446070bd3cc358/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660c29b5aec9680008f5b4a4" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6896446070bd3cbf74/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfc032433010008def35a" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b3566df77b5e1d230d45c8/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997e8d3a4ad20008e50be9" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab39700930013743fe8/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997d18a1b69e00082ee85f" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab19700930013743d59/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997d18a1b69e00082ee85f" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab19700930013743d59/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="66997d18a1b69e00082ee85f" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/66b11ab19700930013743d59/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660c2a2d2433010008df7e92" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b36b6d96446070bd3cc742/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfc4424e1d000085b5f93" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35670f77b5e1d230d49a0/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfca524e1d000085b6007" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35674f77b5e1d230d5157/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfcd07bcd860008796ae8" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35676f77b5e1d230d5540/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="660bfc7b2433010008def3e3" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/series/67b35672f77b5e1d230d4d77/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 02:41-04:38 WIB - 2022 FIFA World Cup [FIFA+]
-https://f7ccf7fc.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLXB0X0ZJRkFQbHVzUG9ydHVndWVzZV9ITFM/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="GOL.TV" tvg-name="GOL.TV" tvg-logo="https://www.movistarplus.es/recorte/n/caratula5/MGOLP4257194", 📺 🔴 02:45-04:45 WIB - Directo Gol Directos a la Champions [Gol Classics]
-https://d71gqtnep83vb.cloudfront.net/gol_classics/gol_classics.m3u8
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Moji.id" tvg-name="Moji.id" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvsA0eX0cYe_h_rs0Kq5EzuceKR9ebt0KLkdunqy3HnNSp9hEI5HGzYO9omOJNdXREpDP3Pv2iUh6p0Og761HTBAZDc6OAelCOnwkR2n9s-qqUBdv_71jMhSV24i8tIZn0aiDaP4_tXRkwKeSMIJoMW2H1MBPbeImXFPvchRoQPyxRq3SNw-6olichhXKj/s700/MOJI.png", 📺 🔴 02:45-05:00 WIB - UEFA CHAMPIONS LEAGUE () PSG VS CHELSEA [MOJI WI]
 #EXTVLCOPT:http-user-agent=Player (Linux; Android 12)
 https://wahyu1ptv.pages.dev/Moji-HD.m3u8
@@ -571,10 +342,6 @@ https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKFC.jpg", 🇲🇾 🔴 02:50-05:00 WIB - PL: Burnley vs Brentford [Astro Premier League]
 https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroPremierLeague.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="R+ LIVE.id" tvg-name="R+ LIVE.id" tvg-logo="", 📺 🔴 02:50-04:35 WIB - R+ [Sport Live Plus]
-https://nl.utako.moe/sport_live_plus/index.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="R+ LIVE.id" tvg-name="R+ LIVE.id" tvg-logo="", 📺 🔴 02:50-04:35 WIB - R+ [Live]
-https://a3569457567-s70378.cdn.ngenix.net/jivi/1/index.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
@@ -1258,52 +1025,6 @@ https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
 https://live.dinesh29.com.np/stream/jiotvplus/starsportshd1/master.m3u8
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts246" tvg-name="Star Sports Select 1 HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-7891-j75vq7k0-v1/imageContent-7891-j75vq7k0-m1.PNG", 📺 🔴 03:30-05:30 WIB - Tottenham Hotspur vs. Fulham-Premier League Soccer [STAR SPORTS SELECT 1 HD]
 https://live.dinesh29.com.np/stream/jiotvplus/starsportsselecthd1/master.m3u8
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [EUROSPORT]
-https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [EUROSPORT 1 🇸🇰]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport Asia]
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport Asia]
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport Asia]
-#EXTVLCOPT:http-referrer=http://www.dens.tv/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8?app_type=web&amp;userid=wnctpm5uf2j&amp;chname=Motorvision%2B
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [EUROSPORT 1]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [EUROSPORT ASIA]
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
-https://atemeshield1-voe.sysln.id/live/eds/EUROSPORTHD/mpd/EUROSPORTHD.mpd
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport Asia]
-https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport 1]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1167
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport 4k]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/25803
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 03:30-04:30 WIB - Yonex Sunrise India Open : Semi Final-BWF World Tour Badminton [Eurosport Asia]
-https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="mjh-superbowlchampions-fast" tvg-name="Super Bowl Champions" tvg-logo="https://api.tvapi.com.au/images/SBCP01-030_medium.png", 📺 🔴 03:30-04:57 WIB - Super Bowl XLIX Champions - 2014 New England Patriots [CHAMPIONS TV 1]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) MPF.Players/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -1799,14 +1520,6 @@ https://d3b0v7fggu5zwm.cloudfront.net/out/v1/8cf72e61626f4361a45c57ce6f2fdad8/in
 #KODIPROP:inputstream.adaptive.license_key=0de1f882d278465abdba73a8b4cb2bda:7061f5e1115d6ef504726c3faa8bf146
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="V+ Sports.id" tvg-name="V+ Sports.id" tvg-logo="https://www.mncvision.id/userfiles/image/channel/channel_90.png", 📺 🔴 04:00-06:30 WIB - Best Of Badminton [Hanacaraka TV (V+)]
 https://d1vckova5fh9mt.cloudfront.net/out/v1/17c724036c5f4615bd0b8093126b5c44/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="663a440c8ea5560008a4db8a" tvg-name="Gaming Central: League of Legends" tvg-logo="https://images.pluto.tv/series/68bac010b3900870ec28cb24/tile-1757080406029.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:00-04:30 WIB - Gaming Central: League of Legends [GAMING TV]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Xstream XGO/1.22 (Linux;Android 9) ExoPlayerLib/2.10.5
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://terson.treshold.workers.dev/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6858119921801816b5359d15e63/manifest.mpd
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="667f2c7b22acab0008b7072b" tvg-name="FOX LOCAL Los Angeles" tvg-logo="https://images.pluto.tv/series/66a2b00f7e516700133d2bf7/tile_1759950700425.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:00-07:00 WIB - LiveNOW From FOX [FOX SPORTS 🇲🇽]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -1911,53 +1624,126 @@ https://a3569457567-s70378.cdn.ngenix.net/jivi/1/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
 https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="6080381ab7c9ea00074ec64c" tvg-name="World Poker Tour" tvg-logo="https://images.pluto.tv/series/609933f05ff04300139c2c54/tile_1768939920776.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 04:17-05:08 WIB - World Poker Tour: Borgata Poker Open - Parte 1
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 04:18-05:26 WIB - F1 Academy
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="US600011Q2" tvg-name="Formula 1 Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_1064424348_0_20250327T112514504Z_1_imageprocessorclient-tvplus-linear-b76dd9bbb-njxgs.jpeg", 📺 ⏳ 04:18-05:26 WIB - F1 Academy: China: Race 1
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="6080381ab7c9ea00074ec64c" tvg-name="World Poker Tour" tvg-logo="https://images.pluto.tv/series/609933f05ff04300139c2c54/tile_1768939920776.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:17-05:08 WIB - World Poker Tour: Borgata Poker Open - Parte 1 [World Poker Tour]
+https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/playlist.m3u8?ads.xumo_channelId=88883102
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:18-05:26 WIB - F1 Academy [Sky Sports F1 FHD]
+https://7pal.short.gy/ssportsf1
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:18-05:26 WIB - F1 Academy [SKY_F1]
+https://raw.githubusercontent.com/Cutsiffa/Bin/refs/heads/main/splus/Skyf1.m3u8
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:18-05:26 WIB - F1 Academy [Sky Sport F1]
+https://zamlb.tgaadi.workers.dev/1783.ts
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:18-05:26 WIB - F1 Academy [DAZN F1 IP]
+http://opplex.tv:8080/live/12345678910/12345678910/354195.ts
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:18-05:26 WIB - F1 Academy [Sky Sport F1]
+https://zamlb.tgaadi.workers.dev/1783.ts
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 🇬🇧 🔴 04:18-05:26 WIB - F1 Academy [SS F1 UK]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1159
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="65c69ee3d77d450008c80438" tvg-name="F1 Channel" tvg-logo="https://images.pluto.tv/series/663147896bc9410013408c8e/tile.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:18-05:26 WIB - F1 Academy [Dazn F1 ES TEST]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/25117
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="US600011Q2" tvg-name="Formula 1 Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_1064424348_0_20250327T112514504Z_1_imageprocessorclient-tvplus-linear-b76dd9bbb-njxgs.jpeg", 📺 🔴 04:18-05:26 WIB - F1 Academy: China: Race 1 [SPORT 1 🇸🇰]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="HITS Now.id" tvg-name="HITS Now.id" tvg-logo="", 📺 ⏳ 04:30-05:30 WIB - Celebrity Wheel Of... S5, Ep 9
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="663a440c8ea5560008a4db8a" tvg-name="Gaming Central: League of Legends" tvg-logo="https://images.pluto.tv/series/68bac010b3900870ec28cb24/tile-1757080406029.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 04:30-05:00 WIB - Gaming Central: League of Legends
+https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="HITS Now.id" tvg-name="HITS Now.id" tvg-logo="", 📺 🔴 04:30-05:30 WIB - Celebrity Wheel Of... S5, Ep 9 [Now Sports Channel]
+http://hls.168.us.kg/u/630/master.m3u8
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="663a440c8ea5560008a4db8a" tvg-name="Gaming Central: League of Legends" tvg-logo="https://images.pluto.tv/series/68bac010b3900870ec28cb24/tile-1757080406029.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 🔴 04:30-05:00 WIB - Gaming Central: League of Legends [GAMING TV]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Xstream XGO/1.22 (Linux;Android 9) ExoPlayerLib/2.10.5
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://terson.treshold.workers.dev/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-https://bwifi.my.id/5menit.mp4
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6858119921801816b5359d15e63/manifest.mpd
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 ⏳ 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="ES300032LR" tvg-name="Gaming Central League of Legends" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/ES_USQT620324A_673628056_0_20250227T112240973Z_53_imageprocessorclient-tvplus-linear-6fb5b47f79-jmtht.jpeg", 📺 ⏳ 04:39-05:55 WIB - Stars League
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [EUROSPORT]
+https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [EUROSPORT 1 🇸🇰]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport Asia]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport Asia]
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport Asia]
+#EXTVLCOPT:http-referrer=http://www.dens.tv/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
+http://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8?app_type=web&amp;userid=wnctpm5uf2j&amp;chname=Motorvision%2B
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [EUROSPORT 1]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [EUROSPORT ASIA]
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
+https://atemeshield1-voe.sysln.id/live/eds/EUROSPORTHD/mpd/EUROSPORTHD.mpd
+#EXTVLCOPT:http-referrer=https://www.firstmedia.com
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport Asia]
+https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport 1]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1167
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport 4k]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/25803
+#EXTVLCOPT:http-referrer=https://www.firstmedia.com
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=47c03f29f04747d2a298c0ad63f3b2c1:8b48b2cb2743b91d5f20cf2622067f3a
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ts812" tvg-name="Eurosport HD" tvg-logo="https://mediaready.videoready.tv/tatasky/image/fetch/f_auto,fl_lossy,q_auto,dpr_1.25,h_500,w_500/https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/EurosportHD_Thumbnail_61c45f7e-f67d-482f-8dc2-ae993aaa56c6.png", 📺 🔴 04:30-06:30 WIB - Pune United vs. Hyderabad Super Stars-World Pickleball League [Eurosport Asia]
+https://atemecdnbalancer-voe.sysln.id/live/eds/EUROSPORTHD/mediampd/EUROSPORTHD.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ES300032LR" tvg-name="Gaming Central League of Legends" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/ES_USQT620324A_673628056_0_20250227T112240973Z_53_imageprocessorclient-tvplus-linear-6fb5b47f79-jmtht.jpeg", 📺 🔴 04:39-05:55 WIB - Stars League [GAMING TV]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Xstream XGO/1.22 (Linux;Android 9) ExoPlayerLib/2.10.5
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://terson.treshold.workers.dev/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="HITSNow" tvg-name="HITS Now" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000597X942217.jpg", 📺 ⏳ 04:40-05:40 WIB - Celebrity Wheel of Fortune
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="ATAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/AT_DEQY392104A_1180301612_0_20250908T210125973Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-tplqm.jpeg", 📺 ⏳ 04:45-07:30 WIB - Manchester City TV
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6858119921801816b5359d15e63/manifest.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="HITSNow" tvg-name="HITS Now" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000597X942217.jpg", 📺 🔴 04:40-05:40 WIB - Celebrity Wheel of Fortune [Now Sports Channel]
+http://hls.168.us.kg/u/630/master.m3u8
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ATAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/AT_DEQY392104A_1180301612_0_20250908T210125973Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-tplqm.jpeg", 📺 🔴 04:45-07:30 WIB - Manchester City TV [SPORTDIGITAL]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
 #EXTVLCOPT:http-referrer=https://ntuplay.xyz/
 #https://xyzdddd.mizhls.ru/lb/premium571/index.m3u8
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="ATAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/AT_DEQY392104A_1180301612_0_20250908T210125973Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-tplqm.jpeg", 📺 ⏳ 04:45-07:30 WIB - Manchester City TV
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ATAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/AT_DEQY392104A_1180301612_0_20250908T210125973Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-tplqm.jpeg", 📺 🔴 04:45-07:30 WIB - Manchester City TV [SPORTDIGITAL]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=610ad79e26a84fc782c987455e21a86b:d2d4acc6e79447b55f3f5c0267af06f5
-https://bwifi.my.id/5menit.mp4
+https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="CHAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/CH_DEQY392104A_1180300232_0_20250908T210125899Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-gkp68.jpeg", 📺 🔴 04:45-07:30 WIB - Manchester City TV [SPORTDIGITAL]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+#EXTVLCOPT:http-referrer=https://ntuplay.xyz/
+#https://xyzdddd.mizhls.ru/lb/premium571/index.m3u8
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="CHAJ0500433A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/CH_DEQY392104A_1180300232_0_20250908T210125899Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-gkp68.jpeg", 📺 🔴 04:45-07:30 WIB - Manchester City TV [SPORTDIGITAL]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=610ad79e26a84fc782c987455e21a86b:d2d4acc6e79447b55f3f5c0267af06f5
+https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="DEAJ0500429A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/DE_DEQY392104A_1180299481_0_20250908T210125354Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-grwzd.jpeg", 📺 🔴 04:45-07:30 WIB - Manchester City TV [SPORTDIGITAL]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+#EXTVLCOPT:http-referrer=https://ntuplay.xyz/
+#https://xyzdddd.mizhls.ru/lb/premium571/index.m3u8
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="DEAJ0500429A" tvg-name="Sportdigital Free" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/DE_DEQY392104A_1180299481_0_20250908T210125354Z_1_imageprocessorclient-tvplus-linear-5db7c6bc99-grwzd.jpeg", 📺 🔴 04:45-07:30 WIB - Manchester City TV [SPORTDIGITAL]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=610ad79e26a84fc782c987455e21a86b:d2d4acc6e79447b55f3f5c0267af06f5
+https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="68224482c5d53e1351aaf2f2" tvg-name="Canal Claro" tvg-logo="https://images.pluto.tv/series/6978002c51ef20e55543c16b/tile_1769472045526.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 05:00-06:30 WIB - Descubrimiento del amor
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="640a68880e884c0009979cc2" tvg-name="FOX Weather" tvg-logo="https://images.pluto.tv/series/669845fddc6f2f001343c7f5/tile_1756155335817.jpg?fill=blur&fit=fill&fm=jpg&h=900&q=75&w=900", 📺 ⏳ 05:00-08:00 WIB - FOX Weather
@@ -2052,8 +1838,6 @@ https://bwifi.my.id/5menit.mp4
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars.id" tvg-name="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 07:30-09:30 WIB - V-League 2025-2026: Men
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="CA4600017KV" tvg-name="Combate Global MMA" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/CA_USQT620324A_2300937221_0_20251218T202221832Z_1_imageprocessorclient-tvplus-linear-584c967455-x2xgk.jpeg", 📺 ⏳ 07:34-09:45 WIB - Combate Global 2023: Eguiluz vs Perez
 https://bwifi.my.id/5menit.mp4
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="US600011Q2" tvg-name="Formula 1 Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_947204088_0_20250305T093717692Z_90_imageprocessorclient-tvplus-linear-b76dd9bbb-t8jnc.jpeg", 📺 ⏳ 07:54-11:45 WIB - Formula 1 Racing
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
