@@ -47,9 +47,7 @@ def get_flag(m3u_name):
     return "📺" 
 
 def normalisasi_alias(name):
-    """KAMUS TRANSLATOR (Menyatukan nama M3U dan EPG)"""
     n = name.lower().strip()
-    # Mengubah ctv 1, champion 1, champions tv 1 -> champions tv 1
     n = re.sub(r'\b(?:champions?\s*tv|champions?|ctv)\s*(\d+)\b', r'champions tv \1', n)
     n = re.sub(r'\bsports?\s+stars?\b', 'sportstars', n) 
     n = re.sub(r'\bmnc\s*sports?\b', 'sportstars', n)    
@@ -164,47 +162,38 @@ def is_valid_time(start_dt, title, ch_name):
     t = title.lower()
     c = normalisasi_alias(ch_name) 
 
-    # 1. VIP 24 JAM: OLAHRAGA GLOBAL 
     non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open']
     if any(k in t for k in non_bola): 
         return True
 
-    # 2. HUKUM LIGA EROPA (Prioritas Tinggi!)
-    # Jika acaranya Liga Eropa, MAKA WAJIB MALAM HARI (17:30 - 05:30 WIB)
     eropa_keywords = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany', 'carabao', 'copa del rey']
     if any(k in t for k in eropa_keywords):
         if 5.5 <= waktu_mulai < 17.5:
-            return False # Tayang Siang Bolong? PASTI REPLAY! BAKAR!
+            return False 
         return True
 
-    # 3. HUKUM BOLA ASIA & AUSTRALIA (Tayang 08:00 Pagi - 22:30 Malam WIB)
     asia_keywords = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea', 'afc', 'asian', 'aff']
     if any(k in t for k in asia_keywords):
         if waktu_mulai < 8.0 or waktu_mulai > 22.5:
             return False 
         return True
 
-    # 4. HUKUM BOLA INDONESIA (Tayang 14:00 Siang - 22:30 Malam WIB)
     indo_keywords = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
     if any(k in t for k in indo_keywords):
         if waktu_mulai < 14.0 or waktu_mulai > 22.5:
             return False 
         return True
 
-    # 5. HUKUM BOLA AMERIKA (Tayang 05:00 Pagi - 14:00 Siang WIB)
     amerika_keywords = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'nba', 'nfl', 'conmebol']
     if any(k in t for k in amerika_keywords):
         if waktu_mulai < 5.0 or waktu_mulai > 14.0:
             return False 
         return True
 
-    # 6. PENYAPU RANJAU / FALLBACK (Jika liganya ga terkenal)
-    # Beri keleluasaan khusus untuk TV Lokal karena sering tayang event sporadis di siang hari
     lokal_channels = ['rcti', 'sctv', 'indosiar', 'antv', 'tvri', 'rtv', 'mnc', 'global', 'inews', 'sportstars', 'soccer channel']
     if any(x in c for x in lokal_channels):
         return True 
 
-    # Untuk channel luar negeri sisanya, blokir jadwal siang bolong (Rawan replay)
     if 5.5 <= waktu_mulai < 17.5:
         return False 
 
@@ -263,7 +252,6 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # FILTER WAKTU CERDAS (Prioritas Benua/Event Utama)
                 if not is_valid_time(start_dt, title_raw, ch_name): continue
 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
@@ -307,6 +295,8 @@ def main():
     print("Step 3: Meracik Playlist VIP Olahraga Aktif...")
     hasil_akhir = []
     channel_block = []
+    
+    # PELACAK ANTI-DOBEL KHUSUS "ACARA AKAN DATANG" KEMBALI DIAKTIFKAN
     upcoming_tracker_backup = set()
     upcoming_tracker_acara = set()
 
@@ -355,6 +345,9 @@ def main():
                                     logo_final = event["prog_logo"] if event["prog_logo"] else logo_asli
                                     
                                     if event["is_live"]:
+                                        # ===================================================
+                                        # JIKA LIVE: FULL BACKUP (Semua link kembar diizinkan)
+                                        # ===================================================
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
                                         judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
                                         stream_final = stream_url 
@@ -376,12 +369,27 @@ def main():
                                         })
                                         
                                     else:
+                                        # ===================================================
+                                        # JIKA UPCOMING: DIBATASI HANYA 1 (Biar Papan Rapi)
+                                        # ===================================================
                                         grup_baru = "📅 ACARA AKAN DATANG"
                                         hari_ini = now_wib.date()
                                         besok = hari_ini + timedelta(days=1)
                                         lusa = hari_ini + timedelta(days=2)
                                         event_date = event["start_dt"].date()
                                         
+                                        # KUNCI ANTI-DOBEL KHUSUS UPCOMING
+                                        kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
+                                        t_norm = re.sub(r'[^a-z0-9]', '', re.sub(r'\b(vs|v)\b', '', event['title_display'].lower()))
+                                        kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
+                                        
+                                        if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara:
+                                            continue # LEWATI JIKA SUDAH ADA!
+                                            
+                                        upcoming_tracker_backup.add(kunci_backup)
+                                        upcoming_tracker_acara.add(kunci_acara)
+                                        # ===================================================
+
                                         if event_date == hari_ini:
                                             judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
                                         elif event_date == besok:
@@ -394,16 +402,6 @@ def main():
                                             
                                         stream_final = LINK_UPCOMING 
                                         order = 1 
-                                        
-                                        kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
-                                        t_norm = re.sub(r'[^a-z0-9]', '', re.sub(r'\b(vs|v)\b', '', event['title_display'].lower()))
-                                        kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
-                                        
-                                        if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara:
-                                            continue 
-                                            
-                                        upcoming_tracker_backup.add(kunci_backup)
-                                        upcoming_tracker_acara.add(kunci_acara)
                                         
                                         baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
                                         
