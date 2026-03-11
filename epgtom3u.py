@@ -46,10 +46,19 @@ def get_flag(m3u_name):
     
     return "📺" 
 
+def normalisasi_alias(name):
+    """KAMUS TRANSLATOR ANTI-TYPO (Menyatukan nama M3U dan EPG)"""
+    n = name.lower().strip()
+    n = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', n)
+    n = re.sub(r'\bsports?\s+stars?\b', 'sportstars', n) # Sports Star -> Sportstars
+    n = re.sub(r'\bmnc\s*sports?\b', 'sportstars', n)    # MNC Sport -> Sportstars
+    n = re.sub(r'\bspo\s+tv\b', 'spotv', n)              # SPO TV -> SPOTV
+    return n
+
 def is_allowed_sport(title, ch_name):
     if not title: return False
     t = title.lower()
-    c = ch_name.lower()
+    c = normalisasi_alias(ch_name)
     
     if re.search(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', title): return False
 
@@ -70,13 +79,12 @@ def is_allowed_sport(title, ch_name):
         if any(x in t for x in ['badminton', 'bwf', 'motogp', 'f1', 'basket', 'tennis']):
             return False
     
-    # DAFTAR HALAL DENGAN TAMBAHAN KATA SAKTI BADMINTON
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
         "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool",  "vs",  "indonesia",  "bri",  "sea games",  "asean games", 
         "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala",  "live",  "league", "fifa series",
         "afc", "aff", "fifa", "uefa", "mls", 
-        "badminton", "bwf", "all england", "thomas", "uber", "sudirman", "yonex", "swiss", "masters", "macau", "china",
+        "badminton", "bwf", "all england", "thomas", "uber", "sudirman", "yonex", "swiss open", "china open", "china masters", "macau open",
         "voli", "volley", "vnl", "proliga", "futsal", "li-ning", "victor", "open",
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
@@ -88,11 +96,10 @@ def is_allowed_sport(title, ch_name):
 
 def is_match_akurat(epg_name, m3u_name):
     if not epg_name or not m3u_name: return False
-    e = epg_name.lower().strip()
-    m = m3u_name.lower().strip()
-
-    m = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', m)
-    e = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', e)
+    
+    # TERAPKAN KAMUS TRANSLATOR DI SINI
+    e = normalisasi_alias(epg_name)
+    m = normalisasi_alias(m3u_name)
 
     hapus_kualitas = r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|id|my|sg|network)\b'
     e_clean = re.sub(hapus_kualitas, '', e).strip()
@@ -104,11 +111,9 @@ def is_match_akurat(epg_name, m3u_name):
     ne = num_e[0] if num_e else '1'
     nm = num_m[0] if num_m else '1'
     
-    if ne != nm: 
-        return False
+    if ne != nm: return False
 
     strict_nets = ['astro', 'bein', 'spotv', 'sportstars', 'soccer channel', 'fight', 'champions', 'hub']
-    
     for net in strict_nets:
         if net in e_clean or net in m_clean:
             if (net in e_clean) != (net in m_clean): return False
@@ -155,55 +160,32 @@ def bersihkan_judul_event(title):
     bersih = re.sub(r'^[\-\:\,\|]\s*', '', bersih)
     return bersih
 
-# ==========================================================
-# FITUR BARU: HUKUM BENUA + VIP PASS BADMINTON
-# ==========================================================
 def is_valid_time(start_dt, title, ch_name):
     waktu_mulai = start_dt.hour + (start_dt.minute / 60.0)
     t = title.lower()
-    c = ch_name.lower()
+    c = normalisasi_alias(ch_name) # Panggil kamus alias di sini juga
 
-    # 1. VIP PASS: OLAHRAGA GLOBAL (Bebas 24 Jam Tanpa Batas)
-    # Kata sakti Badminton sudah lengkap di sini!
-    non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis', 'yonex', 'swiss', 'open', 'masters', 'macau', 'china']
+    # 1. VIP PASS
+    non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open']
     if any(k in t for k in non_bola): 
         return True
 
-    # 2. HUKUM LIGA INDONESIA (Hanya Live mulai jam 14:00 WIB ke atas)
-    liga_indo = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
-    if any(k in t for k in liga_indo):
-        if waktu_mulai < 14.0: 
+    # 2. HUKUM SIANG HARI (04:30 Pagi s/d 17:30 Sore WIB)
+    if 4.5 <= waktu_mulai < 17.5:
+        bola_pagi_sah = [
+            'mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil',
+            'j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea',
+            'afc', 'asian', 'liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya',
+            'nba', 'nfl'
+        ]
+        
+        # PENGECUALIAN ASIA: Sportstars, SpoTV, Astro, dll BEBAS di siang hari!
+        asia_channels = ['astro', 'spotv', 'champions', 'sportstars', 'soccer channel', 'rcti', 'sctv', 'indosiar']
+        if any(x in c for x in asia_channels):
+            return True
+
+        if not any(k in t or k in c for k in bola_pagi_sah):
             return False 
-        return True
-
-    # 3. HUKUM AMERIKA (Hanya Live jam 05:00 Pagi - 14:00 Siang WIB)
-    amerika_keywords = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'nba', 'nfl', 'conmebol']
-    amerika_channels = ['espn', 'fox', 'cbs', 'nbc', 'tyc', 'tudn']
-    is_amerika = any(k in t for k in amerika_keywords) or any(x in c for x in amerika_channels)
-    if is_amerika:
-        if 5.0 <= waktu_mulai <= 14.0:
-            return True
-        return False
-
-    # 4. HUKUM ASIA TIMUR & AUSTRALIA (Hanya Live jam 08:00 Pagi - 19:30 Malam WIB)
-    asia_timur = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea', 'afc', 'asian']
-    if any(k in t for k in asia_timur):
-        if 8.0 <= waktu_mulai <= 19.5: 
-            return True
-        return False
-
-    # 5. HUKUM EROPA & beIN (Hanya Live jam 17:30 Sore - 05:30 Subuh WIB)
-    eropa_keywords = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany']
-    eropa_channels = ['bein', 'sky', 'tnt', 'movistar', 'dazn', 'rmc', 'canal+']
-    is_eropa = any(k in t for k in eropa_keywords) or any(x in c for x in eropa_channels)
-    if is_eropa:
-        if waktu_mulai >= 17.5 or waktu_mulai <= 5.5: 
-            return True
-        return False
-
-    # 6. PENYAPU RANJAU (Fallback)
-    if 5.5 < waktu_mulai < 17.5:
-        return False 
 
     return True
 
@@ -216,9 +198,6 @@ def main():
     epg_channels = {}
     jadwal_per_channel = {}
 
-    # =======================================================
-    # BUKA KACAMATA KUDA: MENGAMBIL JADWAL 3 HARI KE DEPAN
-    # =======================================================
     if now_wib.hour < 5:
         batas_waktu_upcoming = (now_wib + timedelta(days=2)).replace(hour=5, minute=0, second=0, microsecond=0)
     else:
@@ -246,7 +225,6 @@ def main():
             for prog in root.findall("programme"):
                 ch_id = prog.get("channel")
                 if ch_id not in epg_channels: continue
-                
                 if prog.find("previously-shown") is not None: continue
 
                 icon_node = prog.find("icon")
@@ -262,11 +240,8 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 if stop_dt <= now_wib: continue 
-                
-                # Batas Waktu 3 Hari berlaku di sini
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # TERAPKAN HUKUM BENUA SUPER KETAT!
                 if not is_valid_time(start_dt, title_raw, ch_name): continue
 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
@@ -380,10 +355,6 @@ def main():
                                         
                                     else:
                                         grup_baru = "📅 ACARA AKAN DATANG"
-                                        
-                                        # =======================================================
-                                        # LABEL HARI OTOMATIS (Hari Ini, Besok, Lusa, Tanggal)
-                                        # =======================================================
                                         hari_ini = now_wib.date()
                                         besok = hari_ini + timedelta(days=1)
                                         lusa = hari_ini + timedelta(days=2)
