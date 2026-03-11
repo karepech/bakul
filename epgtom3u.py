@@ -86,6 +86,7 @@ def is_allowed_sport(title, ch_name):
     return False
 
 def is_match_akurat(epg_name, m3u_name):
+    """SISTEM PENCOCOKAN VIP DENGAN GEMBOK ANGKA GLOBAL"""
     if not epg_name or not m3u_name: return False
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
@@ -162,43 +163,47 @@ def is_valid_time(start_dt, title, ch_name):
     t = title.lower()
     c = ch_name.lower()
 
-    # 1. VIP PASS: OLAHRAGA GLOBAL 24 JAM
+    # 1. VIP PASS: OLAHRAGA GLOBAL (Bebas 24 Jam Tanpa Batas)
     non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis']
     if any(k in t for k in non_bola): 
         return True
 
-    # 2. VIP PASS: BOLA ASIA & AMERIKA (Sah tayang pagi/siang)
-    bola_pagi_sah = [
-        'mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil',
-        'j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea',
-        'afc', 'asian', 'liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya'
-    ]
-    is_bola_pagi_sah = any(k in t or k in c for k in bola_pagi_sah)
-
-    # 3. HUKUM EROPA & beIN SPORTS (Hanya Live jam 18:00 - 05:00 WIB)
-    eropa_channels = ['bein', 'sky', 'tnt', 'movistar', 'dazn', 'rmc', 'canal+']
-    if any(x in c for x in eropa_channels):
-        if 5.0 <= waktu_mulai < 18.0:
-            if not is_bola_pagi_sah:
-                return False 
+    # 2. HUKUM LIGA INDONESIA (Hanya Live mulai jam 14:00 WIB ke atas)
+    liga_indo = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
+    if any(k in t for k in liga_indo):
+        if waktu_mulai < 14.0: 
+            return False # Tayang pagi/siang bolong = Replay Liar
         return True
 
-    # 4. HUKUM AMERIKA (Hanya Live jam 05:00 Pagi - 13:00 Siang WIB)
+    # 3. HUKUM AMERIKA (Hanya Live jam 05:00 Pagi - 14:00 Siang WIB)
+    amerika_keywords = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'nba', 'nfl', 'conmebol']
     amerika_channels = ['espn', 'fox', 'cbs', 'nbc', 'tyc', 'tudn']
-    if any(x in c for x in amerika_channels):
-        if 13.0 <= waktu_mulai < 24.0 or 0.0 <= waktu_mulai < 5.0:
-            return False 
-        return True
+    is_amerika = any(k in t for k in amerika_keywords) or any(x in c for x in amerika_channels)
+    if is_amerika:
+        if 5.0 <= waktu_mulai <= 14.0:
+            return True
+        return False
 
-    # 5. HUKUM ASIA & LOKAL (Bebas 24 Jam)
-    asia_channels = ['astro', 'spotv', 'champions', 'sportstars', 'soccer channel', 'rcti', 'sctv', 'indosiar']
-    if any(x in c for x in asia_channels):
-        return True 
+    # 4. HUKUM ASIA TIMUR & AUSTRALIA (Hanya Live jam 08:00 Pagi - 19:30 Malam WIB)
+    asia_timur = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea', 'afc', 'asian']
+    if any(k in t for k in asia_timur):
+        if 8.0 <= waktu_mulai <= 19.5: 
+            return True
+        return False
 
-    # 6. PENYAPU RANJAU (Sisa channel: Jika tayang siang tapi bukan bola pagi sah -> BUANG)
-    if 5.0 <= waktu_mulai < 17.0:
-        if not is_bola_pagi_sah:
-            return False 
+    # 5. HUKUM EROPA & beIN (Hanya Live jam 17:30 Sore - 05:30 Subuh WIB)
+    eropa_keywords = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany']
+    eropa_channels = ['bein', 'sky', 'tnt', 'movistar', 'dazn', 'rmc', 'canal+']
+    is_eropa = any(k in t for k in eropa_keywords) or any(x in c for x in eropa_channels)
+    if is_eropa:
+        if waktu_mulai >= 17.5 or waktu_mulai <= 5.5: 
+            return True
+        return False
+
+    # 6. PENYAPU RANJAU (Fallback)
+    # Jika acaranya misterius dan tayang di jam rawan Replay Eropa (05:30 Pagi - 17:29 Sore), HAPUS!
+    if 5.5 < waktu_mulai < 17.5:
+        return False 
 
     return True
 
@@ -256,7 +261,7 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # Terapkan HUKUM BENUA untuk memfilter jadwal!
+                # TERAPKAN HUKUM BENUA SUPER KETAT!
                 if not is_valid_time(start_dt, title_raw, ch_name): continue
 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
