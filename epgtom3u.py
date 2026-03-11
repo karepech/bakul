@@ -42,17 +42,18 @@ def get_flag(m3u_name):
     
     if 'bein' in n and not any(x in n for x in [' en', ' hk', ' th', ' ph', ' my', ' sg', ' au']): 
         return "🇮🇩"
-    if any(x in n for x in [' id', 'indo', 'vidio']): return "🇮🇩"
+    if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     
     return "📺" 
 
 def normalisasi_alias(name):
-    """KAMUS TRANSLATOR ANTI-TYPO (Menyatukan nama M3U dan EPG)"""
+    """KAMUS TRANSLATOR (Menyatukan nama M3U dan EPG)"""
     n = name.lower().strip()
-    n = re.sub(r'\bctv\s*(\d+)', r'champions tv \1', n)
-    n = re.sub(r'\bsports?\s+stars?\b', 'sportstars', n) # Sports Star -> Sportstars
-    n = re.sub(r'\bmnc\s*sports?\b', 'sportstars', n)    # MNC Sport -> Sportstars
-    n = re.sub(r'\bspo\s+tv\b', 'spotv', n)              # SPO TV -> SPOTV
+    # Mengubah ctv 1, champion 1, champions tv 1 -> champions tv 1
+    n = re.sub(r'\b(?:champions?\s*tv|champions?|ctv)\s*(\d+)\b', r'champions tv \1', n)
+    n = re.sub(r'\bsports?\s+stars?\b', 'sportstars', n) 
+    n = re.sub(r'\bmnc\s*sports?\b', 'sportstars', n)    
+    n = re.sub(r'\bspo\s+tv\b', 'spotv', n)              
     return n
 
 def is_allowed_sport(title, ch_name):
@@ -97,7 +98,6 @@ def is_allowed_sport(title, ch_name):
 def is_match_akurat(epg_name, m3u_name):
     if not epg_name or not m3u_name: return False
     
-    # TERAPKAN KAMUS TRANSLATOR DI SINI
     e = normalisasi_alias(epg_name)
     m = normalisasi_alias(m3u_name)
 
@@ -117,19 +117,15 @@ def is_match_akurat(epg_name, m3u_name):
     for net in strict_nets:
         if net in e_clean or net in m_clean:
             if (net in e_clean) != (net in m_clean): return False
-            
             if net == 'astro':
                 subs = ['arena bola 2', 'arena bola', 'arena', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport 5', 'supersport', 'cricket', 'badminton', 'football', 'golf', 'grandstand', 'premier']
                 found_e = next((s for s in subs if s in e_clean), 'none')
                 found_m = next((s for s in subs if s in m_clean), 'none')
                 if found_e != found_m: return False
-            
             if net == 'bein':
                 if ('xtra' in e_clean or 'extra' in e_clean) != ('xtra' in m_clean or 'extra' in m_clean): return False
-
             if net == 'spotv':
                 if ('now' in e_clean) != ('now' in m_clean): return False
-
             return True
 
     e_words = set(re.findall(r'[a-z0-9]+', e_clean))
@@ -160,32 +156,57 @@ def bersihkan_judul_event(title):
     bersih = re.sub(r'^[\-\:\,\|]\s*', '', bersih)
     return bersih
 
+# ==========================================================
+# FILTER WAKTU CERDAS BERDASARKAN EVENT LIGA (BUKAN CHANNEL)
+# ==========================================================
 def is_valid_time(start_dt, title, ch_name):
     waktu_mulai = start_dt.hour + (start_dt.minute / 60.0)
     t = title.lower()
-    c = normalisasi_alias(ch_name) # Panggil kamus alias di sini juga
+    c = normalisasi_alias(ch_name) 
 
-    # 1. VIP PASS
+    # 1. VIP 24 JAM: OLAHRAGA GLOBAL 
     non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open']
     if any(k in t for k in non_bola): 
         return True
 
-    # 2. HUKUM SIANG HARI (04:30 Pagi s/d 17:30 Sore WIB)
-    if 4.5 <= waktu_mulai < 17.5:
-        bola_pagi_sah = [
-            'mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil',
-            'j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea',
-            'afc', 'asian', 'liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya',
-            'nba', 'nfl'
-        ]
-        
-        # PENGECUALIAN ASIA: Sportstars, SpoTV, Astro, dll BEBAS di siang hari!
-        asia_channels = ['astro', 'spotv', 'champions', 'sportstars', 'soccer channel', 'rcti', 'sctv', 'indosiar']
-        if any(x in c for x in asia_channels):
-            return True
+    # 2. HUKUM LIGA EROPA (Prioritas Tinggi!)
+    # Jika acaranya Liga Eropa, MAKA WAJIB MALAM HARI (17:30 - 05:30 WIB)
+    eropa_keywords = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany', 'carabao', 'copa del rey']
+    if any(k in t for k in eropa_keywords):
+        if 5.5 <= waktu_mulai < 17.5:
+            return False # Tayang Siang Bolong? PASTI REPLAY! BAKAR!
+        return True
 
-        if not any(k in t or k in c for k in bola_pagi_sah):
+    # 3. HUKUM BOLA ASIA & AUSTRALIA (Tayang 08:00 Pagi - 22:30 Malam WIB)
+    asia_keywords = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea', 'afc', 'asian', 'aff']
+    if any(k in t for k in asia_keywords):
+        if waktu_mulai < 8.0 or waktu_mulai > 22.5:
             return False 
+        return True
+
+    # 4. HUKUM BOLA INDONESIA (Tayang 14:00 Siang - 22:30 Malam WIB)
+    indo_keywords = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
+    if any(k in t for k in indo_keywords):
+        if waktu_mulai < 14.0 or waktu_mulai > 22.5:
+            return False 
+        return True
+
+    # 5. HUKUM BOLA AMERIKA (Tayang 05:00 Pagi - 14:00 Siang WIB)
+    amerika_keywords = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'nba', 'nfl', 'conmebol']
+    if any(k in t for k in amerika_keywords):
+        if waktu_mulai < 5.0 or waktu_mulai > 14.0:
+            return False 
+        return True
+
+    # 6. PENYAPU RANJAU / FALLBACK (Jika liganya ga terkenal)
+    # Beri keleluasaan khusus untuk TV Lokal karena sering tayang event sporadis di siang hari
+    lokal_channels = ['rcti', 'sctv', 'indosiar', 'antv', 'tvri', 'rtv', 'mnc', 'global', 'inews', 'sportstars', 'soccer channel']
+    if any(x in c for x in lokal_channels):
+        return True 
+
+    # Untuk channel luar negeri sisanya, blokir jadwal siang bolong (Rawan replay)
+    if 5.5 <= waktu_mulai < 17.5:
+        return False 
 
     return True
 
@@ -242,6 +263,7 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
+                # FILTER WAKTU CERDAS (Prioritas Benua/Event Utama)
                 if not is_valid_time(start_dt, title_raw, ch_name): continue
 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
