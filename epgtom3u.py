@@ -25,6 +25,7 @@ GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh
 
 OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
+LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 # ==========================================
 # II. FUNGSI PEMBANTU (FILTRASI & LOGIKA)
@@ -85,7 +86,6 @@ def is_allowed_sport(title, ch_name):
     return False
 
 def is_match_akurat(epg_name, m3u_name):
-    """SISTEM PENCOCOKAN VIP DENGAN GEMBOK ANGKA GLOBAL"""
     if not epg_name or not m3u_name: return False
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
@@ -97,22 +97,15 @@ def is_match_akurat(epg_name, m3u_name):
     e_clean = re.sub(hapus_kualitas, '', e).strip()
     m_clean = re.sub(hapus_kualitas, '', m).strip()
 
-    # =======================================================
-    # 🛡️ GEMBOK ANGKA GLOBAL (SOLUSI BUG HUB PREMIER)
-    # =======================================================
     num_e = re.findall(r'\d+', e_clean)
     num_m = re.findall(r'\d+', m_clean)
 
-    # Jika tidak ada angka, kita anggap itu channel "1" (Misal: Bein = Bein 1)
     ne = num_e[0] if num_e else '1'
     nm = num_m[0] if num_m else '1'
     
-    # Jika angkanya tidak sama persis, LANGSUNG BUANG! (Hub 1 tidak akan bisa gabung Hub 2)
     if ne != nm: 
         return False
-    # =======================================================
 
-    # Tambahan "hub" ke dalam jaringan ketat agar makin aman
     strict_nets = ['astro', 'bein', 'spotv', 'sportstars', 'soccer channel', 'fight', 'champions', 'hub']
     
     for net in strict_nets:
@@ -161,6 +154,54 @@ def bersihkan_judul_event(title):
     bersih = re.sub(r'^[\-\:\,\|]\s*', '', bersih)
     return bersih
 
+# ==========================================================
+# FITUR BARU: HUKUM BENUA (PEMBANTAI REPLAY BERDASARKAN JAM)
+# ==========================================================
+def is_valid_time(start_dt, title, ch_name):
+    waktu_mulai = start_dt.hour + (start_dt.minute / 60.0)
+    t = title.lower()
+    c = ch_name.lower()
+
+    # 1. VIP PASS: OLAHRAGA GLOBAL 24 JAM
+    non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis']
+    if any(k in t for k in non_bola): 
+        return True
+
+    # 2. VIP PASS: BOLA ASIA & AMERIKA (Sah tayang pagi/siang)
+    bola_pagi_sah = [
+        'mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil',
+        'j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea',
+        'afc', 'asian', 'liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya'
+    ]
+    is_bola_pagi_sah = any(k in t or k in c for k in bola_pagi_sah)
+
+    # 3. HUKUM EROPA & beIN SPORTS (Hanya Live jam 18:00 - 05:00 WIB)
+    eropa_channels = ['bein', 'sky', 'tnt', 'movistar', 'dazn', 'rmc', 'canal+']
+    if any(x in c for x in eropa_channels):
+        if 5.0 <= waktu_mulai < 18.0:
+            if not is_bola_pagi_sah:
+                return False 
+        return True
+
+    # 4. HUKUM AMERIKA (Hanya Live jam 05:00 Pagi - 13:00 Siang WIB)
+    amerika_channels = ['espn', 'fox', 'cbs', 'nbc', 'tyc', 'tudn']
+    if any(x in c for x in amerika_channels):
+        if 13.0 <= waktu_mulai < 24.0 or 0.0 <= waktu_mulai < 5.0:
+            return False 
+        return True
+
+    # 5. HUKUM ASIA & LOKAL (Bebas 24 Jam)
+    asia_channels = ['astro', 'spotv', 'champions', 'sportstars', 'soccer channel', 'rcti', 'sctv', 'indosiar']
+    if any(x in c for x in asia_channels):
+        return True 
+
+    # 6. PENYAPU RANJAU (Sisa channel: Jika tayang siang tapi bukan bola pagi sah -> BUANG)
+    if 5.0 <= waktu_mulai < 17.0:
+        if not is_bola_pagi_sah:
+            return False 
+
+    return True
+
 # ==========================================
 # III. MAIN EKSEKUSI (INTI SCRIPT)
 # ==========================================
@@ -202,9 +243,6 @@ def main():
 
                 icon_node = prog.find("icon")
                 epg_prog_logo = icon_node.get("src") if icon_node is not None else ""
-                
-                # WAJIB ADA POSTER
-                if not epg_prog_logo or epg_prog_logo.strip() == "": continue
                     
                 ch_name = epg_channels[ch_id]
                 title_raw = prog.findtext("title") or ""
@@ -217,6 +255,9 @@ def main():
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
+
+                # Terapkan HUKUM BENUA untuk memfilter jadwal!
+                if not is_valid_time(start_dt, title_raw, ch_name): continue
 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
                 if durasi_menit < 30: continue 
@@ -284,6 +325,9 @@ def main():
                     bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
                     nama_asli_m3u = nama_asli_m3u.strip()
                     
+                    logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
+                    logo_asli = logo_asli_match.group(2) if logo_asli_match else ""
+                    
                     clean_attrs = bagian_atribut
                     attrs_to_remove = ['group-title', 'tvg-group', 'tvg-id', 'tvg-name', 'tvg-logo']
                     for attr in attrs_to_remove:
@@ -301,7 +345,8 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    logo_final = event["prog_logo"]
+                                    # PINJAM LOGO DARI M3U JIKA EPG GAK PUNYA POSTER (Fitur yg dipertahankan)
+                                    logo_final = event["prog_logo"] if event["prog_logo"] else logo_asli
                                     
                                     if event["is_live"]:
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
@@ -330,7 +375,7 @@ def main():
                                             judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
                                         else:
                                             judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
-                                        stream_final = LINK_STANDBY 
+                                        stream_final = LINK_UPCOMING 
                                         order = 1 
                                         
                                         kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
