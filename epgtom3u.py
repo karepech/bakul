@@ -70,13 +70,14 @@ def is_allowed_sport(title, ch_name):
         if any(x in t for x in ['badminton', 'bwf', 'motogp', 'f1', 'basket', 'tennis']):
             return False
     
+    # DAFTAR HALAL DENGAN TAMBAHAN KATA SAKTI BADMINTON
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
         "fc", "united", "city", "madrid", "barcelona", "chelsea", "arsenal", "liverpool",  "vs",  "indonesia",  "bri",  "sea games",  "asean games", 
         "juventus", "milan", "inter", "bayern", "psg", "soccer", "football", "copa", "piala",  "live",  "league", "fifa series",
         "afc", "aff", "fifa", "uefa", "mls", 
-        "badminton", "bwf", "all england", "thomas", "uber", "sudirman", 
-        "voli", "volley", "vnl", "proliga", "futsal", "yonex", "li-ning", "victor", "open",
+        "badminton", "bwf", "all england", "thomas", "uber", "sudirman", "yonex", "swiss", "masters", "macau", "china",
+        "voli", "volley", "vnl", "proliga", "futsal", "li-ning", "victor", "open",
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
     
@@ -86,7 +87,6 @@ def is_allowed_sport(title, ch_name):
     return False
 
 def is_match_akurat(epg_name, m3u_name):
-    """SISTEM PENCOCOKAN VIP DENGAN GEMBOK ANGKA GLOBAL"""
     if not epg_name or not m3u_name: return False
     e = epg_name.lower().strip()
     m = m3u_name.lower().strip()
@@ -156,7 +156,7 @@ def bersihkan_judul_event(title):
     return bersih
 
 # ==========================================================
-# FITUR BARU: HUKUM BENUA (PEMBANTAI REPLAY BERDASARKAN JAM)
+# FITUR BARU: HUKUM BENUA + VIP PASS BADMINTON
 # ==========================================================
 def is_valid_time(start_dt, title, ch_name):
     waktu_mulai = start_dt.hour + (start_dt.minute / 60.0)
@@ -164,7 +164,8 @@ def is_valid_time(start_dt, title, ch_name):
     c = ch_name.lower()
 
     # 1. VIP PASS: OLAHRAGA GLOBAL (Bebas 24 Jam Tanpa Batas)
-    non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis']
+    # Kata sakti Badminton sudah lengkap di sini!
+    non_bola = ['badminton', 'bwf', 'motogp', 'f1', 'formula', 'voli', 'volleyball', 'futsal', 'moto2', 'moto3', 'sprint', 'tennis', 'yonex', 'swiss', 'open', 'masters', 'macau', 'china']
     if any(k in t for k in non_bola): 
         return True
 
@@ -172,7 +173,7 @@ def is_valid_time(start_dt, title, ch_name):
     liga_indo = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'aff', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
     if any(k in t for k in liga_indo):
         if waktu_mulai < 14.0: 
-            return False # Tayang pagi/siang bolong = Replay Liar
+            return False 
         return True
 
     # 3. HUKUM AMERIKA (Hanya Live jam 05:00 Pagi - 14:00 Siang WIB)
@@ -201,7 +202,6 @@ def is_valid_time(start_dt, title, ch_name):
         return False
 
     # 6. PENYAPU RANJAU (Fallback)
-    # Jika acaranya misterius dan tayang di jam rawan Replay Eropa (05:30 Pagi - 17:29 Sore), HAPUS!
     if 5.5 < waktu_mulai < 17.5:
         return False 
 
@@ -216,10 +216,13 @@ def main():
     epg_channels = {}
     jadwal_per_channel = {}
 
+    # =======================================================
+    # BUKA KACAMATA KUDA: MENGAMBIL JADWAL 3 HARI KE DEPAN
+    # =======================================================
     if now_wib.hour < 5:
-        batas_waktu_upcoming = now_wib.replace(hour=5, minute=0, second=0, microsecond=0)
+        batas_waktu_upcoming = (now_wib + timedelta(days=2)).replace(hour=5, minute=0, second=0, microsecond=0)
     else:
-        batas_waktu_upcoming = (now_wib + timedelta(days=1)).replace(hour=5, minute=0, second=0, microsecond=0)
+        batas_waktu_upcoming = (now_wib + timedelta(days=3)).replace(hour=5, minute=0, second=0, microsecond=0)
 
     print("Step 1: Mengunduh dan memproses Trio Emas EPG...")
     for url in EPG_URLS:
@@ -259,6 +262,8 @@ def main():
 
                 if not start_dt or not stop_dt or start_dt >= stop_dt: continue
                 if stop_dt <= now_wib: continue 
+                
+                # Batas Waktu 3 Hari berlaku di sini
                 if start_dt >= batas_waktu_upcoming: continue
 
                 # TERAPKAN HUKUM BENUA SUPER KETAT!
@@ -350,7 +355,6 @@ def main():
                                     jam_selesai = event["stop_dt"].strftime('%H:%M')
                                     jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                     
-                                    # PINJAM LOGO DARI M3U JIKA EPG GAK PUNYA POSTER (Fitur yg dipertahankan)
                                     logo_final = event["prog_logo"] if event["prog_logo"] else logo_asli
                                     
                                     if event["is_live"]:
@@ -376,10 +380,25 @@ def main():
                                         
                                     else:
                                         grup_baru = "📅 ACARA AKAN DATANG"
-                                        if event["start_dt"].date() == now_wib.date():
+                                        
+                                        # =======================================================
+                                        # LABEL HARI OTOMATIS (Hari Ini, Besok, Lusa, Tanggal)
+                                        # =======================================================
+                                        hari_ini = now_wib.date()
+                                        besok = hari_ini + timedelta(days=1)
+                                        lusa = hari_ini + timedelta(days=2)
+                                        event_date = event["start_dt"].date()
+                                        
+                                        if event_date == hari_ini:
                                             judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
-                                        else:
+                                        elif event_date == besok:
                                             judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
+                                        elif event_date == lusa:
+                                            judul_akhir = f"{bendera} ⏳ Lusa {jam_str} - {event['title_display']}"
+                                        else:
+                                            tanggal_str = event["start_dt"].strftime('%d/%m')
+                                            judul_akhir = f"{bendera} ⏳ {tanggal_str} {jam_str} - {event['title_display']}"
+                                            
                                         stream_final = LINK_UPCOMING 
                                         order = 1 
                                         
