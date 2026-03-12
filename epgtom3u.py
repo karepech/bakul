@@ -9,6 +9,7 @@ import io
 # I. KONFIGURASI EMAS (MULTI-EPG & M3U VIP)
 # ==========================================
 
+# PYTHON HANYA AKAN MEMBACA 3 EPG INI (Super Ringan & Akurat)
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
     "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",
@@ -21,6 +22,7 @@ M3U_URLS = [
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
 
+# INI HANYA UNTUK DITULIS DI HEADER M3U (Tidak didownload oleh Python)
 GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml"
 
 OUTPUT_FILE = "live_matches_only.m3u"
@@ -86,14 +88,12 @@ def is_allowed_sport(title, ch_name):
         "smackdown", "snooker", "darts", "rugby", "cricket", "icc", "mlb", "nhl", "nfl", "baseball", 
         "wbc", "basketball", "nba", "fiba", "movie", "special delivery", "billiard", "t20"
     ]
-    # SENSOR KETAT HARAM
     if re.search(r'\b(?:' + '|'.join(haram) + r')\b', t): return False
 
     bola_channels = ['arena bola', 'football', 'soccer', 'premier', 'laliga']
     if any(x in c for x in bola_channels):
         if any(x in t for x in ['badminton', 'bwf', 'motogp', 'f1', 'basket', 'tennis']): return False
     
-    # SENSOR KETAT HALAL (Menghapus kata jebakan seperti 'city', 'bri', 'open', 'live')
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
         "manchester city", "manchester united", "madrid", "barcelona", "chelsea", "arsenal", "liverpool", "juventus", "milan", "inter", "bayern", "psg", 
@@ -103,7 +103,6 @@ def is_allowed_sport(title, ch_name):
         "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
     ]
     
-    # Deteksi batas kata murni agar "Brian" tidak dianggap "bri"
     if re.search(r'\b(?:' + '|'.join(halal).replace('+', r'\+') + r')\b', t) or REGEX_VS.search(t):
         return True
         
@@ -159,53 +158,42 @@ def bersihkan_judul_event(title):
     return REGEX_JUDUL_3.sub('', bersih)
 
 # ==========================================================
-# FILTER WAKTU SUPER PRESISI (REQUEST VVIP)
+# FILTER WAKTU SUPER PRESISI
 # ==========================================================
 def is_valid_time(start_dt, title, ch_name):
-    w = start_dt.hour + (start_dt.minute / 60.0) # Konversi ke desimal (contoh 18:30 = 18.5)
+    w = start_dt.hour + (start_dt.minute / 60.0) 
     t = title.lower()
 
-    # 1. ATURAN BADMINTON (Full 24 Jam)
     is_badminton = any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open'])
     if is_badminton: return True
 
-    # 2. ATURAN BOLA VOLI
     is_voli = any(k in t for k in ['voli', 'volley', 'vnl', 'proliga'])
     if is_voli:
-        # Asia: 12:00 - 20:00 || Eropa: 22:00 - 04:00 || Amerika: 05:00 - 11:00
         if (12.0 <= w <= 20.0) or (w >= 22.0 or w <= 4.0) or (5.0 <= w <= 11.0):
             return True
         return False
 
-    # 3. ATURAN MOTOGP & F1 (Racing)
     is_racing = any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint'])
     if is_racing:
-        # Amerika: 03:00-06:00 || Aus/Jpn: 09:00-13:00 || Asia: 13:00-16:00 || Eropa: 18:00-22:00
         if (3.0 <= w <= 6.0) or (9.0 <= w <= 16.0) or (18.0 <= w <= 22.0):
             return True
         return False
 
-    # 4. ATURAN LIGA SEPAK BOLA & LAINNYA BERDASARKAN BENUA
-    # EROPA (18:30 - 03:00)
     eropa_keywords = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany', 'carabao', 'copa del rey']
     if any(k in t for k in eropa_keywords):
         if w >= 18.5 or w <= 3.0: return True
         return False 
 
-    # AMERIKA (06:00 - 11:00)
     amerika_keywords = ['mls', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'nba', 'nfl', 'conmebol']
     if any(k in t for k in amerika_keywords):
         if 6.0 <= w <= 11.0: return True
         return False 
 
-    # ASIA LOKAL (15:00 - 21:00)
     asia_keywords = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'a-league', 'australia', 'japan', 'korea', 'afc', 'asian', 'aff', 'liga 1', 'bri liga', 'indonesia', 'shopee', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2']
     if any(k in t for k in asia_keywords):
         if 15.0 <= w <= 21.0: return True
         return False 
 
-    # 5. PENYAPU RANJAU (Fallback Umum jika liganya tidak spesifik)
-    # Blokir keras siang hari (03:00 Pagi sampai 15:00 Sore) untuk acara yang tidak jelas asal-usulnya
     if 3.0 < w < 15.0:
         return False
 
@@ -221,11 +209,6 @@ def main():
     epg_channel_logos = {} 
     jadwal_per_channel = {}
 
-    ALL_EPG_URLS = EPG_URLS.copy()
-    for u in GLOBAL_EPG_URL.split(','):
-        if u.strip() and u.strip() not in ALL_EPG_URLS:
-            ALL_EPG_URLS.append(u.strip())
-
     if now_wib.hour < 5:
         batas_waktu_upcoming = (now_wib + timedelta(days=2)).replace(hour=5, minute=0, second=0, microsecond=0)
     else:
@@ -234,8 +217,9 @@ def main():
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
 
-    print(f"Step 1: Mengunduh dan memproses {len(ALL_EPG_URLS)} EPG...")
-    for url in ALL_EPG_URLS:
+    # SCRIPT SEKARANG HANYA MEMBACA 3 EPG TRIO EMAS (Sangat Cepat!)
+    print(f"Step 1: Mengunduh dan memproses {len(EPG_URLS)} EPG Inti...")
+    for url in EPG_URLS:
         if not url: continue
         try:
             r_epg = session.get(url, timeout=60)
@@ -276,7 +260,6 @@ def main():
                 if stop_dt <= now_wib: continue 
                 if start_dt >= batas_waktu_upcoming: continue
 
-                # TERAPKAN ATURAN WAKTU PRESISI DISINI
                 if not is_valid_time(start_dt, title_raw, ch_name): continue
 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
@@ -415,6 +398,7 @@ def main():
 
     try:
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            # GLOABL EPG URL TETAP DI HEADER, TAPI TIDAK DIDOWNLOAD OLEH PYTHON
             f.write(f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 OLAHRAGA AKTIF VIP"\n')
             if not hasil_akhir:
                 f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL HARI INI\n')
