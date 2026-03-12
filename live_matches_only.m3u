@@ -19,18 +19,6 @@
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 🔴 04:00-06:30 WIB - Best Of Badminton [SPORTSTARS 2 B]
 https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 04:00-06:00 WIB - Sportacular Match: IDN Vs KWT [SPORTSTARS 4 B]
-##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 04:00-06:00 WIB - Sportacular Match: IDN Vs KWT [SPORTSTARS 4 B]
-https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJNJ.jpg", 🇲🇾 🔴 05:00-07:00 WIB - Dutch: Groningen vs Ajax [ASTRO FOOTBALL]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
@@ -51,12 +39,12 @@ http://208.87.242.55/livehttpplay?channel_id=13301
 ##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
 ##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
 http://208.87.242.55/livehttpplay?channel_id=13302
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 06:30-08:30 WIB - ACL Two: AHL Vs KHA
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 06:30-08:30 WIB - ACL Two: AHL Vs KHA [Soccer Channel V+]
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-https://bwifi.my.id/5menit.mp4
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQY.jpg", 🇲🇾 ⏳ 07:00-13:55 WIB - BWF England Open: Finals
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
