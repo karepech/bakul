@@ -9,18 +9,31 @@ import io
 # I. KONFIGURASI EMAS (MULTI-EPG & M3U VIP)
 # ==========================================
 
+# EPG INTI (HANYA INI YANG DIBACA PYTHON AGAR NGEBUT)
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
     "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
 ]
 
-M3U_URLS = [
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
+# DAFTAR SERVER MASTER M3U MAS IPUL
+RAW_MASTER_URLS = [
+    "https://raw.githubusercontent.com/mimipipi22/lalajo/refs/heads/main/playlist25", 
+    "https://semar25.short.gy", 
+    "https://deccotech.online/tv/tvstream.html",
+    "https://bit.ly/KPL203",
+    "https://freeiptv2026.tsender57.workers.dev",
+    "https://liveevent.iptvbonekoe.workers.dev",
+    "http://sauridigital.my.id/kerbaunakal/2026TVGNS.html",
+    "https://bit.ly/TVKITKAT",
+    "https://spoo.me/tvplurl04",
+    "https://bit.ly/TVKITKAT", # Duplicate sengaja dibiarkan, script akan otomatis menghapusnya
+    "https://aspaltvpasti.top/xxx/merah.php"
 ]
+# Menghapus duplikat URL agar mesin tidak kerja dua kali
+M3U_URLS = list(dict.fromkeys(RAW_MASTER_URLS))
 
+# EPG GLOBAL HANYA UNTUK HEADER TIVIMATE
 GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml"
 
 OUTPUT_FILE = "live_matches_only.m3u"
@@ -83,8 +96,8 @@ def is_allowed_sport(title, ch_name):
         "magazine", "highlight", "classic", "review", "encore", "tba", "hl", "dl", "rev", "story",
         "fitness", "workout", "gym", "golden fit",
         "tennis", "wta", "atp", "wimbledon", "golf", "pga", "wwe", "ufc", "boxing", "fight", "mma", 
-        "smackdown", "snooker", "darts", "rugby", "cricket", "icc", "mlb", "nhl", "nfl", "baseball", 
-        "wbc", "basketball", "nba", "fiba", "movie", "special delivery", "billiard", "t20"
+        "smackdown", "snooker", "darts", "rugby", "cricket", "icc", "mlb", "nhl", "baseball", 
+        "wbc", "basketball", "fiba", "movie", "special delivery", "billiard", "t20", "cleaning", "maniac", "brian"
     ]
     if re.search(r'\b(?:' + '|'.join(haram) + r')\b', t): return False
 
@@ -98,7 +111,7 @@ def is_allowed_sport(title, ch_name):
         "indonesia", "bri liga 1", "sea games", "asean games", "soccer", "football", "copa", "piala", "fifa", "uefa", "mls", "afc", "aff",
         "badminton", "bwf", "all england", "thomas", "uber", "sudirman", "yonex", "swiss open", "china open", "china masters", "macau open", "indonesia masters",
         "voli", "volley", "vnl", "proliga", "futsal",
-        "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint"
+        "motogp", "moto2", "moto3", "f1", "formula", "grand prix", "racing", "sprint", "nba", "nfl"
     ]
     
     if re.search(r'\b(?:' + '|'.join(halal).replace('+', r'\+') + r')\b', t) or REGEX_VS.search(t):
@@ -156,50 +169,60 @@ def bersihkan_judul_event(title):
     return REGEX_JUDUL_3.sub('', bersih)
 
 # ==========================================================
-# FILTER WAKTU SUPER PRESISI (IMPLEMENTASI JADWAL MAS IPUL)
+# FILTER WAKTU SUPER PRESISI (HUKUM BENUA & CABOR)
 # ==========================================================
 def is_valid_time(start_dt, title, ch_name):
     w = start_dt.hour + (start_dt.minute / 60.0) 
     t = title.lower()
+    c = normalisasi_alias(ch_name)
 
-    if any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open']): 
+    # 1. VIP 24 JAM: BADMINTON
+    if any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open', 'indonesia masters']): 
         return True
 
+    # 2. VOLI (Berdasarkan Region)
     if any(k in t for k in ['voli', 'volley', 'vnl', 'proliga']):
         if (12.0 <= w <= 20.0) or (w >= 22.0 or w <= 4.0) or (5.0 <= w <= 11.0): return True
         return False
 
+    # 3. RACING: MOTOGP / F1
     if any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint']):
         if (3.0 <= w <= 6.0) or (9.0 <= w <= 16.0) or (18.0 <= w <= 22.0): return True
         return False
 
+    # 4. LIGA EROPA (18:30 – 05:00 WIB)
     eropa = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany', 'carabao', 'copa del rey']
     if any(k in t for k in eropa):
         if w >= 18.0 or w <= 5.0: return True
         return False 
 
+    # 5. LIGA ARAB SAUDI (22:00 - 03:00 WIB)
     saudi = ['saudi', 'roshn']
     if any(k in t for k in saudi):
         if w >= 21.0 or w <= 3.0: return True
         return False
 
+    # 6. LIGA ASIA TIMUR & AFC (12:00 - 21:30 WIB)
     asia = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'k league', 'afc', 'asian', 'aff']
     if any(k in t for k in asia):
         if 12.0 <= w <= 21.5: return True
         return False 
 
+    # 7. LIGA INDONESIA (14:00 - 21:30 WIB)
     indo = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
     if any(k in t for k in indo):
         if 14.0 <= w <= 21.5: return True
         return False 
 
+    # 8. LIGA AMERIKA (02:00 - 11:30 WIB)
     amerika = ['mls', 'major league soccer', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'brasileiro', 'campeonato', 'nba', 'nfl', 'conmebol']
     if any(k in t for k in amerika):
         if 2.0 <= w <= 11.5: return True
         return False 
 
+    # 9. PENYAPU RANJAU (Blokir Replay Siang Bolong untuk acara misterius di TV Asing)
     lokal_channels = ['rcti', 'sctv', 'indosiar', 'antv', 'tvri', 'rtv', 'mnc', 'global', 'inews', 'sportstars', 'soccer channel']
-    if not any(x in normalisasi_alias(ch_name) for x in lokal_channels):
+    if not any(x in c for x in lokal_channels):
         if 5.0 < w < 14.0: 
             return False
 
@@ -293,129 +316,135 @@ def main():
         except Exception:
             continue
 
-    print("Step 2: Menggabungkan file Multi M3U master Anda...")
-    m3u_lines = []
+    print(f"Step 2: Mengunduh dan melabeli KTP dari {len(M3U_URLS)} Server M3U Master...")
+    m3u_sources_data = []
+    source_id = 1
     for url in M3U_URLS:
         if not url: continue
-        print(f" -> Sedot M3U: {url.split('/')[-1]} ...")
+        print(f" -> Sedot KTP {source_id}: {url.split('/')[-1]} ...")
         try:
             r_m3u = session.get(url, timeout=30)
             if r_m3u.status_code == 200:
-                m3u_lines.extend(r_m3u.text.splitlines())
+                m3u_sources_data.append({
+                    "source_id": source_id,
+                    "lines": r_m3u.text.splitlines()
+                })
+                source_id += 1
         except Exception:
             continue
 
-    print("Step 3: Meracik Playlist VIP Olahraga Aktif (HANYA 1 CHANNEL 1 TAYANGAN)...")
+    print("Step 3: Meracik Playlist VIP (SISTEM PERWAKILAN: 1 KTP = 1 CHANNEL)...")
     hasil_akhir = []
-    channel_block = []
     
-    # ====================================================================
-    # PELACAK ANTI-DOBEL MUTLAK (UNTUK KEDUA KATEGORI: LIVE DAN UPCOMING)
-    # ====================================================================
+    # PELACAK ANTI-DOBEL
     live_tracker_backup = set()
     upcoming_tracker_backup = set()
     upcoming_tracker_acara = set()
 
-    for line in m3u_lines:
-        baris = line.strip()
-        if not baris: continue
-        if baris.upper().startswith("#EXTM3U"): continue
+    for src in m3u_sources_data:
+        src_id = src["source_id"]
+        channel_block = []
+        
+        for line in src["lines"]:
+            baris = line.strip()
+            if not baris: continue
+            if baris.upper().startswith("#EXTM3U"): continue
 
-        if baris.startswith("#"):
-            channel_block.append(baris)
-        else:
-            stream_url = baris
-            extinf_idx = -1
-            
-            for i, tag in enumerate(channel_block):
-                if tag.upper().startswith("#EXTINF"):
-                    extinf_idx = i
-                    break
-            
-            if extinf_idx != -1:
-                extinf = channel_block[extinf_idx]
-                if "," in extinf:
-                    bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
-                    nama_asli_m3u = nama_asli_m3u.strip()
-                    
-                    logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
-                    logo_asli = logo_asli_match.group(2) if logo_asli_match else ""
-                    
-                    clean_attrs = bagian_atribut
-                    attrs_to_remove = ['group-title', 'tvg-group', 'tvg-id', 'tvg-name', 'tvg-logo']
-                    for attr in attrs_to_remove:
-                        clean_attrs = re.sub(rf'(?i)\s*{attr}=(["\']).*?\1', '', clean_attrs)
-                        clean_attrs = re.sub(rf'(?i)\s*{attr}=[^"\'\s,]+', '', clean_attrs)
-                    clean_attrs = REGEX_JUDUL_2.sub(' ', clean_attrs).strip()
+            if baris.startswith("#"):
+                channel_block.append(baris)
+            else:
+                stream_url = baris
+                extinf_idx = -1
+                
+                for i, tag in enumerate(channel_block):
+                    if tag.upper().startswith("#EXTINF"):
+                        extinf_idx = i
+                        break
+                
+                if extinf_idx != -1:
+                    extinf = channel_block[extinf_idx]
+                    if "," in extinf:
+                        bagian_atribut, nama_asli_m3u = extinf.split(",", 1)
+                        nama_asli_m3u = nama_asli_m3u.strip()
+                        
+                        logo_asli_match = re.search(r'(?i)tvg-logo=(["\'])(.*?)\1', bagian_atribut)
+                        logo_asli = logo_asli_match.group(2) if logo_asli_match else ""
+                        
+                        clean_attrs = bagian_atribut
+                        attrs_to_remove = ['group-title', 'tvg-group', 'tvg-id', 'tvg-name', 'tvg-logo']
+                        for attr in attrs_to_remove:
+                            clean_attrs = re.sub(rf'(?i)\s*{attr}=(["\']).*?\1', '', clean_attrs)
+                            clean_attrs = re.sub(rf'(?i)\s*{attr}=[^"\'\s,]+', '', clean_attrs)
+                        clean_attrs = REGEX_JUDUL_2.sub(' ', clean_attrs).strip()
 
-                    bendera = get_flag(nama_asli_m3u)
+                        bendera = get_flag(nama_asli_m3u)
 
-                    for ch_id, nama_epg in epg_channels.items():
-                        if is_match_akurat(nama_epg, nama_asli_m3u):
-                            if ch_id in jadwal_per_channel:
-                                for event in jadwal_per_channel[ch_id]:
-                                    jam_mulai = event["start_dt"].strftime('%H:%M')
-                                    jam_selesai = event["stop_dt"].strftime('%H:%M')
-                                    jam_str = f"{jam_mulai}-{jam_selesai} WIB"
-                                    
-                                    logo_epg_prog = event["prog_logo"]
-                                    logo_epg_chan = epg_channel_logos.get(ch_id, "")
-                                    logo_final = logo_epg_prog or logo_epg_chan or logo_asli
-                                    
-                                    if event["is_live"]:
-                                        # ==================================================
-                                        # GEMBOK ANTI-DOBEL KHUSUS LIVE (Membunuh link ke-2, ke-3)
-                                        # ==================================================
-                                        kunci_live = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
-                                        if kunci_live in live_tracker_backup:
-                                            continue # Jika channel dan jam sudah ada, BUANG LINK INI!
-                                        live_tracker_backup.add(kunci_live)
-                                        # ==================================================
+                        for ch_id, nama_epg in epg_channels.items():
+                            if is_match_akurat(nama_epg, nama_asli_m3u):
+                                if ch_id in jadwal_per_channel:
+                                    for event in jadwal_per_channel[ch_id]:
+                                        jam_mulai = event["start_dt"].strftime('%H:%M')
+                                        jam_selesai = event["stop_dt"].strftime('%H:%M')
+                                        jam_str = f"{jam_mulai}-{jam_selesai} WIB"
                                         
-                                        grup_baru = "🔴 ACARA SEDANG TAYANG"
-                                        judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
-                                        stream_final = stream_url 
-                                        order = 0 
+                                        logo_epg_prog = event["prog_logo"]
+                                        logo_epg_chan = epg_channel_logos.get(ch_id, "")
+                                        logo_final = logo_epg_prog or logo_epg_chan or logo_asli
                                         
-                                        baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
-                                        block_final = [baris_extinf if t.upper().startswith("#EXTINF") else t for t in channel_block if not t.upper().startswith("#EXTGRP")]
-                                        
-                                        hasil_akhir.append({"kategori_order": order, "start_time": event["start_dt"].timestamp(), "title_sort": event['title_display'], "baris_lengkap": block_final + [stream_final]})
-                                        
-                                    else:
-                                        grup_baru = "📅 ACARA AKAN DATANG"
-                                        hari_ini = now_wib.date()
-                                        besok = hari_ini + timedelta(days=1)
-                                        lusa = hari_ini + timedelta(days=2)
-                                        event_date = event["start_dt"].date()
-                                        
-                                        # ==================================================
-                                        # GEMBOK ANTI-DOBEL KHUSUS UPCOMING
-                                        # ==================================================
-                                        kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
-                                        t_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', event['title_display'].lower()))
-                                        kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
-                                        
-                                        if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara: 
-                                            continue 
+                                        if event["is_live"]:
+                                            # ==================================================
+                                            # GEMBOK KTP (Membuang link dobel di dalam 1 file master)
+                                            # ==================================================
+                                            kunci_live = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}_{src_id}"
+                                            if kunci_live in live_tracker_backup:
+                                                continue 
+                                            live_tracker_backup.add(kunci_live)
+                                            # ==================================================
                                             
-                                        upcoming_tracker_backup.add(kunci_backup)
-                                        upcoming_tracker_acara.add(kunci_acara)
-                                        # ==================================================
+                                            grup_baru = "🔴 ACARA SEDANG TAYANG"
+                                            judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
+                                            stream_final = stream_url 
+                                            order = 0 
+                                            
+                                            baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
+                                            block_final = [baris_extinf if t.upper().startswith("#EXTINF") else t for t in channel_block if not t.upper().startswith("#EXTGRP")]
+                                            
+                                            hasil_akhir.append({"kategori_order": order, "start_time": event["start_dt"].timestamp(), "title_sort": event['title_display'], "baris_lengkap": block_final + [stream_final]})
+                                            
+                                        else:
+                                            grup_baru = "📅 ACARA AKAN DATANG"
+                                            hari_ini = now_wib.date()
+                                            besok = hari_ini + timedelta(days=1)
+                                            lusa = hari_ini + timedelta(days=2)
+                                            event_date = event["start_dt"].date()
+                                            
+                                            # ==================================================
+                                            # GEMBOK UPCOMING (Hanya 1 link secara Global)
+                                            # ==================================================
+                                            kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
+                                            t_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', event['title_display'].lower()))
+                                            kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
+                                            
+                                            if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara: 
+                                                continue 
+                                                
+                                            upcoming_tracker_backup.add(kunci_backup)
+                                            upcoming_tracker_acara.add(kunci_acara)
+                                            # ==================================================
 
-                                        if event_date == hari_ini: judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
-                                        elif event_date == besok: judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
-                                        elif event_date == lusa: judul_akhir = f"{bendera} ⏳ Lusa {jam_str} - {event['title_display']}"
-                                        else: judul_akhir = f"{bendera} ⏳ {event['start_dt'].strftime('%d/%m')} {jam_str} - {event['title_display']}"
+                                            if event_date == hari_ini: judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
+                                            elif event_date == besok: judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
+                                            elif event_date == lusa: judul_akhir = f"{bendera} ⏳ Lusa {jam_str} - {event['title_display']}"
+                                            else: judul_akhir = f"{bendera} ⏳ {event['start_dt'].strftime('%d/%m')} {jam_str} - {event['title_display']}"
 
-                                        stream_final = LINK_UPCOMING 
-                                        order = 1 
-                                        
-                                        baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
-                                        block_final = [baris_extinf if t.upper().startswith("#EXTINF") else t for t in channel_block if not t.upper().startswith("#EXTGRP")]
+                                            stream_final = LINK_UPCOMING 
+                                            order = 1 
+                                            
+                                            baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
+                                            block_final = [baris_extinf if t.upper().startswith("#EXTINF") else t for t in channel_block if not t.upper().startswith("#EXTGRP")]
 
-                                        hasil_akhir.append({"kategori_order": order, "start_time": event["start_dt"].timestamp(), "title_sort": event['title_display'], "baris_lengkap": block_final + [stream_final]})
-            channel_block = []
+                                            hasil_akhir.append({"kategori_order": order, "start_time": event["start_dt"].timestamp(), "title_sort": event['title_display'], "baris_lengkap": block_final + [stream_final]})
+                channel_block = []
 
     print("Step 4: Mengurutkan dan menyimpan hasil...")
     hasil_akhir.sort(key=lambda x: (x["kategori_order"], x["start_time"], x["title_sort"]))
