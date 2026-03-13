@@ -1,14 +1,4 @@
 #EXTM3U url-tvg="https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml" name="🔴 OLAHRAGA AKTIF VIP"
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 13:30-15:30 WIB - ACL Two: NSR Vs IST [Soccer Channel 1]
-https://fta4-cdn-flr.visionplus.id/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd|Referer=https://www.visionplus.id/&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 13:30-15:30 WIB - ACL Two: NSR Vs IST [Soccer Channel V+]
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 #EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKEW.jpg", 🇲🇾 🔴 14:40-17:30 WIB - PL: Arsenal vs Chelsea [ASTRO PREMIER LEAGUE]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -67,26 +57,64 @@ https://d29ecfnk3jwkp9.cloudfront.net/out/v1/9cc8f08dddb744dea58dbed4e07fb320/ma
 https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 15:30-17:30 WIB - AFC Futsal 2026: KGZ Vs IDN
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 15:55-18:02 WIB - NRL: Roosters V Rabbitohs
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 15:30-17:30 WIB - AFC Futsal 2026: KGZ Vs IDN [Soccer Channel 1]
+https://fta4-cdn-flr.visionplus.id/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd|Referer=https://www.visionplus.id/&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 15:30-17:30 WIB - AFC Futsal 2026: KGZ Vs IDN [Soccer Channel V+]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [Premier Sports 🇵🇭]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [Sky Sport Premier League FHD]
+https://7pal.short.gy/skyspt8nz
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [Now Sports Premier League1 HD]
+https://7pal.short.gy/nowhkp1
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [Premier Sports Rugby]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4751472d3ac45e95e44b5e75480e53de:5f989e3de354630ec7973980f129ed01
+https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fapyi0fj1o/out/v1/6fe7ef7bb5de4033a2b202d9ca62151a/cenc.mpd
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=002046c9a49b9ab1cdb6616bec5d26c3:d2f92f6b7edc9a1a05d393ba0c20ef9e
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [Peacock Premier League]
+https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc1021n07j)/master.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [PREMIER SPORTS]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [PREMIER SPORTS]
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 15:55-18:02 WIB - NRL: Roosters V Rabbitohs [PREMIER SPORT 1]
+https://raw.githubusercontent.com/B-inal-123/s-eropa/inal-22/Premier1.m3u8
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 16:00-18:00 WIB - V-League Men
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 16:00-18:00 WIB - V-League Men [SPORTSTARS 4 B]
 ##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 16:00-18:00 WIB - V-League Men
-https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 16:00-18:00 WIB - V-League Men [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 16:00-18:00 WIB - V-League Men [Sportstars 4]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVRFH.jpg", 🇲🇾 ⏳ 16:30-17:30 WIB - Sorotan BWF Terbuka Jerman 2026: Akhir
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
