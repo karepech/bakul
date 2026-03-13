@@ -159,59 +159,45 @@ def bersihkan_judul_event(title):
 # FILTER WAKTU SUPER PRESISI (IMPLEMENTASI JADWAL MAS IPUL)
 # ==========================================================
 def is_valid_time(start_dt, title, ch_name):
-    w = start_dt.hour + (start_dt.minute / 60.0) # Contoh: 18:30 WIB = 18.5
+    w = start_dt.hour + (start_dt.minute / 60.0) 
     t = title.lower()
 
-    # 1. VIP 24 JAM: BADMINTON FULL
     if any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'swiss open', 'china open', 'china masters', 'macau open']): 
         return True
 
-    # 2. VOLI (Berdasarkan Region)
     if any(k in t for k in ['voli', 'volley', 'vnl', 'proliga']):
-        # Asia (12-20), Eropa (22-04), Amerika (05-11)
         if (12.0 <= w <= 20.0) or (w >= 22.0 or w <= 4.0) or (5.0 <= w <= 11.0): return True
         return False
 
-    # 3. RACING: MOTOGP / F1
     if any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint']):
-        # Amerika: 03-06, Aus/Jpn: 09-13, Asia: 13-16, Eropa: 18-22
         if (3.0 <= w <= 6.0) or (9.0 <= w <= 16.0) or (18.0 <= w <= 22.0): return True
         return False
 
-    # 4. LIGA EROPA (18:30 – 05:00 WIB)
-    # Termasuk laga UCL jam 03:00 yang berakhir jam 05:00
     eropa = ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'england', 'italy', 'spain', 'germany', 'carabao', 'copa del rey']
     if any(k in t for k in eropa):
         if w >= 18.0 or w <= 5.0: return True
         return False 
 
-    # 5. LIGA ARAB SAUDI (22:00 - 03:00 WIB)
     saudi = ['saudi', 'roshn']
     if any(k in t for k in saudi):
         if w >= 21.0 or w <= 3.0: return True
         return False
 
-    # 6. LIGA ASIA TIMUR & AFC (12:00 - 21:30 WIB)
     asia = ['j-league', 'j1', 'j2', 'j3', 'k-league', 'k league', 'afc', 'asian', 'aff']
     if any(k in t for k in asia):
         if 12.0 <= w <= 21.5: return True
         return False 
 
-    # 7. LIGA INDONESIA LOKAL (14:00 - 21:30 WIB)
     indo = ['liga 1', 'bri liga', 'indonesia', 'shopee', 'timnas', 'persib', 'persija', 'persebaya', 'piala presiden', 'liga 2', 'nusantara']
     if any(k in t for k in indo):
         if 14.0 <= w <= 21.5: return True
         return False 
 
-    # 8. LIGA AMERIKA & BRAZIL (02:00 - 11:30 WIB Pagi)
     amerika = ['mls', 'major league soccer', 'concacaf', 'libertadores', 'sudamericana', 'ncaa', 'liga mx', 'america', 'usl', 'argentina', 'brasil', 'brasileiro', 'campeonato', 'nba', 'nfl', 'conmebol']
     if any(k in t for k in amerika):
         if 2.0 <= w <= 11.5: return True
         return False 
 
-    # 9. PENYAPU RANJAU UMUM (Fallback)
-    # Jika acaranya tidak dikenali liganya, dan tayang siang bolong (jam 05:00 - 14:00), 
-    # TAPI dia tayang di TV Asing (BeIN, Astro, dll), KITA HAPUS! (Rawan Replay)
     lokal_channels = ['rcti', 'sctv', 'indosiar', 'antv', 'tvri', 'rtv', 'mnc', 'global', 'inews', 'sportstars', 'soccer channel']
     if not any(x in normalisasi_alias(ch_name) for x in lokal_channels):
         if 5.0 < w < 14.0: 
@@ -319,9 +305,14 @@ def main():
         except Exception:
             continue
 
-    print("Step 3: Meracik Playlist VIP Olahraga Aktif...")
+    print("Step 3: Meracik Playlist VIP Olahraga Aktif (HANYA 1 CHANNEL 1 TAYANGAN)...")
     hasil_akhir = []
     channel_block = []
+    
+    # ====================================================================
+    # PELACAK ANTI-DOBEL MUTLAK (UNTUK KEDUA KATEGORI: LIVE DAN UPCOMING)
+    # ====================================================================
+    live_tracker_backup = set()
     upcoming_tracker_backup = set()
     upcoming_tracker_acara = set()
 
@@ -372,6 +363,15 @@ def main():
                                     logo_final = logo_epg_prog or logo_epg_chan or logo_asli
                                     
                                     if event["is_live"]:
+                                        # ==================================================
+                                        # GEMBOK ANTI-DOBEL KHUSUS LIVE (Membunuh link ke-2, ke-3)
+                                        # ==================================================
+                                        kunci_live = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
+                                        if kunci_live in live_tracker_backup:
+                                            continue # Jika channel dan jam sudah ada, BUANG LINK INI!
+                                        live_tracker_backup.add(kunci_live)
+                                        # ==================================================
+                                        
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
                                         judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
                                         stream_final = stream_url 
@@ -389,14 +389,19 @@ def main():
                                         lusa = hari_ini + timedelta(days=2)
                                         event_date = event["start_dt"].date()
                                         
+                                        # ==================================================
+                                        # GEMBOK ANTI-DOBEL KHUSUS UPCOMING
+                                        # ==================================================
                                         kunci_backup = f"{ch_id}_{event['start_dt'].strftime('%Y%m%d%H%M')}"
                                         t_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', event['title_display'].lower()))
                                         kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
                                         
-                                        if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara: continue 
+                                        if kunci_backup in upcoming_tracker_backup or kunci_acara in upcoming_tracker_acara: 
+                                            continue 
                                             
                                         upcoming_tracker_backup.add(kunci_backup)
                                         upcoming_tracker_acara.add(kunci_acara)
+                                        # ==================================================
 
                                         if event_date == hari_ini: judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
                                         elif event_date == besok: judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
