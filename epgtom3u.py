@@ -16,16 +16,9 @@ EPG_URLS = [
 ]
 
 RAW_MASTER_URLS = [
-    "https://raw.githubusercontent.com/mimipipi22/lalajo/refs/heads/main/playlist25", 
-    "https://semar25.short.gy", 
-    "https://deccotech.online/tv/tvstream.html",
-    "https://bit.ly/KPL203",
-    "https://freeiptv2026.tsender57.workers.dev",
-    "https://liveevent.iptvbonekoe.workers.dev",
-    "http://sauridigital.my.id/kerbaunakal/2026TVGNS.html",
-    "https://bit.ly/TVKITKAT",
-    "https://spoo.me/tvplurl04",
-    "https://aspaltvpasti.top/xxx/merah.php"
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u", 
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u", 
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
 M3U_URLS = list(dict.fromkeys(RAW_MASTER_URLS))
 
