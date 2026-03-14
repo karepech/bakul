@@ -1,627 +1,279 @@
-#EXTM3U url-tvg="https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml" name="🔴 OLAHRAGA AKTIF VIP"
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRP.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: SF [ASTRO ARENA]
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
+#EXTM3U
+#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLPT.jpg", 🇲🇾 🔴 08:50-18:30 WIB - BWF Malaysia Open: Day 5: SF [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports1.id" tvg-name="beIn Sports 1" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 12:40-13:20 WIB - F1 Academy Race 2026: China [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955143.jpg", 🇮🇩 ⏳ 12:40-13:20 WIB - F1 Academy Race 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports1.id" tvg-name="beIn Sports 1" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 13:55-15:00 WIB - F1 Qual. 2026: Chinese GP [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X953832.jpg", 🇮🇩 ⏳ 13:55-15:00 WIB - Formula 1 Qualifying 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 ⏳ 14:00-16:00 WIB - AFC Women's Asian Cup 2026: QF [ASTRO ARENA 2]
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 14:00-15:55 WIB - ACL Two: PSB Vs LCS [Soccer Channel V+]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 14:10-16:10 WIB - V-League 2025-2026: Women [SPORTSTARS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/CGTN_DOC_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:10-14:40 WIB - Stretching the Limits V [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 ⏳ 15:00-15:30 WIB - Knockouts!: Sergio Vs Paul [FIGHT SPORTS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports2.id" tvg-name="beIn Sports 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_310.png", 🇮🇩 ⏳ 15:05-17:00 WIB - Super Lig 2025/26: FAT Vs FEN [BEIN SPORTS 2]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola2" tvg-name="Astro Arena Bola 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 ⏳ 15:50-18:00 WIB - AFC Women's Asian Cup 2026: Suku Akhir 1 [ASTRO ARENA BOLA 2]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola2hd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 15:55-18:00 WIB - AFC WAC 2026: KOR Vs UZB [Soccer Channel V+]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 ⏳ 16:00-16:30 WIB - BWF Martial Arts [FIGHT SPORTS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 16:10-18:10 WIB - Proliga [SPORTSTARS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 ⏳ 16:45-18:50 WIB - AFC Elite: JDT vs Sanfrecce [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars3.id" tvg-name="Sportstars 3" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 18:00-20:00 WIB - BRI Liga 1 [Sportstars 3ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports1.id" tvg-name="beIn Sports 1" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 18:25-18:55 WIB - F1 Sprint Race 2026: Chinese GP [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955157.jpg", 🇮🇩 ⏳ 18:25-18:55 WIB - Formula 1 Sprint Race 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 18:30-20:30 WIB - V-League Women [SPORTSTARS 4 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 18:30-21:00 WIB - URC: Bulls V Stormers [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 18:30-20:30 WIB - Bundesliga: SCF Vs LEV [Soccer Channel V+]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 18:50-21:00 WIB - Bundesliga 2 : Bielefeld Vs Paderborn [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHV.jpg", 🇲🇾 ⏳ 18:50-20:50 WIB - Serie A: Lazio vs Sassuolo [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports1.id" tvg-name="beIn Sports 1" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 18:55-19:55 WIB - F1 Qualifying 2026: Chinese GP [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X953850.jpg", 🇮🇩 ⏳ 18:55-19:55 WIB - Formula 1 Qualifying 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroBadminton_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 19:00-02:00 WIB - BWF Swiss Open: SF 1 [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKFL.jpg", 🇲🇾 ⏳ 19:10-21:20 WIB - PL: Man City vs Nottm Forest [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTGEM.jpg", 🇲🇾 ⏳ 19:20-21:30 WIB - EFL: Coventry vs Southampton [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 19:30-21:30 WIB - AFC Championship League Two [SPORTSTARS 2 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="OKEY" tvg-name="TV Okey" tvg-logo="https://aqfadtv.xyz/images/OKEY.png", 📺 ⏳ 19:30-22:45 WIB - BOLA SEPAK LIGA SUPER 2025-2026 [OKEY TV]
+https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports1.id" tvg-name="beIn Sports 1" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 19:55-22:10 WIB - LaLiga 2025/26: GIR Vs ATH [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955162.jpg", 🇮🇩 ⏳ 19:55-22:10 WIB - LaLiga : Girona Vs Athletic Bilbao [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola2" tvg-name="Astro Arena Bola 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 ⏳ 20:00-22:00 WIB - AFC Women's Asian Cup 2026: Suku Akhir 2 [ASTRO ARENA BOLA 2]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola2hd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-url="https://bit.ly/IndonesiaEpgG" group-title="⏳ SEGERA TAYANG" tvg-id="IMC.id" tvg-name="IMC" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_14.png", 🇮🇩 ⏳ 20:00-21:25 WIB - Mertua Vs Menantu [Indonesia Movie Channel (IMC)]
+https://fta3-cdn-flr.visionplus.id/out/v1/65432a4c12ca4a52abf473a0e41d7c7e/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/CGTN_DOC_IVP_LAND_1280x720.jpg", 📺 ⏳ 20:10-20:40 WIB - Stretching the Limits V [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="ANTV.id" tvg-name="ANTV" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_115.png", 🇮🇩 ⏳ 20:30-23:00 WIB - Serie A Liga Italia [ANTV SPORTS]
+http://103.66.62.83:8000/play/a00r/index.m3u8
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 20:50-01:00 WIB - Serie A 2025/26: Inter lwn Atalanta [ASTRO ARENA 2]
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 20:55-01:00 WIB - Serie a Women 25/26 [W-SPORTS]
+https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 ⏳ 21:00-21:30 WIB - Knockouts!: Gatti Vs Baldomir [FIGHT SPORTS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 21:00-02:02 WIB - Guinness Six Nations: Ireland V Scotland [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 21:20-00:00 WIB - Bundesliga : Leverkusen Vs Bayern [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 21:25-23:30 WIB - Bundesliga: LEV Vs FCB [Soccer Channel V+]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga 2025/26 [SPORTSTARS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga: SGE Vs HDH [SPORTSTARS 2 B]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars3.id" tvg-name="Sportstars 3" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga: TSG Vs WOB [Sportstars 3ᴴᴰ]
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:50-00:30 WIB - PL: Burnley vs Bournemouth [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:50-00:20 WIB - PL: Sunderland vs Brighton [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:50-00:30 WIB - PL: Burnley vs Bournemouth [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTGEM.jpg", 🇲🇾 ⏳ 21:50-02:00 WIB - EFL: Leicester vs QPR [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955163.jpg", 🇮🇩 ⏳ 22:10-02:40 WIB - LaLiga : Atletico Madrid Vs Getafe [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 23:30-01:30 WIB - V-League 2025-2026: Men [SPORTSTARS]
+https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beInSports3.id" tvg-name="beIn Sports 3" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 ⏳ 23:55-02:00 WIB - Super Lig 25/26: GAL Vs IBA [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTN" tvg-name="CGTN" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/1121X134223.jpg", 📺 ⏳ 00:03-00:33 WIB - Africa [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 00:20-02:25 WIB - Bundesliga : Hamburg Vs Cologne [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 00:20-02:30 WIB - PL: Arsenal vs Everton [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 00:30-02:30 WIB - PL: Chelsea vs Newcastle [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 00:30-02:30 WIB - PL: Chelsea vs Newcastle [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRN.jpg", 🇲🇾 ⏳ 01:00-04:30 WIB - BWF Terbuka All England 2026: QF [ASTRO ARENA 2]
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/CGTN_DOC_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:10-02:40 WIB - Stretching the Limits V [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 02:25-04:30 WIB - Bundesliga 2 : Hertha Vs Bochum [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 02:35-05:00 WIB - Serie A: Udinese vs Juventus [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 02:50-05:00 WIB - PL: West Ham vs Man City [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955165.jpg", 🇮🇩 ⏳ 02:55-05:00 WIB - LaLiga : Real Madrid Vs Elche [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 03:00-05:22 WIB - Guinness Six Nations: France V England [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 ⏳ 07:00-12:30 WIB - BWF Terbuka All England 2026: Akhir [ASTRO ARENA]
 http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRP.jpg", 🇲🇾 🔴 07:00-12:00 WIB - BWF Terbuka All England 2026: SF [Astro Arena]
-https://raw.githubusercontent.com/Bluestraveller13/super-duper-spork/refs/heads/main/AstroArenaBola.m3u8
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 14:00-15:55 WIB - ACL Two: PSB Vs LCS
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWIBB.jpg", 🇲🇾 ⏳ 14:00-16:00 WIB - AFC Women's Asian Cup 2026: QF
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
-#https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 14:10-16:10 WIB - V-League 2025-2026: Women
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beInSports2.id" tvg-name="beIn Sports 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_310.png", 🇮🇩 ⏳ 15:05-17:00 WIB - Super Lig 2025/26: FAT Vs FEN
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 15:55-18:00 WIB - AFC WAC 2026: KOR Vs UZB
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 ⏳ 16:00-16:30 WIB - BWF Martial Arts
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 16:10-18:10 WIB - Proliga
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJED.jpg", 🇲🇾 ⏳ 16:45-18:50 WIB - AFC Elite: JDT vs Sanfrecce
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ac900f4053fa420095fb84f491f7a331:59748725964ff275e524af73792c8ad4
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars3.id" tvg-name="Sportstars 3" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 18:00-20:00 WIB - BRI Liga 1
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 18:30-20:30 WIB - Bundesliga: SCF Vs LEV
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 18:30-21:00 WIB - URC: Bulls V Stormers
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e02fc4146be34c2db75a847a6f5e95e9:a25a6118776646a690b2931609264bd5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 18:30-20:30 WIB - V-League Women
-##https://d84q7nw4qf3j3.cloudfront.net/out/v1/da31f135bd6c4fe0b7dc4262436277fb/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars4.id" tvg-name="Sportstars 4" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 18:30-20:30 WIB - V-League Women
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 18:50-21:00 WIB - Bundesliga 2 : Bielefeld Vs Paderborn
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHV.jpg", 🇲🇾 ⏳ 18:50-20:50 WIB - Serie A: Lazio vs Sassuolo
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKFL.jpg", 🇲🇾 ⏳ 19:10-21:20 WIB - PL: Man City vs Nottm Forest
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTGEM.jpg", 🇲🇾 ⏳ 19:20-21:30 WIB - EFL: Coventry vs Southampton
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d19fdcc1de0245edbbfcfaa31b3385ed:d0bfa058d6f3d7c45c5244820dbda8f3
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 19:30-21:30 WIB - AFC Championship League Two
-##https://d3b0v7fggu5zwm.cloudfront.net/out/v1/c4d0918d98cd4bf8a77850ed16696110/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ac900f4053fa420095fb84f491f7a331:59748725964ff275e524af73792c8ad4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 19:30-21:30 WIB - AFC Championship League Two
-##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/6f5596513af749c19d0bcdac013dda3c/index.mpd
-##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-##https://fta4-cdn-flr.visionplus.id/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 19:30-21:30 WIB - AFC Championship League Two
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="OKEY" tvg-name="TV Okey" tvg-logo="https://aqfadtv.xyz/images/OKEY.png", 📺 ⏳ 19:30-22:45 WIB - BOLA SEPAK LIGA SUPER 2025-2026
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beInSports1.id" tvg-name="beIn Sports 1" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 19:55-22:10 WIB - LaLiga 2025/26: GIR Vs ATH
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955162.jpg", 🇮🇩 ⏳ 19:55-22:10 WIB - LaLiga : Girona Vs Athletic Bilbao
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=251c384e846841abafa1f7c723d57e66:e45b06a38cd261b74c5160f0912c042f
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="ANTV.id" tvg-name="ANTV" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_115.png", 🇮🇩 ⏳ 20:30-23:00 WIB - Serie A Liga Italia
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 20:50-01:00 WIB - Serie A 2025/26: Inter lwn Atalanta
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
-#https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 20:55-01:00 WIB - Serie a Women 25/26
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 21:00-02:02 WIB - Guinness Six Nations: Ireland V Scotland
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 21:20-00:00 WIB - Bundesliga : Leverkusen Vs Bayern
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="SoccerChannel.id" tvg-name="Soccer Channel" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 21:25-23:30 WIB - Bundesliga: LEV Vs FCB
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga 2025/26
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d19fdcc1de0245edbbfcfaa31b3385ed:d0bfa058d6f3d7c45c5244820dbda8f3
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga: SGE Vs HDH
-##https://d3b0v7fggu5zwm.cloudfront.net/out/v1/c4d0918d98cd4bf8a77850ed16696110/index.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ac900f4053fa420095fb84f491f7a331:59748725964ff275e524af73792c8ad4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga: SGE Vs HDH
-##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/6f5596513af749c19d0bcdac013dda3c/index.mpd
-##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-##https://fta4-cdn-flr.visionplus.id/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars2.id" tvg-name="Sportstars 2" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga: SGE Vs HDH
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ac900f4053fa420095fb84f491f7a331:59748725964ff275e524af73792c8ad4
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars3.id" tvg-name="Sportstars 3" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 21:30-23:30 WIB - Bundesliga: TSG Vs WOB
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTGEM.jpg", 🇲🇾 ⏳ 21:50-02:00 WIB - EFL: Leicester vs QPR
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:50-00:30 WIB - PL: Burnley vs Bournemouth
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:50-00:20 WIB - PL: Sunderland vs Brighton
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955163.jpg", 🇮🇩 ⏳ 22:10-02:40 WIB - LaLiga : Atletico Madrid Vs Getafe
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="Sportstars.id" tvg-name="Sportstars" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 23:30-01:30 WIB - V-League 2025-2026: Men
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beInSports3.id" tvg-name="beIn Sports 3" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 ⏳ 23:55-02:00 WIB - Super Lig 25/26: GAL Vs IBA
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Besok 00:20-02:25 WIB - Bundesliga : Hamburg Vs Cologne
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 00:20-02:30 WIB - PL: Arsenal vs Everton
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 00:30-02:30 WIB - PL: Chelsea vs Newcastle
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena2" tvg-name="Astro Arena 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRN.jpg", 🇲🇾 ⏳ Besok 01:00-04:30 WIB - BWF Terbuka All England 2026: QF
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
-#https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Besok 02:25-04:30 WIB - Bundesliga 2 : Hertha Vs Bochum
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ Besok 02:35-05:00 WIB - Serie A: Udinese vs Juventus
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 02:50-05:00 WIB - PL: West Ham vs Man City
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955165.jpg", 🇮🇩 ⏳ Besok 02:55-05:00 WIB - LaLiga : Real Madrid Vs Elche
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 03:00-05:22 WIB - Guinness Six Nations: France V England
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroArena" tvg-name="Astro Arena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 ⏳ Besok 07:00-12:30 WIB - BWF Terbuka All England 2026: Akhir
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=efda647dad723563b625be8c05ee6110:6776985938b332164b97b81fe566a34a
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 12:00-14:00 WIB - NRL: Sea Eagles V Knights
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955136.jpg", 🇮🇩 ⏳ Besok 12:30-13:55 WIB - Grand Prix Sunday 2026
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955116.jpg", 🇮🇩 ⏳ Besok 13:55-16:00 WIB - Formula 1 Main Race 2026
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 14:00-17:02 WIB - AFL: Gold Coast V West Coast
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 14:00-16:10 WIB - PL: Burnley vs Bournemouth
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJPV.jpg", 🇲🇾 ⏳ Besok 15:10-16:10 WIB - Dutch League: Round 24 Highlights
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUZVK.jpg", 🇲🇾 ⏳ Besok 16:10-18:00 WIB - EFL: Blackpool vs Mansfield
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955239.jpg", 🇮🇩 ⏳ Besok 18:00-19:55 WIB - LaLiga : Real Madrid Vs Elche
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ Besok 18:20-20:30 WIB - Serie A: Verona vs Genoa
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Besok 19:20-21:25 WIB - Bundesliga 2 : Schalke Vs Hannover
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 19:50-22:05 WIB - Under-20 Six Nations: Wales U20 V Italy U20
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955166.jpg", 🇮🇩 ⏳ Besok 19:55-22:10 WIB - LaLiga : Mallorca Vs Espanyol
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 20:50-23:50 WIB - PL: Crystal Palace vs Leeds
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ Besok 20:50-23:30 WIB - Serie A: Pisa vs Cagliari
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 21:00-23:15 WIB - PL: Man Utd vs Aston Villa
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Besok 21:25-01:25 WIB - Bundesliga : Werder Bremen Vs Mainz
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 22:05-00:35 WIB - Under-20 Six Nations: Ireland U20 V Scotland U20
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955167.jpg", 🇮🇩 ⏳ Besok 22:10-02:40 WIB - LaLiga : Barcelona Vs Sevilla
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 23:30-01:30 WIB - PL: Liverpool vs Tottenham
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Besok 23:50-02:00 WIB - Premier League 2025/26: Match Week 30: Arsenal vs. Everton
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ Besok 23:50-02:00 WIB - Serie A: Como vs Roma
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 00:25-02:30 WIB - Frauen Bundesliga 25/26
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 00:35-02:52 WIB - Under-20 Six Nations: France U20 V England U20
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Lusa 01:25-03:30 WIB - Bundesliga : Stuttgart Vs Leipzig
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Lusa 02:15-04:30 WIB - PL: Sunderland vs Brighton
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUVIO.jpg", 🇲🇾 ⏳ Lusa 02:25-05:00 WIB - FA Cup: Southampton vs Leicester
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 02:30-04:30 WIB - Serie a Women 25/26
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ Lusa 02:35-05:00 WIB - Serie A: Lazio vs Milan
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Lusa 02:55-05:00 WIB - LaLiga : Real Sociedad Vs Osasuna
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 03:22-05:12 WIB - Guinness Six Nations: Ireland V Scotland
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 14:52-16:42 WIB - Guinness Six Nations: Wales V Italy
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Lusa 16:00-19:00 WIB - PL: Man Utd vs Aston Villa
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 16:42-18:32 WIB - Guinness Six Nations: France V England
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Lusa 19:00-22:00 WIB - PL: Liverpool vs Tottenham
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURIE.jpg", 🇲🇾 ⏳ Lusa 19:00-21:00 WIB - Serie A: Pisa vs Cagliari
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Lusa 19:10-22:00 WIB - PL: Chelsea vs Newcastle
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 20:00-22:00 WIB - Frauen Bundesliga 25/26
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURIG.jpg", 🇲🇾 ⏳ Lusa 21:00-01:00 WIB - Serie A: Como vs Roma
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ Lusa 21:00-02:00 WIB - UCL : Real Madrid Vs Man City - R16, 1st Leg
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Lusa 22:00-01:50 WIB - PL: Chelsea vs Newcastle
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ Lusa 22:00-02:20 WIB - PL: West Ham vs Man City
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Lusa 22:02-01:42 WIB - Under-20 Six Nations: Wales U20 V Italy U20
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroPremierLeague2_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ Lusa 22:30-00:00 WIB - Match Hls 25/26: MW30: Arsenal Vs Everton
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 17/03 00:00-01:55 WIB - LaLiga : Real Sociedad Vs Osasuna
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJPX.jpg", 🇲🇾 ⏳ 17/03 01:00-02:00 WIB - Dutch League: Round 26: Highlights
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 17/03 01:42-03:32 WIB - Under-20 Six Nations: France U20 V England U20
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 17/03 02:00-05:00 WIB - Barcelona Marathon 26
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKDT.jpg", 🇲🇾 ⏳ 17/03 02:00-05:00 WIB - PL: Liverpool vs Man City
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"3fpujVSbTVF3qcref5oLIw", "kid":"wdyS8HifESUDwNs73i8SEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/2104/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUZWK.jpg", 🇲🇾 ⏳ 17/03 02:50-05:00 WIB - EFL: Portsmouth vs Derby
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 17/03 02:50-05:00 WIB - PL: Brentford vs. Wolves
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
-https://bwifi.my.id/5menit.mp4
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 17/03 02:55-05:00 WIB - LaLiga : Rayo Vallecano Vs Levante
-https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroBadminton_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 07:00-12:00 WIB - BWF Swiss Open: SF 1 [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 09:35-10:15 WIB - F1 Academy Race 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 12:00-14:00 WIB - NRL: Sea Eagles V Knights [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955136.jpg", 🇮🇩 ⏳ 12:30-13:55 WIB - Grand Prix Sunday 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955116.jpg", 🇮🇩 ⏳ 13:55-16:00 WIB - Formula 1 Main Race 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:00-17:02 WIB - AFL: Gold Coast V West Coast [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 14:00-16:10 WIB - PL: Burnley vs Bournemouth [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola2" tvg-name="Astro Arena Bola 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUQVP.jpg", 🇲🇾 ⏳ 14:00-16:00 WIB - AFC Two 2025/26: BUFC lwn SEL [ASTRO ARENA BOLA 2]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola2hd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJPV.jpg", 🇲🇾 ⏳ 15:10-16:10 WIB - Dutch League: Round 24 Highlights [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola" tvg-name="Astro Arena Bola" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJEK.jpg", 🇲🇾 ⏳ 16:00-18:00 WIB - AFC Elite 2025/26: SHI lwn JDT [ASTRO ARENA BOLA]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola1fhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUZVK.jpg", 🇲🇾 ⏳ 16:10-18:00 WIB - EFL: Blackpool vs Mansfield [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroBadminton_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 17:00-22:00 WIB - BWF Swiss Open: Final [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955239.jpg", 🇮🇩 ⏳ 18:00-19:55 WIB - LaLiga : Real Madrid Vs Elche [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 18:20-20:30 WIB - Serie A: Verona vs Genoa [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 19:20-21:25 WIB - Bundesliga 2 : Schalke Vs Hannover [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 19:50-22:05 WIB - Under-20 Six Nations: Wales U20 V Italy U20 [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955166.jpg", 🇮🇩 ⏳ 19:55-22:10 WIB - LaLiga : Mallorca Vs Espanyol [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 20:50-23:50 WIB - PL: Crystal Palace vs Leeds [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 20:50-23:30 WIB - Serie A: Pisa vs Cagliari [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:00-23:15 WIB - PL: Man Utd vs Aston Villa [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 21:00-23:15 WIB - PL: Man Utd vs Aston Villa [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 21:25-01:25 WIB - Bundesliga : Werder Bremen Vs Mainz [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 22:05-00:35 WIB - Under-20 Six Nations: Ireland U20 V Scotland U20 [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955167.jpg", 🇮🇩 ⏳ 22:10-02:40 WIB - LaLiga : Barcelona Vs Sevilla [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 23:30-01:30 WIB - PL: Liverpool vs Tottenham [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 23:30-01:30 WIB - PL: Liverpool vs Tottenham [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 23:50-02:00 WIB - Premier League 2025/26: Match Week 30: Arsenal vs. Everton [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 23:50-02:00 WIB - Serie A: Como vs Roma [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroBadminton_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 00:00-03:00 WIB - BWF Swiss Open: SF 2 [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTN" tvg-name="CGTN" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/1121X134223.jpg", 📺 ⏳ 00:03-00:33 WIB - Africa [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 00:25-02:30 WIB - Frauen Bundesliga 25/26 [W-SPORTS]
+https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 00:35-02:52 WIB - Under-20 Six Nations: France U20 V England U20 [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 01:25-03:30 WIB - Bundesliga : Stuttgart Vs Leipzig [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 02:15-04:30 WIB - PL: Sunderland vs Brighton [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUVIO.jpg", 🇲🇾 ⏳ 02:25-05:00 WIB - FA Cup: Southampton vs Leicester [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:30-04:30 WIB - Serie a Women 25/26 [W-SPORTS]
+https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTFNN.jpg", 🇲🇾 ⏳ 02:35-05:00 WIB - Serie A: Lazio vs Milan [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 02:55-05:00 WIB - LaLiga : Real Sociedad Vs Osasuna [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 03:22-05:12 WIB - Guinness Six Nations: Ireland V Scotland [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroBadminton_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 09:00-14:00 WIB - BWF Swiss Open: Final [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola" tvg-name="Astro Arena Bola" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWJEK.jpg", 🇲🇾 ⏳ 13:00-15:00 WIB - AFC Elite 2025/26: SHI lwn JDT [ASTRO ARENA BOLA]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola1fhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/CGTN_DOC_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:10-14:40 WIB - Stretching the Limits V [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:52-16:42 WIB - Guinness Six Nations: Wales V Italy [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroBadminton" tvg-name="Astro Badminton" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KVLQN.jpg", 🇲🇾 ⏳ 15:00-02:00 WIB - BWF England Open: Rd32 [ASTRO BADMINTON]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=badmintonhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 16:00-19:00 WIB - PL: Man Utd vs Aston Villa [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 16:42-18:32 WIB - Guinness Six Nations: France V England [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 19:00-22:00 WIB - PL: Liverpool vs Tottenham [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURIE.jpg", 🇲🇾 ⏳ 19:00-21:00 WIB - Serie A: Pisa vs Cagliari [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola2" tvg-name="Astro Arena Bola 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUEKD.jpg", 🇲🇾 ⏳ 19:00-21:00 WIB - AFC Two 2025/26: NDI lwn RAT [ASTRO ARENA BOLA 2]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola2hd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 19:10-22:00 WIB - PL: Chelsea vs Newcastle [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955211.jpg", 🇮🇩 ⏳ 19:25-20:00 WIB - Formula 1 Highlights 2026 [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 20:00-22:00 WIB - Frauen Bundesliga 25/26 [W-SPORTS]
+https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/CGTN_DOC_IVP_LAND_1280x720.jpg", 📺 ⏳ 20:10-20:40 WIB - Stretching the Limits V [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports3" tvg-name="beIN Sports 3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 21:00-02:00 WIB - UCL : Real Madrid Vs Man City - R16, 1st Leg [BEIN SPORTS 3]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURIG.jpg", 🇲🇾 ⏳ 21:00-01:00 WIB - Serie A: Como vs Roma [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola2" tvg-name="Astro Arena Bola 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUEKE.jpg", 🇲🇾 ⏳ 21:00-01:00 WIB - AFC Two 2025/26: KAY lwn TAM [ASTRO ARENA BOLA 2]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola2hd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 22:00-02:20 WIB - PL: West Ham vs Man City [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 22:00-01:50 WIB - PL: Chelsea vs Newcastle [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 22:02-01:42 WIB - Under-20 Six Nations: Wales U20 V Italy U20 [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroPremierLeague2_2024_IVP_LAND_1280x720.jpg", 🇲🇾 ⏳ 22:30-00:00 WIB - Match Hls 25/26: MW30: Arsenal Vs Everton [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 00:00-01:55 WIB - LaLiga : Real Sociedad Vs Osasuna [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTN" tvg-name="CGTN" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/1121X134223.jpg", 📺 ⏳ 00:03-01:03 WIB - Africa [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJPX.jpg", 🇲🇾 ⏳ 01:00-02:00 WIB - Dutch League: Round 26: Highlights [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="PremierSports" tvg-name="Premier Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 01:42-03:32 WIB - Under-20 Six Nations: France U20 V England U20 [Premier Sports 🇵🇭]
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KQMWZ.jpg", 🇲🇾 ⏳ 01:50-02:50 WIB - 2024 Giants - Episode 3 [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="W-Sport" tvg-name="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:00-05:00 WIB - Barcelona Marathon 26 [W-SPORTS]
+https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague2" tvg-name="Astro Premier League 2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTKDT.jpg", 🇲🇾 ⏳ 02:00-05:00 WIB - PL: Liverpool vs Man City [ASTRO PREMIER LEAGUE 2]
+http://208.87.242.55/livehttpplay?channel_id=13303
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroArenaBola" tvg-name="Astro Arena Bola" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KURHZ.jpg", 🇲🇾 ⏳ 02:05-04:00 WIB - Serie A 2025/26: TOR lwn PAR [ASTRO ARENA BOLA]
+https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola1fhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/CGTN_DOC_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:10-02:40 WIB - Stretching the Limits V [CGTN]
+https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c68572841ba301729c8468973bfe/manifest.mpd
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroPremierLeague" tvg-name="Astro Premier League" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 02:50-05:00 WIB - PL: Brentford vs. Wolves [ASTRO PREMIER LEAGUE]
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroGrandstand" tvg-name="Astro Grandstand" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJUI_series.jpg", 🇲🇾 ⏳ 02:50-05:00 WIB - PL: Brentford vs. Wolves [ASTRO GRANDSTAND]
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="AstroFootball" tvg-name="Astro Football" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KUZWK.jpg", 🇲🇾 ⏳ 02:50-05:00 WIB - EFL: Portsmouth vs Derby [ASTRO FOOTBALL]
+http://208.87.242.55/livehttpplay?channel_id=13300
+#EXTINF:-1 group-title="⏳ SEGERA TAYANG" tvg-id="beINSports" tvg-name="beIN Sports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 02:55-05:00 WIB - LaLiga : Rayo Vallecano Vs Levante [BEIN SPORTS 1]
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
