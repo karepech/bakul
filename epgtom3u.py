@@ -17,11 +17,14 @@ M3U_URLS = [
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
 
-GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml"
+# Link EPG Raksasa
+GLOBAL_EPG_URL = "https://www.open-epg.com/generate/bXxbrwUThe.xml,https://i.mjh.nz/SamsungTVPlus/all.xml,https://i.mjh.nz/au/all/epg.xml,https://www.tdtchannels.com/epg/TV.xml,https://www.open-epg.com/files/indonesia2.xml,https://www.open-epg.com/files/indonesia6.xml,https://www.open-epg.com/files/thailand.xml,https://www.open-epg.com/files/thailandpremium.xml,https://i.mjh.nz/PlutoTV/all.xml,https://www.open-epg.com/files/francepremium.xml,https://avkb.short.gy/tsepg.xml.gz,https://raw.githubusercontent.com/dbghelp/mewatch-EPG/refs/heads/main/mewatch.xml,https://epg1.168.us.kg/mytvsuper.com.xml"
+
 OUTPUT_FILE = "live_matches_only.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
+# Server Dewa
 SERVER_PRIORITAS = ['semar', 'lajojo', 'iptv2026']
 
 # ==========================================
@@ -32,15 +35,20 @@ REGEX_STARS = re.compile(r'\bsports?\s+stars?\b')
 REGEX_MNC = re.compile(r'\bmnc\s*sports?\b')
 REGEX_SPO = re.compile(r'\bspo\s+tv\b')
 REGEX_CYRILLIC_CJK = re.compile(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]')
-REGEX_KUALITAS = re.compile(r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|network|premium|now)\b')
+REGEX_KUALITAS = re.compile(r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|network|premium|now|id|my|sg)\b')
 REGEX_NUMBERS = re.compile(r'\d+')
 REGEX_LIVE = re.compile(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\blangsung\b|\blive on\b)')
 REGEX_VS = re.compile(r'\b(vs|v)\b')
-REGEX_NON_ALPHANUM = re.compile(r'[^a-z0-9]') # Untuk menormalkan judul acara
+REGEX_NON_ALPHANUM = re.compile(r'[^a-z0-9]')
+
+def bersihkan_judul_event(title):
+    bersih = REGEX_LIVE.sub('', title)
+    bersih = re.sub(r'\s+', ' ', bersih).strip()
+    return re.sub(r'^[\-\:\,\|]\s*', '', bersih)
 
 def get_channel_number(text):
     nums = REGEX_NUMBERS.findall(text)
-    return nums[0] if nums else '0'
+    return nums[0] if nums else '0' # Ambil angka terdepan yang relevan
 
 def get_priority(url, name):
     teks = (url + " " + name).lower()
@@ -88,18 +96,17 @@ def get_region_ktp(name, epg_id=""):
 def is_sports_channel(name):
     n = name.lower()
     
-    # 1. BUKA GERBANG TV LOKAL (Nanti diseleksi di is_allowed_sport kalau bukan bola)
+    # TV Lokal 
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in n for x in lokal): return True
 
-    # 2. BUKA GERBANG GLOBAL VVIP
+    # Astro diloloskan ke tahap 2
     if 'astro' in n:
         haram = ['awani','ria','oasis','prima','rania','citra','hijrah','ceria','warna','shiq','vellithirai','vinmeen','box office', 'a-list']
         if any(x in n for x in haram): return False
-        halal_astro = ['arena', 'supersport', 'grandstand', 'premier', 'cricket', 'badminton', 'football', 'golf', 'tennis', 'rugby', 'sport']
-        return any(x in n for x in halal_astro)
+        return True 
 
-    # Tambahan Raksasa Global: Sky, TNT, SS, True, DAZN, Setanta, Eleven, Now
+    # Channel Global Raksasa
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
@@ -114,24 +121,32 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     
     if REGEX_CYRILLIC_CJK.search(t): return False
 
-    # HUKUM ASTRO BADMINTON & ARENA
-    if 'astro arena' in c or 'astro badminton' in c:
-        if not any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'master', 'open', 'tour', 'championship']): 
+    # HUKUM ASTRO: MURNI BADMINTON
+    if 'astro' in c:
+        kata_badminton = [
+            'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 
+            'swiss open', 'malaysia open', 'indonesia open', 'indonesia master', 
+            'china open', 'japan open', 'korea open', 'french open', 'denmark open', 
+            'thailand', 'singapore open', 'taipei', 'macau', 'hong kong', 
+            'world tour', 'championship'
+        ]
+        if not any(k in t for k in kata_badminton): 
             return False
 
-    # HUKUM TV LOKAL (Wajib nayangin Bola/Nasional, Sinetron buang!)
+    # HUKUM TV LOKAL
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in c for x in lokal) and 'sport' not in c:
         kunci_lokal = ['timnas', 'liga 1', 'bri liga', 'indonesia', 'piala', 'afc', 'aff', 'premier', 'champions', 'uefa']
         if not any(k in t for k in kunci_lokal): return False
 
-    # HUKUM DURASI & KATA HARAM
+    # HUKUM DURASI 
     if durasi_menit < 30: return False
     
     bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
     is_football = any(k in c or k in t for k in bola_keywords)
     if is_football and durasi_menit < 85: return False
 
+    # KATA HARAM
     haram = [
         "(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del ",
         "replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", 
@@ -147,6 +162,7 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     ]
     if re.search(r'\b(?:' + '|'.join(haram).replace('+', r'\+') + r')\b', t): return False
 
+    # KATA HALAL
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
         "manchester", "madrid", "barcelona", "chelsea", "arsenal", "liverpool", "juventus", "milan", "inter", "bayern", "psg", 
@@ -177,20 +193,15 @@ def is_valid_time(start_dt, title, ch_name):
         if 5.0 < w < 11.0 and " vs " not in t: return False
     return True
 
+# --- MESIN PENCOCOKAN MATA ELANG ---
 def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     e = normalisasi_alias(epg_name).strip()
     m = normalisasi_alias(m3u_name).strip()
 
-    # Hukum Merek Hak Cipta
+    # Hukum Merek
     brands = ['bein', 'spotv', 'astro', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']
     for b in brands:
         if (b in e) != (b in m): return False
-
-    if 'astro' in e and 'astro' in m:
-        subs = ['arena bola 2', 'arena bola', 'arena', 'cricket', 'badminton', 'football', 'golf', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport', 'grandstand', 'premier']
-        e_sub = next((s for s in subs if s in e), None)
-        m_sub = next((s for s in subs if s in m), None)
-        if e_sub and m_sub and e_sub != m_sub: return False
 
     e_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', e).strip()
     m_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', m).strip()
@@ -268,15 +279,17 @@ def main():
                 is_live = (st - timedelta(minutes=5)) <= now_wib < sp
                 prog_logo = pg.find("icon").get("src") if pg.find("icon") is not None else ""
                 
+                judul_bersih = bersihkan_judul_event(title)
+                
                 if cid not in match_data: match_data[cid] = []
                 match_data[cid].append({
-                    "title": REGEX_LIVE.sub('', title).strip(),
+                    "title": judul_bersih,
                     "start": st, "stop": sp, "live": is_live, "logo": prog_logo
                 })
         except Exception: continue
 
     print("Step 2: Menjahit M3U & Filter 3x3 (Channel vs Server)...")
-    keranjang_event_live = {} # { event_key: { cid: [ {prioritas, data} ] } }
+    keranjang_event_live = {} 
     up_tracker = set()
     
     for idx, url in enumerate(M3U_URLS, 1):
@@ -326,13 +339,11 @@ def main():
                                         prioritas_skor = get_priority(stream_url, m3u_name)
                                         
                                         if ev["live"]:
-                                            # LOGIKA FILTER 3x3: Max 3 Channel Berbeda, tiap channel max 3 Server
                                             judul_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', ev['title'].lower()))
                                             event_key = f"{judul_norm}_{ev['start'].timestamp()}"
                                             
                                             if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
                                             
-                                            # Batasi Maksimal 3 Channel Berbeda untuk Acara yang sama
                                             if matched_cid not in keranjang_event_live[event_key]:
                                                 if len(keranjang_event_live[event_key]) >= 3: continue 
                                                 keranjang_event_live[event_key][matched_cid] = []
@@ -345,7 +356,6 @@ def main():
                                                 "order": 0, "sort": ev['start'].timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
                                             })
                                         else:
-                                            # UPCOMING: 1 Baris saja per Acara (Sesuai Permintaan)
                                             judul_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', ev['title'].lower()))
                                             up_key = f"{judul_norm}_{ev['start'].timestamp()}"
                                             if up_key in up_tracker: continue
@@ -355,7 +365,6 @@ def main():
                                             judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']}"
                                             up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
                                             
-                                            # Simpan langsung ke hasil akhir via temporary bucket
                                             if "UPCOMING" not in keranjang_event_live: keranjang_event_live["UPCOMING"] = {"UP": []}
                                             keranjang_event_live["UPCOMING"]["UP"].append({
                                                 "order": 1, "sort": ev['start'].timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
@@ -367,7 +376,6 @@ def main():
     print("Step 3: Membatasi Max 3 Server dan Rendering Playlist...")
     hasil_m3u = []
     
-    # Ekstrak data dari keranjang dan batasi max 3 server per channel
     for event_key, channels in keranjang_event_live.items():
         for cid, daftar_link in channels.items():
             daftar_link.sort(key=lambda x: x["prioritas"])
