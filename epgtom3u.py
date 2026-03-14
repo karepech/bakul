@@ -37,7 +37,7 @@ OUTPUT_FILE = "live_matches_only.m3u"
 
 def is_sports_channel(name):
     """
-    SATPAM PINTU DEPAN: Hanya TV yang mengandung nama ini yang boleh masuk.
+    SATPAM PINTU DEPAN: Hanya TV yang mengandung kata ini yang boleh masuk.
     Arirang, Makkah, CGTN, Discovery otomatis ditendang!
     """
     n = name.lower()
@@ -45,7 +45,8 @@ def is_sports_channel(name):
         'sport', 'spo tv', 'spotv', 'bein', 'champions', 'arena', 
         'premier', 'golf', 'tennis', 'nba', 'nfl', 'supersport', 
         'grandstand', 'cricket', 'fight', 'espn', 'euro', 'fox', 
-        'soccer', 'football', 'laliga', 'wwe', 'ufc', 'smackdown', 'hub'
+        'soccer', 'football', 'laliga', 'wwe', 'ufc', 'smackdown', 'hub',
+        'mola', 'racing', 'moto', 'badminton', 'bwf', 'striker'
     ]
     return any(term in n for term in sports_terms)
 
@@ -91,7 +92,7 @@ def get_flag(m3u_name):
     return "📺"
 
 def bersihkan_judul_event(title):
-    return re.sub(r'^[\-\:\,\|]\s*', '', re.sub(r'\s+', ' ', re.sub(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\blangsung\b|\blive on\b)', '', title))).strip())
+    return re.sub(r'^[\-\:\,\|]\s*', '', re.sub(r'\s+', ' ', re.sub(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\blangsung\b|\blive on\b)', '', title))).strip()
 
 def parse_epg_time(time_str):
     if not time_str: return None
@@ -203,9 +204,8 @@ def main():
                 logo_asli = logo_asli.group(2) if logo_asli else ""
                 bendera = get_flag(nama_asli_m3u)
 
-                # Pencocokan via TVG-ID (Karena namanya sudah pasti Sports, ini paling akurat)
                 matched_epg_id = None
-                if tvg_id_asli and tvg_id_asli in jadwal_per_channel:
+                if tvg_id_asli and tvg_id_asli in epg_channels:
                     matched_epg_id = tvg_id_asli
                 else:
                     # Pencocokan Teks Kasar (Fallback)
@@ -216,7 +216,8 @@ def main():
                             matched_epg_id = ch_id
                             break
 
-                if matched_epg_id:
+                # DI SINI LETAK PERBAIKANNYA (Mencegah KeyError)
+                if matched_epg_id and matched_epg_id in jadwal_per_channel:
                     for event in jadwal_per_channel[matched_epg_id]:
                         jam_str = f"{event['start_dt'].strftime('%H:%M')}-{event['stop_dt'].strftime('%H:%M')} WIB"
                         logo_final = event["prog_logo"] or epg_channel_logos.get(matched_epg_id, "") or logo_asli
