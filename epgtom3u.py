@@ -117,7 +117,6 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     
     if REGEX_CYRILLIC_CJK.search(t): return False
 
-    # ATURAN VVIP ASTRO KHUSUS BADMINTON
     if 'astro' in c:
         kata_badminton = [
             'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 
@@ -169,12 +168,9 @@ def is_valid_time(start_dt, title, ch_name):
     if any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'open', 'masters', 'tour']): return True
     if any(k in t for k in ['voli', 'volley', 'vnl', 'proliga']): return ((12.0 <= w <= 20.0) or (w >= 22.0 or w <= 4.0) or (5.0 <= w <= 11.0))
     if any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint']): return ((3.0 <= w <= 6.0) or (9.0 <= w <= 16.0) or (18.0 <= w <= 22.0))
-    
-    # PERBAIKAN: Jam Liga Eropa dilonggarkan agar Serie A & Liga Inggris sore tidak terpotong
     if any(k in t for k in ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'carabao', 'copa del rey']): 
         if 5.0 < w < 14.0 and " vs " not in t: return False
         return True
-
     if any(k in t for k in ['saudi', 'roshn', 'caf', 'africa']): return (w >= 20.0 or w <= 6.5)
     if any(k in t for k in ['j-league', 'k-league', 'afc', 'asian', 'aff']): return (11.5 <= w <= 22.5)
     if any(k in t for k in ['liga 1', 'bri liga', 'indonesia', 'timnas', 'piala presiden']): return (14.0 <= w <= 21.5)
@@ -240,12 +236,13 @@ def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     match_data = {}
     epg_chans, epg_logos = {}, {}
-    limit_date = now_wib + timedelta(hours=24)
+    # PERUBAHAN: Batas Waktu 3 Hari (72 Jam) ke depan
+    limit_date = now_wib + timedelta(days=3)
 
     ses = requests.Session()
     ses.headers.update({'User-Agent': 'Mozilla/5.0'})
 
-    print(f"Step 1: Sedot EPG Global (Jadwal 24 Jam)...")
+    print(f"Step 1: Sedot EPG Global (Jadwal 3 Hari Sampai: {limit_date.strftime('%d-%m-%Y %H:%M')} WIB)...")
     for url in EPG_URLS:
         try:
             r = ses.get(url, timeout=60).content
@@ -364,14 +361,19 @@ def main():
                                         "order": 0, "sort": ev_start.timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
                                     })
                                 else:
-                                    # PERBAIKAN BUG KERANJANG BOCOR
                                     up_key = f"{judul_norm}_{ev_start.timestamp()}"
                                     if up_key in up_tracker: 
                                         block = []
                                         continue
                                     up_tracker.add(up_key)
                                     
-                                    lbl = "Besok " if ev_start.date() == (now_wib.date() + timedelta(days=1)) else ""
+                                    ev_date = ev_start.date()
+                                    hari_ini = now_wib.date()
+                                    if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
+                                    elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
+                                    elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev_start.strftime('%d/%m')} "
+                                    else: lbl = ""
+                                    
                                     judul = f"{flag} ⏳ {lbl}{jam} - {event_title}"
                                     up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
                                     
@@ -418,13 +420,18 @@ def main():
                                                 "order": 0, "sort": ev['start'].timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
                                             })
                                         else:
-                                            # PERBAIKAN BUG KERANJANG BOCOR
                                             judul_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', ev['title'].lower()))
                                             up_key = f"{judul_norm}_{ev['start'].timestamp()}"
                                             if up_key in up_tracker: continue
                                             up_tracker.add(up_key)
                                             
-                                            lbl = "Besok " if ev['start'].date() == (now_wib.date() + timedelta(days=1)) else ""
+                                            ev_date = ev['start'].date()
+                                            hari_ini = now_wib.date()
+                                            if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
+                                            elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
+                                            elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev['start'].strftime('%d/%m')} "
+                                            else: lbl = ""
+                                            
                                             judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']}"
                                             up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
                                             
@@ -454,6 +461,6 @@ def main():
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal (Termasuk Event Global & Upcoming) Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal (3 Hari Ke Depan) Siap Meluncur.")
 
 if __name__ == "__main__": main()
