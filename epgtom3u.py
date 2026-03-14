@@ -297,4 +297,53 @@ def main():
                                 logo_match = re.search(r'(?i)tvg-logo=["\']([^"\']*)["\']', raw_attrs)
                                 orig_logo = logo_match.group(1) if logo_match else ""
 
-                                clean_attr = re.sub(r'(?i)\s*(group-title|tvg-id|
+                                clean_attr = re.sub(r'(?i)\s*(group-title|tvg-id|tvg-logo|tvg-name)=["\'][^"\']*["\']', '', raw_attrs).strip()
+                                if not clean_attr.upper().startswith("#EXTINF"):
+                                    clean_attr = "#EXTINF:-1 " + clean_attr.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
+
+                                flag = get_flag(m3u_name)
+                                matched_cid = None
+                                
+                                # PENCARIAN & BREAK CEPAT
+                                for cid, ename in epg_chans.items():
+                                    if is_match_akurat_v2(ename, cid, m3u_name):
+                                        matched_cid = cid
+                                        break # Menghentikan kloning jadwal!
+                                
+                                # WAJIB ADA JADWAL EPG
+                                if matched_cid and matched_cid in match_data:
+                                    for ev in match_data[matched_cid]:
+                                        jam = f"{ev['start'].strftime('%H:%M')}-{ev['stop'].strftime('%H:%M')} WIB"
+                                        final_logo = ev['logo'] if ev.get('logo') else (epg_logos.get(matched_cid) if epg_logos.get(matched_cid) else orig_logo)
+                                        
+                                        if ev["live"]:
+                                            judul = f"{flag} 🔴 {jam} - {ev['title']} [{m3u_name}] ({idx})"
+                                            live_block = list(block) 
+                                            live_block[extinf_idx] = f'{clean_attr} group-title="🔴 SEDANG TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
+                                            hasil_m3u.append({"order": 0, "sort": m3u_name, "data": live_block + [stream_url]})
+                                        else:
+                                            up_key = f"{matched_cid}_{ev['start'].timestamp()}"
+                                            if up_key in up_tracker: continue
+                                            up_tracker.add(up_key)
+                                            
+                                            lbl = "Besok " if ev['start'].date() == (now_wib.date() + timedelta(days=1)) else ""
+                                            judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} ({idx})"
+                                            up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
+                                            hasil_m3u.append({"order": 1, "sort": str(ev['start'].timestamp()), "data": [up_extinf, LINK_UPCOMING]})
+                                            
+                    block = [] 
+        except Exception: continue
+
+    print("Step 3: Rendering Playlist TiviMate...")
+    hasil_m3u.sort(key=lambda x: (x["order"], x["sort"].lower()))
+    
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        f.write(f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 BAKUL WIFI SPORTS"\n')
+        if not hasil_m3u: 
+            f.write(f'#EXTINF:-1 group-title="ℹ️ INFO", BELUM ADA PERTANDINGAN\n{LINK_STANDBY}\n')
+        for item in hasil_m3u: 
+            f.write("\n".join(item["data"]) + "\n")
+
+    print(f"Selesai! {len(hasil_m3u)} Jadwal Akurat Siap Meluncur ke TiviMate.")
+
+if __name__ == "__main__": main()
