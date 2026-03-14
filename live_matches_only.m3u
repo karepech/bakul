@@ -71,65 +71,6 @@ https://cdn10jtedge.indihometv.com/atm/DASH/ABC_AUSTRALIA/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=fbbccb9d1f9e402293b23dcf62322d83:63d828f9c104b74c1188a651ba39c812
 #EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="ABCAustralia.id" tvg-name="ABC Australia" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_350.png", 🇦🇺 🔴 09:00-12:00 WIB - AFL: Bulldogs Vs Giants [ABC Australia]
 https://atemecdnbalancer-voe.sysln.id/live/eds/ABC_Australia/mediampd/ABC_Australia.mpd
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT SPORTS]
-https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT SPORTS]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=2f4c7790660c4a0ea82f38ca1998da13:9186a4ec6c2c2af731de820bf517e4e0
-https://cdn08jtedge.indihometv.com/dassdvr/133/fightsport/manifest.mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://cubmu.caranytv.workers.dev/trv
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Xstream XGO/1.22 (Linux;Android 9) ExoPlayerLib/2.10.5
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT TV PREMIUM]
-https://cdnjkt913.transvision.co.id:1000/live/master/5/4028c6857fe540a1018060a0c34340b6/manifest.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT BOX 🇸🇰]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/
-#EXTVLCOPT:http-origin=https://webtv.sk
-https://dash3.antik.sk/live/test_fightbox_medium_atk/playlist.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT SPORTS HD]
-https://012v4.goiptv.us.ci/stream/starhub/fightsportshd/
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [MATCH! FIGHT 🇷🇺]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=660a37a91aa00b7e2e0bc7dca349b982:3593a4a2bfbd7d9585efff083b769cf5
-https://video.beeline.tv/live/d/channel377.isml/manifest-stb.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [Fighting TV Samurai]
-https://nl.utako.moe/fighting_tv/index.m3u8
-#EXTINF:-1 tvg-chno="271" group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [Fight TV]
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#EXTVLCOPT:http-user-agent=YuppTV/7.18.1 (Linux;Android 16) ExoPlayerLib/2.19.1
-https://streams2.sofast.tv/ptnr-yupptv/title-FIGHT-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/70e45fc8-1f6c-4492-ac26-9868f70f4e02/manifest.m3u8?hdnts=st%3D1769558008~exp%3D1769579608~acl%3D%21%2A%2Fptnr-yupptv%2Ftitle-FIGHT-TV-ENG_yupptv%2Fv1%2Fmaster%2F611d79b11b77e2f571934fd80ca1413453772ac7%2F70e45fc8-1f6c-4492-ac26-9868f70f4e02%2F%2A%21%2Fpayload%2Fyupptvott_5_-1_7c03c72952b44aa4_US_128.24.160.230_yuppfast_2_channel_68_-1%2F%2A~data%3Dyupptvott_5_-1_7c03c72952b44aa4_US_128.24.160.230_yuppfast_2_channel_68_-1~hmac%3D5b3e91a87146d945717d2e68736986e441208071d11b32a2aeccccc4f4333496
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [DSPORTS FIGHT]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"b770d5b4bb6b594daf985845aae9aa5f":"b0cb46d2d31cf044bc73db71e9865f6f","45bbd582f220f438f896450d8306a3f2":"582c6ba7f64bbc0f2d91c6b0c265760c"}
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [Persiana Fight]
-https://fighthls.persiana.live/hls/stream.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT SPORTS]
-http://cdn.nng.cloudns.us/live/m3u8/sprt/d7d981d1df08d72.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT NETWORK]
-#https://d12a2vxqkkh1bo.cloudfront.net/hls/main.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT NETWORK]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=00208c93f4358213b52220898b962385:8ae6063167228e350dd132d4a1573102
-http://cors.tundracast.com:2000/https://fsly.stream.peacocktv.com/Content/CMAF_CTR-4s/Live/channel(vc106wh3yw)/master.mpd
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [FIGHT SPORT]
-http://202.80.222.20/cdn/iptv/Tvod/001/channel2000163/1024.m3u8
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [SK Fight Channel]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1288
-#EXTINF:-1 group-title="🔴 ACARA SEDANG TAYANG" tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 🔴 10:00-10:30 WIB - BWF Martial Arts [Arena Fight Test]
-http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/19615
 #EXTINF:-1 group-title="📅 ACARA AKAN DATANG" tvg-id="ABCAustralia.id" tvg-name="ABC Australia" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_350.png", 📺 ⏳ 12:00-15:00 WIB - AFL: Geelong Vs Fremantle
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 https://bwifi.my.id/5menit.mp4
