@@ -25,16 +25,6 @@ https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mp
 https://7pal.short.gy/skyspt8nz
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 21:00-02:02 WIB - Guinness Six Nations: Ireland V Scotland [Sky Sports PremierLeague FHD]
 https://7pal.short.gy/ssportspl
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 🔴 22:00-00:00 WIB - Burnley vs AFC Bournemouth [Live Event]
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/2b3491d1-cd71-4df1-8928-cf61255a9326/master.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 🔴 22:00-00:00 WIB - Sunderland vs Brighton & Hove Albion [Live Event]
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
-https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/f9742bc3-51d2-40b8-9fb0-17b69264c04f/master.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
@@ -58,21 +48,6 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/ind
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955163.jpg", 🇮🇩 🔴 22:10-02:40 WIB - LaLiga : Atletico Madrid Vs Getafe [USA_BEIN]
 http://23.237.104.106:8080/USA_BEIN/index.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSMHX9.jpg", 📺 🔴 22:15-00:15 WIB - Atlético Madrid vs Getafe [Live Event]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 🔴 23:00-01:00 WIB - Lorient vs Lens [Live Event]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-https://dash2.antik.sk/stream/nvidia_nova_sport2/playlist_cenc.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
@@ -115,55 +90,71 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/ind
 #KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 https://a83aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ Besok 00:30-02:30 WIB - Arsenal vs Everton
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ 00:30-02:30 WIB - Arsenal vs Everton
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ Besok 00:30-02:30 WIB - Chelsea vs Newcastle United
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ 00:30-02:30 WIB - Chelsea vs Newcastle United
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://abnnews.id/wp-content/uploads/2025/08/images-3-12.jpeg", 📺 ⏳ Besok 00:30-02:30 WIB - Hamburger SV vs Köln
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://abnnews.id/wp-content/uploads/2025/08/images-3-12.jpeg", 📺 ⏳ 00:30-02:30 WIB - Hamburger SV vs Köln
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSMHX9.jpg", 📺 ⏳ Besok 00:30-02:30 WIB - Real Oviedo vs Valencia
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSMHX9.jpg", 📺 ⏳ 00:30-02:30 WIB - Real Oviedo vs Valencia
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://shorter.me/87PxH", 📺 ⏳ Besok 00:45-02:45 WIB - PSV vs NEC
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://shorter.me/87PxH", 📺 ⏳ 00:45-02:45 WIB - PSV vs NEC
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="AstroArena2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRN.jpg", 🇲🇾 ⏳ Besok 01:00-04:30 WIB - BWF Terbuka All England 2026: QF
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="AstroArena2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRN.jpg", 🇲🇾 ⏳ 01:00-04:30 WIB - BWF Terbuka All England 2026: QF
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://g-sports.id/wp-content/uploads/2025/08/Liga-Italia.jpg", 📺 ⏳ Besok 02:45-04:45 WIB - Udinese vs Juventus
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://g-sports.id/wp-content/uploads/2025/08/Liga-Italia.jpg", 📺 ⏳ 02:45-04:45 WIB - Udinese vs Juventus
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955165.jpg", 🇮🇩 ⏳ Besok 02:55-05:00 WIB - LaLiga : Real Madrid Vs Elche
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955165.jpg", 🇮🇩 ⏳ 02:55-05:00 WIB - LaLiga : Real Madrid Vs Elche
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 03:00-05:22 WIB - Guinness Six Nations: France V England
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 03:00-05:22 WIB - Guinness Six Nations: France V England
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://shorter.me/87PxH", 📺 ⏳ Besok 03:00-05:00 WIB - Ajax vs Sparta Rotterdam
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://shorter.me/87PxH", 📺 ⏳ 03:00-05:00 WIB - Ajax vs Sparta Rotterdam
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSMHX9.jpg", 📺 ⏳ Besok 03:00-05:00 WIB - Real Madrid vs Elche
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSMHX9.jpg", 📺 ⏳ 03:00-05:00 WIB - Real Madrid vs Elche
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ Besok 03:00-05:00 WIB - West Ham United vs Manchester City
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ 03:00-05:00 WIB - West Ham United vs Manchester City
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ Besok 03:05-05:05 WIB - Monaco vs Brest
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 03:05-05:05 WIB - Monaco vs Brest
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="AstroArena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 ⏳ Besok 07:00-12:30 WIB - BWF Terbuka All England 2026: Akhir
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="AstroArena" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWKRQ.jpg", 🇲🇾 ⏳ 07:00-12:30 WIB - BWF Terbuka All England 2026: Akhir
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 12:00-14:00 WIB - NRL: Sea Eagles V Knights
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 12:00-14:00 WIB - NRL: Sea Eagles V Knights
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955136.jpg", 🇮🇩 ⏳ Besok 12:30-13:55 WIB - Grand Prix Sunday 2026
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955136.jpg", 🇮🇩 ⏳ 12:30-13:55 WIB - Grand Prix Sunday 2026
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955116.jpg", 🇮🇩 ⏳ Besok 13:55-16:00 WIB - Formula 1 Main Race 2026
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955116.jpg", 🇮🇩 ⏳ 13:55-16:00 WIB - Formula 1 Main Race 2026
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 14:00-17:02 WIB - AFL: Gold Coast V West Coast
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:00-17:02 WIB - AFL: Gold Coast V West Coast
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 14:15-17:00 WIB - Barcelona Marathon 26
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:15-17:00 WIB - Barcelona Marathon 26
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955239.jpg", 🇮🇩 ⏳ Besok 18:00-19:55 WIB - LaLiga : Real Madrid Vs Elche
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955239.jpg", 🇮🇩 ⏳ 18:00-19:55 WIB - LaLiga : Real Madrid Vs Elche
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX8aO_n7o9ddr-AAhwH5Zw6ABZtbEMKmdjCQ&s", 📺 ⏳ Besok 18:00-20:00 WIB - YONEX Swiss Open 2026
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX8aO_n7o9ddr-AAhwH5Zw6ABZtbEMKmdjCQ&s", 📺 ⏳ 18:00-20:00 WIB - YONEX Swiss Open 2026
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 18:02-19:50 WIB - NRL: Panthers V Sharks
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 18:02-19:50 WIB - NRL: Panthers V Sharks
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 19:50-22:05 WIB - Under-20 Six Nations: Wales U20 V Italy U20
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 19:50-22:05 WIB - Under-20 Six Nations: Wales U20 V Italy U20
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955166.jpg", 🇮🇩 ⏳ Besok 19:55-22:10 WIB - LaLiga : Mallorca Vs Espanyol
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955166.jpg", 🇮🇩 ⏳ 19:55-22:10 WIB - LaLiga : Mallorca Vs Espanyol
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ Besok 22:05-00:35 WIB - Under-20 Six Nations: Ireland U20 V Scotland U20
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://g-sports.id/wp-content/uploads/2025/08/Liga-Italia.jpg", 📺 ⏳ 21:00-23:00 WIB - Internazionale vs Atalanta
 https://bwifi.my.id/5menit.mp4
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955167.jpg", 🇮🇩 ⏳ Besok 22:10-02:40 WIB - LaLiga : Barcelona Vs Sevilla
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://abnnews.id/wp-content/uploads/2025/08/images-3-12.jpeg", 📺 ⏳ 21:30-23:30 WIB - Bayer Leverkusen vs Bayern München
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://abnnews.id/wp-content/uploads/2025/08/images-3-12.jpeg", 🇦🇺 ⏳ 21:30-23:30 WIB - Borussia Dortmund vs Augsburg
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://abnnews.id/wp-content/uploads/2025/08/images-3-12.jpeg", 📺 ⏳ 21:30-23:30 WIB - Eintracht Frankfurt vs Heidenheim
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ 22:00-00:00 WIB - Burnley vs AFC Bournemouth
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSr5Mb.jpg", 📺 ⏳ 22:00-00:00 WIB - Sunderland vs Brighton & Hove Albion
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 22:05-00:35 WIB - Under-20 Six Nations: Ireland U20 V Scotland U20
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955167.jpg", 🇮🇩 ⏳ 22:10-02:40 WIB - LaLiga : Barcelona Vs Sevilla
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FtSMHX9.jpg", 📺 ⏳ 22:15-00:15 WIB - Atlético Madrid vs Getafe
+https://bwifi.my.id/5menit.mp4
+#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 23:00-01:00 WIB - Lorient vs Lens
 https://bwifi.my.id/5menit.mp4
