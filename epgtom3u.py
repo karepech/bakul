@@ -18,20 +18,22 @@ EPG_URLS = [
 ]
 
 RAW_MASTER_URLS = [
-    "https://raw.githubusercontent.com/mimipipi22/lalajo/refs/heads/main/playlist25", # (1)
-    "https://semar25.short.gy",                                                       # (2)
-    "https://deccotech.online/tv/tvstream.html",                                      # (3)
-    "https://bit.ly/KPL203",                                                          # (4)
-    "https://freeiptv2026.tsender57.workers.dev",                                     # (5)
-    "https://liveevent.iptvbonekoe.workers.dev",                                      # (6)
-    "http://sauridigital.my.id/kerbaunakal/2026TVGNS.html",                           # (7)
-    "https://bit.ly/TVKITKAT",                                                        # (8)
-    "https://spoo.me/tvplurl04",                                                      # (9)
-    "https://aspaltvpasti.top/xxx/merah.php"                                          # (10)
+    "https://raw.githubusercontent.com/mimipipi22/lalajo/refs/heads/main/playlist25", 
+    "https://semar25.short.gy", 
+    "https://deccotech.online/tv/tvstream.html",
+    "https://bit.ly/KPL203",
+    "https://freeiptv2026.tsender57.workers.dev",
+    "https://liveevent.iptvbonekoe.workers.dev",
+    "http://sauridigital.my.id/kerbaunakal/2026TVGNS.html",
+    "https://bit.ly/TVKITKAT",
+    "https://spoo.me/tvplurl04",
+    "https://aspaltvpasti.top/xxx/merah.php"
 ]
 M3U_URLS = list(dict.fromkeys(RAW_MASTER_URLS))
 
 OUTPUT_FILE = "live_matches_only.m3u"
+LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
+LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 # ==========================================
 # OPTIMASI REGEX (LEBIH CEPAT & ANTI-JEBAKAN)
@@ -65,6 +67,21 @@ def get_flag(m3u_name):
     if 'bein' in n and not any(x in n for x in [' en', ' hk', ' th', ' ph', ' my', ' sg', ' au']): return "🇮🇩"
     if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     return "📺" 
+
+# FITUR BARU: Deteksi Kode Negara Khusus
+def get_region_code(text):
+    t = text.lower()
+    if re.search(r'\b(au|aus|australia|optus)\b', t): return 'AU'
+    if re.search(r'\b(hk|hong\s*kong)\b', t): return 'HK'
+    if re.search(r'\b(th|thai|thailand)\b', t): return 'TH'
+    if re.search(r'\b(my|malaysia|astro)\b', t): return 'MY'
+    if re.search(r'\b(sg|singapore|starhub)\b', t): return 'SG'
+    if re.search(r'\b(ph|philippines)\b', t): return 'PH'
+    if re.search(r'\b(arab|mena|ae|middle\s*east)\b', t): return 'ARAB'
+    if re.search(r'\b(uk|english|en)\b', t): return 'UK'
+    if re.search(r'\b(us|usa)\b', t): return 'US'
+    if re.search(r'\b(id|indo|indonesia)\b', t): return 'ID'
+    return 'UNKNOWN'
 
 def normalisasi_alias(name):
     n = name.lower().strip()
@@ -120,14 +137,30 @@ def kemiripan_teks(a, b):
     return SequenceMatcher(None, a, b).ratio()
 
 def is_match_akurat(epg_name, m3u_name, epg_id="", m3u_tvg_id=""):
+    # 1. Bypass TVG-ID Mutlak
     if epg_id and m3u_tvg_id:
         if epg_id.lower() == m3u_tvg_id.lower():
             return True
 
     if not epg_name or not m3u_name: return False
+    
+    # 2. SISTEM ANTI-BENTROK NEGARA (Penting untuk beIN, SPOTV, dll)
+    reg_epg = get_region_code(epg_name + " " + epg_id)
+    reg_m3u = get_region_code(m3u_name)
+    
+    # Mayoritas EPG kita dari Indonesia. Jika EPG tidak menyebutkan negara, tapi ini channel internasional, asumsikan ID.
+    if reg_epg == 'UNKNOWN' and any(net in epg_name.lower() for net in ['bein', 'spotv', 'eurosport', 'fox']):
+        reg_epg = 'ID' 
+        
+    # Jika M3U punya bendera negara (misal AU) dan EPG beda negara (misal ID), langsung tolak!
+    if reg_epg != 'UNKNOWN' and reg_m3u != 'UNKNOWN' and reg_epg != reg_m3u:
+        return False
+
+    # 3. Proses Bersih-bersih
     e_clean = REGEX_KUALITAS.sub('', normalisasi_alias(epg_name)).strip()
     m_clean = REGEX_KUALITAS.sub('', normalisasi_alias(m3u_name)).strip()
     
+    # 4. Syarat Mutlak Angka (Mencegah beIN 1 tertukar beIN 2)
     num_e = REGEX_NUMBERS.findall(e_clean)
     num_m = REGEX_NUMBERS.findall(m_clean)
     if num_e != num_m: return False
@@ -137,9 +170,11 @@ def is_match_akurat(epg_name, m3u_name, epg_id="", m3u_tvg_id=""):
         if net in e_clean or net in m_clean:
             if (net in e_clean) != (net in m_clean): return False
 
+    # 5. Fuzzy Matching
     if kemiripan_teks(e_clean, m_clean) >= 0.85:
         return True
 
+    # 6. Fallback Subset
     e_words = set(REGEX_WORDS.findall(e_clean))
     m_words = set(REGEX_WORDS.findall(m_clean))
     if e_words and m_words:
@@ -224,7 +259,6 @@ def main():
     epg_channel_logos = {} 
     jadwal_per_channel = {}
 
-    # MEMBUAT KAMUS ID SUMBER LINK MASTER
     print("\n=============================================")
     print("📡 DAFTAR ID SUMBER M3U (LEGEND)")
     print("=============================================")
@@ -300,7 +334,6 @@ def main():
                 pass
 
     print(f"Step 2: Mengunduh {len(M3U_URLS)} File M3U Master secara bersamaan...")
-    # Menyimpan baris M3U beserta ID Sumbernya
     m3u_lines_with_source = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = {executor.submit(fetch_url, url): url for url in M3U_URLS if url}
@@ -311,7 +344,6 @@ def main():
                     id_sumber = sumber_id_map[url]
                     lines = content.decode('utf-8').splitlines()
                     for line in lines:
-                        # Kita pasangkan setiap baris dengan ID sumbernya
                         m3u_lines_with_source.append((id_sumber, line))
                 except: pass
 
@@ -360,25 +392,26 @@ def main():
                                     
                                     logo_final = event["prog_logo"] or epg_channel_logos.get(ch_id, "") or logo_asli
                                     
+                                    kunci_event = f"{ch_id}_{event['start_dt'].timestamp()}_{stream_url}"
+                                    if kunci_event in live_stream_tracker:
+                                        continue 
+                                    live_stream_tracker.add(kunci_event)
+                                    
                                     if event["is_live"]:
-                                        kunci_live = f"{ch_id}_{event['start_dt'].timestamp()}_{stream_url}"
-                                        if kunci_live in live_stream_tracker:
-                                            continue 
-                                        live_stream_tracker.add(kunci_live)
-                                        
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
-                                        
-                                        # === PENAMBAHAN ID SUMBER DI SINI ===
-                                        # Contoh output: 🇮🇩 🔴 19:00-21:00 WIB - Timnas vs Jepang [beIN 1] (1)
                                         judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}] ({id_sumber})"
+                                        url_video = stream_url
+                                    else:
+                                        grup_baru = "⏰ AKAN DATANG"
+                                        judul_akhir = f"{bendera} ⏰ {jam_str} - {event['title_display']} [{nama_asli_m3u}] ({id_sumber})"
+                                        url_video = stream_url 
                                         
-                                        baris_extinf = f'#EXTINF:-1 tvg-id="{ch_id}" tvg-logo="{logo_final}" group-title="{grup_baru}",{judul_akhir}\n{stream_url}'
-                                        hasil_akhir.append(baris_extinf)
+                                    baris_extinf = f'#EXTINF:-1 tvg-id="{ch_id}" tvg-logo="{logo_final}" group-title="{grup_baru}",{judul_akhir}\n{url_video}'
+                                    hasil_akhir.append(baris_extinf)
                                         
-            # Bersihkan blok setelah URL video ditemukan
             channel_block = []
 
-    print(f"Step 4: Menyimpan {len(hasil_akhir)} pertandingan live ke dalam {OUTPUT_FILE}...")
+    print(f"Step 4: Menyimpan {len(hasil_akhir)} pertandingan ke dalam {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write("#EXTM3U\n")
         for saluran in sorted(hasil_akhir):
