@@ -280,15 +280,21 @@ def main():
                 # HUKUM JAM KICK-OFF
                 if not is_valid_time(start_dt, title_raw, ch_name): continue
 
-                # HUKUM DURASI WAKTU (Membunuh Pre-Match dan Highlight Jam 8 Malam)
+                # HUKUM DURASI WAKTU 
                 durasi_menit = (stop_dt - start_dt).total_seconds() / 60
                 if durasi_menit < 30: continue 
 
-                bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
+                # PERBAIKAN: Menghapus 'vs', 'v', 'bein' agar Badminton dan olahraga lain tidak tersapu
+                bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'fc ', 'united', 'soccer']
                 is_football = any(k in ch_name.lower() or k in title_raw.lower() for k in bola_keywords)
                 
-                # JIKA SEPAK BOLA, DURASI WAJIB LEBIH DARI 85 MENIT (Full Match)
-                if is_football and durasi_menit < 85: continue
+                # PERBAIKAN: Penyelamat (Bypass) untuk olahraga spesifik
+                olahraga_lain_keywords = ['badminton', 'bwf', 'swiss open', 'thomas', 'uber', 'sudirman', 'motogp', 'f1', 'basket', 'voli', 'vnl', 'proliga']
+                is_other_sport = any(k in title_raw.lower() for k in olahraga_lain_keywords)
+                
+                # JIKA MURNI SEPAK BOLA, DURASI WAJIB LEBIH DARI 85 MENIT (Full Match)
+                if is_football and not is_other_sport and durasi_menit < 85: 
+                    continue
 
                 waktu_toleransi_live = start_dt - timedelta(minutes=5)
                 is_live = waktu_toleransi_live <= now_wib < stop_dt
@@ -327,8 +333,6 @@ def main():
     
     # ========================================================================
     # GEMBOK ANTI-SPAM TINGKAT TINGGI
-    # 1. live_stream_tracker: Membuang URL video yang sama persis untuk acara Live.
-    # 2. upcoming_event_tracker: Memastikan 1 Pertandingan (Judul+Jam) HANYA TAMPIL 1 BARIS di masa depan.
     # ========================================================================
     live_stream_tracker = set()
     upcoming_event_tracker = set()
@@ -381,71 +385,52 @@ def main():
                                     
                                     if event["is_live"]:
                                         # ==================================================
-                                        # GEMBOK URL: Mencegah link server colongan!
+                                        # GEMBOK URL LIVE: Mencegah link server colongan!
                                         # ==================================================
                                         kunci_live = f"{ch_id}_{event['start_dt'].timestamp()}_{stream_url}"
                                         if kunci_live in live_stream_tracker:
                                             continue 
                                         live_stream_tracker.add(kunci_live)
-                                        # ==================================================
                                         
                                         grup_baru = "🔴 ACARA SEDANG TAYANG"
                                         judul_akhir = f"{bendera} 🔴 {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
-                                        stream_final = stream_url 
-                                        order = 0 
+                                        order = 0 # Prioritas Tampil Pertama
                                         
                                         baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
-                                        block_final = [baris_extinf if t.upper().startswith("#EXTINF") else t for t in channel_block if not t.upper().startswith("#EXTGRP")]
-                                        
-                                        hasil_akhir.append({"kategori_order": order, "start_time": event["start_dt"].timestamp(), "title_sort": event['title_display'], "baris_lengkap": block_final + [stream_final]})
-                                        
+                                        block_final = f"{baris_extinf}\n{stream_url}"
+                                        hasil_akhir.append({"order": order, "waktu": event['start_dt'], "teks": block_final})
+
                                     else:
                                         # ==================================================
-                                        # GEMBOK ACARA UPCOMING: 1 Laga = 1 Kotak Mutlak!
+                                        # GEMBOK URL UPCOMING: 1 Acara, 1 Baris Saja!
                                         # ==================================================
-                                        t_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', event['title_display'].lower()))
-                                        kunci_acara = f"{event['start_dt'].strftime('%Y%m%d%H%M')}_{t_norm}"
-                                        
-                                        if kunci_acara in upcoming_event_tracker:
-                                            continue # Laga ini sudah ada di daftar, BUANG SISANYA!
-                                        upcoming_event_tracker.add(kunci_acara)
-                                        # ==================================================
+                                        kunci_upcoming = f"{ch_id}_{event['start_dt'].timestamp()}"
+                                        if kunci_upcoming in upcoming_event_tracker:
+                                            continue
+                                        upcoming_event_tracker.add(kunci_upcoming)
 
-                                        grup_baru = "📅 ACARA AKAN DATANG"
-                                        hari_ini = now_wib.date()
-                                        besok = hari_ini + timedelta(days=1)
-                                        lusa = hari_ini + timedelta(days=2)
-                                        event_date = event["start_dt"].date()
-
-                                        if event_date == hari_ini: judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']}"
-                                        elif event_date == besok: judul_akhir = f"{bendera} ⏳ Besok {jam_str} - {event['title_display']}"
-                                        elif event_date == lusa: judul_akhir = f"{bendera} ⏳ Lusa {jam_str} - {event['title_display']}"
-                                        else: judul_akhir = f"{bendera} ⏳ {event['start_dt'].strftime('%d/%m')} {jam_str} - {event['title_display']}"
-
-                                        stream_final = LINK_UPCOMING 
-                                        order = 1 
+                                        grup_baru = "⏳ SEGERA TAYANG"
+                                        judul_akhir = f"{bendera} ⏳ {jam_str} - {event['title_display']} [{nama_asli_m3u}]"
+                                        order = 1 # Prioritas Tampil Kedua
                                         
                                         baris_extinf = f'{clean_attrs} group-title="{grup_baru}" tvg-id="{ch_id}" tvg-name="{nama_epg}" tvg-logo="{logo_final}", {judul_akhir}'
-                                        block_final = [baris_extinf if t.upper().startswith("#EXTINF") else t for t in channel_block if not t.upper().startswith("#EXTGRP")]
+                                        
+                                        # *Catatan: Jika event Upcoming ingin diarahkan ke LINK_UPCOMING, ubah stream_url di bawah ini menjadi LINK_UPCOMING
+                                        block_final = f"{baris_extinf}\n{stream_url}"
+                                        hasil_akhir.append({"order": order, "waktu": event['start_dt'], "teks": block_final})
+            
+            channel_block = [] # Reset block
 
-                                        hasil_akhir.append({"kategori_order": order, "start_time": event["start_dt"].timestamp(), "title_sort": event['title_display'], "baris_lengkap": block_final + [stream_final]})
-            channel_block = []
+    print("Step 4: Menyortir dan menyimpan ke file output...")
+    # Menyortir Playlist: Live di atas, Upcoming di bawah, lalu diurutkan berdasarkan jam tayang
+    hasil_akhir.sort(key=lambda x: (x["order"], x["waktu"]))
 
-    print("Step 4: Mengurutkan dan menyimpan hasil...")
-    hasil_akhir.sort(key=lambda x: (x["kategori_order"], x["start_time"], x["title_sort"]))
-
-    try:
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            f.write(f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 OLAHRAGA AKTIF VIP"\n')
-            if not hasil_akhir:
-                f.write('#EXTINF:-1 group-title="ℹ️ INFORMASI", ℹ️ BELUM ADA JADWAL HARI INI\n')
-                f.write(f'{LINK_STANDBY}\n')
-            for item in hasil_akhir:
-                for baris_hasil in item["baris_lengkap"]:
-                    f.write(baris_hasil + "\n")
-        print(f"Sukses! Playlist tersimpan di {OUTPUT_FILE} dengan {len(hasil_akhir)} pertandingan.")
-    except Exception as e:
-        print(f"Gagal menyimpan file: {e}")
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        f.write("#EXTM3U\n")
+        for item in hasil_akhir:
+            f.write(item["teks"] + "\n")
+            
+    print(f"SELESAI! Playlist VIP berhasil disimpan ke {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
