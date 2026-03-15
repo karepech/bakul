@@ -101,11 +101,12 @@ def is_sports_channel(name):
         if any(x in n for x in haram): return False
         return True 
 
+    # PERBAIKAN GERBANG UTAMA: Masukkan Badminton & BWF
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
         'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai',
-        'premier league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'nba', 'nfl'
+        'premier league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'nba', 'nfl', 'badminton', 'bwf'
     ]
     return any(x in n for x in sports_keywords)
 
@@ -126,9 +127,13 @@ def is_allowed_sport(title, ch_name, durasi_menit):
         ]
         if not any(k in t for k in kata_badminton): return False
 
+    # PERBAIKAN TV LOKAL: Boleh nayangin Badminton (seperti iNews)
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in c for x in lokal) and 'sport' not in c:
-        kunci_lokal = ['timnas', 'liga 1', 'bri liga', 'indonesia', 'piala', 'afc', 'aff', 'premier', 'champions', 'uefa']
+        kunci_lokal = [
+            'timnas', 'liga 1', 'bri liga', 'indonesia', 'piala', 'afc', 'aff', 'premier', 'champions', 'uefa',
+            'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'open', 'masters', 'tour', 'swiss'
+        ]
         if not any(k in t for k in kunci_lokal): return False
 
     if durasi_menit < 30: return False
@@ -136,8 +141,11 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
     if any(k in c or k in t for k in bola_keywords) and durasi_menit < 85: return False
 
-    haram = [
-        "(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del ",
+    # PERBAIKAN DETEKSI REPLAY: Pecah simbol biar lebih tangguh
+    haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
+    if any(s in t for s in haram_simbol): return False
+
+    haram_kata = [
         "replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", 
         "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", 
         "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", 
@@ -148,7 +156,7 @@ def is_allowed_sport(title, ch_name, durasi_menit):
         "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", 
         "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv"
     ]
-    if re.search(r'\b(?:' + '|'.join(haram).replace('+', r'\+') + r')\b', t): return False
+    if re.search(r'\b(?:' + '|'.join(haram_kata) + r')\b', t): return False
 
     halal = [
         "liga", "premier", "champions", "fa cup", "serie a", "bundesliga", "ligue 1", "dutch", "eredivisie",
@@ -160,37 +168,24 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     if re.search(r'\b(?:' + '|'.join(halal).replace('+', r'\+') + r')\b', t) or REGEX_VS.search(t): return True
     return False
 
-# ---------------------------------------------------------
-# GEMBOK WAKTU BENUA (ANTI SIARAN ULANG SIANG BOLONG)
-# ---------------------------------------------------------
 def is_valid_time(start_dt, title, ch_name):
     w = start_dt.hour + (start_dt.minute / 60.0)
     t = title.lower()
 
-    # Bebas Jam Tayang
     if any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'open', 'masters', 'tour']): return True
-    if any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint']): return True
-    
-    # Aturan Liga Eropa (Inggris, Italia, Spanyol, dll) - Hanya boleh tayang 17:00 sore sampai 06:00 pagi WIB
+    if any(k in t for k in ['voli', 'volley', 'vnl', 'proliga']): return ((12.0 <= w <= 20.0) or (w >= 22.0 or w <= 4.0) or (5.0 <= w <= 11.0))
+    if any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint']): return ((3.0 <= w <= 6.0) or (9.0 <= w <= 16.0) or (18.0 <= w <= 22.0))
     if any(k in t for k in ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'carabao', 'copa del rey']): 
-        if 6.0 <= w <= 16.5: return False # Jam 06.00 sampai 16.30 pasti Replay. DIBUANG!
+        if 5.0 < w < 14.0 and " vs " not in t: return False
         return True
+    if any(k in t for k in ['saudi', 'roshn', 'caf', 'africa']): return (w >= 20.0 or w <= 6.5)
+    if any(k in t for k in ['j-league', 'k-league', 'afc', 'asian', 'aff']): return (11.5 <= w <= 22.5)
+    if any(k in t for k in ['liga 1', 'bri liga', 'indonesia', 'timnas', 'piala presiden']): return (14.0 <= w <= 21.5)
+    if any(k in t for k in ['mls', 'major league', 'concacaf', 'libertadores', 'sudamericana', 'liga mx', 'brasileiro', 'nba', 'nfl']): return (2.0 <= w <= 11.5)
 
-    # Aturan Amerika (MLS, NBA) - Tayang Pagi
-    if any(k in t for k in ['mls', 'major league', 'concacaf', 'libertadores', 'sudamericana', 'liga mx', 'brasileiro', 'nba', 'nfl']): 
-        if 13.0 <= w <= 23.0: return False # Jam 1 siang ke atas pasti Replay. DIBUANG!
-        return True
-
-    # Aturan Arab / Afrika
-    if any(k in t for k in ['saudi', 'roshn', 'caf', 'africa']): 
-        if 7.0 <= w <= 19.0: return False # Siang bolong Replay. DIBUANG!
-        return True
-
-    # Aturan Asia / Indonesia - Tayang Sore ke Malam
-    if any(k in t for k in ['j-league', 'k-league', 'afc', 'asian', 'aff', 'liga 1', 'bri liga', 'indonesia', 'timnas', 'piala presiden']): 
-        if w < 13.0 or w > 23.5: return False # Pagi buta Replay. DIBUANG!
-        return True
-
+    lokal_channels = ['rcti', 'sctv', 'indosiar', 'antv', 'tvri', 'rtv', 'mnc', 'global', 'inews', 'sportstars', 'soccer channel']
+    if not any(x in normalisasi_alias(ch_name) for x in lokal_channels):
+        if 5.0 < w < 11.0 and " vs " not in t: return False
     return True
 
 def is_match_akurat_v3(epg_name, epg_id, m3u_name):
@@ -216,7 +211,11 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     m_num = REGEX_NUMBERS.findall(m_k)
     en = e_num[0] if e_num else '0'
     mn = m_num[0] if m_num else '0'
-    if en != mn: return False
+    
+    # PERBAIKAN ANGKA: Jangan cek angka (server) untuk channel Badminton/SPOTV jika EPG tidak punya angka
+    pengecualian_angka = ['badminton', 'arena', 'spotv']
+    if not any(k in e_k for k in pengecualian_angka):
+        if en != mn: return False
 
     for net in ['xtra', 'extra', 'now', 'max', 'plus']:
         if (net in e) != (net in m): return False
@@ -345,7 +344,6 @@ def main():
                                 if ev_start < now_wib - timedelta(hours=4): ev_start += timedelta(days=1)
                                 ev_stop = ev_start + timedelta(hours=2) 
                                 
-                                # PERBAIKAN: Masukkan Tol Event ke Gerbang Waktu Benua
                                 if not is_valid_time(ev_start, event_title, "event channel"):
                                     block = []
                                     continue
@@ -390,7 +388,6 @@ def main():
                                     elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev_start.strftime('%d/%m')} "
                                     else: lbl = ""
                                     
-                                    # Menambahkan nama TV di akhir judul
                                     judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
                                     up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
                                     
@@ -449,7 +446,6 @@ def main():
                                             elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev['start'].strftime('%d/%m')} "
                                             else: lbl = ""
                                             
-                                            # Menambahkan nama TV di akhir judul
                                             judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} [{m3u_name}]"
                                             up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
                                             
@@ -472,13 +468,15 @@ def main():
 
     hasil_m3u.sort(key=lambda x: (x["order"], float(x["sort"])))
     
+    m3u_header = f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 BAKUL WIFI SPORTS (Upd: {now_wib.strftime("%H:%M WIB")})"\n'
+    
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write(f'#EXTM3U url-tvg="{GLOBAL_EPG_URL}" name="🔴 BAKUL WIFI SPORTS"\n')
+        f.write(m3u_header)
         if not hasil_m3u: 
             f.write(f'#EXTINF:-1 group-title="ℹ️ INFO", BELUM ADA PERTANDINGAN\n{LINK_STANDBY}\n')
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal Bebas Replay Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal (BWF, Replay Bersih, Max 3) Siap Meluncur.")
 
 if __name__ == "__main__": main()
