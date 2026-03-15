@@ -45,7 +45,6 @@ def bersihkan_judul_event(title):
     bersih = re.sub(r'\s+', ' ', bersih).strip()
     return re.sub(r'^[\-\:\,\|]\s*', '', bersih)
 
-# KEMBALI HADIR: Menyatukan jadwal yang tertulis "Acara [beIN 1]" dan "Acara [beIN 2]" agar tidak ganda
 def generate_event_key(title, timestamp):
     title_clean = re.sub(r'\[.*?\]|\(.*?\)', '', title).strip()
     judul_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', title_clean.lower()))
@@ -82,6 +81,7 @@ def get_flag(m3u_name):
     if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     return "📺" 
 
+# PERBAIKAN: Pemisahan beIN berbagai negara makin ketat
 def get_region_ktp(name, epg_id=""):
     n = name.lower() + " " + epg_id.lower()
     if any(x in n for x in ['.au', ' au', 'aus', 'optus']): return "AU"
@@ -91,7 +91,9 @@ def get_region_ktp(name, epg_id=""):
     if any(x in n for x in ['.th', ' th', 'thai', 'true']): return "TH"
     if any(x in n for x in ['.sg', ' sg', 'singapore', 'hub']): return "SG"
     if any(x in n for x in ['.za', ' za', 'supersport']): return "ZA"
-    if any(x in n for x in ['bein', 'spotv', 'id', 'indo']): return "ID"
+    if any(x in n for x in ['.hk', ' hk', 'hong']): return "HK"
+    if any(x in n for x in ['.ph', ' ph', 'phil']): return "PH"
+    if any(x in n for x in ['bein', 'spotv', 'id', 'indo', 'ind']): return "ID"
     return "UNKNOWN"
 
 # ==========================================
@@ -324,12 +326,10 @@ def main():
                             logo_match = re.search(r'(?i)tvg-logo=["\']([^"\']*)["\']', raw_attrs)
                             orig_logo = logo_match.group(1) if logo_match else ""
 
-                            # KEMBALI HADIR: Pembersih grup siluman (KIDS, NEWS) dan pembersih ekstensi TiviMate
                             clean_attr = re.sub(r'(?i)\s*(group-title|tvg-group|tvg-id|tvg-logo|tvg-name)=("[^"]*"|\'[^\']*\'|[^\s,]+)', '', raw_attrs).strip()
                             if not clean_attr.upper().startswith("#EXTINF"):
                                 clean_attr = "#EXTINF:-1 " + clean_attr.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
                                 
-                            # KEMBALI HADIR: Bantai baris #EXTGRP bawaan pusat agar TiviMate tidak tumpang tindih
                             bersih_block = [t for t in block if not t.upper().startswith("#EXTGRP")]
 
                             prioritas_skor = get_priority(stream_url, m3u_name)
@@ -478,6 +478,6 @@ def main():
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal (Full Fitur, Bebas Kloning, Anti Kids/News) Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal (Full Fitur) Siap Meluncur.")
 
 if __name__ == "__main__": main()
