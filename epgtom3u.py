@@ -35,7 +35,7 @@ REGEX_STARS = re.compile(r'\bsports?\s+stars?\b')
 REGEX_MNC = re.compile(r'\bmnc\s*sports?\b')
 REGEX_SPO = re.compile(r'\bspo\s+tv\b')
 REGEX_CYRILLIC_CJK = re.compile(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]')
-REGEX_KUALITAS = re.compile(r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|network|premium|now|id|my|sg)\b')
+REGEX_KUALITAS = re.compile(r'\b(hd|fhd|uhd|4k|8k|tv|hevc|raw|plus|max|sd|hq|sport|sports|ch|channel|network|premium|now)\b')
 REGEX_NUMBERS = re.compile(r'\d+')
 REGEX_LIVE = re.compile(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\blangsung\b|\blive on\b)')
 REGEX_VS = re.compile(r'\b(vs|v)\b')
@@ -84,12 +84,12 @@ def get_flag(m3u_name):
     if any(x in n for x in [' au', 'optus', 'aus']): return "🇦🇺"
     if any(x in n for x in [' ae', 'arab', 'mena', 'ssc', 'alkass', 'abu dhabi']): return "🇸🇦"
     if any(x in n for x in [' za', 'supersport', 'africa']): return "🇿🇦"
-    if 'bein' in n and not any(x in n for x in [' us', 'usa', 'america', ' en', ' hk', ' th', ' ph', ' my', ' sg', ' au', ' arab']): return "🇮🇩"
-    if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
+    if any(x in n for x in [' id', 'indo', 'indonesia', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
+    if 'bein' in n and not any(x in n for x in [' us', ' usa', ' sg', ' my', ' uk', ' th', ' hk', ' au', ' ae', ' za', ' ph']): return "🇮🇩"
     return "📺" 
 
 def get_region_ktp(name, epg_id=""):
-    n = name.lower() + " " + epg_id.lower()
+    n = (name + " " + epg_id).lower()
     if any(x in n for x in ['.us', ' us', 'usa', 'america']): return "US" 
     if any(x in n for x in ['.au', ' au', 'aus', 'optus']): return "AU"
     if any(x in n for x in ['.uk', ' uk', 'eng', 'english', 'sky']): return "UK"
@@ -100,7 +100,7 @@ def get_region_ktp(name, epg_id=""):
     if any(x in n for x in ['.za', ' za', 'supersport']): return "ZA"
     if any(x in n for x in ['.hk', ' hk', 'hong']): return "HK"
     if any(x in n for x in ['.ph', ' ph', 'phil']): return "PH"
-    if any(x in n for x in ['bein', 'spotv', 'id', 'indo', 'ind']): return "ID"
+    if any(x in n for x in ['.id', ' id', 'indo', 'indonesia']): return "ID"
     return "UNKNOWN"
 
 # ==========================================
@@ -114,7 +114,7 @@ def is_sports_channel(name):
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
-        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro sport', 'astro supersport', 'astro arena',
+        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro',
         'premier league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'nba', 'nfl', 'badminton', 'bwf'
     ]
     return any(x in n for x in sports_keywords)
@@ -127,17 +127,8 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     if REGEX_CYRILLIC_CJK.search(t): return False
 
     if 'astro' in c:
-        haram = ['awani','ria','oasis','prima','rania','citra','hijrah','ceria','warna','shiq','vellithirai','vinmeen','box office', 'a-list']
-        if any(x in c for x in haram): return False
-        
-        kata_badminton = [
-            'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 
-            'swiss open', 'malaysia open', 'indonesia open', 'indonesia master', 
-            'china open', 'japan open', 'korea open', 'french open', 'denmark open', 
-            'thailand', 'singapore open', 'taipei', 'macau', 'hong kong', 
-            'world tour', 'championship', 'swiss'
-        ]
-        if not any(k in t for k in kata_badminton): return False
+        haram_astro = ['awani','ria','oasis','prima','rania','citra','hijrah','ceria','warna','shiq','vellithirai','vinmeen','box office', 'a-list']
+        if any(x in c for x in haram_astro): return False
 
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in c for x in lokal) and 'sport' not in c:
@@ -226,12 +217,16 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     if not any(k in e_k for k in pengecualian_angka):
         if en != mn: return False
 
-    for net in ['xtra', 'extra', 'now', 'max', 'plus']:
-        if (net in e) != (net in m): return False
-
+    # KUNCIAN KHUSUS NEGARA (PISAHKAN BEIN US, BEIN HK, BEIN ID, DLL)
     ktp_e = get_region_ktp(epg_name, epg_id)
     ktp_m = get_region_ktp(m3u_name)
-    if ktp_e != "UNKNOWN" and ktp_m != "UNKNOWN" and ktp_e != ktp_m: return False
+    
+    if 'bein' in e or 'spotv' in e:
+        e_reg = ktp_e if ktp_e != "UNKNOWN" else "ID"
+        m_reg = ktp_m if ktp_m != "UNKNOWN" else "ID"
+        if e_reg != m_reg: return False
+    else:
+        if ktp_e != "UNKNOWN" and ktp_m != "UNKNOWN" and ktp_e != ktp_m: return False
 
     if e_k in m_k or m_k in e_k: return True
     
@@ -512,7 +507,7 @@ def main():
 
     hasil_m3u.sort(key=lambda x: (x["order"], float(x["sort"])))
     
-    # PERUBAHAN: Menghapus url-tvg global agar M3U jauh lebih ringan saat diload di aplikasi TV
+    # EPG GLOBAL DIHILANGKAN DARI HEADER AGAR APLIKASI TV LEBIH RINGAN
     m3u_header = f'#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: {now_wib.strftime("%H:%M WIB")})"\n'
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
