@@ -13,7 +13,7 @@ EPG_URLS = [
 ]
 
 M3U_URLS = [
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
+    "https://deccotech.online/tv/tvstream.html",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
@@ -205,6 +205,11 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
 
     e_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', e).strip()
     m_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', m).strip()
+    
+    # PENAMBAHAN ANGKA OTOMATIS (SUNTIKAN)
+    if re.search(r'\b(spotv|bein|arena)\b', e_clean) and not REGEX_NUMBERS.search(e_clean): e_clean += ' 1'
+    if re.search(r'\b(spotv|bein|arena)\b', m_clean) and not REGEX_NUMBERS.search(m_clean): m_clean += ' 1'
+
     e_k = REGEX_KUALITAS.sub('', e_clean).strip()
     m_k = REGEX_KUALITAS.sub('', m_clean).strip()
 
@@ -217,7 +222,7 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     if not any(k in e_k for k in pengecualian_angka):
         if en != mn: return False
 
-    # KUNCIAN KHUSUS NEGARA (PISAHKAN BEIN US, BEIN HK, BEIN ID, DLL)
+    # KTP NEGARA KETAT (BEIN & SPOTV)
     ktp_e = get_region_ktp(epg_name, epg_id)
     ktp_m = get_region_ktp(m3u_name)
     
@@ -436,9 +441,12 @@ def main():
                                 judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
                                 up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
                                 
+                                # TRICK OTT PLAYER: Buat link seolah-olah unik
+                                unique_link_up = f"{LINK_UPCOMING}?match={event_key}"
+                                
                                 if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
                                 keranjang_event_live[event_key]["UPCOMING"] = [{
-                                    "order": 1, "sort": ev_start.timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
+                                    "order": 1, "sort": ev_start.timestamp(), "prioritas": 0, "data": [up_extinf, unique_link_up]
                                 }]
                                 
                             block = []
@@ -489,9 +497,12 @@ def main():
                                         judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} [{m3u_name}]"
                                         up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
                                         
+                                        # TRICK OTT PLAYER: Buat link seolah-olah unik
+                                        unique_link_up = f"{LINK_UPCOMING}?match={event_key}"
+                                        
                                         if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
                                         keranjang_event_live[event_key]["UPCOMING"] = [{
-                                            "order": 1, "sort": ev['start'].timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
+                                            "order": 1, "sort": ev['start'].timestamp(), "prioritas": 0, "data": [up_extinf, unique_link_up]
                                         }]
                                         
                 block = [] 
@@ -517,6 +528,6 @@ def main():
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal (Full Fitur) Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal Siap Meluncur.")
 
 if __name__ == "__main__": main()
