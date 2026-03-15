@@ -73,7 +73,7 @@ def normalisasi_alias(name):
 
 def get_flag(m3u_name):
     n = m3u_name.lower()
-    if any(x in n for x in [' us', 'usa', 'america']): return "🇺🇸" # TAMBAHAN BENDERA USA
+    if any(x in n for x in [' us', 'usa', 'america']): return "🇺🇸" 
     if any(x in n for x in [' sg', 'starhub', 'singapore']): return "🇸🇬"
     if any(x in n for x in [' my', 'astro', 'malaysia']): return "🇲🇾"
     if any(x in n for x in [' en', 'english', ' uk', 'sky']): return "🇬🇧"
@@ -82,14 +82,13 @@ def get_flag(m3u_name):
     if any(x in n for x in [' au', 'optus', 'aus']): return "🇦🇺"
     if any(x in n for x in [' ae', 'arab', 'mena', 'ssc', 'alkass', 'abu dhabi']): return "🇸🇦"
     if any(x in n for x in [' za', 'supersport', 'africa']): return "🇿🇦"
-    # beIN tanpa region tag otomatis diberi bendera Indonesia
     if 'bein' in n and not any(x in n for x in [' us', 'usa', 'america', ' en', ' hk', ' th', ' ph', ' my', ' sg', ' au', ' arab']): return "🇮🇩"
     if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     return "📺" 
 
 def get_region_ktp(name, epg_id=""):
     n = name.lower() + " " + epg_id.lower()
-    if any(x in n for x in ['.us', ' us', 'usa', 'america']): return "US" # TAMBAHAN KTP USA KHUSUS BEIN USA
+    if any(x in n for x in ['.us', ' us', 'usa', 'america']): return "US" 
     if any(x in n for x in ['.au', ' au', 'aus', 'optus']): return "AU"
     if any(x in n for x in ['.uk', ' uk', 'eng', 'english', 'sky']): return "UK"
     if any(x in n for x in ['.ae', ' ar', 'arab', 'mena', 'premium', 'ssc']): return "ARAB"
@@ -113,7 +112,8 @@ def is_sports_channel(name):
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
-        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro',
+        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 
+        'astro sport', 'astro supersport', 'astro arena', # <-- NAMA ASTRO SPORTS YANG SPESIFIK
         'premier league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'nba', 'nfl', 'badminton', 'bwf'
     ]
     return any(x in n for x in sports_keywords)
@@ -188,9 +188,15 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     e = normalisasi_alias(epg_name).strip()
     m = normalisasi_alias(m3u_name).strip()
 
-    brands = ['bein', 'spotv', 'astro', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']
+    brands = ['bein', 'spotv', 'astro sport', 'astro supersport', 'astro arena', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']
     for b in brands:
         if (b in e) != (b in m): return False
+
+    if 'astro' in e and 'astro' in m:
+        subs = ['arena bola 2', 'arena bola', 'arena', 'cricket', 'badminton', 'football', 'golf', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport', 'grandstand', 'premier']
+        e_sub = next((s for s in subs if s in e), None)
+        m_sub = next((s for s in subs if s in m), None)
+        if e_sub and m_sub and e_sub != m_sub: return False
 
     e_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', e).strip()
     m_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', m).strip()
