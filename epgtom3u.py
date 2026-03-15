@@ -2,6 +2,7 @@ import requests, re, gzip
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 import concurrent.futures
+from functools import lru_cache
 
 # ==========================================
 # I. KONFIGURASI EMAS (MULTI-EPG & M3U VIP)
@@ -14,11 +15,11 @@ EPG_URLS = [
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
 ]
 
+# File indonesia_combined dihapus agar super ringan!
 M3U_URLS = [
     "https://bit.ly/KPL203",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 ]
 
 OUTPUT_FILE = "live_matches_only.m3u"
@@ -28,17 +29,18 @@ SERVER_PRIORITAS = ['semar', 'lajojo', 'iptv2026']
 
 GLOBAL_SEEN_STREAM_URLS = set()
 MAPPING_DICT = {}
+COMPILED_MAPPING = []
 
 # ==========================================
-# II. SISTEM MAPPING / KAMUS PINTAR (DARI TXT)
+# II. SISTEM MAPPING / KAMUS PINTAR (TURBO)
 # ==========================================
 def load_mapping():
-    global MAPPING_DICT
+    global MAPPING_DICT, COMPILED_MAPPING
     try:
         print("Mengambil Kamus Pintar (map.txt)...")
         r = requests.get(MAP_URL, timeout=30).text
         for line in r.splitlines():
-            line = line.split('#')[0].strip() # Buang komentar
+            line = line.split('#')[0].strip() 
             if not line or line.startswith('['): continue
             if '=' in line:
                 official, aliases = line.split('=', 1)
@@ -47,19 +49,21 @@ def load_mapping():
                     alias = alias.strip().lower()
                     if alias:
                         MAPPING_DICT[alias] = official
-        # Urutkan dari singkatan terpanjang agar terjemahan akurat
+        
         MAPPING_DICT = dict(sorted(MAPPING_DICT.items(), key=lambda x: len(x[0]), reverse=True))
-        print(f"  > Berhasil menghafal {len(MAPPING_DICT)} istilah dari map.txt!")
+        for alias, official in MAPPING_DICT.items():
+            COMPILED_MAPPING.append((re.compile(r'\b' + re.escape(alias) + r'\b'), official))
+            
+        print(f"  > Berhasil menghafal dan mengkompilasi {len(MAPPING_DICT)} istilah!")
     except Exception as e:
         print(f"  > Gagal memuat map.txt: {e}")
 
+@lru_cache(maxsize=None)
 def terjemahkan_nama(teks):
-    """Menerjemahkan singkatan M3U menjadi nama resmi berdasarkan map.txt"""
     if not teks: return ""
     n = teks.lower().strip()
-    for alias, official in MAPPING_DICT.items():
-        # Pakai regex \b agar kata 'pl' tidak mengubah kata 'play'
-        n = re.sub(r'\b' + re.escape(alias) + r'\b', official, n)
+    for pattern, official in COMPILED_MAPPING:
+        n = pattern.sub(official, n)
     return n
 
 # ==========================================
@@ -73,11 +77,13 @@ REGEX_VS = re.compile(r'\b(vs|v)\b')
 REGEX_NON_ALPHANUM = re.compile(r'[^a-z0-9]')
 REGEX_EVENT = re.compile(r'(?:^|[^0-9])(\d{2})[:\.](\d{2})\s*(?:WIB)?\s*[\-\|]?\s*(.+)', re.IGNORECASE)
 
+@lru_cache(maxsize=10000)
 def bersihkan_judul_event(title):
     bersih = REGEX_LIVE.sub('', title)
     bersih = re.sub(r'\s+', ' ', bersih).strip()
     return re.sub(r'^[\-\:\,\|]\s*', '', bersih)
 
+@lru_cache(maxsize=10000)
 def generate_event_key(title, timestamp):
     title_clean = re.sub(r'(?i)\#\s*\d+', '', title)
     title_clean = re.sub(r'\[.*?\]|\(.*?\)', '', title_clean)
@@ -89,6 +95,7 @@ def get_priority(url, name):
     teks = (url + " " + name).lower()
     return 0 if any(p in teks for p in SERVER_PRIORITAS) else 1
 
+@lru_cache(maxsize=5000)
 def get_flag(m3u_name):
     n = m3u_name.lower()
     if any(x in n for x in [' us', 'usa', 'america']): return "🇺🇸" 
@@ -104,6 +111,7 @@ def get_flag(m3u_name):
     if 'bein' in n and not any(x in n for x in [' us', ' usa', ' sg', ' my', ' uk', ' th', ' hk', ' au', ' ae', ' za', ' ph']): return "🇮🇩"
     return "📺" 
 
+@lru_cache(maxsize=5000)
 def get_region_ktp(name, epg_id=""):
     n = (name + " " + epg_id).lower()
     if any(x in n for x in ['.us', ' us', 'usa', 'america']): return "US" 
@@ -122,22 +130,18 @@ def get_region_ktp(name, epg_id=""):
 # ==========================================
 # IV. FILTERING & ATURAN VVIP
 # ==========================================
+@lru_cache(maxsize=10000)
 def is_sports_channel(name):
-    # Nama diterjemahkan dulu pakai map.txt
     n = terjemahkan_nama(name)
-    
-    # 1. ATURAN TV LOKAL MUTLAK (Haram masuk kalau gaada embel-embel sport)
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in n for x in lokal) and 'soccer channel' not in n:
         return 'sport' in n
 
-    # 2. ATURAN ASTRO (Haramkan channel umum Astro)
     if 'astro' in n:
         haram = ['awani','ria','oasis','prima','rania','citra','hijrah','ceria','warna','shiq','vellithirai','vinmeen','box office', 'a-list']
         if any(x in n for x in haram): return False
         return True 
 
-    # 3. KATA KUNCI HALAL GLOBAL
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
@@ -148,23 +152,19 @@ def is_sports_channel(name):
 def is_allowed_sport(title, ch_name, durasi_menit):
     if not title: return False
     
-    # Judul dan nama channel diterjemahkan dulu ke bahasa resmi
     t = terjemahkan_nama(title)
     c = terjemahkan_nama(ch_name)
     
     if REGEX_CYRILLIC_CJK.search(t): return False
 
-    # ATURAN VVIP ASTRO (KHUSUS BADMINTON)
     if 'astro' in c:
         kata_badminton = ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 'swiss open', 'malaysia open', 'indonesia open', 'indonesia master', 'china open', 'japan open', 'korea open', 'french open', 'denmark open', 'thailand', 'singapore open', 'taipei', 'macau', 'hong kong', 'world tour', 'championship', 'swiss']
         if not any(k in t for k in kata_badminton): return False
 
-    # ANTI SIARAN PENDEK (HIGHLIGHTS)
     if durasi_menit < 30: return False
     bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
     if any(k in c or k in t for k in bola_keywords) and durasi_menit < 85: return False
 
-    # PEMBANTAIAN SIARAN ULANG (REPLAY HARAM)
     haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
     if any(s in t for s in haram_simbol): return False
 
@@ -180,25 +180,22 @@ def is_valid_time(start_dt, title, ch_name):
     if any(k in t for k in ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'open', 'masters', 'tour']): return True
     if any(k in t for k in ['motogp', 'moto2', 'moto3', 'f1', 'formula', 'grand prix', 'sprint']): return True
     
-    # EROPA: Block jam 06:00 sampai 13:30 (Pasti Replay)
     if any(k in t for k in ['premier', 'champions', 'serie a', 'la liga', 'bundesliga', 'ligue 1', 'fa cup', 'eredivisie', 'uefa', 'euro', 'carabao', 'copa del rey']): 
         if 6.0 <= w <= 13.5: return False 
         return True
         
-    # AMERIKA: Block jam 13:00 sampai 23:00 (Pasti Replay)
     if any(k in t for k in ['mls', 'major league', 'concacaf', 'libertadores', 'sudamericana', 'liga mx', 'brasileiro', 'nba', 'nfl']): 
         if 13.0 <= w <= 23.0: return False 
         return True
 
-    # ASIA/INDO: Block jam 00:00 sampai 09:00 pagi (Pasti Replay)
     if any(k in t for k in ['j-league', 'k-league', 'afc', 'asian', 'aff', 'liga 1', 'bri liga', 'indonesia', 'timnas', 'piala presiden']): 
         if w < 9.0: return False 
         return True
 
     return True
 
+@lru_cache(maxsize=10000)
 def is_match_akurat_v3(epg_name, epg_id, m3u_name):
-    # Menggunakan terjemahan pintar map.txt sebelum mencocokkan
     e = terjemahkan_nama(epg_name)
     m = terjemahkan_nama(m3u_name)
 
@@ -278,9 +275,11 @@ def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     match_data = {}
     epg_chans, epg_logos = {}, {}
-    limit_date = now_wib + timedelta(days=3)
+    
+    # ATURAN BARU: BATAS AKHIR HARI BESOK JAM 23:59:59 WIB
+    besok = now_wib + timedelta(days=1)
+    limit_date = besok.replace(hour=23, minute=59, second=59)
 
-    # 1. PANGGIL OTAK MAPPING DARI GITHUB
     load_mapping()
 
     print("Step 1: Sedot Semua EPG & M3U Serentak (Multithreading Turbo)...")
@@ -297,7 +296,7 @@ def main():
                 if is_epg: epg_contents[url] = content
                 else: m3u_contents[url] = content
 
-    print(f"Step 2: Memproses Data EPG (Jadwal 3 Hari Sampai: {limit_date.strftime('%d-%m-%Y %H:%M')} WIB)...")
+    print(f"Step 2: Memproses Data EPG (Hanya Sampai: {limit_date.strftime('%d-%m-%Y %H:%M')} WIB)...")
     for url in EPG_URLS:
         content = epg_contents.get(url)
         if not content: continue
@@ -306,13 +305,16 @@ def main():
             for ch in root.findall("channel"):
                 cid, cn = ch.get("id"), ch.findtext("display-name")
                 if cid and cn: 
-                    epg_chans[cid] = cn.strip()
+                    cn_strip = cn.strip()
+                    if not is_sports_channel(cn_strip): continue
+                    
+                    epg_chans[cid] = cn_strip
                     icon = ch.find("icon")
                     if icon is not None: epg_logos[cid] = icon.get("src")
                     
             for pg in root.findall("programme"):
                 cid = pg.get("channel")
-                if cid not in epg_chans: continue
+                if cid not in epg_chans: continue 
                 
                 st, sp = parse_time(pg.get("start")), parse_time(pg.get("stop"))
                 if not st or not sp or sp <= now_wib or st >= limit_date: continue 
@@ -370,6 +372,13 @@ def main():
                 
                 if extinf_idx != -1:
                     raw_extinf = block[extinf_idx]
+                    
+                    # FILTER SUPER CEPAT KHUSUS KPL203 (Abaikan VOD & Film!)
+                    if "KPL203" in url:
+                        if not re.search(r'(?i)group-title=["\'][^"\']*event\s*\(', raw_extinf):
+                            block = []
+                            continue
+
                     if "," in raw_extinf:
                         raw_attrs, m3u_name = raw_extinf.split(",", 1)
                         m3u_name = m3u_name.strip()
@@ -443,9 +452,7 @@ def main():
                                 ev_date = ev_start.date()
                                 hari_ini = now_wib.date()
                                 if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
-                                elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
-                                elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev_start.strftime('%d/%m')} "
-                                else: lbl = ""
+                                else: lbl = "" # Pasti hari ini kalau lolos limit_date
                                 
                                 judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
                                 up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
@@ -486,7 +493,6 @@ def main():
                                             if len(keranjang_event_live[event_key]) >= 3: continue 
                                             keranjang_event_live[event_key][matched_cid] = []
                                         
-                                        # Tampilan asli dibersihkan agar rapi
                                         m3u_display = re.sub(r'[\[\]\(\)]', '', m3u_name).strip()
                                         judul = f"{flag} 🔴 {jam} - {ev['title']} [{m3u_display}]"
                                         
@@ -503,9 +509,7 @@ def main():
                                         ev_date = ev['start'].date()
                                         hari_ini = now_wib.date()
                                         if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
-                                        elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
-                                        elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev['start'].strftime('%d/%m')} "
-                                        else: lbl = ""
+                                        else: lbl = "" 
                                         
                                         m3u_display = re.sub(r'[\[\]\(\)]', '', m3u_name).strip()
                                         judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} [{m3u_display}]"
@@ -540,6 +544,6 @@ def main():
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal (Kamus map.txt) Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal (Super Cepat) Siap Meluncur.")
 
 if __name__ == "__main__": main()
