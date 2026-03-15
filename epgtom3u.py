@@ -1,6 +1,7 @@
 import requests, re, gzip
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+import concurrent.futures
 
 # ==========================================
 # I. KONFIGURASI EMAS (MULTI-EPG & M3U VIP)
@@ -24,6 +25,9 @@ LINK_STANDBY = "https://bwifi.my.id/live.mp4"
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
 
 SERVER_PRIORITAS = ['semar', 'lajojo', 'iptv2026']
+
+# BUKU CATATAN PUSAT (SUPER GLOBAL TRACKER)
+GLOBAL_SEEN_STREAM_URLS = set()
 
 # ==========================================
 # II. OPTIMASI REGEX & FUNGSI PEMBANTU
@@ -81,7 +85,6 @@ def get_flag(m3u_name):
     if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     return "📺" 
 
-# PERBAIKAN: Pemisahan beIN berbagai negara makin ketat
 def get_region_ktp(name, epg_id=""):
     n = name.lower() + " " + epg_id.lower()
     if any(x in n for x in ['.au', ' au', 'aus', 'optus']): return "AU"
@@ -245,6 +248,21 @@ def parse_time(ts):
     except Exception: return None
 
 # ==========================================
+# FUNGSI SEDOT MULTITHREADING
+# ==========================================
+def fetch_url_content(url, is_epg=False):
+    try:
+        ses = requests.Session()
+        ses.headers.update({'User-Agent': 'Mozilla/5.0'})
+        r = ses.get(url, timeout=60).content
+        if is_epg:
+            return url, (gzip.decompress(r) if r[:2] == b'\x1f\x8b' else r), True
+        return url, r.decode('utf-8', errors='ignore'), False
+    except Exception as e:
+        print(f"  > Gagal mengunduh {url}: {e}")
+        return url, None, is_epg
+
+# ==========================================
 # IV. PROSES EKSEKUSI UTAMA
 # ==========================================
 def main():
@@ -253,15 +271,26 @@ def main():
     epg_chans, epg_logos = {}, {}
     limit_date = now_wib + timedelta(days=3)
 
-    ses = requests.Session()
-    ses.headers.update({'User-Agent': 'Mozilla/5.0'})
+    print("Step 1: Sedot Semua EPG & M3U Serentak (Multithreading Turbo)...")
+    epg_contents = {}
+    m3u_contents = {}
 
-    print(f"Step 1: Sedot EPG Global (Jadwal 3 Hari Sampai: {limit_date.strftime('%d-%m-%Y %H:%M')} WIB)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_url_content, u, True) for u in EPG_URLS]
+        futures += [executor.submit(fetch_url_content, u, False) for u in M3U_URLS]
+        
+        for future in concurrent.futures.as_completed(futures):
+            url, content, is_epg = future.result()
+            if content:
+                if is_epg: epg_contents[url] = content
+                else: m3u_contents[url] = content
+
+    print(f"Step 2: Memproses Data EPG (Jadwal 3 Hari Sampai: {limit_date.strftime('%d-%m-%Y %H:%M')} WIB)...")
     for url in EPG_URLS:
+        content = epg_contents.get(url)
+        if not content: continue
         try:
-            r = ses.get(url, timeout=60).content
-            root = ET.fromstring(gzip.decompress(r) if r[:2] == b'\x1f\x8b' else r)
-            
+            root = ET.fromstring(content)
             for ch in root.findall("channel"):
                 cid, cn = ch.get("id"), ch.findtext("display-name")
                 if cid and cn: 
@@ -293,172 +322,185 @@ def main():
                     "title": judul_bersih,
                     "start": st, "stop": sp, "live": is_live, "logo": prog_logo
                 })
-        except Exception: continue
+        except Exception as e:
+            print(f"Error parsing XML from {url}: {e}")
+            continue
 
-    print("Step 2: Menjahit M3U (Tol Event & Filter 3x3)...")
+    print("Step 3: Menjahit M3U (Tol Event & Filter 3x3) dengan Global Tracker...")
     keranjang_event_live = {} 
     up_tracker = set()
     
-    for idx, url in enumerate(M3U_URLS, 1):
-        try:
-            is_event_link = "event_combined.m3u" in url
-            lines = ses.get(url, timeout=30).text.splitlines()
-            block = []
-            for ln in lines:
-                ln_clean = ln.strip()
-                if not ln_clean or "EXTM3U" in ln_clean.upper(): continue
+    for url in M3U_URLS:
+        content = m3u_contents.get(url)
+        if not content: continue
+        
+        is_event_link = "event_combined.m3u" in url
+        lines = content.splitlines()
+        block = []
+        
+        for ln in lines:
+            ln_clean = ln.strip()
+            if not ln_clean or "EXTM3U" in ln_clean.upper(): continue
+            
+            if ln_clean.startswith("#"):
+                if ln_clean.upper().startswith("#EXTINF"):
+                    if any(t.upper().startswith("#EXTINF") for t in block):
+                        block = [] 
+                block.append(ln_clean) 
+            elif len(ln_clean) > 5:
+                stream_url = ln_clean
                 
-                if ln_clean.startswith("#"):
-                    if ln_clean.upper().startswith("#EXTINF"):
-                        if any(t.upper().startswith("#EXTINF") for t in block):
-                            block = [] 
-                    block.append(ln_clean) 
-                else:
-                    stream_url = ln_clean
-                    extinf_idx = next((i for i, t in enumerate(block) if t.upper().startswith("#EXTINF")), -1)
-                    
-                    if extinf_idx != -1:
-                        raw_extinf = block[extinf_idx]
-                        if "," in raw_extinf:
-                            raw_attrs, m3u_name = raw_extinf.split(",", 1)
-                            m3u_name = m3u_name.strip()
+                # ==========================================
+                # CEK GLOBAL TRACKER (ANTI DOBEL LINK M3U)
+                # ==========================================
+                if stream_url in GLOBAL_SEEN_STREAM_URLS:
+                    block = []
+                    continue
+                GLOBAL_SEEN_STREAM_URLS.add(stream_url)
+                
+                extinf_idx = next((i for i, t in enumerate(block) if t.upper().startswith("#EXTINF")), -1)
+                
+                if extinf_idx != -1:
+                    raw_extinf = block[extinf_idx]
+                    if "," in raw_extinf:
+                        raw_attrs, m3u_name = raw_extinf.split(",", 1)
+                        m3u_name = m3u_name.strip()
+                        
+                        logo_match = re.search(r'(?i)tvg-logo=["\']([^"\']*)["\']', raw_attrs)
+                        orig_logo = logo_match.group(1) if logo_match else ""
+
+                        clean_attr = re.sub(r'(?i)\s*(group-title|tvg-group|tvg-id|tvg-logo|tvg-name)=("[^"]*"|\'[^\']*\'|[^\s,]+)', '', raw_attrs).strip()
+                        if not clean_attr.upper().startswith("#EXTINF"):
+                            clean_attr = "#EXTINF:-1 " + clean_attr.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
                             
-                            logo_match = re.search(r'(?i)tvg-logo=["\']([^"\']*)["\']', raw_attrs)
-                            orig_logo = logo_match.group(1) if logo_match else ""
+                        bersih_block = [t for t in block if not t.upper().startswith("#EXTGRP")]
 
-                            clean_attr = re.sub(r'(?i)\s*(group-title|tvg-group|tvg-id|tvg-logo|tvg-name)=("[^"]*"|\'[^\']*\'|[^\s,]+)', '', raw_attrs).strip()
-                            if not clean_attr.upper().startswith("#EXTINF"):
-                                clean_attr = "#EXTINF:-1 " + clean_attr.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
-                                
-                            bersih_block = [t for t in block if not t.upper().startswith("#EXTGRP")]
+                        prioritas_skor = get_priority(stream_url, m3u_name)
 
-                            prioritas_skor = get_priority(stream_url, m3u_name)
-
-                            # ==========================================
-                            # JALUR TOL KHUSUS EVENT_COMBINED
-                            # ==========================================
-                            event_match = REGEX_EVENT.search(m3u_name)
-                            if is_event_link and event_match:
-                                hh, mm = int(event_match.group(1)), int(event_match.group(2))
-                                event_title = bersihkan_judul_event(event_match.group(3))
-                                
-                                if not is_allowed_sport(event_title, "event channel", 100):
-                                    block = []
-                                    continue
-                                
-                                ev_start = now_wib.replace(hour=hh, minute=mm, second=0, microsecond=0)
-                                if ev_start < now_wib - timedelta(hours=4): ev_start += timedelta(days=1)
-                                ev_stop = ev_start + timedelta(hours=2) 
-                                
-                                if not is_valid_time(ev_start, event_title, "event channel"):
-                                    block = []
-                                    continue
-
-                                if ev_stop <= now_wib or ev_start >= limit_date:
-                                    block = []
-                                    continue
-                                    
-                                is_live = (ev_start - timedelta(minutes=5)) <= now_wib < ev_stop
-                                jam = f"{ev_start.strftime('%H:%M')}-{ev_stop.strftime('%H:%M')} WIB"
-                                flag = get_flag(event_title)
-                                
-                                event_key = generate_event_key(event_title, ev_start.timestamp())
-                                
-                                if is_live:
-                                    if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
-                                    if "EVENT_VIP" not in keranjang_event_live[event_key]:
-                                        if len(keranjang_event_live[event_key]) >= 3: 
-                                            block = []
-                                            continue 
-                                        keranjang_event_live[event_key]["EVENT_VIP"] = []
-                                    
-                                    judul = f"{flag} 🔴 {jam} - {event_title} [Live Event]"
-                                    live_block = list(bersih_block) 
-                                    live_block[extinf_idx] = f'{clean_attr} group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
-                                    
-                                    keranjang_event_live[event_key]["EVENT_VIP"].append({
-                                        "order": 0, "sort": ev_start.timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
-                                    })
-                                else:
-                                    if event_key in up_tracker: 
-                                        block = []
-                                        continue
-                                    up_tracker.add(event_key)
-                                    
-                                    ev_date = ev_start.date()
-                                    hari_ini = now_wib.date()
-                                    if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
-                                    elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
-                                    elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev_start.strftime('%d/%m')} "
-                                    else: lbl = ""
-                                    
-                                    judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
-                                    up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
-                                    
-                                    if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
-                                    keranjang_event_live[event_key]["UPCOMING"] = [{
-                                        "order": 1, "sort": ev_start.timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
-                                    }]
-                                    
+                        # ==========================================
+                        # JALUR TOL KHUSUS EVENT_COMBINED
+                        # ==========================================
+                        event_match = REGEX_EVENT.search(m3u_name)
+                        if is_event_link and event_match:
+                            hh, mm = int(event_match.group(1)), int(event_match.group(2))
+                            event_title = bersihkan_judul_event(event_match.group(3))
+                            
+                            if not is_allowed_sport(event_title, "event channel", 100):
                                 block = []
-                                continue 
+                                continue
+                            
+                            ev_start = now_wib.replace(hour=hh, minute=mm, second=0, microsecond=0)
+                            if ev_start < now_wib - timedelta(hours=4): ev_start += timedelta(days=1)
+                            ev_stop = ev_start + timedelta(hours=2) 
+                            
+                            if not is_valid_time(ev_start, event_title, "event channel"):
+                                block = []
+                                continue
 
-                            # ==========================================
-                            # JALUR NORMAL (SPORTS & INDONESIA COMBINED)
-                            # ==========================================
-                            if is_sports_channel(m3u_name):
-                                flag = get_flag(m3u_name)
-                                matched_cid = None
+                            if ev_stop <= now_wib or ev_start >= limit_date:
+                                block = []
+                                continue
                                 
-                                for cid, ename in epg_chans.items():
-                                    if is_match_akurat_v3(ename, cid, m3u_name):
-                                        matched_cid = cid
-                                        break
+                            is_live = (ev_start - timedelta(minutes=5)) <= now_wib < ev_stop
+                            jam = f"{ev_start.strftime('%H:%M')}-{ev_stop.strftime('%H:%M')} WIB"
+                            flag = get_flag(event_title)
+                            
+                            event_key = generate_event_key(event_title, ev_start.timestamp())
+                            
+                            if is_live:
+                                if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
+                                if "EVENT_VIP" not in keranjang_event_live[event_key]:
+                                    if len(keranjang_event_live[event_key]) >= 3: 
+                                        block = []
+                                        continue 
+                                    keranjang_event_live[event_key]["EVENT_VIP"] = []
                                 
-                                if matched_cid and matched_cid in match_data:
-                                    for ev in match_data[matched_cid]:
-                                        jam = f"{ev['start'].strftime('%H:%M')}-{ev['stop'].strftime('%H:%M')} WIB"
-                                        final_logo = ev['logo'] if ev.get('logo') else (epg_logos.get(matched_cid) if epg_logos.get(matched_cid) else orig_logo)
-                                        
-                                        event_key = generate_event_key(ev['title'], ev['start'].timestamp())
-                                        
-                                        if ev["live"]:
-                                            if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
-                                            
-                                            if matched_cid not in keranjang_event_live[event_key]:
-                                                if len(keranjang_event_live[event_key]) >= 3: continue 
-                                                keranjang_event_live[event_key][matched_cid] = []
-                                            
-                                            judul = f"{flag} 🔴 {jam} - {ev['title']} [{m3u_name}]"
-                                            live_block = list(bersih_block) 
-                                            live_block[extinf_idx] = f'{clean_attr} group-title="🔴 SEDANG TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
-                                            
-                                            keranjang_event_live[event_key][matched_cid].append({
-                                                "order": 0, "sort": ev['start'].timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
-                                            })
-                                        else:
-                                            if event_key in up_tracker: continue
-                                            up_tracker.add(event_key)
-                                            
-                                            ev_date = ev['start'].date()
-                                            hari_ini = now_wib.date()
-                                            if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
-                                            elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
-                                            elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev['start'].strftime('%d/%m')} "
-                                            else: lbl = ""
-                                            
-                                            judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} [{m3u_name}]"
-                                            up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
-                                            
-                                            if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
-                                            keranjang_event_live[event_key]["UPCOMING"] = [{
-                                                "order": 1, "sort": ev['start'].timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
-                                            }]
-                                            
-                    block = [] 
-        except Exception: continue
+                                judul = f"{flag} 🔴 {jam} - {event_title} [Live Event]"
+                                live_block = list(bersih_block) 
+                                live_block[extinf_idx] = f'{clean_attr} group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
+                                
+                                keranjang_event_live[event_key]["EVENT_VIP"].append({
+                                    "order": 0, "sort": ev_start.timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
+                                })
+                            else:
+                                if event_key in up_tracker: 
+                                    block = []
+                                    continue
+                                up_tracker.add(event_key)
+                                
+                                ev_date = ev_start.date()
+                                hari_ini = now_wib.date()
+                                if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
+                                elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
+                                elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev_start.strftime('%d/%m')} "
+                                else: lbl = ""
+                                
+                                judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
+                                up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
+                                
+                                if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
+                                keranjang_event_live[event_key]["UPCOMING"] = [{
+                                    "order": 1, "sort": ev_start.timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
+                                }]
+                                
+                            block = []
+                            continue 
 
-    print("Step 3: Membatasi Max 3 Server dan Rendering Playlist...")
+                        # ==========================================
+                        # JALUR NORMAL (SPORTS & INDONESIA COMBINED)
+                        # ==========================================
+                        if is_sports_channel(m3u_name):
+                            flag = get_flag(m3u_name)
+                            matched_cid = None
+                            
+                            for cid, ename in epg_chans.items():
+                                if is_match_akurat_v3(ename, cid, m3u_name):
+                                    matched_cid = cid
+                                    break
+                            
+                            if matched_cid and matched_cid in match_data:
+                                for ev in match_data[matched_cid]:
+                                    jam = f"{ev['start'].strftime('%H:%M')}-{ev['stop'].strftime('%H:%M')} WIB"
+                                    final_logo = ev['logo'] if ev.get('logo') else (epg_logos.get(matched_cid) if epg_logos.get(matched_cid) else orig_logo)
+                                    
+                                    event_key = generate_event_key(ev['title'], ev['start'].timestamp())
+                                    
+                                    if ev["live"]:
+                                        if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
+                                        
+                                        if matched_cid not in keranjang_event_live[event_key]:
+                                            if len(keranjang_event_live[event_key]) >= 3: continue 
+                                            keranjang_event_live[event_key][matched_cid] = []
+                                        
+                                        judul = f"{flag} 🔴 {jam} - {ev['title']} [{m3u_name}]"
+                                        live_block = list(bersih_block) 
+                                        live_block[extinf_idx] = f'{clean_attr} group-title="🔴 SEDANG TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
+                                        
+                                        keranjang_event_live[event_key][matched_cid].append({
+                                            "order": 0, "sort": ev['start'].timestamp(), "prioritas": prioritas_skor, "data": live_block + [stream_url]
+                                        })
+                                    else:
+                                        if event_key in up_tracker: continue
+                                        up_tracker.add(event_key)
+                                        
+                                        ev_date = ev['start'].date()
+                                        hari_ini = now_wib.date()
+                                        if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
+                                        elif ev_date == hari_ini + timedelta(days=2): lbl = "Lusa "
+                                        elif ev_date > hari_ini + timedelta(days=2): lbl = f"{ev['start'].strftime('%d/%m')} "
+                                        else: lbl = ""
+                                        
+                                        judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} [{m3u_name}]"
+                                        up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
+                                        
+                                        if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
+                                        keranjang_event_live[event_key]["UPCOMING"] = [{
+                                            "order": 1, "sort": ev['start'].timestamp(), "prioritas": 0, "data": [up_extinf, LINK_UPCOMING]
+                                        }]
+                                        
+                block = [] 
+
+    print("Step 4: Membatasi Max 3 Server dan Rendering Playlist...")
     hasil_m3u = []
     
     for event_key, channels in keranjang_event_live.items():
