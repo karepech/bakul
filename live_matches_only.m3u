@@ -1,4 +1,4 @@
-#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: 02:08 WIB)"
+#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: 02:18 WIB)"
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="AstroSportsPlus2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWPKQ.jpg", 🇲🇾 🔴 22:30-03:00 WIB - ATP: Indian Wells 2026: Day 11 [ASTRO PREMIER LEAGUE 2]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -48,8 +48,24 @@ http://mytv-extra.com:80/V713SWTY/D8T8KGTL/34436
 ##KODIPROP:inputstream.adaptive.license_key=ead0335d60401225727a6d531e9c2710:1ee3b252227c5c2ec9378c833d2e14ff
 #https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5057/default_ott.mpd
 http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="AstroSportsUHD" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJSE.jpg", 🇲🇾 ⏳ 02:15-04:25 WIB - PL: Liverpool vs Aston Villa [ASTRO PREMIER LEAGUE]
-https://bwifi.my.id/5menit.mp4?match=plliverpoolastonvilla_1773627300.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="AstroSportsUHD" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJSE.jpg", 🇲🇾 🔴 02:15-04:25 WIB - PL: Liverpool vs Aston Villa [ASTRO PREMIER LEAGUE]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"TxVBP35HZ7UMSOGbf5ovzA", "kid":"90mrcfInmZv7CY9zNZqsEA" } ], "type":"temporary" }
+##https://ast.livecricketsl.live/proxy/sg.php/http://linearjitp-playback.astro.com.my/dash-wv/linear/601/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13302
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="AstroSportsUHD" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJSE.jpg", 🇲🇾 🔴 02:15-04:25 WIB - PL: Liverpool vs Aston Villa [ASTRO GRANDSTAND]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=5be66a6f88efee3d6e30f72a9c58e310:168f3fadfc730ba3dfc932f7c430e27d
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2701/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13301
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="AstroSportsUHD" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KTJSE.jpg", 🇲🇾 🔴 02:15-04:25 WIB - PL: Liverpool vs Aston Villa [ASTRO FOOTBALL]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
+http://208.87.242.55/livehttpplay?channel_id=13300
 #EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:30-04:30 WIB - Serie a Women 25/26 [W-SPORTS]
 https://bwifi.my.id/5menit.mp4?match=serieawomen25_1773628200.0
 #EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 02:52-03:22 WIB - Classics: 2007 - Ireland V France [Sky Sport Premier League FHD]
