@@ -73,6 +73,7 @@ def normalisasi_alias(name):
 
 def get_flag(m3u_name):
     n = m3u_name.lower()
+    if any(x in n for x in [' us', 'usa', 'america']): return "🇺🇸" # TAMBAHAN BENDERA USA
     if any(x in n for x in [' sg', 'starhub', 'singapore']): return "🇸🇬"
     if any(x in n for x in [' my', 'astro', 'malaysia']): return "🇲🇾"
     if any(x in n for x in [' en', 'english', ' uk', 'sky']): return "🇬🇧"
@@ -81,12 +82,14 @@ def get_flag(m3u_name):
     if any(x in n for x in [' au', 'optus', 'aus']): return "🇦🇺"
     if any(x in n for x in [' ae', 'arab', 'mena', 'ssc', 'alkass', 'abu dhabi']): return "🇸🇦"
     if any(x in n for x in [' za', 'supersport', 'africa']): return "🇿🇦"
-    if 'bein' in n and not any(x in n for x in [' en', ' hk', ' th', ' ph', ' my', ' sg', ' au', ' arab']): return "🇮🇩"
+    # beIN tanpa region tag otomatis diberi bendera Indonesia
+    if 'bein' in n and not any(x in n for x in [' us', 'usa', 'america', ' en', ' hk', ' th', ' ph', ' my', ' sg', ' au', ' arab']): return "🇮🇩"
     if any(x in n for x in [' id', 'indo', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     return "📺" 
 
 def get_region_ktp(name, epg_id=""):
     n = name.lower() + " " + epg_id.lower()
+    if any(x in n for x in ['.us', ' us', 'usa', 'america']): return "US" # TAMBAHAN KTP USA KHUSUS BEIN USA
     if any(x in n for x in ['.au', ' au', 'aus', 'optus']): return "AU"
     if any(x in n for x in ['.uk', ' uk', 'eng', 'english', 'sky']): return "UK"
     if any(x in n for x in ['.ae', ' ar', 'arab', 'mena', 'premium', 'ssc']): return "ARAB"
@@ -107,15 +110,10 @@ def is_sports_channel(name):
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in n for x in lokal): return True
 
-    if 'astro' in n:
-        haram = ['awani','ria','oasis','prima','rania','citra','hijrah','ceria','warna','shiq','vellithirai','vinmeen','box office', 'a-list']
-        if any(x in n for x in haram): return False
-        return True 
-
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
-        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai',
+        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro',
         'premier league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'nba', 'nfl', 'badminton', 'bwf'
     ]
     return any(x in n for x in sports_keywords)
@@ -126,16 +124,6 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     c = normalisasi_alias(ch_name)
     
     if REGEX_CYRILLIC_CJK.search(t): return False
-
-    if 'astro' in c:
-        kata_badminton = [
-            'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 
-            'swiss open', 'malaysia open', 'indonesia open', 'indonesia master', 
-            'china open', 'japan open', 'korea open', 'french open', 'denmark open', 
-            'thailand', 'singapore open', 'taipei', 'macau', 'hong kong', 
-            'world tour', 'championship', 'swiss'
-        ]
-        if not any(k in t for k in kata_badminton): return False
 
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in c for x in lokal) and 'sport' not in c:
@@ -203,12 +191,6 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     brands = ['bein', 'spotv', 'astro', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']
     for b in brands:
         if (b in e) != (b in m): return False
-
-    if 'astro' in e and 'astro' in m:
-        subs = ['arena bola 2', 'arena bola', 'arena', 'cricket', 'badminton', 'football', 'golf', 'supersport 1', 'supersport 2', 'supersport 3', 'supersport 4', 'supersport', 'grandstand', 'premier']
-        e_sub = next((s for s in subs if s in e), None)
-        m_sub = next((s for s in subs if s in m), None)
-        if e_sub and m_sub and e_sub != m_sub: return False
 
     e_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', e).strip()
     m_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', m).strip()
@@ -350,9 +332,7 @@ def main():
             elif len(ln_clean) > 5:
                 stream_url = ln_clean
                 
-                # ==========================================
                 # CEK GLOBAL TRACKER (ANTI DOBEL LINK M3U)
-                # ==========================================
                 if stream_url in GLOBAL_SEEN_STREAM_URLS:
                     block = []
                     continue
@@ -377,9 +357,7 @@ def main():
 
                         prioritas_skor = get_priority(stream_url, m3u_name)
 
-                        # ==========================================
                         # JALUR TOL KHUSUS EVENT_COMBINED
-                        # ==========================================
                         event_match = REGEX_EVENT.search(m3u_name)
                         if is_event_link and event_match:
                             hh, mm = int(event_match.group(1)), int(event_match.group(2))
@@ -446,9 +424,7 @@ def main():
                             block = []
                             continue 
 
-                        # ==========================================
                         # JALUR NORMAL (SPORTS & INDONESIA COMBINED)
-                        # ==========================================
                         if is_sports_channel(m3u_name):
                             flag = get_flag(m3u_name)
                             matched_cid = None
