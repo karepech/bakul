@@ -13,8 +13,9 @@ EPG_URLS = [
 ]
 
 M3U_URLS = [
-    "https://deccotech.online/tv/tvstream.html",
+    "https://bit.ly/KPL203",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
+    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/indonesia_combined.m3u"
 ]
 
@@ -206,10 +207,6 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     e_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', e).strip()
     m_clean = re.sub(r'(liga 1|laliga 1|formula 1|f 1|f1|liga 2)', '', m).strip()
     
-    # PENAMBAHAN ANGKA OTOMATIS (SUNTIKAN)
-    if re.search(r'\b(spotv|bein|arena)\b', e_clean) and not REGEX_NUMBERS.search(e_clean): e_clean += ' 1'
-    if re.search(r'\b(spotv|bein|arena)\b', m_clean) and not REGEX_NUMBERS.search(m_clean): m_clean += ' 1'
-
     e_k = REGEX_KUALITAS.sub('', e_clean).strip()
     m_k = REGEX_KUALITAS.sub('', m_clean).strip()
 
@@ -222,7 +219,6 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     if not any(k in e_k for k in pengecualian_angka):
         if en != mn: return False
 
-    # KTP NEGARA KETAT (BEIN & SPOTV)
     ktp_e = get_region_ktp(epg_name, epg_id)
     ktp_m = get_region_ktp(m3u_name)
     
@@ -328,7 +324,7 @@ def main():
             print(f"Error parsing XML from {url}: {e}")
             continue
 
-    print("Step 3: Menjahit M3U (Tol Event & Filter 3x3) dengan Global Tracker...")
+    print("Step 3: Menjahit M3U (Jalur Tol Otomatis Anti-Spam) dengan Global Tracker...")
     keranjang_event_live = {} 
     up_tracker = set()
     
@@ -336,7 +332,6 @@ def main():
         content = m3u_contents.get(url)
         if not content: continue
         
-        is_event_link = "event_combined.m3u" in url
         lines = content.splitlines()
         block = []
         
@@ -352,7 +347,6 @@ def main():
             elif len(ln_clean) > 5:
                 stream_url = ln_clean
                 
-                # CEK GLOBAL TRACKER (ANTI DOBEL LINK M3U)
                 if stream_url in GLOBAL_SEEN_STREAM_URLS:
                     block = []
                     continue
@@ -377,12 +371,13 @@ def main():
 
                         prioritas_skor = get_priority(stream_url, m3u_name)
 
-                        # JALUR TOL KHUSUS EVENT_COMBINED
+                        # ==========================================
+                        # ATURAN BARU: JALUR TOL UNIVERSAL (Dari Link Mana Saja)
+                        # ==========================================
                         event_match = REGEX_EVENT.search(m3u_name)
-                        if is_event_link and event_match:
+                        if event_match:
                             hh, mm = int(event_match.group(1)), int(event_match.group(2))
                             
-                            # BERSIHKAN NAMA DARI #1, #2, dst AGAR TIDAK JADI SPAM
                             event_title_kotor = bersihkan_judul_event(event_match.group(3))
                             event_title = re.sub(r'(?i)\#\s*\d+', '', event_title_kotor)
                             event_title = re.sub(r'\[.*?\]|\(.*?\)', '', event_title)
@@ -441,7 +436,6 @@ def main():
                                 judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
                                 up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
                                 
-                                # TRICK OTT PLAYER: Buat link seolah-olah unik
                                 unique_link_up = f"{LINK_UPCOMING}?match={event_key}"
                                 
                                 if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
@@ -497,7 +491,6 @@ def main():
                                         judul = f"{flag} ⏳ {lbl}{jam} - {ev['title']} [{m3u_name}]"
                                         up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="{matched_cid}" tvg-logo="{final_logo}", {judul}'
                                         
-                                        # TRICK OTT PLAYER: Buat link seolah-olah unik
                                         unique_link_up = f"{LINK_UPCOMING}?match={event_key}"
                                         
                                         if event_key not in keranjang_event_live: keranjang_event_live[event_key] = {}
@@ -518,7 +511,6 @@ def main():
 
     hasil_m3u.sort(key=lambda x: (x["order"], float(x["sort"])))
     
-    # EPG GLOBAL DIHILANGKAN DARI HEADER AGAR APLIKASI TV LEBIH RINGAN
     m3u_header = f'#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: {now_wib.strftime("%H:%M WIB")})"\n'
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -528,6 +520,6 @@ def main():
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal (Termasuk Tol Universal) Siap Meluncur.")
 
 if __name__ == "__main__": main()
