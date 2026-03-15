@@ -15,7 +15,7 @@ EPG_URLS = [
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
 ]
 
-# File indonesia_combined dihapus agar super ringan!
+# File indonesia_combined dihapus sesuai perintah agar super ringan!
 M3U_URLS = [
     "https://bit.ly/KPL203",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
@@ -157,13 +157,8 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     
     if REGEX_CYRILLIC_CJK.search(t): return False
 
-    if 'astro' in c:
-        kata_badminton = ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 'swiss open', 'malaysia open', 'indonesia open', 'indonesia master', 'china open', 'japan open', 'korea open', 'french open', 'denmark open', 'thailand', 'singapore open', 'taipei', 'macau', 'hong kong', 'world tour', 'championship', 'swiss']
-        if not any(k in t for k in kata_badminton): return False
-
+    # ATURAN DURASI 85 MENIT TELAH DIMUSNAHKAN! Hanya filter short highlights (< 30 mnt).
     if durasi_menit < 30: return False
-    bola_keywords = ['liga', 'premier', 'champions', 'fa cup', 'serie a', 'bundesliga', 'ligue 1', 'bein', 'fc', 'united', 'vs', 'v']
-    if any(k in c or k in t for k in bola_keywords) and durasi_menit < 85: return False
 
     haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
     if any(s in t for s in haram_simbol): return False
@@ -276,7 +271,7 @@ def main():
     match_data = {}
     epg_chans, epg_logos = {}, {}
     
-    # ATURAN BARU: BATAS AKHIR HARI BESOK JAM 23:59:59 WIB
+    # ATURAN BARU: BATAS AKHIR HARI BESOK JAM 23:59:59 WIB (Super Ringan)
     besok = now_wib + timedelta(days=1)
     limit_date = besok.replace(hour=23, minute=59, second=59)
 
@@ -375,7 +370,7 @@ def main():
                     
                     # FILTER SUPER CEPAT KHUSUS KPL203 (Abaikan VOD & Film!)
                     if "KPL203" in url:
-                        if not re.search(r'(?i)group-title=["\'][^"\']*event\s*\(', raw_extinf):
+                        if not re.search(r'(?i)group-title=["\'][^"\']*event', raw_extinf):
                             block = []
                             continue
 
@@ -452,7 +447,7 @@ def main():
                                 ev_date = ev_start.date()
                                 hari_ini = now_wib.date()
                                 if ev_date == hari_ini + timedelta(days=1): lbl = "Besok "
-                                else: lbl = "" # Pasti hari ini kalau lolos limit_date
+                                else: lbl = "" 
                                 
                                 judul = f"{flag} ⏳ {lbl}{jam} - {event_title} [Live Event]"
                                 up_extinf = f'{clean_attr} group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
@@ -544,6 +539,6 @@ def main():
         for item in hasil_m3u: 
             f.write("\n".join(item["data"]) + "\n")
 
-    print(f"Selesai! {len(hasil_m3u)} Jadwal (Super Cepat) Siap Meluncur.")
+    print(f"Selesai! {len(hasil_m3u)} Jadwal (Fix beIN & Bebas Astro) Siap Meluncur.")
 
 if __name__ == "__main__": main()
