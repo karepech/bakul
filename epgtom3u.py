@@ -50,7 +50,11 @@ def bersihkan_judul_event(title):
     return re.sub(r'^[\-\:\,\|]\s*', '', bersih)
 
 def generate_event_key(title, timestamp):
-    title_clean = re.sub(r'\[.*?\]|\(.*?\)', '', title).strip()
+    # PEMBERSIHAN AGRESIF ANTI-SPAM (Hapus #1, #2, dll)
+    title_clean = re.sub(r'(?i)\#\s*\d+', '', title)
+    title_clean = re.sub(r'\[.*?\]|\(.*?\)', '', title_clean)
+    title_clean = re.sub(r'\d+\]?$', '', title_clean.strip())
+    
     judul_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', title_clean.lower()))
     return f"{judul_norm}_{timestamp}"
 
@@ -112,8 +116,7 @@ def is_sports_channel(name):
     sports_keywords = [
         'bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs',
         'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 
-        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 
-        'astro sport', 'astro supersport', 'astro arena', # <-- NAMA ASTRO SPORTS YANG SPESIFIK
+        'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro',
         'premier league', 'la liga', 'serie a', 'bundesliga', 'ligue 1', 'nba', 'nfl', 'badminton', 'bwf'
     ]
     return any(x in n for x in sports_keywords)
@@ -124,6 +127,19 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     c = normalisasi_alias(ch_name)
     
     if REGEX_CYRILLIC_CJK.search(t): return False
+
+    if 'astro' in c:
+        haram = ['awani','ria','oasis','prima','rania','citra','hijrah','ceria','warna','shiq','vellithirai','vinmeen','box office', 'a-list']
+        if any(x in c for x in haram): return False
+        
+        kata_badminton = [
+            'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'yonex', 'all england', 
+            'swiss open', 'malaysia open', 'indonesia open', 'indonesia master', 
+            'china open', 'japan open', 'korea open', 'french open', 'denmark open', 
+            'thailand', 'singapore open', 'taipei', 'macau', 'hong kong', 
+            'world tour', 'championship', 'swiss'
+        ]
+        if not any(k in t for k in kata_badminton): return False
 
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in c for x in lokal) and 'sport' not in c:
@@ -188,7 +204,7 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     e = normalisasi_alias(epg_name).strip()
     m = normalisasi_alias(m3u_name).strip()
 
-    brands = ['bein', 'spotv', 'astro sport', 'astro supersport', 'astro arena', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']
+    brands = ['bein', 'spotv', 'astro', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']
     for b in brands:
         if (b in e) != (b in m): return False
 
@@ -367,7 +383,12 @@ def main():
                         event_match = REGEX_EVENT.search(m3u_name)
                         if is_event_link and event_match:
                             hh, mm = int(event_match.group(1)), int(event_match.group(2))
-                            event_title = bersihkan_judul_event(event_match.group(3))
+                            
+                            # BERSIHKAN NAMA DARI #1, #2, dst AGAR TIDAK JADI SPAM
+                            event_title_kotor = bersihkan_judul_event(event_match.group(3))
+                            event_title = re.sub(r'(?i)\#\s*\d+', '', event_title_kotor)
+                            event_title = re.sub(r'\[.*?\]|\(.*?\)', '', event_title)
+                            event_title = re.sub(r'\d+\]?$', '', event_title.strip()).strip()
                             
                             if not is_allowed_sport(event_title, "event channel", 100):
                                 block = []
