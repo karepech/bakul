@@ -15,7 +15,6 @@ EPG_URLS = [
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
 ]
 
-# File indonesia_combined resmi dihapus agar STB tidak berat
 M3U_URLS = [
     "https://bit.ly/KPL203",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
@@ -53,9 +52,9 @@ def load_mapping():
         MAPPING_DICT = dict(sorted(MAPPING_DICT.items(), key=lambda x: len(x[0]), reverse=True))
         for alias, official in MAPPING_DICT.items():
             COMPILED_MAPPING.append((re.compile(r'\b' + re.escape(alias) + r'\b'), official))
-        print(f"  > Berhasil menghafal {len(MAPPING_DICT)} istilah!")
+        print(f"  > Berhasil memuat mapping.")
     except Exception as e:
-        print(f"  > Gagal memuat map.txt: {e}")
+        print(f"  > Peringatan: map.txt gagal dimuat ({e}), lanjut tanpa mapping.")
 
 @lru_cache(maxsize=None)
 def terjemahkan_nama(teks):
@@ -84,10 +83,10 @@ def generate_event_key(title, timestamp):
     judul_norm = REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', title_clean.lower()))
     return f"{judul_norm}_{timestamp}"
 
-# SKOR VVIP: Mengatur agar beIN & Lokal naik ke urutan teratas
 @lru_cache(maxsize=5000)
 def get_vip_score(ch_name):
     n = ch_name.lower()
+    # BEIN DAN LOKAL JADI KASTA 0 (PALING ATAS)
     vip_keywords = ['bein', 'spotv', 'sportstars', 'soccer channel', 'champions tv', 'rcti sports', 'inews sports', 'mnc sports']
     if any(k in n for k in vip_keywords):
         return 0
@@ -108,6 +107,21 @@ def get_flag(m3u_name):
     if any(x in n for x in [' id', 'indo', 'indonesia', 'vidio', 'rcti', 'sctv', 'mnc', 'tvri', 'antv', 'indosiar', 'rtv', 'inews']): return "🇮🇩"
     if 'bein' in n and not any(x in n for x in [' us', ' usa', ' sg', ' my', ' uk', ' th', ' hk', ' au', ' ae', ' za', ' ph']): return "🇮🇩"
     return "📺" 
+
+def get_region_ktp(name, epg_id=""):
+    n = (name + " " + epg_id).lower()
+    if any(x in n for x in ['.us', ' us', 'usa', 'america']): return "US" 
+    if any(x in n for x in ['.au', ' au', 'aus', 'optus']): return "AU"
+    if any(x in n for x in ['.uk', ' uk', 'eng', 'english', 'sky']): return "UK"
+    if any(x in n for x in ['.ae', ' ar', 'arab', 'mena', 'premium', 'ssc']): return "ARAB"
+    if any(x in n for x in ['.my', ' my', 'astro', 'malaysia']): return "MY"
+    if any(x in n for x in ['.th', ' th', 'thai', 'true']): return "TH"
+    if any(x in n for x in ['.sg', ' sg', 'singapore', 'hub']): return "SG"
+    if any(x in n for x in ['.za', ' za', 'supersport']): return "ZA"
+    if any(x in n for x in ['.hk', ' hk', 'hong']): return "HK"
+    if any(x in n for x in ['.ph', ' ph', 'phil']): return "PH"
+    if any(x in n for x in ['.id', ' id', 'indo', 'indonesia']): return "ID"
+    return "UNKNOWN"
 
 # ==========================================
 # IV. FILTERING & ATURAN VVIP
@@ -156,18 +170,28 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
         if en != mn: return False
     return True
 
+def fetch_url_content(url, is_epg=False):
+    try:
+        r = requests.get(url, timeout=60).content
+        content = (gzip.decompress(r) if r[:2] == b'\x1f\x8b' else r.decode('utf-8', errors='ignore'))
+        return url, content, is_epg
+    except: return url, None, is_epg
+
+def parse_time(ts):
+    try: return datetime.strptime(ts[:14], "%Y%m%d%H%M%S") + timedelta(hours=7)
+    except: return None
+
 # ==========================================
 # VI. PROSES EKSEKUSI UTAMA
 # ==========================================
 def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     match_data, epg_chans, epg_logos = {}, {}, {}
-    besok = now_wib + timedelta(days=1)
-    limit_date = besok.replace(hour=23, minute=59, second=59)
+    limit_date = (now_wib + timedelta(days=1)).replace(hour=23, minute=59, second=59)
 
     load_mapping()
     
-    print("Step 1: Sedot EPG & M3U...")
+    print("Step 1: Sedot data...")
     epg_contents, m3u_contents = {}, {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(fetch_url_content, u, True) for u in EPG_URLS]
@@ -200,7 +224,7 @@ def main():
                     match_data[cid].append({"title": re.sub(r'\s+', ' ', REGEX_LIVE.sub('', title)).strip(), "start": st, "stop": sp, "live": (st - timedelta(minutes=5)) <= now_wib < sp, "logo": pg.find("icon").get("src") if pg.find("icon") is not None else ""})
         except: continue
 
-    print("Step 3: Jahit M3U (Ultra-Light STB)...")
+    print("Step 3: Menjahit M3U...")
     keranjang_event_live, up_tracker = {}, set()
     for url, content in m3u_contents.items():
         lines = content.splitlines()
@@ -214,9 +238,11 @@ def main():
             else:
                 if not block: continue
                 raw_extinf = block[0]
-                if "KPL203" in url and not re.search(r'(?i)group-title=["\'][^"\']*event', raw_extinf): 
+                # FILTER RINGAN KPL203
+                if "KPL203" in url and not re.search(r'(?i)group-title=["\'][^"\']*event', raw_extinf):
                     block = []
                     continue
+                
                 if "," in raw_extinf:
                     m3u_name = raw_extinf.split(",", 1)[1].strip()
                     logo_match = re.search(r'(?i)tvg-logo=["\']([^"\']*)["\']', raw_extinf)
@@ -253,7 +279,9 @@ def main():
                                     if ev["live"]:
                                         if key not in keranjang_event_live: keranjang_event_live[key] = {}
                                         if cid not in keranjang_event_live[key]: keranjang_event_live[key][cid] = []
-                                        keranjang_event_live[key][cid].append({"order": 0, "vip_score": skor_vip, "sort": ev['start'].timestamp(), "prioritas": get_priority(ln, m3u_name), "data": [inf, ln]})
+                                        # PRIORITAS SERVER: semar, lajojo, dll
+                                        prio = 0 if any(p in (ln + m3u_name).lower() for p in SERVER_PRIORITAS) else 1
+                                        keranjang_event_live[key][cid].append({"order": 0, "vip_score": skor_vip, "sort": ev['start'].timestamp(), "prioritas": prio, "data": [inf, ln]})
                                     elif key not in up_tracker:
                                         up_tracker.add(key)
                                         if key not in keranjang_event_live: keranjang_event_live[key] = {"UPCOMING": []}
@@ -262,25 +290,18 @@ def main():
 
     print("Step 4: Rendering...")
     hasil = []
-    for chan_dict in keranjang_event_live.values():
-        for cid, links in chan_dict.items():
+    for match_groups in keranjang_event_live.values():
+        for cid, links in match_groups.items():
             links.sort(key=lambda x: x["prioritas"])
-            hasil.extend(links[:3])
+            hasil.extend(links[:3]) # Ambil max 3 server per channel
+    # URUTAN: SEDANG TAYANG DULU -> JAM -> VIP SCORE (BEIN/LOKAL DI ATAS)
     hasil.sort(key=lambda x: (x["order"], float(x["sort"]), x["vip_score"]))
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(f'#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: {now_wib.strftime("%H:%M WIB")})"\n')
         if not hasil: f.write(f'#EXTINF:-1 group-title="ℹ️ INFO", BELUM ADA PERTANDINGAN\n{LINK_STANDBY}\n')
-        for it in hasil: f.write("\n".join(it["data"]) + "\n")
-
-def fetch_url_content(url, is_epg=False):
-    try:
-        r = requests.get(url, timeout=60).content
-        return url, (gzip.decompress(r) if r[:2] == b'\x1f\x8b' else r.decode('utf-8', errors='ignore')), is_epg
-    except: return url, None, is_epg
-
-def parse_time(ts):
-    try: return datetime.strptime(ts[:14], "%Y%m%d%H%M%S") + timedelta(hours=7)
-    except: return None
+        else:
+            for it in hasil: f.write("\n".join(it["data"]) + "\n")
+    print("Selesai!")
 
 if __name__ == "__main__": main()
