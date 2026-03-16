@@ -1,4 +1,4 @@
-#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: 00:31 WIB)"
+#EXTM3U name="🔴 BAKUL WIFI SPORTS (Upd: 01:37 WIB)"
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 22:02-01:42 WIB - Under-20 Six Nations: Wales U20 V Italy U20 [Sky Sport Premier League FHD]
 https://7pal.short.gy/skyspt8nz
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 22:02-01:42 WIB - Under-20 Six Nations: Wales U20 V Italy U20 [Sky Sports PremierLeague FHD]
@@ -23,18 +23,6 @@ http://208.87.242.55/livehttpplay?channel_id=13301
 ##KODIPROP:inputstream.adaptive.license_key=79f4028730acca9ab8b00f26158ddb10:91febe843c08c7cc523efd827292e40e
 ##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/2506/default_ott.mpd
 http://208.87.242.55/livehttpplay?channel_id=13300
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 22:30-01:00 WIB - Coppa Italia Femminile 25/26 [W-SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 22:30-01:00 WIB - Coppa Italia Femminile 25/26 [W-SPORT]
-##KODIPROP:inputstream.adaptive.license_type=clearkey
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-##KODIPROP:inputstream.adaptive.license_key=010cbb9cf1a01ead38070730d38bc710:9cd5c0d1e54c22e035d88dd3c1dfc84c
-##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"nNXA0eVMIuA12I3Twd/ITA", "kid":"AQy7nPGgHq04Bwcw04vHEA" } ], "type":"temporary" }
-##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5060/default_ott.mpd
-http://mytv-extra.com:80/V713SWTY/D8T8KGTL/2145
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="AstroSportsPlus2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/KWPKK.jpg", 🇲🇾 🔴 23:30-10:20 WIB - ATP: Indian Wells 2026: Day 5 [ASTRO PREMIER LEAGUE 2]
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -62,10 +50,24 @@ http://mytv-extra.com:80/V713SWTY/D8T8KGTL/33329
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=fb06bb8266fb4a998e7c4e7e90461556:52242587d8106c4b3ed596c7a56b4e28
 https://load.perfecttv.net/rwt.mpd?username=vip_3klp0es8&password=wg3piwEs&channel=bola1fhd|user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 01:00-02:00 WIB - Snow League 25/26 [W-SPORTS]
-https://bwifi.my.id/5menit.mp4?match=snowleague25_1773709200.0
-#EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 01:42-03:32 WIB - Under-20 Six Nations: France U20 V England U20 [Sky Sport Premier League FHD]
-https://bwifi.my.id/5menit.mp4?match=under20sixnationsfranceu20englandu_1773711720.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 01:00-02:00 WIB - Snow League 25/26 [W-SPORTS]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
+https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 01:00-02:00 WIB - Snow League 25/26 [W-SPORT]
+##KODIPROP:inputstream.adaptive.license_type=clearkey
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+##KODIPROP:inputstream.adaptive.license_key=010cbb9cf1a01ead38070730d38bc710:9cd5c0d1e54c22e035d88dd3c1dfc84c
+##KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"nNXA0eVMIuA12I3Twd/ITA", "kid":"AQy7nPGgHq04Bwcw04vHEA" } ], "type":"temporary" }
+##https://ast.livecricketsl.live/proxy/sg.php/https://linearjitp-playback.astro.com.my/dash-wv/linear/5060/default_ott.mpd
+http://mytv-extra.com:80/V713SWTY/D8T8KGTL/2145
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:42-03:32 WIB - Under-20 Six Nations: France U20 V England U20 [Sky Sport Premier League FHD]
+https://7pal.short.gy/skyspt8nz
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:42-03:32 WIB - Under-20 Six Nations: France U20 V England U20 [Sky Sports PremierLeague FHD]
+https://7pal.short.gy/ssportspl
+#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:42-03:32 WIB - Under-20 Six Nations: France U20 V England U20 [SKY SPORTS EPL]
+http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/9334/index.m3u8
 #EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:00-05:00 WIB - Barcelona Marathon 26 [W-SPORTS]
 https://bwifi.my.id/5menit.mp4?match=barcelonamarathon_1773712800.0
 #EXTINF:-1 group-title="📅 AKAN TAYANG" tvg-id="" tvg-logo="https://g-sports.id/wp-content/uploads/2025/08/Liga-Italia.jpg", 📺 ⏳ 02:45-04:45 WIB - Cremonese vs Fiorentina [Live Event]
