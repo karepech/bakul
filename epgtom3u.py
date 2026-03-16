@@ -15,8 +15,8 @@ EPG_URLS = [
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
 ]
 
-# Sengaja membuang indonesia_combined agar proses STB & Mesin sangat enteng
 M3U_URLS = [
+    "https://bit.ly/KPL203",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 ]
@@ -85,7 +85,6 @@ def generate_event_key(title, timestamp):
 
 @lru_cache(maxsize=5000)
 def get_vip_score(ch_name):
-    # Skor VVIP 0 (Tertinggi) untuk Channel Premium
     n = ch_name.lower()
     if any(k in n for k in ['bein', 'spotv', 'sportstars', 'soccer channel', 'champions tv', 'rcti sports', 'inews sports', 'mnc sports']): return 0
     return 1
@@ -117,7 +116,7 @@ def is_sports_channel(name):
     n = terjemahkan_nama(name)
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in n for x in lokal) and 'soccer channel' not in n: return 'sport' in n
-    sports_kws = ['bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs', 'sky', 'tnt', 'optus', 'hub', 'true premier', 'supersport', 'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro']
+    sports_kws = ['bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'arena bola', 'golf', 'tennis', 'motor', 'fight', 'wwe', 'mola', 'vidio', 'cbs', 'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'ss premier', 'ss action', 'ss variety', 'ss grandstand', 'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai', 'astro']
     return any(x in n for x in sports_kws)
 
 def is_allowed_sport(title, ch_name, durasi_menit):
@@ -173,24 +172,27 @@ def parse_time(ts):
             dt = datetime.strptime(ts[:20].strip(), "%Y%m%d%H%M%S %z")
             return dt.astimezone(timezone(timedelta(hours=7))).replace(tzinfo=None)
         return datetime.strptime(ts[:14], "%Y%m%d%H%M%S") + timedelta(hours=7)
-    except: return None
+    except Exception: return None
 
 def fetch_url_content(url, is_epg=False):
     try:
         ses = requests.Session()
         ses.headers.update({'User-Agent': 'Mozilla/5.0'})
         r = ses.get(url, timeout=60).content
-        return url, (gzip.decompress(r) if r[:2] == b'\x1f\x8b' else r.decode('utf-8', errors='ignore')), is_epg
-    except: return url, None, is_epg
+        if is_epg:
+            return url, (gzip.decompress(r) if r[:2] == b'\x1f\x8b' else r), True
+        return url, r.decode('utf-8', errors='ignore'), False
+    except Exception as e:
+        print(f"Gagal mengunduh {url}: {e}")
+        return url, None, is_epg
 
 # ==========================================
-# VI. PROSES EKSEKUSI UTAMA (AUTO-CLEAN & HEMAT DEWA)
+# VI. PROSES EKSEKUSI UTAMA (AUTO-CLEAN & PENYELAMAT TOKEN)
 # ==========================================
 def main():
     now_wib = datetime.utcnow() + timedelta(hours=7)
     match_data, epg_chans, epg_logos = {}, {}, {}
     
-    # LOGIKA HEMAT DEWA: BATAS MUTLAK JAM 03:00 PAGI (DINI HARI)
     if now_wib.hour < 3:
         limit_date = now_wib.replace(hour=3, minute=0, second=0, microsecond=0)
     else:
@@ -223,7 +225,6 @@ def main():
                 if cid not in epg_chans: continue 
                 st, sp = parse_time(pg.get("start")), parse_time(pg.get("stop"))
                 
-                # AUTO-CLEAN: JIKA ACARA SUDAH SELESAI (sp <= now_wib), LANGSUNG DIBUANG!
                 if not st or not sp or sp <= now_wib or st >= limit_date: continue 
                 
                 durasi = (sp - st).total_seconds() / 60
@@ -247,9 +248,12 @@ def main():
             else:
                 if not block: continue
                 raw_extinf = block[0]
-                stream_url = ln # Menyimpan link stream dengan benar
+                stream_url = ln 
                 
-                # Filter Cepat KPL203 (Buang VOD & Film seketika)
+                # FITUR PENYELAMAT TOKEN & HEADER (#EXTVLCOPT, #EXTHTTP, dll)
+                # Menyaring tag ekstra di luar EXTINF, membuang EXTGRP karena kita punya grup sendiri
+                extra_tags = [t for t in block[1:] if not t.upper().startswith("#EXTGRP")]
+                
                 if "KPL203" in url and not re.search(r'(?i)group-title=["\'][^"\']*event', raw_extinf): 
                     block = []
                     continue
@@ -266,16 +270,13 @@ def main():
                     skor_vip = get_vip_score(m3u_name)
                     
                     ev_m = REGEX_EVENT.search(m3u_name)
-                    # 1. JALUR JAM TAYANG (PRIORITAS 0)
                     if ev_m:
                         hh, mm = int(ev_m.group(1)), int(ev_m.group(2))
                         ev_title = re.sub(r'(?i)\#\s*\d+|\[.*?\]|\(.*?\)', '', ev_m.group(3)).strip()
                         ev_start = now_wib.replace(hour=hh, minute=mm, second=0, microsecond=0)
                         if ev_start < now_wib - timedelta(hours=4): ev_start += timedelta(days=1)
-                        ev_stop = ev_start + timedelta(hours=2) # Asumsi durasi event 2 jam
+                        ev_stop = ev_start + timedelta(hours=2) 
                         
-                        # AUTO-CLEAN & LIMIT WAKTU 
-                        # Buang jika pertandingan sudah selesai (ev_stop <= now) ATAU melewati batas jam 3 pagi
                         if ev_stop > now_wib and ev_start < limit_date:
                             is_live = (ev_start - timedelta(minutes=5)) <= now_wib < ev_stop
                             key = generate_event_key(ev_title, ev_start.timestamp())
@@ -286,13 +287,14 @@ def main():
                             if is_live:
                                 judul = f"{get_flag(ev_title)} 🔴 {ev_start.strftime('%H:%M')} - {ev_title}"
                                 inf = f'#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
-                                keranjang_match[key]["links"].append({"prio": 0, "data": [inf, stream_url]})
+                                # Menyisipkan Token & Header asli!
+                                keranjang_match[key]["links"].append({"prio": 0, "data": [inf] + extra_tags + [stream_url]})
                             else:
                                 judul = f"{get_flag(ev_title)} ⏳ {ev_start.strftime('%H:%M')} - {ev_title}"
                                 inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{orig_logo}", {judul}'
+                                # Video upcoming milik kita tidak butuh token provider
                                 keranjang_match[key]["links"].append({"prio": 0, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                                 
-                    # 2. JALUR EPG (PRIORITAS 1)
                     elif is_sports_channel(m3u_name):
                         for cid, ename in epg_chans.items():
                             if is_match_akurat_v3(ename, cid, m3u_name) and cid in match_data:
@@ -307,10 +309,12 @@ def main():
                                         m_disp = re.sub(r'[\[\]\(\)]', '', m3u_name).strip()
                                         judul = f"{get_flag(m3u_name)} 🔴 {ev['start'].strftime('%H:%M')} - {ev['title']} [{m_disp}]"
                                         inf = f'#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="{cid}" tvg-logo="{final_logo}", {judul}'
-                                        keranjang_match[key]["links"].append({"prio": 1, "data": [inf, stream_url]})
+                                        # Menyisipkan Token & Header asli!
+                                        keranjang_match[key]["links"].append({"prio": 1, "data": [inf] + extra_tags + [stream_url]})
                                     else:
                                         judul_pendek = f"{get_flag(m3u_name)} ⏳ {ev['start'].strftime('%H:%M')} - {ev['title']}"
                                         inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{final_logo}", {judul_pendek}'
+                                        # Video upcoming milik kita tidak butuh token provider
                                         keranjang_match[key]["links"].append({"prio": 1, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                 block = []
 
@@ -319,11 +323,9 @@ def main():
     
     for key, match in keranjang_match.items():
         links = match["links"]
-        # Filter link kembar
-        unique_links = { l["data"][1]: l for l in links }.values()
+        unique_links = { l["data"][-1]: l for l in links }.values() # Filter berdasar link URL terakhir
         sorted_links = sorted(unique_links, key=lambda x: x["prio"])
         
-        # ATURAN DIET EKSTREM: Max 2 Link untuk Live, 1 Link untuk Jadwal Menunggu
         max_take = 2 if match["is_live"] else 1
         
         for l in sorted_links[:max_take]:
@@ -334,7 +336,6 @@ def main():
                 "data": l["data"]
             })
 
-    # PENGURUTAN LAYAR (TiviMate): 1. SEDANG TAYANG -> 2. JAM KICK OFF -> 3. KASTA BEIN/LOKAL
     hasil_render.sort(key=lambda x: (x["order"], float(x["sort"]), x["vip"]))
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -342,8 +343,9 @@ def main():
         if not hasil_render: 
             f.write(f'#EXTINF:-1 group-title="ℹ️ INFO", BELUM ADA PERTANDINGAN\n{LINK_STANDBY}\n')
         else:
-            for it in hasil_render: f.write("\n".join(it["data"]) + "\n")
+            for it in hasil_render: 
+                f.write("\n".join(it["data"]) + "\n")
             
-    print(f"SELESAI! Daftar siaran berhasil dibuat sangat ringan!")
+    print(f"SELESAI! Daftar siaran berhasil dibuat sangat ringan, utuh, dan tahan blokir!")
 
 if __name__ == "__main__": main()
