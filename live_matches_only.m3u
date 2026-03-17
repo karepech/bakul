@@ -1,9 +1,18 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 06:45-09:20 WIB - 2026 LIV Golf: Singapore [SPOTV]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-referrer=https://visionplus.id
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 06:45-09:20 WIB - 2026 LIV Golf: Singapore [SPOTV NOW]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3dd653fc7aa1e3075b7f0233620df68f:8573791fa55bff03a3094ff559fc1407
+#EXTVLCOPT:http-referrer=https://www.mana2.my/
 https://slive.mana2.my/SpotvNow/index.mpd
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 07:00-10:00 WIB - Indonesia Juara Badminton [SPORTSTARS 4]
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
 http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 10:00-12:00 WIB - BRI Liga 1
 https://bwifi.my.id/5menit.mp4?m=briliga_1773741600.0
@@ -17,8 +26,6 @@ https://bwifi.my.id/5menit.mp4?m=afcwac2026semifinal_1773766800.0
 https://bwifi.my.id/5menit.mp4?m=laliga202526barsev_1773770400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_313.png", 🇮🇩 ⏳ 18:00-20:00 WIB - beIN Sports 5
 https://bwifi.my.id/5menit.mp4?m=beinsports_1773770400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/fox_news_channel.png", 📺 ⏳ 18:00-19:00 WIB - Fox & Friends
-https://bwifi.my.id/5menit.mp4?m=foxfriends_1773770400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 ⏳ 18:00-19:00 WIB - Mega Fights In 60
 https://bwifi.my.id/5menit.mp4?m=megafightsin_1773770400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 ⏳ 18:10-20:00 WIB - UEL 2025/26: VFB Vs POR
@@ -29,8 +36,6 @@ https://bwifi.my.id/5menit.mp4?m=bundesliga202526stpbvb_1773772200.0
 https://bwifi.my.id/5menit.mp4?m=leaguewomen_1773772200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 19:00-20:00 WIB - Indonesia Juara Badminton
 https://bwifi.my.id/5menit.mp4?m=indonesiajuarabadminton_1773774000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/fox_news_channel.png", 📺 ⏳ 19:00-20:00 WIB - Fox & Friends
-https://bwifi.my.id/5menit.mp4?m=foxfriends_1773774000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 19:00-20:00 WIB - Formula E: Driver
 https://bwifi.my.id/5menit.mp4?m=formulaedriver_1773774000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 ⏳ 19:30-21:30 WIB - 25/26 Scottish Premiership
@@ -45,16 +50,12 @@ https://bwifi.my.id/5menit.mp4?m=beinsports_1773777600.0
 https://bwifi.my.id/5menit.mp4?m=timnasspecial_1773777600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 20:00-22:00 WIB - Bundesliga Big Match
 https://bwifi.my.id/5menit.mp4?m=bundesligabigmatch_1773777600.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/fox_news_channel.png", 📺 ⏳ 20:00-21:00 WIB - America's Newsroom
-https://bwifi.my.id/5menit.mp4?m=americasnewsroom_1773777600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 20:30-22:30 WIB - AFC Asian Cup 2026: IRQ Vs CHN
 https://bwifi.my.id/5menit.mp4?m=afcasiancup2026irqchn_1773779400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 20:30-23:30 WIB - Indonesia Juara Badminton
 https://bwifi.my.id/5menit.mp4?m=indonesiajuarabadminton_1773779400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 20:30-22:30 WIB - V-League 2025-2026: Women
 https://bwifi.my.id/5menit.mp4?m=league20252026women_1773779400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/fox_news_channel.png", 📺 ⏳ 21:00-22:00 WIB - America's Newsroom
-https://bwifi.my.id/5menit.mp4?m=americasnewsroom_1773781200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 ⏳ 21:30-23:30 WIB - A-League Men: BRI Vs WSW
 https://bwifi.my.id/5menit.mp4?m=aleaguemenbriwsw_1773783000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_310.png", 🇮🇩 ⏳ 21:55-00:00 WIB - UYL 2025/26: VIL Vs PSG
@@ -65,14 +66,10 @@ https://bwifi.my.id/5menit.mp4?m=laliga202526alavil_1773784800.0
 https://bwifi.my.id/5menit.mp4?m=beinsports_1773784800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 22:00-00:00 WIB - Friendly Match
 https://bwifi.my.id/5menit.mp4?m=friendlymatch_1773784800.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/fox_news_channel.png", 📺 ⏳ 22:00-23:00 WIB - The Faulkner Focus
-https://bwifi.my.id/5menit.mp4?m=thefaulknerfocus_1773784800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 22:30-00:15 WIB - Timnas Spesial: AUS Vs IDN
 https://bwifi.my.id/5menit.mp4?m=timnasspesialausidn_1773786600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 ⏳ 22:30-00:30 WIB - V-League 2025-2026: Men
 https://bwifi.my.id/5menit.mp4?m=league20252026men_1773786600.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/fox_news_channel.png", 📺 ⏳ 23:00-00:00 WIB - Outnumbered
-https://bwifi.my.id/5menit.mp4?m=outnumbered_1773788400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 23:05-01:00 WIB - A-League Men: WEL Vs PER
 https://bwifi.my.id/5menit.mp4?m=aleaguemenwelper_1773788700.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 ⏳ 23:30-01:00 WIB - Pegasus World Cup 2026
