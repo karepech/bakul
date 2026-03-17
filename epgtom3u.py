@@ -16,6 +16,7 @@ EPG_URLS = [
 ]
 
 M3U_URLS = [
+
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 ]
@@ -312,4 +313,74 @@ def main():
                             key = generate_event_key(ev_title, ev_start.timestamp())
                             
                             if key not in keranjang_match: 
-                                keranjang_match[key] = {"is_live": is_live, "
+                                keranjang_match[key] = {"is_live": is_live, "sort": ev_start.timestamp(), "vip": skor_vip, "links": []}
+                            
+                            # FORMAT JAM: 15:00-17:00
+                            jam_tayang = f"{ev_start.strftime('%H:%M')}-{ev_stop.strftime('%H:%M')}"
+                            
+                            if is_live:
+                                judul = f"{get_flag(ev_title)} 🔴 {jam_tayang} WIB - {ev_title}"
+                                inf = f'#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
+                                keranjang_match[key]["links"].append({"prio": 0, "data": [inf] + extra_tags + [stream_url]})
+                            else:
+                                judul = f"{get_flag(ev_title)} ⏳ {jam_tayang} WIB - {ev_title}"
+                                inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{orig_logo}", {judul}'
+                                keranjang_match[key]["links"].append({"prio": 0, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
+                                
+                    # 2. JALUR EPG NORMAL
+                    elif is_sports_channel(m3u_name):
+                        for cid, ename in epg_chans.items():
+                            if is_match_akurat_v3(ename, cid, m3u_name) and cid in match_data:
+                                for ev in match_data[cid]:
+                                    key = generate_event_key(ev['title'], ev['start'].timestamp())
+                                    
+                                    if key not in keranjang_match: 
+                                        keranjang_match[key] = {"is_live": ev['live'], "sort": ev['start'].timestamp(), "vip": skor_vip, "links": []}
+                                    
+                                    final_logo = ev["logo"] or epg_logos.get(cid) or orig_logo
+                                    
+                                    # FORMAT JAM: 15:00-17:00
+                                    jam_tayang = f"{ev['start'].strftime('%H:%M')}-{ev['stop'].strftime('%H:%M')}"
+                                    
+                                    if ev["live"]:
+                                        m_disp = re.sub(r'[\[\]\(\)]', '', m3u_name).strip()
+                                        judul = f"{get_flag(m3u_name)} 🔴 {jam_tayang} WIB - {ev['title']} [{m_disp}]"
+                                        inf = f'#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="{cid}" tvg-logo="{final_logo}", {judul}'
+                                        keranjang_match[key]["links"].append({"prio": 1, "data": [inf] + extra_tags + [stream_url]})
+                                    else:
+                                        judul_pendek = f"{get_flag(m3u_name)} ⏳ {jam_tayang} WIB - {ev['title']}"
+                                        inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{final_logo}", {judul_pendek}'
+                                        keranjang_match[key]["links"].append({"prio": 1, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
+                block = []
+
+    print("Step 4: Rendering M3U Anti-Lag...")
+    hasil_render = []
+    
+    for key, match in keranjang_match.items():
+        links = match["links"]
+        unique_links = { l["data"][-1]: l for l in links }.values() 
+        sorted_links = sorted(unique_links, key=lambda x: x["prio"])
+        
+        max_take = 2 if match["is_live"] else 1
+        
+        for l in sorted_links[:max_take]:
+            hasil_render.append({
+                "order": 0 if match["is_live"] else 1,
+                "sort": match["sort"],
+                "vip": match["vip"],
+                "data": l["data"]
+            })
+
+    hasil_render.sort(key=lambda x: (x["order"], float(x["sort"]), x["vip"]))
+    
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        f.write(f'#EXTM3U name="🔴 BAKUL WIFI SPORTS"\n')
+        if not hasil_render: 
+            f.write(f'#EXTINF:-1 group-title="ℹ️ INFO", BELUM ADA PERTANDINGAN\n{LINK_STANDBY}\n')
+        else:
+            for it in hasil_render: 
+                f.write("\n".join(it["data"]) + "\n")
+            
+    print(f"SELESAI! Jadwal siap disajikan!")
+
+if __name__ == "__main__": main()
