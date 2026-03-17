@@ -15,7 +15,7 @@ EPG_URLS = [
 ]
 
 M3U_URLS = [
-    
+
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u",
     "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 ]
@@ -113,7 +113,7 @@ def get_region_ktp(name, epg_id=""):
 @lru_cache(maxsize=10000)
 def is_sports_channel(name):
     n = terjemahkan_nama(name)
-    if 'astro' in n: return False # Astro Dibuang
+    if 'astro' in n: return False
     lokal = ['rcti', 'sctv', 'antv', 'indosiar', 'tvri', 'mnc', 'trans', 'global', 'inews']
     if any(x in n for x in lokal) and 'soccer channel' not in n: return 'sport' in n
     sports_kws = ['bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'golf', 'tennis', 'motor', 'mola', 'vidio', 'cbs', 'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'dazn', 'setanta', 'eleven', 'now sports', 'fox', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai']
@@ -123,20 +123,15 @@ def is_allowed_sport(title, ch_name, durasi_menit):
     if not title: return False
     t = terjemahkan_nama(title)
     
-    # 1. HAPUS TAYANGAN 30 MENIT ATAU KURANG
     if REGEX_CYRILLIC_CJK.search(t) or durasi_menit <= 30: return False
     
     haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
     if any(s in t for s in haram_simbol): return False
     
-    # 2. HAPUS KATEGORI FIGHT, WWE, REPLAY
     haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "smackdown", "raw", "one championship"]
     if re.search(r'\b(?:' + '|'.join(haram_kata) + r')\b', t): return False
     return True
 
-# ==========================================
-# ATURAN BENUA (TEMBOK BESI BRUTAL)
-# ==========================================
 def is_valid_time(start_dt, title):
     w = start_dt.hour + (start_dt.minute / 60.0)
     t = terjemahkan_nama(title)
@@ -162,7 +157,6 @@ def is_match_akurat_v3(epg_name, epg_id, m3u_name):
     for b in ['bein', 'spotv', 'champions tv', 'sportstars', 'soccer channel', 'true premier', 'dazn', 'setanta', 'supersport']:
         if (b in e) != (b in m): return False
         
-    # 3. PISAHKAN BEIN XTRA, BEIN CONNECT DARI BEIN BIASA
     if ('xtra' in e or 'extra' in e) != ('xtra' in m or 'extra' in m): return False
     if ('connect' in e) != ('connect' in m): return False
         
@@ -278,7 +272,7 @@ def main():
                 raw_extinf = block[0]
                 stream_url = ln 
                 
-                # EKSTRAK FULL CODE (semua tag selain grup bawaan)
+                # Tag Ekstra (seperti #EXTVLCOPT) diamankan
                 extra_tags = [t for t in block[1:] if not t.upper().startswith("#EXTGRP")]
                 
                 if "KPL203" in url and not re.search(r'(?i)group-title=["\'][^"\']*event', raw_extinf): 
@@ -298,12 +292,13 @@ def main():
                     orig_logo = logo_match.group(1) if logo_match else ""
                     skor_vip = get_vip_score(m3u_name)
                     
-                    # 4. AMBIL SELURUH ATRIBUT ASLI PROVIDER (KECUALI GROUP, ID, & LOGO) UNTUK LIVE
-                    clean_attrs = re.sub(r'(?i)\s*(group-title|tvg-id|tvg-logo)=("[^"]*"|\'[^\']*\'|[^\s,]+)', '', raw_attrs).strip()
+                    # 💥 FOKUS FULL CODE: Menyaring group, id, logo, dan nama lama dari atribut asli
+                    clean_attrs = re.sub(r'(?i)\s*(group-title|tvg-group|tvg-id|tvg-logo|tvg-name)=("[^"]*"|\'[^\']*\'|[^\s,]+)', '', raw_attrs).strip()
                     if not clean_attrs.upper().startswith("#EXTINF"):
                         clean_attrs = "#EXTINF:-1 " + clean_attrs.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
                     
                     ev_m = REGEX_EVENT.search(m3u_name)
+                    # 1. JALUR JAM TAYANG
                     if ev_m:
                         hh, mm = int(ev_m.group(1)), int(ev_m.group(2))
                         ev_title = re.sub(r'(?i)\#\s*\d+|\[.*?\]|\(.*?\)', '', ev_m.group(3)).strip()
@@ -322,15 +317,15 @@ def main():
                             
                             if is_live:
                                 judul = f"{get_flag(ev_title)} 🔴 {jam_tayang} WIB - {ev_title}"
-                                # FULL CODE: Pasang clean_attrs bawaan asli untuk Live
+                                # PENERAPAN FULL CODE ASLI PROVIDER DI SINI
                                 inf = f'{clean_attrs} group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
                                 keranjang_match[key]["links"].append({"prio": 0, "data": [inf] + extra_tags + [stream_url]})
                             else:
                                 judul = f"{get_flag(ev_title)} ⏳ {jam_tayang} WIB - {ev_title}"
-                                # HEMAT: Tidak pasang atribut berat untuk Upcoming
                                 inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{orig_logo}", {judul}'
                                 keranjang_match[key]["links"].append({"prio": 0, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                                 
+                    # 2. JALUR EPG
                     elif is_sports_channel(m3u_name):
                         for cid, ename in epg_chans.items():
                             if is_match_akurat_v3(ename, cid, m3u_name) and cid in match_data:
@@ -346,12 +341,11 @@ def main():
                                     if ev["live"]:
                                         m_disp = re.sub(r'[\[\]\(\)]', '', m3u_name).strip()
                                         judul = f"{get_flag(m3u_name)} 🔴 {jam_tayang} WIB - {ev['title']} [{m_disp}]"
-                                        # FULL CODE: Pasang clean_attrs bawaan asli untuk Live
+                                        # PENERAPAN FULL CODE ASLI PROVIDER DI SINI JUGA
                                         inf = f'{clean_attrs} group-title="🔴 SEDANG TAYANG" tvg-id="{cid}" tvg-logo="{final_logo}", {judul}'
                                         keranjang_match[key]["links"].append({"prio": 1, "data": [inf] + extra_tags + [stream_url]})
                                     else:
                                         judul_pendek = f"{get_flag(m3u_name)} ⏳ {jam_tayang} WIB - {ev['title']}"
-                                        # HEMAT: Tidak pasang atribut berat untuk Upcoming
                                         inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{final_logo}", {judul_pendek}'
                                         keranjang_match[key]["links"].append({"prio": 1, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                 block = []
@@ -384,6 +378,6 @@ def main():
             for it in hasil_render: 
                 f.write("\n".join(it["data"]) + "\n")
             
-    print(f"SELESAI! Live Full Code, SPOTV presisi, jadwal akurat!")
+    print(f"SELESAI! Jadwal Live sekarang FULL CODE Murni tanpa kepotong!")
 
 if __name__ == "__main__": main()
