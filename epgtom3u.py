@@ -7,7 +7,7 @@ from functools import lru_cache
 # ==========================================
 # I. KONFIGURASI EMAS (ULTRA-LIGHT STB)
 # ==========================================
-MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/hasil_mapping_epg.txt"
+MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/map.txt"
 
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
