@@ -295,6 +295,13 @@ def main():
                     raw_attrs, m3u_name = raw_extinf.split(",", 1)
                     m3u_name = m3u_name.strip()
                     
+                    # ==========================================================
+                    # SATPAM ANTI-BENDERA (Khusus SPOTV link error dari luar)
+                    # [\U0001F1E6-\U0001F1FF] adalah kode unicode untuk emoji bendera
+                    # ==========================================================
+                    if 'spotv' in m3u_name.lower() and re.search(r'[\U0001F1E6-\U0001F1FF]', m3u_name):
+                        continue # Langsung buang tanpa sisa!
+                    
                     if stream_url in GLOBAL_SEEN_STREAM_URLS:
                         continue
                     GLOBAL_SEEN_STREAM_URLS.add(stream_url)
@@ -378,7 +385,7 @@ def main():
         unique_links = { l["orig_url"]: l for l in links }.values() 
         sorted_links = sorted(unique_links, key=lambda x: x["prio"])
         
-        # KUOTA FLEKSIBEL: Badminton max 4, Lainnya max 3 (Untuk Jadwal Akan Datang tetap 1)
+        # KUOTA FLEKSIBEL: Badminton max 4, Lainnya max 3 (Jadwal Akan Datang tetap 1)
         if match["is_live"]:
             max_take = 4 if match["is_badminton"] else 3
         else:
@@ -402,6 +409,6 @@ def main():
             for it in hasil_render: 
                 f.write("\n".join(it["data"]) + "\n")
             
-    print(f"SELESAI! beIN Fake Lenyap, EPG Otomatis Nyangkut, Badminton Full Court!")
+    print(f"SELESAI! SPOTV Error berbendera berhasil dimusnahkan!")
 
 if __name__ == "__main__": main()
