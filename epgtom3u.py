@@ -251,6 +251,11 @@ def main():
                 
                 durasi = (sp - st).total_seconds() / 60
                 title = pg.findtext("title") or ""
+                
+                # FITUR ANTI-FAKE MATCH BEIN (Jika EPG title cuma mengulang kata "bein sports", buang!)
+                if 'bein' in epg_chans[cid].lower() and 'bein sports' in title.lower():
+                    continue
+                
                 if is_allowed_sport(title, epg_chans[cid], durasi) and is_valid_time(st, title):
                     if cid not in match_data: match_data[cid] = []
                     match_data[cid].append({"title": bersihkan_judul_event(title), "start": st, "stop": sp, "live": (st - timedelta(minutes=5)) <= now_wib < sp, "logo": pg.find("icon").get("src") if pg.find("icon") is not None else ""})
@@ -312,33 +317,31 @@ def main():
                             if ev_start < now_wib - timedelta(hours=12): 
                                 ev_start += timedelta(days=1)
                                 
-                            ev_stop = ev_start + timedelta(hours=6) # Durasi 6 jam (Aman buat badminton)
+                            ev_stop = ev_start + timedelta(hours=6) 
                             
-                            # ATURAN NORMAL: HANYA TAMPIL JIKA BELUM EXPIRED
                             if ev_stop > now_wib:
                                 is_live = (ev_start - timedelta(minutes=15)) <= now_wib < ev_stop
                                 key = generate_event_key(ev_title, ev_start.timestamp())
+                                is_badminton = any(k in ev_title.lower() for k in ['badminton', 'bwf', 'orleans', 'master', 'masters', 'open', 'tour', 'super', 'all england'])
                                 
                                 if key not in keranjang_match: 
-                                    keranjang_match[key] = {"is_live": is_live, "sort": ev_start.timestamp(), "vip": skor_vip, "links": []}
+                                    keranjang_match[key] = {"is_live": is_live, "sort": ev_start.timestamp(), "vip": skor_vip, "is_badminton": is_badminton, "links": []}
                                 
                                 jam_tayang = f"{ev_start.strftime('%H:%M')} WIB"
                                 
                                 if is_live:
                                     judul = f"{get_flag(ev_title)} 🔴 {jam_tayang} - {ev_title}"
                                     inf = f'{clean_attrs} group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
-                                    # SimPAN orig_url agar link tidak ter-overwrite
                                     keranjang_match[key]["links"].append({"prio": 0, "orig_url": stream_url, "data": [inf] + extra_tags + [stream_url]})
                                 else:
                                     judul = f"{get_flag(ev_title)} ⏳ {jam_tayang} - {ev_title}"
                                     inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{orig_logo}", {judul}'
-                                    # Simpan orig_url agar duplikat 5menit.mp4 bisa lolos banyak
                                     keranjang_match[key]["links"].append({"prio": 0, "orig_url": stream_url, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                         else:
-                            # Jika nama M3U berantakan tanpa jam
+                            is_badminton = any(k in m3u_name.lower() for k in ['badminton', 'bwf', 'orleans', 'master', 'masters', 'open', 'tour', 'super', 'all england'])
                             key = generate_event_key(m3u_name, now_wib.timestamp())
                             if key not in keranjang_match: 
-                                keranjang_match[key] = {"is_live": True, "sort": now_wib.timestamp(), "vip": skor_vip, "links": []}
+                                keranjang_match[key] = {"is_live": True, "sort": now_wib.timestamp(), "vip": skor_vip, "is_badminton": is_badminton, "links": []}
                             
                             judul = f"{get_flag(m3u_name)} 🔴 EVENT - {m3u_name}"
                             inf = f'{clean_attrs} group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
@@ -349,9 +352,10 @@ def main():
                             if is_match_akurat_v3(ename, cid, m3u_name) and cid in match_data:
                                 for ev in match_data[cid]:
                                     key = generate_event_key(ev['title'], ev['start'].timestamp())
+                                    is_badminton = any(k in ev['title'].lower() for k in ['badminton', 'bwf', 'orleans', 'master', 'masters', 'open', 'tour', 'super', 'all england'])
                                     
                                     if key not in keranjang_match: 
-                                        keranjang_match[key] = {"is_live": ev['live'], "sort": ev['start'].timestamp(), "vip": skor_vip, "links": []}
+                                        keranjang_match[key] = {"is_live": ev['live'], "sort": ev['start'].timestamp(), "vip": skor_vip, "is_badminton": is_badminton, "links": []}
                                     
                                     final_logo = ev["logo"] or epg_logos.get(cid) or orig_logo
                                     jam_tayang = f"{ev['start'].strftime('%H:%M')}-{ev['stop'].strftime('%H:%M')}"
@@ -371,13 +375,14 @@ def main():
     
     for key, match in keranjang_match.items():
         links = match["links"]
-        # Filter kembar berdasarkan LINK STREAM ASLI, bukan link 5menit.mp4!
         unique_links = { l["orig_url"]: l for l in links }.values() 
         sorted_links = sorted(unique_links, key=lambda x: x["prio"])
         
-        # PERINTAH SULTAN: Hapus batas maksimal (Kasih batas 10 aja biar ga jebol memori)
-        # Sekarang ke-4 Orleans Masters akan tampil semua tanpa dipotong!
-        max_take = 10 
+        # KUOTA FLEKSIBEL: Badminton max 4, Lainnya max 3 (Untuk Jadwal Akan Datang tetap 1)
+        if match["is_live"]:
+            max_take = 4 if match["is_badminton"] else 3
+        else:
+            max_take = 1 
         
         for l in sorted_links[:max_take]:
             hasil_render.append({
@@ -397,6 +402,6 @@ def main():
             for it in hasil_render: 
                 f.write("\n".join(it["data"]) + "\n")
             
-    print(f"SELESAI! Semua Event Orleans & BWF Tampil Maksimal Tanpa Terpotong!")
+    print(f"SELESAI! beIN Fake Lenyap, EPG Otomatis Nyangkut, Badminton Full Court!")
 
 if __name__ == "__main__": main()
