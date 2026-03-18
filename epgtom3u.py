@@ -10,7 +10,8 @@ from functools import lru_cache
 MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/map.txt"
 
 EPG_URLS = [
-    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",                   
+    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
+    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml", 
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
 ]
 
