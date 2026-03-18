@@ -5,6 +5,8 @@ import xml.etree.ElementTree as ET
 import re
 import difflib
 import os
+import concurrent.futures
+from functools import lru_cache
 from datetime import datetime, timedelta, timezone
 from io import BytesIO
 
@@ -12,7 +14,7 @@ from io import BytesIO
 # 1. KONFIGURASI URL UTAMA
 # ========================================================
 M3U_URLS = [
-     "https://aspaltvpasti.top/xxx/merah.php",
+    "https://aspaltvpasti.top/xxx/merah.php",
     "https://deccotech.online/tv/tvstream.html", 
     "https://freeiptv2026.tsender57.workers.dev", 
     "https://raw.githubusercontent.com/tvplaylist/T2/refs/heads/main/tv1",
@@ -36,8 +38,9 @@ LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4"
 GLOBAL_SEEN_STREAM_URLS = set()
 
 # ========================================================
-# 2. MESIN MAPPING CERDAS KITA (Kamus & Rumus)
+# 2. MESIN MAPPING CERDAS KITA (Kamus, Rumus & Cache)
 # ========================================================
+@lru_cache(maxsize=10000) # CACHE: Ingat teks yang sudah dirumus
 def rumus_samakan_teks(teks):
     if not teks: return ""
     teks = teks.lower()
@@ -55,6 +58,9 @@ if os.path.exists("kamus_mapping.txt"):
                 if len(parts) == 3:
                     kamus_manual[parts[1].strip().lower()] = {"epg": parts[0].strip(), "nama": parts[2].strip()}
 
+# Sistem Ingatan Fuzzy Matching agar tidak berat
+CACHE_FUZZY = {}
+
 # ========================================================
 # 3. ATURAN SULTAN & FILTER BENUA
 # ========================================================
@@ -63,6 +69,7 @@ REGEX_VS = re.compile(r'\b(vs|v)\b')
 REGEX_NON_ALPHANUM = re.compile(r'[^a-z0-9]')
 REGEX_EVENT = re.compile(r'(?:^|[^0-9])(\d{2})[:\.](\d{2})\s*(?:WIB)?\s*[\-\|]?\s*(.+)', re.IGNORECASE)
 
+@lru_cache(maxsize=5000)
 def bersihkan_judul_event(title):
     bersih = REGEX_LIVE.sub('', title)
     return re.sub(r'^[\-\:\,\|]\s*', '', re.sub(r'\s+', ' ', bersih)).strip()
@@ -72,11 +79,13 @@ def generate_event_key(title, timestamp):
     tc = re.sub(r'\d+\]?$', '', tc.strip())
     return f"{REGEX_NON_ALPHANUM.sub('', REGEX_VS.sub('', tc.lower()))}_{timestamp}"
 
+@lru_cache(maxsize=2000)
 def get_vip_score(ch_name):
     n = ch_name.lower()
     if any(k in n for k in ['bein', 'spotv', 'sportstars', 'soccer channel', 'champions tv', 'rcti sports', 'inews sports', 'mnc sports']): return 0
     return 1
 
+@lru_cache(maxsize=5000)
 def get_flag(m3u_name):
     n = m3u_name.lower()
     if any(x in n for x in [' us', 'usa', 'america']): return "🇺🇸" 
@@ -92,13 +101,14 @@ def get_flag(m3u_name):
     if 'bein' in n and not any(x in n for x in [' us', ' sg', ' my', ' uk', ' th', ' hk', ' au', ' ae', ' za', ' ph']): return "🇮🇩"
     return "📺"
 
+@lru_cache(maxsize=5000)
 def get_region_ktp(name, epg_id=""):
     n = (name + " " + epg_id).lower()
     for reg, kws in [("US",['.us',' us','usa','america']), ("AU",['.au',' au','aus','optus']), ("UK",['.uk',' uk','eng','english','sky']), ("ARAB",['.ae',' ar','arab','mena','ssc']), ("MY",['.my',' my','malaysia']), ("TH",['.th',' th','thai','true']), ("SG",['.sg',' sg','singapore','hub']), ("ZA",['.za',' za','supersport']), ("HK",['.hk',' hk','hong']), ("PH",['.ph',' ph','phil']), ("ID",['.id',' id','indo','indonesia'])]:
         if any(x in n for x in kws): return reg
     return "UNKNOWN"
 
-# SAPU BERSIH: Target Olahraga & Buang Sampah
+@lru_cache(maxsize=5000)
 def is_allowed_sport(title, durasi_menit):
     t = title.lower()
     if re.search(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', t) or durasi_menit <= 30: return False
@@ -109,37 +119,25 @@ def is_allowed_sport(title, durasi_menit):
     haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship", "golf", "snooker", "biliar", "billiard", "panahan", "archery", "renang", "swimming", "sepeda", "cycling", "gulat", "darts", "atletik", "athletics", "gymnastic"]
     if re.search(r'\b(?:' + '|'.join(haram_kata) + r')\b', t): return False
     
-    # Validasi Target VIP: Hanya lolos jika mengandung unsur olahraga yang kita mau (Bola, Balap, Raket)
     target_kws = ['vs', 'liga', 'league', 'cup', 'copa', 'championship', 'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'motogp', 'moto2', 'moto3', 'f1', 'formula', 'wsbk', 'nba', 'nfl', 'mls', 'basket', 'voli', 'volley', 'tennis', 'tenis', 'rugby', 'baseball', 'afc', 'afcon', 'concacaf', 'sudamericana', 'libertadores', 'premier', 'serie a', 'bundesliga', 'la liga']
     if not any(k in t for k in target_kws): return False
     
     return True
 
-# FILTER BENUA (Kekuatan Penuh)
-def is_valid_time_continent(start_dt, title, ch_name):
-    w = start_dt.hour + (start_dt.minute / 60.0)
+@lru_cache(maxsize=5000)
+def is_valid_time_continent(w, title, ch_name):
     t = (title + " " + ch_name).lower()
     
-    # EROPA (18:00 - 05:00) -> Diblokir jika jam 05:01 - 17:59
     if any(k in t for k in [' uk', 'england', 'sky', 'euro', 'uefa', 'champions league', 'la liga', 'serie a', 'bundesliga', 'prancis', 'epl', 'premier league']):
         if 5.1 <= w <= 17.9: return False
-
-    # AMERIKA (05:00 - 14:00) -> Diblokir jika lewat jam 14:00 atau sebelum 05:00
     if any(k in t for k in ['us ', 'usa', 'america', 'mls', 'nba', 'nfl', 'concacaf', 'libertadores', 'sudamericana', 'copa', 'brasil', 'argentina', 'mexico']):
         if w > 14.0 or w < 5.0: return False
-
-    # ASIA (11:00 - 01:00) -> Diblokir jika jam 01:01 - 10:59
     if any(k in t for k in ['my', 'malaysia', 'sg', 'singapore', 'th ', 'thai', 'hk', 'hong', 'id ', 'indo', 'arab', 'saudi', 'afc', 'j-league', 'k-league', 'liga 1']):
         if 1.1 <= w <= 10.9: return False
-
-    # AUSTRALIA (07:00 - 18:00) -> Diblokir jika lewat 18:00 atau sebelum 07:00
     if any(k in t for k in ['au ', 'aus', 'optus', 'a-league', 'nbl']):
         if w > 18.0 or w < 7.0: return False
-
-    # AFRIKA (19:00 - 04:00) -> Diblokir jika jam 04:01 - 18:59
     if any(k in t for k in ['za ', 'africa', 'supersport', 'caf', 'afcon']):
         if 4.1 <= w <= 18.9: return False
-
     return True
 
 def parse_time(ts):
@@ -151,6 +149,25 @@ def parse_time(ts):
         return datetime.strptime(ts[:14], "%Y%m%d%H%M%S") + timedelta(hours=7)
     except: return None
 
+# Fungsi Download Multithread
+def fetch_url(url, is_epg):
+    try:
+        if "epgshare" in url:
+            scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True})
+            resp = scraper.get(url, timeout=45)
+        else:
+            resp = requests.get(url, timeout=45)
+            
+        if is_epg:
+            if b'<html' in resp.content[:20].lower(): return url, None, True
+            content = gzip.GzipFile(fileobj=BytesIO(resp.content)).read() if url.endswith('.gz') else resp.content
+            return url, content, True
+        else:
+            return url, resp.text, False
+    except Exception as e:
+        print(f"❌ Gagal Download {url}: {e}")
+        return url, None, is_epg
+
 # ========================================================
 # 4. EKSEKUSI GABUNGAN
 # ========================================================
@@ -161,17 +178,25 @@ epg_dict = {}
 kamus_rumus_epg = {}
 jadwal_dict = {} 
 
-scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True})
+print("1. Mendownload EPG dan M3U secara serentak (Turbo Mode)...")
+epg_contents = {}
+m3u_contents = {}
 
-print("1. Mengunduh dan memproses EPG (Bypass Anti-Bot)...")
-for url in EPG_URLS:
+# Jalan Tol: Download 13 URL Serentak
+with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
+    futures = [executor.submit(fetch_url, url, True) for url in EPG_URLS]
+    futures += [executor.submit(fetch_url, url, False) for url in M3U_URLS]
+    
+    for future in concurrent.futures.as_completed(futures):
+        url, content, is_epg = future.result()
+        if content:
+            if is_epg: epg_contents[url] = content
+            else: m3u_contents[url] = content
+
+print("2. Memproses Data EPG...")
+for url, content in epg_contents.items():
     try:
-        resp = scraper.get(url, timeout=60) if "epgshare" in url else requests.get(url, timeout=60)
-        if b'<html' in resp.content[:20].lower(): continue
-        content = gzip.GzipFile(fileobj=BytesIO(resp.content)).read() if url.endswith('.gz') else resp.content
-        
         root = ET.fromstring(content)
-        
         for ch in root.findall('channel'):
             id_asli = ch.get('id')
             nama_epg = ch.findtext('display-name') or id_asli
@@ -189,7 +214,8 @@ for url in EPG_URLS:
             if not st or not sp or sp <= now_wib or st >= limit_date: continue 
             durasi = (sp - st).total_seconds() / 60
             
-            if is_allowed_sport(title, durasi) and is_valid_time_continent(st, title, epg_dict[cid]):
+            w = st.hour + (st.minute / 60.0)
+            if is_allowed_sport(title, durasi) and is_valid_time_continent(w, title, epg_dict[cid]):
                 if cid not in jadwal_dict: jadwal_dict[cid] = []
                 logo = pg.find("icon").get("src") if pg.find("icon") is not None else ""
                 jadwal_dict[cid].append({
@@ -198,21 +224,23 @@ for url in EPG_URLS:
                     "logo": logo
                 })
     except Exception as e:
-        print(f"❌ Gagal EPG {url}: {e}")
+        print(f"❌ Gagal Parse EPG {url}: {e}")
 
 daftar_teks_epg_dirumus = list(kamus_rumus_epg.keys())
 keranjang_match = {}
 
-# Variabel untuk Laporan
 log_rumus = []
 audit_m3u = {}
 
-print("2. Mencocokkan M3U dengan Jadwal Sultan & Audit...")
+print("3. Mencocokkan M3U dengan Jadwal Sultan & Audit...")
+# Looping berurutan agar prioritas terjaga
 for url in M3U_URLS:
     audit_m3u[url] = {"ada": [], "tidak": []}
+    content = m3u_contents.get(url)
+    if not content: continue
     
     try:
-        m3u_lines = requests.get(url, timeout=30).text.splitlines()
+        m3u_lines = content.splitlines()
         block = []
         for ln in m3u_lines:
             ln = ln.strip()
@@ -239,7 +267,6 @@ for url in M3U_URLS:
                 if not clean_attrs.upper().startswith("#EXTINF"):
                     clean_attrs = "#EXTINF:-1 " + clean_attrs.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
 
-                # --- 1. BYPASS EVENT DADAKAN ---
                 ev_m = REGEX_EVENT.search(m3u_name)
                 if ev_m:
                     hh, mm = int(ev_m.group(1)), int(ev_m.group(2))
@@ -269,7 +296,6 @@ for url in M3U_URLS:
                         audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Event Kadaluarsa)")
                     continue
 
-                # --- 2. JIKA CHANNEL, MAPPING & CEK BENUA ---
                 tvg_id_match = re.search(r'tvg-id="([^"]*)"', raw_attrs)
                 id_m3u = tvg_id_match.group(1).strip() if tvg_id_match else ""
                 
@@ -288,7 +314,12 @@ for url in M3U_URLS:
                         kandidat_id = kamus_rumus_epg[teks_m3u_dirumus]
                         metode = "RUMUS EXACT"
                     else:
-                        mirip = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=3, cutoff=0.8)
+                        # CACHE FUZZY: Hanya mencari jika belum pernah dicari sebelumnya
+                        if teks_m3u_dirumus not in CACHE_FUZZY:
+                            CACHE_FUZZY[teks_m3u_dirumus] = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=3, cutoff=0.8)
+                        
+                        mirip = CACHE_FUZZY[teks_m3u_dirumus]
+                        
                         for m in mirip:
                             temp_id = kamus_rumus_epg[m]
                             ktp_epg = get_region_ktp(epg_dict.get(temp_id, ""), temp_id)
@@ -312,7 +343,6 @@ for url in M3U_URLS:
                         else:
                              id_epg_terpilih = kandidat_id
 
-                # --- 3. EKSEKUSI JADWAL & PENCATATAN AUDIT ---
                 if id_epg_terpilih and id_epg_terpilih in jadwal_dict:
                     punya_jadwal_aktif = False
                     for ev in jadwal_dict[id_epg_terpilih]:
@@ -349,7 +379,7 @@ for url in M3U_URLS:
     except Exception as e:
         print(f"Error memproses M3U {url}: {e}")
 
-print("3. Merender M3U Final dan Laporan...")
+print("4. Merender M3U Final dan Laporan...")
 hasil_render = []
 for key, match in keranjang_match.items():
     links = match["links"]
@@ -367,7 +397,6 @@ for key, match in keranjang_match.items():
 
 hasil_render.sort(key=lambda x: (x["order"], float(x["sort"]), x["vip"]))
 
-# Cetak File Utama (M3U)
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write(f'#EXTM3U name="🔴 BAKUL WIFI SPORTS"\n')
     if not hasil_render: 
@@ -376,30 +405,19 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         for it in hasil_render: 
             f.write("\n".join(it["data"]) + "\n")
 
-# Cetak Laporan Rumus
 with open("laporan_rumus.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(log_rumus))
 
-# Cetak Laporan Audit Channel (Per Penyedia M3U)
 with open("laporan_channel_m3u.txt", "w", encoding="utf-8") as f:
     f.write("=== LAPORAN AUDIT CHANNEL BAKUL WIFI SPORTS ===\n")
     f.write(f"Diperbarui pada: {now_wib.strftime('%d-%m-%Y %H:%M WIB')}\n\n")
     
     for link, data in audit_m3u.items():
-        f.write(f"📁 SUMBER: {link.split('/')[-1]}\n")
+        f.write(f"📁 SUMBER: {link.split('/')[-1] if not link.endswith('php') and not link.endswith('html') else link}\n")
         f.write("-" * 50 + "\n")
-        
-        # Cetak yang ADA dulu
-        for item in data["ada"]:
-            f.write(f"  {item}\n")
-            
-        # Cetak yang TIDAK ADA
-        for item in data["tidak"]:
-            f.write(f"  {item}\n")
-            
-        total_ada = len(data["ada"])
-        total_tidak = len(data["tidak"])
+        for item in data["ada"]: f.write(f"  {item}\n")
+        for item in data["tidak"]: f.write(f"  {item}\n")
         f.write("-" * 50 + "\n")
-        f.write(f"*Total dari sumber ini: {total_ada} channel sinkron, {total_tidak} channel kosong/mati.*\n\n")
+        f.write(f"*Total dari sumber ini: {len(data['ada'])} channel sinkron, {len(data['tidak'])} channel kosong/mati.*\n\n")
 
-print(f"SELESAI! Tiga file ({OUTPUT_FILE}, laporan_rumus.txt, laporan_channel_m3u.txt) berhasil dibuat!")
+print(f"SELESAI! Tiga file berhasil dibuat dengan mode Turbo!")
