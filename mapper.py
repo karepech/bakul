@@ -12,13 +12,23 @@ from io import BytesIO
 # 1. KONFIGURASI URL UTAMA
 # ========================================================
 M3U_URLS = [
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u",
-    "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/event_combined.m3u"
+     "https://aspaltvpasti.top/xxx/merah.php",
+    "https://deccotech.online/tv/tvstream.html", 
+    "https://freeiptv2026.tsender57.workers.dev", 
+    "https://raw.githubusercontent.com/tvplaylist/T2/refs/heads/main/tv1",
+    "http://sauridigital.my.id/kerbaunakal/2026TVGNS.html", 
+    "https://raw.githubusercontent.com/mimipipi22/lalajo/refs/heads/main/playlist25",
+    "https://semar25.short.gy",
+    "https://bit.ly/TVKITKAT",
+    "https://liveevent.iptvbonekoe.workers.dev",
+    "https://bwifi.my.id/lokal",
+    "https://bit.ly/KPL203"
 ]
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
     "https://epg.pw/xmltv/epg.xml.gz"
 ]
+
 OUTPUT_FILE = "playlist_termapping.m3u"
 LINK_STANDBY = "https://bwifi.my.id/live.mp4" 
 LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4" 
@@ -26,7 +36,7 @@ LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4"
 GLOBAL_SEEN_STREAM_URLS = set()
 
 # ========================================================
-# 2. MESIN MAPPING CERDAS KITA (Kamus Manual & Rumus Fuzzy)
+# 2. MESIN MAPPING CERDAS KITA (Kamus & Rumus)
 # ========================================================
 def rumus_samakan_teks(teks):
     if not teks: return ""
@@ -46,7 +56,7 @@ if os.path.exists("kamus_mapping.txt"):
                     kamus_manual[parts[1].strip().lower()] = {"epg": parts[0].strip(), "nama": parts[2].strip()}
 
 # ========================================================
-# 3. ATURAN FILTER SULTAN (Sesuai Skrip Anda)
+# 3. ATURAN SULTAN & FILTER BENUA
 # ========================================================
 REGEX_LIVE = re.compile(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\blangsung\b|\blive on\b)')
 REGEX_VS = re.compile(r'\b(vs|v)\b')
@@ -82,22 +92,54 @@ def get_flag(m3u_name):
     if 'bein' in n and not any(x in n for x in [' us', ' sg', ' my', ' uk', ' th', ' hk', ' au', ' ae', ' za', ' ph']): return "🇮🇩"
     return "📺"
 
+def get_region_ktp(name, epg_id=""):
+    n = (name + " " + epg_id).lower()
+    for reg, kws in [("US",['.us',' us','usa','america']), ("AU",['.au',' au','aus','optus']), ("UK",['.uk',' uk','eng','english','sky']), ("ARAB",['.ae',' ar','arab','mena','ssc']), ("MY",['.my',' my','malaysia']), ("TH",['.th',' th','thai','true']), ("SG",['.sg',' sg','singapore','hub']), ("ZA",['.za',' za','supersport']), ("HK",['.hk',' hk','hong']), ("PH",['.ph',' ph','phil']), ("ID",['.id',' id','indo','indonesia'])]:
+        if any(x in n for x in kws): return reg
+    return "UNKNOWN"
+
+# SAPU BERSIH: Target Olahraga & Buang Sampah
 def is_allowed_sport(title, durasi_menit):
     t = title.lower()
     if re.search(r'[А-Яа-яЁё\u4e00-\u9fff\u3040-\u30ff\u0600-\u06ff]', t) or durasi_menit <= 30: return False
+    
     haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
     if any(s in t for s in haram_simbol): return False
-    haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship"]
+    
+    haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship", "golf", "snooker", "biliar", "billiard", "panahan", "archery", "renang", "swimming", "sepeda", "cycling", "gulat", "darts", "atletik", "athletics", "gymnastic"]
     if re.search(r'\b(?:' + '|'.join(haram_kata) + r')\b', t): return False
+    
+    # Validasi Target VIP: Hanya lolos jika mengandung unsur olahraga yang kita mau (Bola, Balap, Raket)
+    target_kws = ['vs', 'liga', 'league', 'cup', 'copa', 'championship', 'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'motogp', 'moto2', 'moto3', 'f1', 'formula', 'wsbk', 'nba', 'nfl', 'mls', 'basket', 'voli', 'volley', 'tennis', 'tenis', 'rugby', 'baseball', 'afc', 'afcon', 'concacaf', 'sudamericana', 'libertadores', 'premier', 'serie a', 'bundesliga', 'la liga']
+    if not any(k in t for k in target_kws): return False
+    
     return True
 
-def is_valid_time(start_dt, title):
+# FILTER BENUA (Kekuatan Penuh)
+def is_valid_time_continent(start_dt, title, ch_name):
     w = start_dt.hour + (start_dt.minute / 60.0)
-    t = title.lower()
-    if 5.5 <= w <= 17.5:
-        whitelist = ['badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'motogp', 'moto2', 'moto3', 'f1', 'formula', 'wsbk', 'j-league', 'k-league', 'liga 1', 'bri liga', 'afc', 'asian', 'mls', 'nba', 'nfl', 'tennis', 'golf', 'proliga', 'vnl', 'kovo', 'libertadores', 'sudamericana', 'copa', 'brasil', 'argentina', 'concacaf', 'mexico', 'liga mx', 'caf', 'afcon']
-        if any(k in t for k in whitelist): return True
-        else: return False 
+    t = (title + " " + ch_name).lower()
+    
+    # EROPA (18:00 - 05:00) -> Diblokir jika jam 05:01 - 17:59
+    if any(k in t for k in [' uk', 'england', 'sky', 'euro', 'uefa', 'champions league', 'la liga', 'serie a', 'bundesliga', 'prancis', 'epl', 'premier league']):
+        if 5.1 <= w <= 17.9: return False
+
+    # AMERIKA (05:00 - 14:00) -> Diblokir jika lewat jam 14:00 atau sebelum 05:00
+    if any(k in t for k in ['us ', 'usa', 'america', 'mls', 'nba', 'nfl', 'concacaf', 'libertadores', 'sudamericana', 'copa', 'brasil', 'argentina', 'mexico']):
+        if w > 14.0 or w < 5.0: return False
+
+    # ASIA (11:00 - 01:00) -> Diblokir jika jam 01:01 - 10:59
+    if any(k in t for k in ['my', 'malaysia', 'sg', 'singapore', 'th ', 'thai', 'hk', 'hong', 'id ', 'indo', 'arab', 'saudi', 'afc', 'j-league', 'k-league', 'liga 1']):
+        if 1.1 <= w <= 10.9: return False
+
+    # AUSTRALIA (07:00 - 18:00) -> Diblokir jika lewat 18:00 atau sebelum 07:00
+    if any(k in t for k in ['au ', 'aus', 'optus', 'a-league', 'nbl']):
+        if w > 18.0 or w < 7.0: return False
+
+    # AFRIKA (19:00 - 04:00) -> Diblokir jika jam 04:01 - 18:59
+    if any(k in t for k in ['za ', 'africa', 'supersport', 'caf', 'afcon']):
+        if 4.1 <= w <= 18.9: return False
+
     return True
 
 def parse_time(ts):
@@ -117,7 +159,7 @@ limit_date = now_wib.replace(hour=3, minute=0, second=0, microsecond=0) if now_w
 
 epg_dict = {} 
 kamus_rumus_epg = {}
-jadwal_dict = {} # Menyimpan event/jadwal yang sudah difilter
+jadwal_dict = {} 
 
 scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True})
 
@@ -130,7 +172,6 @@ for url in EPG_URLS:
         
         root = ET.fromstring(content)
         
-        # Mapping Channel ID
         for ch in root.findall('channel'):
             id_asli = ch.get('id')
             nama_epg = ch.findtext('display-name') or id_asli
@@ -139,7 +180,6 @@ for url in EPG_URLS:
                 kamus_rumus_epg[rumus_samakan_teks(id_asli)] = id_asli
                 kamus_rumus_epg[rumus_samakan_teks(nama_epg)] = id_asli
         
-        # Mapping Jadwal dengan Filter Ketat
         for pg in root.findall('programme'):
             cid = pg.get('channel')
             if cid not in epg_dict: continue
@@ -149,7 +189,7 @@ for url in EPG_URLS:
             if not st or not sp or sp <= now_wib or st >= limit_date: continue 
             durasi = (sp - st).total_seconds() / 60
             
-            if is_allowed_sport(title, durasi) and is_valid_time(st, title):
+            if is_allowed_sport(title, durasi) and is_valid_time_continent(st, title, epg_dict[cid]):
                 if cid not in jadwal_dict: jadwal_dict[cid] = []
                 logo = pg.find("icon").get("src") if pg.find("icon") is not None else ""
                 jadwal_dict[cid].append({
@@ -163,8 +203,14 @@ for url in EPG_URLS:
 daftar_teks_epg_dirumus = list(kamus_rumus_epg.keys())
 keranjang_match = {}
 
-print("2. Mencocokkan M3U dengan Jadwal Sultan...")
+# Variabel untuk Laporan
+log_rumus = []
+audit_m3u = {}
+
+print("2. Mencocokkan M3U dengan Jadwal Sultan & Audit...")
 for url in M3U_URLS:
+    audit_m3u[url] = {"ada": [], "tidak": []}
+    
     try:
         m3u_lines = requests.get(url, timeout=30).text.splitlines()
         block = []
@@ -193,7 +239,7 @@ for url in M3U_URLS:
                 if not clean_attrs.upper().startswith("#EXTINF"):
                     clean_attrs = "#EXTINF:-1 " + clean_attrs.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
 
-                # --- 1. BYPASS JIKA INI EVENT DADAKAN ---
+                # --- 1. BYPASS EVENT DADAKAN ---
                 ev_m = REGEX_EVENT.search(m3u_name)
                 if ev_m:
                     hh, mm = int(ev_m.group(1)), int(ev_m.group(2))
@@ -217,28 +263,60 @@ for url in M3U_URLS:
                             judul = f"{get_flag(ev_title)} ⏳ {jam_tayang} WIB - {ev_title}"
                             inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{orig_logo}", {judul}'
                             keranjang_match[key]["links"].append({"prio": 0, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
+                        
+                        audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Event Otomatis)")
+                    else:
+                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Event Kadaluarsa)")
                     continue
 
-                # --- 2. JIKA CHANNEL, COCOKKAN PAKAI MAPPING KITA ---
+                # --- 2. JIKA CHANNEL, MAPPING & CEK BENUA ---
                 tvg_id_match = re.search(r'tvg-id="([^"]*)"', raw_attrs)
                 id_m3u = tvg_id_match.group(1).strip() if tvg_id_match else ""
                 
                 kunci_manual = id_m3u.lower() if id_m3u.lower() in kamus_manual else m3u_name.lower()
                 id_epg_terpilih = ""
+                metode = ""
                 
                 if kunci_manual in kamus_manual:
                     id_epg_terpilih = kamus_manual[kunci_manual]["epg"]
+                    metode = "KAMUS MANUAL"
                 else:
                     teks_m3u_dirumus = rumus_samakan_teks(id_m3u) or rumus_samakan_teks(m3u_name)
+                    kandidat_id = None
+                    
                     if teks_m3u_dirumus in kamus_rumus_epg:
-                        id_epg_terpilih = kamus_rumus_epg[teks_m3u_dirumus]
+                        kandidat_id = kamus_rumus_epg[teks_m3u_dirumus]
+                        metode = "RUMUS EXACT"
                     else:
-                        mirip = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=1, cutoff=0.8)
-                        if mirip: id_epg_terpilih = kamus_rumus_epg[mirip[0]]
+                        mirip = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=3, cutoff=0.8)
+                        for m in mirip:
+                            temp_id = kamus_rumus_epg[m]
+                            ktp_epg = get_region_ktp(epg_dict.get(temp_id, ""), temp_id)
+                            ktp_m3u = get_region_ktp(m3u_name)
+                            
+                            if 'bein' in temp_id.lower() or 'spotv' in temp_id.lower():
+                                if (ktp_epg if ktp_epg != "UNKNOWN" else "ID") == (ktp_m3u if ktp_m3u != "UNKNOWN" else "ID"):
+                                    kandidat_id = temp_id
+                                    break
+                            elif ktp_epg == "UNKNOWN" or ktp_m3u == "UNKNOWN" or ktp_epg == ktp_m3u:
+                                kandidat_id = temp_id
+                                break
+                        metode = "RUMUS FUZZY" if kandidat_id else ""
+                                
+                    if kandidat_id:
+                        if not ('bein' in kandidat_id.lower() or 'spotv' in kandidat_id.lower()):
+                           ktp_epg = get_region_ktp(epg_dict.get(kandidat_id, ""), kandidat_id)
+                           ktp_m3u = get_region_ktp(m3u_name)
+                           if ktp_epg == "UNKNOWN" or ktp_m3u == "UNKNOWN" or ktp_epg == ktp_m3u:
+                               id_epg_terpilih = kandidat_id
+                        else:
+                             id_epg_terpilih = kandidat_id
 
-                # --- 3. EKSEKUSI JADWAL (Ubah Nama Jadi Live/Upcoming) ---
+                # --- 3. EKSEKUSI JADWAL & PENCATATAN AUDIT ---
                 if id_epg_terpilih and id_epg_terpilih in jadwal_dict:
+                    punya_jadwal_aktif = False
                     for ev in jadwal_dict[id_epg_terpilih]:
+                        punya_jadwal_aktif = True
                         key = generate_event_key(ev['title'], ev['start'].timestamp())
                         if key not in keranjang_match: 
                             keranjang_match[key] = {"is_live": ev['live'], "sort": ev['start'].timestamp(), "vip": skor_vip, "links": []}
@@ -255,10 +333,23 @@ for url in M3U_URLS:
                             judul_pendek = f"{get_flag(m3u_name)} ⏳ {jam_tayang} WIB - {ev['title']}"
                             inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{final_logo}", {judul_pendek}'
                             keranjang_match[key]["links"].append({"prio": 1, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
+                    
+                    if punya_jadwal_aktif:
+                        log_rumus.append(f"✅ [{metode}] {m3u_name} -> {epg_dict[id_epg_terpilih]}")
+                        audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Cocok dengan: {epg_dict[id_epg_terpilih]})")
+                    else:
+                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (EPG cocok, tapi jadwal kosong)")
+                else:
+                    if id_epg_terpilih:
+                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (EPG cocok, tapi jadwal kosong/dihapus filter)")
+                    else:
+                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Tidak ada EPG yang cocok)")
+                    log_rumus.append(f"❌ KOSONG: {m3u_name}")
+                    
     except Exception as e:
         print(f"Error memproses M3U {url}: {e}")
 
-print("3. Merender M3U Final (Anti-Lag)...")
+print("3. Merender M3U Final dan Laporan...")
 hasil_render = []
 for key, match in keranjang_match.items():
     links = match["links"]
@@ -276,6 +367,7 @@ for key, match in keranjang_match.items():
 
 hasil_render.sort(key=lambda x: (x["order"], float(x["sort"]), x["vip"]))
 
+# Cetak File Utama (M3U)
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write(f'#EXTM3U name="🔴 BAKUL WIFI SPORTS"\n')
     if not hasil_render: 
@@ -283,5 +375,31 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     else:
         for it in hasil_render: 
             f.write("\n".join(it["data"]) + "\n")
+
+# Cetak Laporan Rumus
+with open("laporan_rumus.txt", "w", encoding="utf-8") as f:
+    f.write("\n".join(log_rumus))
+
+# Cetak Laporan Audit Channel (Per Penyedia M3U)
+with open("laporan_channel_m3u.txt", "w", encoding="utf-8") as f:
+    f.write("=== LAPORAN AUDIT CHANNEL BAKUL WIFI SPORTS ===\n")
+    f.write(f"Diperbarui pada: {now_wib.strftime('%d-%m-%Y %H:%M WIB')}\n\n")
+    
+    for link, data in audit_m3u.items():
+        f.write(f"📁 SUMBER: {link.split('/')[-1]}\n")
+        f.write("-" * 50 + "\n")
         
-print(f"SELESAI! File {OUTPUT_FILE} berhasil dibuat dengan mesin mapping kita & filter sultan Anda!")
+        # Cetak yang ADA dulu
+        for item in data["ada"]:
+            f.write(f"  {item}\n")
+            
+        # Cetak yang TIDAK ADA
+        for item in data["tidak"]:
+            f.write(f"  {item}\n")
+            
+        total_ada = len(data["ada"])
+        total_tidak = len(data["tidak"])
+        f.write("-" * 50 + "\n")
+        f.write(f"*Total dari sumber ini: {total_ada} channel sinkron, {total_tidak} channel kosong/mati.*\n\n")
+
+print(f"SELESAI! Tiga file ({OUTPUT_FILE}, laporan_rumus.txt, laporan_channel_m3u.txt) berhasil dibuat!")
