@@ -9,8 +9,8 @@ from io import BytesIO
 M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
-    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml",
-    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"
+    "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml".
+    
 ]
 
 # 2. RUMUS OTOMATIS: Fungsi untuk menyamakan format teks
