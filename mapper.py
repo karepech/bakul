@@ -5,7 +5,7 @@ import re
 import difflib
 from io import BytesIO
 
-# URL M3U dan EPG
+# 1. URL M3U dan EPG
 M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
@@ -13,15 +13,15 @@ EPG_URLS = [
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"
 ]
 
-# RUMUS OTOMATIS: Fungsi untuk menyamakan format teks
+# 2. RUMUS OTOMATIS: Fungsi untuk menyamakan format teks
 def rumus_samakan_teks(teks):
     if not teks: return ""
     teks = teks.lower()
-    # 1. Hapus kata-kata umum (sports, tv, hd, dll)
+    # Hapus kata-kata umum (sports, tv, hd, dll)
     teks = re.sub(r'\b(sports|sport|tv|hd|fhd|sd|4k|ch|channel|network)\b', '', teks)
-    # 2. Hapus embel-embel dalam kurung/kurung siku
+    # Hapus embel-embel dalam kurung/kurung siku
     teks = re.sub(r'\[.*?\]|\(.*?\)', '', teks)
-    # 3. Hapus SEMUA tanda baca (titik, spasi, strip) dan sisakan huruf/angka saja
+    # Hapus SEMUA tanda baca (titik, spasi, strip) dan sisakan huruf/angka saja
     teks = re.sub(r'[^a-z0-9]', '', teks)
     return teks
 
@@ -29,10 +29,27 @@ print("1. Mengunduh dan memproses data EPG...")
 epg_dict = {} # Menyimpan ID Asli EPG
 kamus_rumus_epg = {} # Menyimpan Teks yang sudah dirumus -> ID Asli EPG
 
+# HEADER PENYAMARAN AGAR TIDAK DIBLOKIR SERVER (Bypass bot protection)
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+}
+
 for url in EPG_URLS:
     try:
-        resp = requests.get(url, timeout=30)
-        content = gzip.GzipFile(fileobj=BytesIO(resp.content)).read() if url.endswith('.gz') else resp.content
+        resp = requests.get(url, headers=headers, timeout=30)
+        
+        # Cek apakah diblokir dan malah dikasih halaman web HTML (bukan XML/GZ)
+        if b'<html' in resp.content[:20].lower() or b'<!doctype' in resp.content[:20].lower():
+            print(f"⚠️ SKIP: Link {url} memblokir akses dan mengembalikan halaman web.")
+            continue
+            
+        # Ekstrak konten
+        if url.endswith('.gz'):
+            content = gzip.GzipFile(fileobj=BytesIO(resp.content)).read()
+        else:
+            content = resp.content
+            
         root = ET.fromstring(content)
         for ch in root.findall('channel'):
             id_asli_epg = ch.get('id')
@@ -45,7 +62,7 @@ for url in EPG_URLS:
                 kamus_rumus_epg[rumus_samakan_teks(id_asli_epg)] = id_asli_epg
                 kamus_rumus_epg[rumus_samakan_teks(nama_epg)] = id_asli_epg
     except Exception as e:
-        print(f"Gagal memproses EPG {url}: {e}")
+        print(f"❌ Gagal memproses EPG {url}: {e}")
 
 daftar_teks_epg_dirumus = list(kamus_rumus_epg.keys())
 
@@ -69,11 +86,11 @@ try:
             
             id_epg_terpilih = ""
             
-            # Cek ke dalam kamus rumus
+            # 1. Cek Exact/Clean Match ke dalam kamus rumus
             if teks_m3u_dirumus in kamus_rumus_epg:
                 id_epg_terpilih = kamus_rumus_epg[teks_m3u_dirumus]
             else:
-                # Jika masih meleset, gunakan tebakan akurasi 80% (Fuzzy)
+                # 2. Jika masih meleset, gunakan tebakan akurasi 80% (Fuzzy)
                 mirip = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=1, cutoff=0.8)
                 if mirip:
                     id_epg_terpilih = kamus_rumus_epg[mirip[0]]
@@ -85,7 +102,7 @@ try:
                 # Masukkan tvg-id yang sudah pasti cocok
                 line_baru = line_bersih.replace('#EXTINF:-1', f'#EXTINF:-1 tvg-id="{id_epg_terpilih}"')
                 
-                # Opsional: Jika ingin nama di layar ikut berubah jadi rapi sesuai EPG
+                # Ganti nama di layar agar rapi mengikuti EPG
                 nama_rapi_epg = epg_dict[id_epg_terpilih]
                 bagian = line_baru.split(',')
                 bagian[-1] = nama_rapi_epg
@@ -99,14 +116,14 @@ try:
         else:
             m3u_baru.append(line)
 
-    # Simpan File
+    # 3. Simpan File Hasil
     with open("playlist_termapping.m3u", "w", encoding="utf-8") as f:
         f.write("\n".join(m3u_baru))
         
     with open("laporan_rumus.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(log_sukses))
         
-    print("Selesai! Mapping otomatis dengan rumus berhasil.")
+    print("Selesai! Mapping otomatis dengan rumus berhasil. File telah disimpan.")
 
 except Exception as e:
     print(f"Error: {e}")
