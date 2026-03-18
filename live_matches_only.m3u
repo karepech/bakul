@@ -1,6 +1,15 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X952276.jpg", 🇮🇩 ⏳ 08:00-10:00 WIB - TGL S2 : Jupiter Links Golf Club Vs Boston Common Golf
-https://bwifi.my.id/5menit.mp4?m=tgls2jupiterlinksgolfclubbostoncommongolf_1773820800.0
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X952276.jpg", 🇮🇩 🔴 08:00-10:00 WIB - TGL S2 : Jupiter Links Golf Club Vs Boston Common Golf [beIN Sports 3]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X952276.jpg", 🇮🇩 🔴 08:00-10:00 WIB - TGL S2 : Jupiter Links Golf Club Vs Boston Common Golf [Bein Sports 3 HD]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1283
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X952276.jpg", 🇮🇩 🔴 08:00-10:00 WIB - TGL S2 : Jupiter Links Golf Club Vs Boston Common Golf [BEIN SPORTS 3]
+http://dragon1977.com:80/047306b75f/b5a06cc482d6/1178451
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955116.jpg", 🇮🇩 ⏳ 12:40-14:40 WIB - Formula 1 Main Race 2026
 https://bwifi.my.id/5menit.mp4?m=formula1mainrace_1773837600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X948150.jpg", 🇮🇩 ⏳ 13:10-15:00 WIB - Super Lig 2025/26
