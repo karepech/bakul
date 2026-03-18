@@ -10,7 +10,7 @@ from io import BytesIO
 # 1. Konfigurasi URL
 M3U_URL = "https://raw.githubusercontent.com/karepech/Karepetv/refs/heads/main/sports_combined.m3u"
 EPG_URLS = [
-    "https://epg.pw/xmltv/epg.xml",
+    "https://epg.pw/xmltv/epg.xml.gz",
     "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml"
 ]
 
