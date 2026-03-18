@@ -1,9 +1,9 @@
 name: Generate EPG Mapping
 
 on:
-  workflow_dispatch: # Tombol manual untuk menjalankan script
-  # schedule:
-  #   - cron: '0 0 * * *' # Opsional: Hapus tanda pagar jika ingin otomatis jalan tiap hari jam 7 pagi WIB
+  workflow_dispatch: # Tetap bisa dijalankan manual pakai tombol
+  schedule:
+    - cron: '0 */12 * * *' # Berjalan otomatis setiap 12 jam
 
 jobs:
   build:
