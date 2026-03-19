@@ -24,7 +24,7 @@
 ❌ KOSONG: AllPlay Ent
 ❌ KOSONG: HANACARAKA TV
 ❌ KOSONG: Food Travel (v+)
-❌ KOSONG: Indonesia Movie Channel (V+)
+✅ [RUMUS EXACT] Indonesia Movie Channel (V+) -> IMC
 ❌ KOSONG: CelebritiesTV (V+)
 ❌ KOSONG: CNN Indonesia (ChannelFeed)
 ❌ KOSONG: IDX
@@ -42,7 +42,7 @@
 ❌ KOSONG: GTV
 ❌ KOSONG: Transtv
 ❌ KOSONG: Trans7
-❌ KOSONG: Citra Entertainment HD
+✅ [RUMUS FUZZY] Citra Entertainment HD -> Citra Entertainment
 ❌ KOSONG: Citra Bioskop HD
 ❌ KOSONG: Citra Dangdut HD
 ❌ KOSONG: Citra Muslim HD
@@ -63,7 +63,7 @@
 ❌ KOSONG: TATV
 ❌ KOSONG: Banjar TV
 ❌ KOSONG: Banten TV
-❌ KOSONG: BMS TV
+✅ [RUMUS FUZZY] BMS TV -> MS Sport
 ❌ KOSONG: Dhamma TV
 ❌ KOSONG: RCTV
 ❌ KOSONG: TV Tabalong
@@ -90,13 +90,13 @@
 ❌ KOSONG: Galaxy
 ❌ KOSONG: ORIGINALS
 ❌ KOSONG: Buddy Star
-❌ KOSONG: Cineedge
+✅ [RUMUS FUZZY] Cineedge -> Cinemax Action
 ❌ KOSONG: SUPERRIX
 ❌ KOSONG: Uniquest
 ❌ KOSONG: beIN Sports 1
 ❌ KOSONG: beIN Sports 2
 ❌ KOSONG: beIN Sports 3
-❌ KOSONG: Sportstar
+✅ [RUMUS FUZZY] Sportstar -> SportsGrid
 ❌ KOSONG: Sportstar 2
 ✅ [RUMUS EXACT] Sportstar 4 -> Sportstars 4 HD
 ❌ KOSONG: CTV 1 (SERI A)
@@ -104,12 +104,12 @@
 ❌ KOSONG: CTV 3
 ❌ KOSONG: CTV 5
 ❌ KOSONG: CTV 6
-❌ KOSONG: SPOTV
+✅ [RUMUS EXACT] SPOTV -> SPOTV HD
 ✅ [RUMUS EXACT] SpoTV 2 -> SPOTV 2 HD
 ❌ KOSONG: REDBULL TV
-❌ KOSONG: Soccer Channel V+
+✅ [RUMUS FUZZY] Soccer Channel V+ -> Soccer Channel
 ❌ KOSONG: Sukan TV 1
-❌ KOSONG: SportTV 1
+✅ [RUMUS FUZZY] SportTV 1 -> SporTV
 ✅ [RUMUS FUZZY] SportTV 2 -> SporTV 2
 ❌ KOSONG: SportTV 3
 ❌ KOSONG: Prima Sport 2
@@ -117,12 +117,12 @@
 ❌ KOSONG: Prima Sport 4
 ❌ KOSONG: Prima Sport 5
 ❌ KOSONG: DGS 1
-❌ KOSONG: DGS 2
+✅ [RUMUS FUZZY] DGS 2 -> RDS2
 ❌ KOSONG: DGS 3
 ❌ KOSONG: DGS 4
 ❌ KOSONG: FOX SPORTS 1
 ✅ [RUMUS FUZZY] FOX SPORTS 2 -> FOX Sports 2 HD [AR]
-❌ KOSONG: FOX SPORTS 3
+✅ [RUMUS FUZZY] FOX SPORTS 3 -> FOX Sports 3 HD [AR]
 ❌ KOSONG: FOX SPORTS PREMIUM
 ❌ KOSONG: Motorvision TV
 ❌ KOSONG: Red Bull TV
@@ -132,11 +132,11 @@
 ❌ KOSONG: SLOVAKIA: SPORT 1
 ❌ KOSONG: SLOVAKIA: SPORT 2
 ❌ KOSONG: SKY_ACTION
-❌ KOSONG: SKY_F1
+✅ [RUMUS EXACT] SKY_F1 -> Sky Sport F1 [DE]
 ❌ KOSONG: SKY_RACE
-❌ KOSONG: ELEVEN1
+✅ [RUMUS EXACT] ELEVEN1 -> Eleven Sports 1
 ✅ [RUMUS EXACT] ELEVEN2 -> Eleven Sports 2
-❌ KOSONG: ELEVEN3
+✅ [RUMUS EXACT] ELEVEN3 -> Eleven Sports 3
 ✅ [RUMUS EXACT] ELEVEN4 -> Eleven Sports 4
 ✅ [RUMUS FUZZY] ELEVEN5 -> Eleven Sports 4
 ❌ KOSONG: Abu Dhabi Sports 1
@@ -151,25 +151,25 @@
 ❌ KOSONG: ONE SPORTS HD
 ❌ KOSONG: PREMIER SPORTS
 ❌ KOSONG: DAZN RINGSIDE
-❌ KOSONG: NBA TV
+✅ [RUMUS EXACT] NBA TV -> NBA
 ❌ KOSONG: FANCODE TV 1
 ❌ KOSONG: FANCODE TV 2
 ❌ KOSONG: FANCODE TV 3
 ❌ KOSONG: CBS Champions
-❌ KOSONG: CBS Sports HQ
+✅ [RUMUS FUZZY] CBS Sports HQ -> CBS Sports Network HD
 ❌ KOSONG: CBS Golazo Network
 ❌ KOSONG: CAZE TV 1
 ❌ KOSONG: CAZE TV 2
 ❌ KOSONG: CAZE TV 3
-❌ KOSONG: SPOTV NOW
-❌ KOSONG: Sportdigital Fussball DE
+✅ [RUMUS FUZZY] SPOTV NOW -> SPOTV HD
+✅ [RUMUS FUZZY] Sportdigital Fussball DE -> sportdigital Fussball
 ❌ KOSONG: DAZN FAST+
 ❌ KOSONG: DAZN COMBAT
 ❌ KOSONG: Biznet Kids
 ❌ KOSONG: Cartoon Network
 ❌ KOSONG: Cartoonito
 ❌ KOSONG: CBeebies
-❌ KOSONG: Kids TV
+✅ [RUMUS EXACT] Kids TV -> Kids TV
 ❌ KOSONG: My Kidz
 ❌ KOSONG: Zoomoo
 ❌ KOSONG: Moonbug (v+)
@@ -185,7 +185,7 @@
 ❌ KOSONG: Disney Channel
 ❌ KOSONG: KidsFlix
 ❌ KOSONG: Pluto TV Kids
-❌ KOSONG: Kartoon Channel
+✅ [RUMUS EXACT] Kartoon Channel -> Kartoon Channel!
 ❌ KOSONG: Pinkfong Baby Shark TV
 ❌ KOSONG: Forever Kids
 ❌ KOSONG: Garfield & Friends
@@ -292,12 +292,12 @@
 ❌ KOSONG: ART SPORT 2
 ❌ KOSONG: CYTAVISION SPORT 1
 ❌ KOSONG: CYTAVISION SPORT 2
-❌ KOSONG: DIGI SPORT 1
-❌ KOSONG: PREMIER SPORT 1
-❌ KOSONG: PREMIER SPORT 2
+✅ [RUMUS EXACT] DIGI SPORT 1 -> DIGI Sport 1
+✅ [RUMUS EXACT] PREMIER SPORT 1 -> Premier Sports 1 [UK]
+✅ [RUMUS EXACT] PREMIER SPORT 2 -> Premier Sports 2 [UK]
 ❌ KOSONG: RAI SPORT
-✅ [RUMUS FUZZY] S-SPORT 1 -> SÝN Sport 1
-❌ KOSONG: S-SPORT 2
+❌ KOSONG: S-SPORT 1
+✅ [RUMUS EXACT] S-SPORT 2 -> S Sport 2 [TR]
 ❌ KOSONG: SPORT DK1
 ❌ KOSONG: SPORT DK2
 ❌ KOSONG: SPORT DK3
@@ -305,30 +305,30 @@
 ✅ [RUMUS FUZZY] SPORT KLUB SL 2 -> Sport Klub 2 [SI]
 ✅ [RUMUS FUZZY] SPORT KLUB SL 3 -> Sport Klub 3 [HR]
 ❌ KOSONG: SPORT TV PT 1
-❌ KOSONG: SPORT TV PT 2
-❌ KOSONG: SPORT TV PT 3
-❌ KOSONG: SPORT TV PT 4
-❌ KOSONG: SPORT TV PT 5
-❌ KOSONG: SPORT TV PT 6
+✅ [RUMUS FUZZY] SPORT TV PT 2 -> ČT2
+✅ [RUMUS FUZZY] SPORT TV PT 3 -> Sport TV+ PT
+✅ [RUMUS FUZZY] SPORT TV PT 4 -> ČT4 Sport
+✅ [RUMUS FUZZY] SPORT TV PT 5 -> Sport TV+ PT
+✅ [RUMUS FUZZY] SPORT TV PT 6 -> Sport TV+ PT
 ❌ KOSONG: SUPER SPORTS 1 ALB
 ❌ KOSONG: SUPER SPORTS 2 ALB
 ❌ KOSONG: SUPER SPORTS 3 ALB
 ❌ KOSONG: SUPER SPORTS 4 ALB
 ❌ KOSONG: SUPER SPORTS 5 ALB
-✅ [RUMUS FUZZY] TIVIBU 1 -> Tivibu Spor 1
-❌ KOSONG: TIVIBU 2
+❌ KOSONG: TIVIBU 1
+✅ [RUMUS FUZZY] TIVIBU 2 -> Tivibu Spor 2
 ❌ KOSONG: TIVIBU 3
-❌ KOSONG: TNT SPORT 1
-❌ KOSONG: TNT SPORT 2
-❌ KOSONG: TNT SPORT 3
+✅ [RUMUS EXACT] TNT SPORT 1 -> TNT Sports 1 HD
+✅ [RUMUS EXACT] TNT SPORT 2 -> TNT Sports 2 HD
+✅ [RUMUS EXACT] TNT SPORT 3 -> TNT Sports 3 HD
 ✅ [RUMUS EXACT] TNT SPORT 4 -> TNT Sports 4 HD
 ❌ KOSONG: TRT SPORT 1
 ❌ KOSONG: TRT SPORT 2
 ❌ KOSONG: VOO SPORT 1
 ❌ KOSONG: VOO SPORT 2
-❌ KOSONG: ZIGGO SPORT 1
-❌ KOSONG: ZIGGO SPORT 2
-❌ KOSONG: ZIGGO SPORT 3
+✅ [RUMUS EXACT] ZIGGO SPORT 1 -> Ziggo Sport 1 [NL]
+✅ [RUMUS EXACT] ZIGGO SPORT 2 -> Ziggo Sport 2 [NL]
+✅ [RUMUS EXACT] ZIGGO SPORT 3 -> Ziggo Sport 3 [NL]
 ✅ [RUMUS EXACT] ZIGGO SPORT 4 -> Ziggo Sport 4 [NL]
 ❌ KOSONG: ZIGGO SPORT 5
 ✅ [RUMUS EXACT] ZIGGO SPORT 6 -> Ziggo Sport 6 [NL]
@@ -384,7 +384,7 @@
 ❌ KOSONG: Golf Channel Latin America
 ❌ KOSONG: Golf Network (544p)
 ❌ KOSONG: Horse TV (720p)
-❌ KOSONG: HTSpor TV (1080p)
+✅ [RUMUS FUZZY] HTSpor TV (1080p) -> SporTV
 ❌ KOSONG: ITV Deportes
 ❌ KOSONG: J Sports 1 (544p)
 ❌ KOSONG: J Sports 2 (544p)
@@ -416,7 +416,7 @@
 ❌ KOSONG: Pac 12 Insider (1080p)
 ❌ KOSONG: Persiana Fight
 ❌ KOSONG: Poker Go (1080p)
-❌ KOSONG: PRO Sport International
+✅ [RUMUS FUZZY] PRO Sport International -> RTV International
 ❌ KOSONG: QazSport (480p) [Geo-blocked]
 ❌ KOSONG: RACER International
 ❌ KOSONG: Realitatea Sportiva (720p)
@@ -431,8 +431,8 @@
 ❌ KOSONG: Sony Sports Ten 5 HD (1080p)
 ❌ KOSONG: SOS Kanal Plus (720p)
 ❌ KOSONG: Sport Italia (1080p)
-❌ KOSONG: Sportdigital FUSSBALL HD (1080p)
-❌ KOSONG: SportsGrid (1080p)
+✅ [RUMUS FUZZY] Sportdigital FUSSBALL HD (1080p) -> sportdigital Fussball
+✅ [RUMUS FUZZY] SportsGrid (1080p) -> SportsGrid
 ❌ KOSONG: SportsTVPlus
 ❌ KOSONG: Stadium (720p)
 ❌ KOSONG: Star Sports 1 HD (1080p)
@@ -448,7 +448,7 @@
 ❌ KOSONG: Swerve Combat (1080p)
 ❌ KOSONG: Teledeporte (1080p)
 ❌ KOSONG: Teletrak (720p)
-❌ KOSONG: TSN The Ocho
+✅ [RUMUS FUZZY] TSN The Ocho -> ESPN8 The Ocho
 ❌ KOSONG: Turf Movil (720p)
 ❌ KOSONG: TÃ¼rkmenistan Sport (406p) [Not 24/7]
 ❌ KOSONG: TVMatic Fight (720p)
@@ -611,7 +611,7 @@
 ❌ KOSONG: TVS Comedy Network (720p)
 ❌ KOSONG: ÐÐÐ Ð¢Ð
 ❌ KOSONG: Ð¢Ð²Ð¾Ðµ Ð¢Ð Ð®Ð¼Ð¾Ñ
-❌ KOSONG: bon appÃ©tit (1080p)
+✅ [RUMUS EXACT] bon appÃ©tit (1080p) -> Bon Appétit TV
 ❌ KOSONG: Chef Champion (720p) [Not 24/7]
 ❌ KOSONG: Chef Roc Show (720p) [Not 24/7]
 ❌ KOSONG: Cooking Panda (576p)
@@ -721,7 +721,7 @@
 ❌ KOSONG: TV Cuatro 4.2 (1080p)
 ❌ KOSONG: TV Life America (720p)
 ❌ KOSONG: TV Vita
-❌ KOSONG: TVE RS (1080p)
+✅ [RUMUS FUZZY] TVE RS (1080p) -> TVS
 ❌ KOSONG: TVR Cultural
 ❌ KOSONG: UCL (720p)
 ❌ KOSONG: UCV TV (720p)
@@ -748,7 +748,7 @@
 ❌ KOSONG: Click TV (Coronel) (720p)
 ❌ KOSONG: CNA Originals (1080p)
 ❌ KOSONG: Court TV (1080p)
-❌ KOSONG: ÄT 2
+✅ [RUMUS EXACT] ÄT 2 -> ČT2
 ❌ KOSONG: DangerTV (720p)
 ❌ KOSONG: Dateline 24/7 (1080p)
 ❌ KOSONG: Documentary+ (1080p)
@@ -812,27 +812,27 @@
 ❌ KOSONG: GARUDA TV
 ❌ KOSONG: TVRI SPORT
 ❌ KOSONG: VOLI TV
-❌ KOSONG: SpoTV 1 PH
+✅ [RUMUS FUZZY] SpoTV 1 PH -> SPOTV HD
 ❌ KOSONG: SpoTV 2 PH
-❌ KOSONG: Soccer Channel 1
-❌ KOSONG: beIN Sports ID 4
-❌ KOSONG: beIN Sports ID 5
+✅ [RUMUS FUZZY] Soccer Channel 1 -> Soccer Channel
+✅ [RUMUS FUZZY] beIN Sports ID 4 -> beIN SPORTS 5
+✅ [RUMUS FUZZY] beIN Sports ID 5 -> beIN SPORTS 5
 ❌ KOSONG: MOTOR VISION+
 ❌ KOSONG: Peacock Premier League
 ❌ KOSONG: USA
 ❌ KOSONG: Prima Sport 1
-❌ KOSONG: TSN 1
-❌ KOSONG: TSN 2
-❌ KOSONG: TSN 3
-❌ KOSONG: TSN 4
-❌ KOSONG: TSN 5
+✅ [RUMUS EXACT] TSN 1 -> TSN 1
+✅ [RUMUS EXACT] TSN 2 -> TSN 2
+✅ [RUMUS EXACT] TSN 3 -> TSN 3
+✅ [RUMUS EXACT] TSN 4 -> TSN 4 HD
+✅ [RUMUS EXACT] TSN 5 -> TSN 5 HD
 ❌ KOSONG: FS1
 ✅ [RUMUS EXACT] SKY SPORTS LALIGA -> Sky Sports LaLiga [MX]
 ❌ KOSONG: SKY SPORTS BUNDESLIGA
-❌ KOSONG: Sky Sports Premiere League
+✅ [RUMUS FUZZY] Sky Sports Premiere League -> Sky Sport Premier League
 ❌ KOSONG: ONE SPORTS+
 ❌ KOSONG: NBA PHILIPPINES
-❌ KOSONG: Sky Sport F1
+✅ [RUMUS EXACT] Sky Sport F1 -> Sky Sport F1 [DE]
 ❌ KOSONG: Sky Sport Racing
 ❌ KOSONG: MYKIDZ DENS
 ❌ KOSONG: MOONBUG
@@ -870,21 +870,21 @@
 ❌ KOSONG: QVC JAPAN
 ❌ KOSONG: SHOP CHANNEL
 ❌ KOSONG: CHANNEL 8 TH
-❌ KOSONG: DLTV 1
+✅ [RUMUS FUZZY] DLTV 1 -> LTV1
 ✅ [RUMUS FUZZY] DLTV 2 -> TV2 Sport [DK]
 ✅ [RUMUS FUZZY] DLTV 3 -> TV3 Sport [DK]
-❌ KOSONG: DLTV 4
+✅ [RUMUS FUZZY] DLTV 4 -> TV4 (Латвия)
 ❌ KOSONG: DLTV 5
 ❌ KOSONG: DLTV 6
-❌ KOSONG: DLTV 7
+✅ [RUMUS FUZZY] DLTV 7 -> LTV7
 ❌ KOSONG: DLTV 8
 ❌ KOSONG: DLTV 9
-❌ KOSONG: DLTV 10
-❌ KOSONG: DLTV 11
-❌ KOSONG: DLTV 12
-❌ KOSONG: DLTV 13
-❌ KOSONG: DLTV 14
-❌ KOSONG: DLTV 15
+✅ [RUMUS FUZZY] DLTV 10 -> LTV1
+✅ [RUMUS FUZZY] DLTV 11 -> LTV1
+✅ [RUMUS FUZZY] DLTV 12 -> LTV1
+✅ [RUMUS FUZZY] DLTV 13 -> LTV1
+✅ [RUMUS FUZZY] DLTV 14 -> LTV1
+✅ [RUMUS FUZZY] DLTV 15 -> LTV1
 ❌ KOSONG: Thairath TV
 ❌ KOSONG: HBO+
 ❌ KOSONG: HBO 2
@@ -917,17 +917,17 @@
 ❌ KOSONG: Kabel Eins DE
 ❌ KOSONG: 3sat DE
 ❌ KOSONG: VOX DE
-❌ KOSONG: Das Erste DE
+✅ [RUMUS FUZZY] Das Erste DE -> Das Erste
 ❌ KOSONG: ZDF DE
 ❌ KOSONG: ZDF NEO HD
-❌ KOSONG: ORF 1
+✅ [RUMUS EXACT] ORF 1 -> ORF 1
 ❌ KOSONG: ORF 2
-❌ KOSONG: Sixx DE
+✅ [RUMUS FUZZY] Sixx DE -> Sixx [DE]
 ❌ KOSONG: Phoenix DE
 ❌ KOSONG: AXN White DE
 ❌ KOSONG: AXN Black DE
 ❌ KOSONG: Disney Channel DE
-❌ KOSONG: Sky 1
+✅ [RUMUS EXACT] Sky 1 -> Sky Sport 1 HD
 ❌ KOSONG: Cinema Highlights
 ❌ KOSONG: Hits DE
 ❌ KOSONG: Action DE
@@ -978,45 +978,45 @@
 ❌ KOSONG: SK Fight Channel
 ✅ [RUMUS EXACT] Arena Sport 1 HR -> Arena Sport 1 HR
 ✅ [RUMUS EXACT] Arena Sport 1 HR raw -> Arena Sport 1 HR
-❌ KOSONG: Arena Sport 2 HR
-❌ KOSONG: Arena Sport 2 HR raw
+✅ [RUMUS EXACT] Arena Sport 2 HR -> Arena Sport 2 HR
+✅ [RUMUS EXACT] Arena Sport 2 HR raw -> Arena Sport 2 HR
 ✅ [RUMUS EXACT] Arena Sport 3 HR -> Arena Sport 3 HR
 ✅ [RUMUS EXACT] Arena Sport 3 HR raw -> Arena Sport 3 HR
 ✅ [RUMUS EXACT] Arena Sport 4 HR -> Arena Sport 4 HR
 ✅ [RUMUS EXACT] Arena Sport 4 HR raw -> Arena Sport 4 HR
-❌ KOSONG: Arena Sport 5 HR
-❌ KOSONG: Arena Sport 5 HR raw
-❌ KOSONG: Arena Sport 6 HR
-❌ KOSONG: Arena Sport 6 HR raw
-❌ KOSONG: Arena Sport 7 HR
-❌ KOSONG: Arena Sport 7 HR raw
-❌ KOSONG: Arena Sport 8 HR
-❌ KOSONG: Arena Sport 8 HR raw
-❌ KOSONG: Arena Sport 9 HR
-❌ KOSONG: Arena Sport 9 HR raw
+✅ [RUMUS EXACT] Arena Sport 5 HR -> Arena Sport 5 HR
+✅ [RUMUS EXACT] Arena Sport 5 HR raw -> Arena Sport 5 HR
+✅ [RUMUS EXACT] Arena Sport 6 HR -> Arena Sport 6 HR
+✅ [RUMUS EXACT] Arena Sport 6 HR raw -> Arena Sport 6 HR
+✅ [RUMUS FUZZY] Arena Sport 7 HR -> Arena Sport 6 HR
+✅ [RUMUS FUZZY] Arena Sport 7 HR raw -> Arena Sport 6 HR
+✅ [RUMUS FUZZY] Arena Sport 8 HR -> Arena Sport 6 HR
+✅ [RUMUS FUZZY] Arena Sport 8 HR raw -> Arena Sport 6 HR
+✅ [RUMUS FUZZY] Arena Sport 9 HR -> Arena Sport 6 HR
+✅ [RUMUS FUZZY] Arena Sport 9 HR raw -> Arena Sport 6 HR
 ✅ [RUMUS FUZZY] Arena Sport 10 HR -> Arena Sport 1 HR
 ✅ [RUMUS FUZZY] Arena Sport 10 HR raw -> Arena Sport 1 HR
 ❌ KOSONG: Arena Sport 1 Sr
 ❌ KOSONG: Arena Sport 2 Sr
 ✅ [RUMUS FUZZY] Arena Sport 3 Sr -> Arena Sport 3 HR
 ✅ [RUMUS FUZZY] Arena Sport 4 Sr -> Arena Sport 4 HR
-❌ KOSONG: Arena Sport 5 Sr
-❌ KOSONG: Arena Sport 6 Sr
+✅ [RUMUS FUZZY] Arena Sport 5 Sr -> Arena Sport 5 HR
+✅ [RUMUS FUZZY] Arena Sport 6 Sr -> Arena Sport 6 HR
 ✅ [RUMUS FUZZY] Arena Sport 7 Sr -> Arena Sport 7 [HR]
 ✅ [RUMUS FUZZY] Arena Sport 8 Sr -> Arena Sport 8 [HR]
-❌ KOSONG: Arena Sport 9 Sr
+✅ [RUMUS FUZZY] Arena Sport 9 Sr -> Arena Sport 9 [HR]
 ❌ KOSONG: Arena Sport 10 Sr
 ✅ [RUMUS EXACT] Arena Premium 1 -> Arena Premium 1
 ✅ [RUMUS EXACT] Arena Premium 1 raw -> Arena Premium 1
-❌ KOSONG: Arena Premium 2
-❌ KOSONG: Arena Premium 2 raw
+✅ [RUMUS EXACT] Arena Premium 2 -> Arena Premium 2
+✅ [RUMUS EXACT] Arena Premium 2 raw -> Arena Premium 2
 ✅ [RUMUS EXACT] Arena Premium 3 -> Arena Premium 3
 ✅ [RUMUS EXACT] Arena Premium 3 raw -> Arena Premium 3
-❌ KOSONG: Arena Premium 4
+✅ [RUMUS EXACT] Arena Premium 4 -> Arena Premium 4 [RS]
 ✅ [RUMUS EXACT] Arena Premium 5 -> Arena Premium 5 [RS]
 ✅ [RUMUS FUZZY] Arena Premium 1 BiH -> Arena Premium 1
 ✅ [RUMUS EXACT] Arena Tenis -> Arena Tenis [RS]
-❌ KOSONG: Arena Adrenalin
+✅ [RUMUS EXACT] Arena Adrenalin -> Arena Adrenalin [RS]
 ✅ [RUMUS FUZZY] Arena Sport 1 BH -> Arena Sport 1 HR
 ✅ [RUMUS FUZZY] Arena Fight Test -> Arena Fight HD
 ❌ KOSONG: Arena Esport Test
@@ -1040,18 +1040,18 @@
 ❌ KOSONG: SS Golf UK
 ❌ KOSONG: SS Racing UK
 ❌ KOSONG: SS News UK
-❌ KOSONG: BT Sport 1 HD
-❌ KOSONG: BT Sport 2 HD
+✅ [RUMUS EXACT] BT Sport 1 HD -> BT Sport 1 HD
+✅ [RUMUS EXACT] BT Sport 2 HD -> BT Sport 2 HD
 ❌ KOSONG: BT Sport 3 HD
 ❌ KOSONG: ESPN 2 US HD Test
 ❌ KOSONG: FOX Sports 1 Nl
 ✅ [RUMUS FUZZY] FOX Sports 2 Nl -> FOX Sports 2 HD [AR]
-❌ KOSONG: FOX Sports 3 Nl
+✅ [RUMUS FUZZY] FOX Sports 3 Nl -> FOX Sports 3 HD [AR]
 ❌ KOSONG: FOX Sports 4 Nl
-❌ KOSONG: TSN 1 HD
-❌ KOSONG: TSN 2 HD
-❌ KOSONG: NFL Network
-❌ KOSONG: NBA TV
+✅ [RUMUS EXACT] TSN 1 HD -> TSN 1
+✅ [RUMUS EXACT] TSN 2 HD -> TSN 2
+✅ [RUMUS EXACT] NFL Network -> NFL Network HD
+✅ [RUMUS EXACT] NBA TV -> NBA
 ❌ KOSONG: SOS Kanal
 ❌ KOSONG: Sportska TV
 ❌ KOSONG: TV Zvezda
@@ -1059,7 +1059,7 @@
 ❌ KOSONG: SPORT TV 2 SLO
 ❌ KOSONG: SPORT TV 3 SLO
 ❌ KOSONG: Dazn F1 ES TEST
-❌ KOSONG: Digi Sport 1
+✅ [RUMUS EXACT] Digi Sport 1 -> DIGI Sport 1
 ✅ [RUMUS EXACT] Digi Sport 2 -> DIGI Sport 2
 ✅ [RUMUS EXACT] Digi Sport 3 -> DIGI Sport 3
 ✅ [RUMUS EXACT] Digi Sport 4 -> DIGI Sport 4
@@ -1089,7 +1089,7 @@
 ❌ KOSONG: TIMNAS DAY 1
 ❌ KOSONG: TIMNAS DAY 2
 ❌ KOSONG: TIMNAS DAY 3
-❌ KOSONG: SPORTSTARS 3
+✅ [RUMUS EXACT] SPORTSTARS 3 -> Sportstars 3
 ❌ KOSONG: GTV SPORTS
 ❌ KOSONG: MNC TV SPORTS
 ❌ KOSONG: iNEWS SPORTS
@@ -1098,14 +1098,14 @@
 ❌ KOSONG: SCTV SPORTS
 ❌ KOSONG: TVRI SPORTS
 ❌ KOSONG: VOLI TV
-❌ KOSONG: SPOTV PH
+✅ [RUMUS FUZZY] SPOTV PH -> SPOTV HD
 ❌ KOSONG: SPOTV 2 PH
-❌ KOSONG: SPOTV HD FM
+✅ [RUMUS FUZZY] SPOTV HD FM -> SPOTV HD
 ❌ KOSONG: INDOSIAR SPORTS 1
 ❌ KOSONG: INDOSIAR SPORTS 2
 ❌ KOSONG: FIFA+ AU
 ❌ KOSONG: FIFA+ 1
-❌ KOSONG: BEIN SPORT XTRA
+✅ [RUMUS EXACT] BEIN SPORT XTRA -> beIN Sports Xtra [US]
 ❌ KOSONG: SKY SPORTS LIVE 5 HD
 ❌ KOSONG: SKY SPORTS LIVE 6 HD
 ❌ KOSONG: MOJI WI
@@ -1322,7 +1322,7 @@
 ❌ KOSONG: PAL TV IM
 ❌ KOSONG: DAVIKA TV LAMPUNG
 ❌ KOSONG: RADAR LAMPUNG TV
-❌ KOSONG: SULTRA TV
+✅ [RUMUS FUZZY] SULTRA TV -> V Sport Ultra HD
 ❌ KOSONG: KTV IM
 ❌ KOSONG: TV TABALONG
 ❌ KOSONG: PORTALOKA TV
@@ -1351,9 +1351,9 @@
 ❌ KOSONG: PRIMA TV
 ❌ KOSONG: JURNAL TV
 ❌ KOSONG: AREK TV
-❌ KOSONG: JOGJA TV
+✅ [RUMUS FUZZY] JOGJA TV -> JOJ Sport [CZ]
 ❌ KOSONG: SEMARANG TV
-❌ KOSONG: MGS TV
+✅ [RUMUS FUZZY] MGS TV -> MS Sport
 ❌ KOSONG: HUMA BETANG TV
 ❌ KOSONG: BETV IM
 ❌ KOSONG: JAYA TV IM
@@ -1432,22 +1432,22 @@
 ❌ KOSONG: ON SPORTS
 ✅ [RUMUS EXACT] ON SPORTS NEWS -> ON Sports News
 ❌ KOSONG: ON FOOTBALL
-❌ KOSONG: ON GOLF
+✅ [RUMUS EXACT] ON GOLF -> ON Golf
 ❌ KOSONG: SCTV15
 ❌ KOSONG: SCTV17
 ❌ KOSONG: SCTV22
 ✅ [RUMUS EXACT] W-SPORT -> W-Sport
-❌ KOSONG: FUBO SPORTS 1
-❌ KOSONG: FUBO SPORTS 2
-❌ KOSONG: TNT SPORTS 1
-❌ KOSONG: TNT SPORTS 2
-❌ KOSONG: TNT SPORTS 3
+✅ [RUMUS FUZZY] FUBO SPORTS 1 -> Fubo Sports Network [US]
+✅ [RUMUS FUZZY] FUBO SPORTS 2 -> Fubo Sports Network [US]
+✅ [RUMUS EXACT] TNT SPORTS 1 -> TNT Sports 1 HD
+✅ [RUMUS EXACT] TNT SPORTS 2 -> TNT Sports 2 HD
+✅ [RUMUS EXACT] TNT SPORTS 3 -> TNT Sports 3 HD
 ✅ [RUMUS EXACT] TNT SPORTS 4 -> TNT Sports 4 HD
-❌ KOSONG: TSN 1
-❌ KOSONG: TSN 2
-❌ KOSONG: TSN 3
-❌ KOSONG: TSN 4
-❌ KOSONG: TSN 5
+✅ [RUMUS EXACT] TSN 1 -> TSN 1
+✅ [RUMUS EXACT] TSN 2 -> TSN 2
+✅ [RUMUS EXACT] TSN 3 -> TSN 3
+✅ [RUMUS EXACT] TSN 4 -> TSN 4 HD
+✅ [RUMUS EXACT] TSN 5 -> TSN 5 HD
 ✅ [RUMUS EXACT] SKY SPORTS -> Sky Sports [MX]
 ❌ KOSONG: SKY SPORTS 2
 ❌ KOSONG: SKY LIVE 1
@@ -1456,26 +1456,26 @@
 ❌ KOSONG: SKY LIVE 4
 ❌ KOSONG: SKY LIVE 7
 ✅ [RUMUS EXACT] FOX SPORTS 2 -> FOX Sports 2 HD [AR]
-❌ KOSONG: FOX SPORTS 3
+✅ [RUMUS EXACT] FOX SPORTS 3 -> FOX Sports 3 HD [AR]
 ❌ KOSONG: FS PREMIUM
 ❌ KOSONG: CAZE TV 3
 ❌ KOSONG: EUROSPORT 1
 ❌ KOSONG: EUROSPORT 2
-❌ KOSONG: ESPN
-❌ KOSONG: ESPN 2
-❌ KOSONG: ESPN 3
+✅ [RUMUS EXACT] ESPN -> ESPN HD
+✅ [RUMUS EXACT] ESPN 2 -> ESPN2 HD
+✅ [RUMUS EXACT] ESPN 3 -> ESPN 3
 ❌ KOSONG: ESPN 4
-❌ KOSONG: ESPN 5
-❌ KOSONG: ESPN 6
+✅ [RUMUS EXACT] ESPN 5 -> ESPN 5
+✅ [RUMUS EXACT] ESPN 6 -> ESPN 6
 ❌ KOSONG: ASTRO ARENA
 ❌ KOSONG: ASTRO ARENA 2
 ❌ KOSONG: ASTRO FOOTBALL
-❌ KOSONG: ASTRO GRANDSTAND
+✅ [RUMUS EXACT] ASTRO GRANDSTAND -> Astro Grandstand HD
 ❌ KOSONG: ASTRO CRICKET
 ✅ [RUMUS EXACT] ASTRO BADMINTON -> Astro Badminton
 ✅ [RUMUS FUZZY] ASTRO BADMINTON 2 -> Astro Badminton
-❌ KOSONG: ASTRO ARENA BOLA
-❌ KOSONG: ASTRO ARENA BOLA 2
+✅ [RUMUS FUZZY] ASTRO ARENA BOLA -> Astro Arena Bola 2
+✅ [RUMUS EXACT] ASTRO ARENA BOLA 2 -> Astro Arena Bola 2
 ❌ KOSONG: ASTRO PREMIER LEAGUE
 ❌ KOSONG: ASTRO PREMIER LEAGUE 2
 ❌ KOSONG: UNIFI SPORTS
@@ -1483,7 +1483,7 @@
 ❌ KOSONG: TRUE GOLF CHANNEL
 ❌ KOSONG: GOLFPASS HD
 ❌ KOSONG: JOURNAL DU GOLF
-❌ KOSONG: NBC GOLF
+✅ [RUMUS FUZZY] NBC GOLF -> ON Golf
 ❌ KOSONG: STAR SPORTS 1 HD
 ❌ KOSONG: STAR SPORTS 2 HD
 ❌ KOSONG: STAR SPORTS SELECT 1 HD
@@ -1511,9 +1511,9 @@
 ❌ KOSONG: DAZN 2 IP
 ✅ [RUMUS FUZZY] DAZN 3 IP -> DAZN 3 PT
 ❌ KOSONG: DAZN 4 IP
-❌ KOSONG: DAZN 5 IP
+✅ [RUMUS FUZZY] DAZN 5 IP -> DAZN 5 PT
 ❌ KOSONG: DAZN 6 IP
-❌ KOSONG: DAZN F1 IP
+✅ [RUMUS FUZZY] DAZN F1 IP -> DAZN F1 [ES]
 ❌ KOSONG: EUROSPORT ASIA
 ❌ KOSONG: DAZN 1 ES
 ❌ KOSONG: DAZN 2 ES
@@ -1523,7 +1523,7 @@
 ❌ KOSONG: DAZN HELDINNEN
 ❌ KOSONG: DAZN WOMEN'S FOOTBALL
 ❌ KOSONG: DAZN RINGSIDE
-❌ KOSONG: SPORTDIGITAL
+✅ [RUMUS FUZZY] SPORTDIGITAL -> SportDigital1+
 ❌ KOSONG: GO3 SPORT 2
 ❌ KOSONG: GO3 SPORT 3
 ❌ KOSONG: GO3 SPORT EXTRA 1
@@ -1540,7 +1540,7 @@
 ❌ KOSONG: TEN SPORTS HD
 ❌ KOSONG: SONY TEN 1 HD
 ❌ KOSONG: SONY TEN 2 HD
-❌ KOSONG: SONY TEN 3 HD
+✅ [RUMUS EXACT] SONY TEN 3 HD -> Sony Sports Ten 3 HD
 ❌ KOSONG: SONY TEN 4 HD
 ✅ [RUMUS EXACT] SONY TEN 5 HD -> Sony Sports Ten 5 HD
 ❌ KOSONG: EPL 1 NOW SPORTS 1
@@ -1720,7 +1720,7 @@
 ❌ KOSONG: MUSIK INDONESIA
 ❌ KOSONG: SONG TV
 ❌ KOSONG: CLUBBING TV
-✅ [RUMUS EXACT] TV MU -> MU TV
+❌ KOSONG: TV MU
 ❌ KOSONG: TV9
 ❌ KOSONG: KILAT TV
 ❌ KOSONG: EAT & GO
@@ -1761,11 +1761,11 @@
 ❌ KOSONG: ARIRANG
 ❌ KOSONG: WION TV
 ❌ KOSONG: GOLF+
-❌ KOSONG: FOOTBALL TV
+✅ [RUMUS FUZZY] FOOTBALL TV -> V Sport Football [SE]
 ❌ KOSONG: BALAP
-❌ KOSONG: HISTORICAL SPORTS
+✅ [RUMUS FUZZY] HISTORICAL SPORTS -> Historia HD
 ❌ KOSONG: MOTOR RACING
-❌ KOSONG: HORIZON SPORTS
+✅ [RUMUS EXACT] HORIZON SPORTS -> Horizon Sports
 ❌ KOSONG: FIGHT TV
 ❌ KOSONG: IDCYCLIST
 ❌ KOSONG: XTEM SPORTS
@@ -1829,14 +1829,14 @@
 ❌ KOSONG: TVMU
 ❌ KOSONG: DMI TV
 ❌ KOSONG: HANACARAKA
-❌ KOSONG: ANTV
+✅ [RUMUS EXACT] ANTV -> ANTV
 ❌ KOSONG: RCTI
 ❌ KOSONG: TRANS 7
 ❌ KOSONG: TRANS TV
-❌ KOSONG: SPOTV
+✅ [RUMUS EXACT] SPOTV -> SPOTV HD
 ❌ KOSONG: SPOTV 2
-❌ KOSONG: SPORTSTARS 2
-❌ KOSONG: SPORTSTARS 3
+✅ [RUMUS EXACT] SPORTSTARS 2 -> Sportstars 2 HD
+✅ [RUMUS EXACT] SPORTSTARS 3 -> Sportstars 3
 ✅ [RUMUS EXACT] SPORTSTARS 4 -> Sportstars 4 HD
 ❌ KOSONG: INEWS
 ❌ KOSONG: TVRI
@@ -1889,7 +1889,7 @@
 ❌ KOSONG: CHANNEL NEWS ASIA
 ❌ KOSONG: RUSIA TODAY
 ❌ KOSONG: CCM
-❌ KOSONG: IMC
+✅ [RUMUS EXACT] IMC -> IMC
 ❌ KOSONG: FIGHT SPORTS
 ❌ KOSONG: LIFETIME
 ❌ KOSONG: TV5 MONDE
@@ -1939,7 +1939,7 @@
 ❌ KOSONG: ABC AUSTRALIA
 ❌ KOSONG: TV5 MONDE
 ❌ KOSONG: TLC
-❌ KOSONG: HORIZON SPORTS
+✅ [RUMUS EXACT] HORIZON SPORTS -> Horizon Sports
 ❌ KOSONG: TV2 1
 ❌ KOSONG: TV3 IP
 ❌ KOSONG: TV6
@@ -1952,7 +1952,7 @@
 ❌ KOSONG: ASTRO AURA IP
 ❌ KOSONG: ASTRO RANIA IP
 ❌ KOSONG: TV IKIM VPN
-❌ KOSONG: TVS HD
+✅ [RUMUS EXACT] TVS HD -> TVS
 ❌ KOSONG: DEWAN NEGARA
 ❌ KOSONG: DEWAN RAKYAT
 ❌ KOSONG: RTB GO  LIVE
@@ -2048,7 +2048,7 @@
 ❌ KOSONG: JOWO TV
 ❌ KOSONG: HBO
 ❌ KOSONG: ROCK EXTREME
-❌ KOSONG: CELESTIAL MOVIES
+✅ [RUMUS EXACT] CELESTIAL MOVIES -> Celestial Movies
 ❌ KOSONG: MY CINEMA ASIA
 ❌ KOSONG: FLIK
 ❌ KOSONG: BIOSKOP INDONESIA
@@ -2068,14 +2068,14 @@
 ❌ KOSONG: CHAMPIONS TV 1 (UDP)
 ❌ KOSONG: CHAMPIONS TV 2 (UDP)
 ❌ KOSONG: CHAMPIONS TV 3 (UDP)
-❌ KOSONG: FIGHT SPORTS
+✅ [RUMUS EXACT] FIGHT SPORTS -> Fight Sport
 ❌ KOSONG: EUROSPORT 2
 ❌ KOSONG: NBA TV
 ❌ KOSONG: VOLI TV
 ❌ KOSONG: TVRI SPORT
 ❌ KOSONG: MOTORVISION+
 ❌ KOSONG: WE DO SPORT
-❌ KOSONG: HORIZON SPORTS
+✅ [RUMUS EXACT] HORIZON SPORTS -> Horizon Sports
 ❌ KOSONG: ARIRANG
 ❌ KOSONG: KBS WORLD
 ❌ KOSONG: KBS KOREA
@@ -2137,7 +2137,7 @@
 ❌ KOSONG: PLANET FUN
 ❌ KOSONG: DEI KIDS
 ❌ KOSONG: DEI KIDS
-❌ KOSONG: KARTOON CHANNEL
+✅ [RUMUS EXACT] KARTOON CHANNEL -> Kartoon Channel!
 ❌ KOSONG: MTV 90s
 ❌ KOSONG: MTV LIVE
 ❌ KOSONG: PRAMBORS TV
@@ -2193,8 +2193,8 @@
 ❌ KOSONG: OCN
 ❌ KOSONG: Korean Drama SD
 ❌ KOSONG: Asian Crush
-❌ KOSONG: TNT MX
-❌ KOSONG: TNT (PXL)
+✅ [RUMUS FUZZY] TNT MX -> TNT
+✅ [RUMUS FUZZY] TNT (PXL) -> TNT
 ❌ KOSONG: &TV HD
 ❌ KOSONG: &PICTURES HD
 ❌ KOSONG: &PICTURES SD
@@ -2215,23 +2215,23 @@
 ❌ KOSONG: TFC Asia 🇵🇭
 ❌ KOSONG: TFC Canada 🇵🇭
 ❌ KOSONG: CT SPORT 🇸🇰
-❌ KOSONG: JOJ SPORT 🇸🇰
-❌ KOSONG: JOJ SPORT 2 🇸🇰
-❌ KOSONG: RTVS SPORT 🇸🇰
+✅ [RUMUS EXACT] JOJ SPORT 🇸🇰 -> JOJ Sport [CZ]
+✅ [RUMUS FUZZY] JOJ SPORT 2 🇸🇰 -> JOJ Sport [CZ]
+✅ [RUMUS FUZZY] RTVS SPORT 🇸🇰 -> TVS
 ❌ KOSONG: AUTO MOTOR AND SPORT 🇸🇰
 ❌ KOSONG: GOLF CHANNEL 🇸🇰
 ❌ KOSONG: FIGHT BOX 🇸🇰
 ❌ KOSONG: FAST AND FUNBOX 🇸🇰
 ❌ KOSONG: Sportsnet ONE
-❌ KOSONG: Sportsnet 360
-❌ KOSONG: Sportsnet Ontario
-❌ KOSONG: TSN 1 🇨🇦
-❌ KOSONG: TSN 2 🇨🇦
-❌ KOSONG: TSN 3 🇨🇦
-❌ KOSONG: TSN 4 🇨🇦
-❌ KOSONG: TSN 5 🇨🇦
+✅ [RUMUS FUZZY] Sportsnet 360 -> Sportsnet 360 HD
+✅ [RUMUS FUZZY] Sportsnet Ontario -> Sportsnet 4K
+✅ [RUMUS FUZZY] TSN 1 🇨🇦 -> TSN 1
+✅ [RUMUS FUZZY] TSN 2 🇨🇦 -> TSN 2
+✅ [RUMUS FUZZY] TSN 3 🇨🇦 -> TSN 3
+✅ [RUMUS FUZZY] TSN 4 🇨🇦 -> TSN 4 HD
+✅ [RUMUS FUZZY] TSN 5 🇨🇦 -> TSN 5 HD
 ✅ [RUMUS EXACT] TNT Sport 4 🇬🇧 -> TNT Sports 4 HD
-❌ KOSONG: Premier Sports 2 🇵🇭
+✅ [RUMUS EXACT] Premier Sports 2 🇵🇭 -> Premier Sports 2 [UK]
 ❌ KOSONG: CBS Sports HQ (720p)
 ❌ KOSONG: BEIN SPORTS MAX 5 🇫🇷
 ❌ KOSONG: BEIN SPORTS MAX 6 🇫🇷
@@ -2240,7 +2240,7 @@
 ❌ KOSONG: BEIN SPORTS MAX 9 🇫🇷
 ❌ KOSONG: BEIN SPORTS MAX 10 🇫🇷
 ❌ KOSONG: Tv4Futbol 🇸🇪
-❌ KOSONG: TV4 Tennis 🇸🇪
+✅ [RUMUS EXACT] TV4 Tennis 🇸🇪 -> TV4 Tennis [SE]
 ❌ KOSONG: TVP Sport
 ❌ KOSONG: TYC Sports
 ❌ KOSONG: Setanta Sports
@@ -2268,8 +2268,8 @@
 ❌ KOSONG: Sport Klub 4 ᴴᴰ
 ❌ KOSONG: Sport Klub 5 ᴴᴰ
 ❌ KOSONG: Sport Klub 6 ᴴᴰ
-❌ KOSONG: Sport Klub 7 ᴴᴰ
-❌ KOSONG: Sport Klub 8 ᴴᴰ
+✅ [RUMUS FUZZY] Sport Klub 7 ᴴᴰ -> WLNS-DT
+✅ [RUMUS FUZZY] Sport Klub 8 ᴴᴰ -> SPORT1+
 ❌ KOSONG: KBSN Sports KR
 ❌ KOSONG: tvN Sports
 ❌ KOSONG: ASTRO ARENA
@@ -2278,7 +2278,7 @@
 ✅ [RUMUS FUZZY] BOLA ARENA 2 -> Arena Sport 2
 ❌ KOSONG: ASTRO PREMIER LEAGUE
 ❌ KOSONG: ASTRO PREMIER LEAGUE 2
-❌ KOSONG: ASTRO GRANDSTAND
+✅ [RUMUS EXACT] ASTRO GRANDSTAND -> Astro Grandstand HD
 ❌ KOSONG: ASTRO FOOTBALL
 ❌ KOSONG: ASTRO FOOTBALL LIVE
 ❌ KOSONG: q:85/https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/542_144.png" group-title="WORLD SPORTS",ASTRO SPORTSPLUS
@@ -2300,7 +2300,7 @@
 ❌ KOSONG: Fanduel TV
 ❌ KOSONG: TVP Sport
 ❌ KOSONG: Nova Sport 1
-❌ KOSONG: Nova Sport 2
+✅ [RUMUS EXACT] Nova Sport 2 -> Nova Sport 2
 ✅ [RUMUS EXACT] Arena Sport 1 -> Arena Sport 1
 ✅ [RUMUS EXACT] Arena Sport 2 -> Arena Sport 2
 ❌ KOSONG: Sport 1
@@ -2313,7 +2313,7 @@
 ❌ KOSONG: Fox Sports 505 FHD
 ❌ KOSONG: Fox Sports 506 FHD
 ❌ KOSONG: Fox Sports 507 FHD
-❌ KOSONG: Sky Sport1 NZ FHD
+✅ [RUMUS FUZZY] Sky Sport1 NZ FHD -> Sky Sport 1 HD
 ❌ KOSONG: Sky Sport2 NZ FHD
 ❌ KOSONG: Sky Sport3 NZ FHD
 ❌ KOSONG: Sky Sport4 NZ FHD
@@ -2321,9 +2321,9 @@
 ❌ KOSONG: Sky Sport6 NZ FHD
 ❌ KOSONG: Sky Sport7 NZ FHD
 ❌ KOSONG: Sky Sport Premier League FHD
-❌ KOSONG: Hub Sports 1 HD
+✅ [RUMUS EXACT] Hub Sports 1 HD -> Hub Sports 1 HD
 ✅ [RUMUS EXACT] Hub Sports 2 HD -> Hub Sports 2 HD
-❌ KOSONG: Hub Sports 3 HD
+✅ [RUMUS EXACT] Hub Sports 3 HD -> Hub Sports 3 HD
 ✅ [RUMUS EXACT] Hub Sports 4 HD -> Hub Sports 4 HD
 ❌ KOSONG: Hub Sports 5 HD
 ❌ KOSONG: Hub Sports 6 HD
@@ -2347,20 +2347,20 @@
 ✅ [RUMUS FUZZY] Now Sports PremierLeague 2 HD -> Now Sports Premier League
 ✅ [RUMUS FUZZY] Now Sports Premier League 3 HD -> Now Sports Premier League
 ❌ KOSONG: Sky Sports Main Event FHD
-❌ KOSONG: Sky Sports PremierLeague FHD
-❌ KOSONG: Sky Sports Football FHD
-❌ KOSONG: Sky Sports F1 FHD
+✅ [RUMUS FUZZY] Sky Sports PremierLeague FHD -> SkySp PL HD
+✅ [RUMUS FUZZY] Sky Sports Football FHD -> SkySp Fball
+✅ [RUMUS FUZZY] Sky Sports F1 FHD -> SkySp F1 HD
 ❌ KOSONG: Sky Sports Tennis FHD
-❌ KOSONG: Sky Sports+ FHD
+✅ [RUMUS FUZZY] Sky Sports+ FHD -> SkySp+
 ❌ KOSONG: Sky Sports Criket FHD
-❌ KOSONG: Sky Sports Golf FHD
+✅ [RUMUS FUZZY] Sky Sports Golf FHD -> SkySp Golf
 ❌ KOSONG: Sky Sports News-FHD
-❌ KOSONG: Sky Sports Action FHD
+✅ [RUMUS FUZZY] Sky Sports Action FHD -> SkySp ActionHD
 ❌ KOSONG: Sky Sports Box Office
-✅ [RUMUS FUZZY] PSN 1 -> SÝN Sport 1
+❌ KOSONG: PSN 1
 ❌ KOSONG: PSN 2
 ❌ KOSONG: PSN 3
-❌ KOSONG: PSN 4
+✅ [RUMUS FUZZY] PSN 4 -> SÝN Sport 4
 ❌ KOSONG: PSN 5
 ❌ KOSONG: MATCH! 🇷🇺
 ❌ KOSONG: MATCH! ARENA 🇷🇺
@@ -2374,7 +2374,7 @@
 ❌ KOSONG: MIR BASKETBOLA 🇷🇺
 ❌ KOSONG: CCTV5
 ❌ KOSONG: CCTV5+
-❌ KOSONG: CCTV FOOTBALL
+✅ [RUMUS FUZZY] CCTV FOOTBALL -> V Sport Football [SE]
 ❌ KOSONG: TRACE Sport Stars
 ❌ KOSONG: ELTA SPORT 1 🇹🇼
 ❌ KOSONG: ELTA SPORT 2 🇹🇼
@@ -2382,20 +2382,20 @@
 ❌ KOSONG: ELTA SPORT 4 🇹🇼
 ❌ KOSONG: DAZN 1 🇹🇼
 ❌ KOSONG: DAZN 2 🇹🇼
-❌ KOSONG: SKY SPORTS ACTION
-❌ KOSONG: SKY SPORTS F1
+✅ [RUMUS FUZZY] SKY SPORTS ACTION -> SkySp ActionHD
+✅ [RUMUS FUZZY] SKY SPORTS F1 -> SkySp F1 HD
 ❌ KOSONG: SKY SPORTS CRICKET
-❌ KOSONG: SKY SPORTS FOOTBALL
-❌ KOSONG: SKY SPORTS GOLF
+✅ [RUMUS FUZZY] SKY SPORTS FOOTBALL -> SkySp Fball
+✅ [RUMUS FUZZY] SKY SPORTS GOLF -> SkySp Golf
 ❌ KOSONG: SKY SPORTS MAIN EVENT
 ❌ KOSONG: SKY SPORTS MIX
 ❌ KOSONG: SKY SPORTS NEWS
-❌ KOSONG: SKY SPORTS EPL
+✅ [RUMUS FUZZY] SKY SPORTS EPL -> SkySp PL HD
 ❌ KOSONG: SKY SPORTS RACING
 ✅ [RUMUS FUZZY] SPORTS TV TURKEY -> Sportstars
 ❌ KOSONG: EUROCHANNEL
 ❌ KOSONG: ABC
-❌ KOSONG: CBS
+✅ [RUMUS EXACT] CBS -> CBS Sports Network HD
 ❌ KOSONG: NBC
 ❌ KOSONG: FOX
 ❌ KOSONG: Dubai TV
@@ -2557,7 +2557,7 @@
 ❌ KOSONG: Disney Channel
 ❌ KOSONG: Disney XD
 ❌ KOSONG: E! Entertainment
-❌ KOSONG: ESPN U
+✅ [RUMUS FUZZY] ESPN U -> ESPNU HD
 ❌ KOSONG: Food Network
 ❌ KOSONG: Fox News
 ❌ KOSONG: FUSE
@@ -2589,7 +2589,7 @@
 ❌ KOSONG: SEC Network
 ❌ KOSONG: Showtime
 ❌ KOSONG: Sportsman Channel
-❌ KOSONG: SportsNet New York
+✅ [RUMUS FUZZY] SportsNet New York -> SNY SportsNet New York HD
 ❌ KOSONG: Starz
 ❌ KOSONG: Starz Encore Classic
 ❌ KOSONG: TLC
@@ -2622,7 +2622,7 @@
 ❌ KOSONG: TV1000
 ❌ KOSONG: TV1000 Action
 ❌ KOSONG: viju TV1000 romantica
-❌ KOSONG: NFL
+✅ [RUMUS EXACT] NFL -> NFL Network HD
 ❌ KOSONG: Citra
 ❌ KOSONG: Oasis
 ❌ KOSONG: Ceria
@@ -2673,8 +2673,8 @@
 ❌ KOSONG: SPORT 1 (SGP)
 ❌ KOSONG: SPORT 2 (SGP)
 ❌ KOSONG: ON Football HD
-❌ KOSONG: ON Sports News
-❌ KOSONG: ON Golf HD
+✅ [RUMUS FUZZY] ON Sports News -> Sportsnet West HD
+✅ [RUMUS EXACT] ON Golf HD -> ON Golf
 ❌ KOSONG: SCTV9
 ❌ KOSONG: SCTV15 HD
 ❌ KOSONG: SCTV17 HD
@@ -2836,18 +2836,18 @@
 ❌ KOSONG: tvN Drama
 ❌ KOSONG: tvN Story
 ❌ KOSONG: tvN Show
-❌ KOSONG: tvN International
+✅ [RUMUS FUZZY] tvN International -> RTV International
 ❌ KOSONG: CGNTV SOUTH KOREA
 ❌ KOSONG: CJOnStyle(540p)
 ❌ KOSONG: tvchosun2
 ❌ KOSONG: tvN1
-❌ KOSONG: tvN2
+✅ [RUMUS FUZZY] tvN2 -> TVNZ 2
 ❌ KOSONG: tvN3
 ❌ KOSONG: JTV
 ❌ KOSONG: C
 ❌ KOSONG: TV
 ❌ KOSONG: TV1
-❌ KOSONG: TV4
+✅ [RUMUS EXACT] TV4 -> TV4 (Латвия)
 ❌ KOSONG: 14
 ❌ KOSONG: NHK G
 ❌ KOSONG: NHK E
@@ -2872,7 +2872,7 @@
 ❌ KOSONG: WOWOW Cinema
 ❌ KOSONG: WOWOW Live
 ❌ KOSONG: BS 10 Premium
-❌ KOSONG: JSport 1
+✅ [RUMUS FUZZY] JSport 1 -> Sport1+ HD
 ✅ [RUMUS FUZZY] JSport 2 -> SporTV 2
 ❌ KOSONG: JSport 3
 ❌ KOSONG: JSport 4
@@ -2992,7 +2992,7 @@
 ❌ KOSONG: SPORT 1
 ❌ KOSONG: SPORT 2
 ❌ KOSONG: NOVA 1
-❌ KOSONG: NOVA 2
+✅ [RUMUS EXACT] NOVA 2 -> Nova Sport 2
 ❌ KOSONG: TVP 1
 ❌ KOSONG: AXN
 ❌ KOSONG: AMC
@@ -3021,14 +3021,14 @@
 ❌ KOSONG: FX
 ❌ KOSONG: Universal TV
 ❌ KOSONG: Sony Channel
-❌ KOSONG: Sony Movies
-❌ KOSONG: Paramount
+✅ [RUMUS FUZZY] Sony Movies -> Sony Movie Channel HD
+✅ [RUMUS FUZZY] Paramount -> Sony Movie Channel HD
 ❌ KOSONG: AXN
 ❌ KOSONG: WB TV
-❌ KOSONG: ESPN
-❌ KOSONG: ESPN 2
-❌ KOSONG: ESPN 3
-❌ KOSONG: ESPN Plus
+✅ [RUMUS EXACT] ESPN -> ESPN HD
+✅ [RUMUS EXACT] ESPN 2 -> ESPN2 HD
+✅ [RUMUS EXACT] ESPN 3 -> ESPN 3
+✅ [RUMUS FUZZY] ESPN Plus -> ESPNU HD
 ❌ KOSONG: Golf Channel
 ❌ KOSONG: Fox News
 ❌ KOSONG: CNN
@@ -3036,8 +3036,8 @@
 ❌ KOSONG: HGTV
 ❌ KOSONG: Food Network
 ❌ KOSONG: NBA TV
-❌ KOSONG: NFL
-❌ KOSONG: TNT
+✅ [RUMUS EXACT] NFL -> NFL Network HD
+✅ [RUMUS EXACT] TNT -> TNT
 ❌ KOSONG: E!
 ❌ KOSONG: Disney
 ❌ KOSONG: Disney Jr.
@@ -3112,16 +3112,16 @@
 ❌ KOSONG: BEST ACTION TV
 ❌ KOSONG: BEST DRAMA TV
 ❌ KOSONG: BEST THRILLER TV
-❌ KOSONG: Action MAX HD East
+✅ [RUMUS FUZZY] Action MAX HD East -> ActionMAX HD
 ❌ KOSONG: More MAX HD East
 ❌ KOSONG: Sundance TV
 ❌ KOSONG: Cinemax HD East
 ❌ KOSONG: Cinemax West
-❌ KOSONG: 5Star MAX East
+✅ [RUMUS EXACT] 5Star MAX East -> 5 StarMAX HD East
 ❌ KOSONG: HBO 1
 ❌ KOSONG: HBO 2
 ❌ KOSONG: HBO Latino
-❌ KOSONG: Cinemax Latino 🇲🇽
+✅ [RUMUS FUZZY] Cinemax Latino 🇲🇽 -> Cinemax Action
 ❌ KOSONG: HBO Zone
 ❌ KOSONG: HBO West
 ❌ KOSONG: HBO East
@@ -3192,10 +3192,10 @@
 ❌ KOSONG: Modern Innovations by History
 ❌ KOSONG: History Hit Channel
 ❌ KOSONG: FOX SPORTS 🇲🇽
-❌ KOSONG: FOX SPORTS 3 🇲🇽
-❌ KOSONG: FUBO SPORTS 1
-❌ KOSONG: FUBO SPORTS 2
-❌ KOSONG: CBS Sports
+✅ [RUMUS FUZZY] FOX SPORTS 3 🇲🇽 -> FOX Sports 3 HD [AR]
+✅ [RUMUS FUZZY] FUBO SPORTS 1 -> Fubo Sports Network [US]
+✅ [RUMUS FUZZY] FUBO SPORTS 2 -> Fubo Sports Network [US]
+✅ [RUMUS EXACT] CBS Sports -> CBS Sports Network HD
 ❌ KOSONG: BEIN SPORTS 3 🇦🇺
 ❌ KOSONG: beIN Sports 3 HD
 ❌ KOSONG: Premiere Sports 1
@@ -3209,10 +3209,10 @@
 ✅ [RUMUS FUZZY] LALIGA -> M+ LALIGA [ES]
 ✅ [RUMUS FUZZY] Dazn laliga hypermotion 1 -> LaLiga TV Hypermotion [ES]
 ✅ [RUMUS FUZZY] Dazn laliga hypermotion 2 -> LaLiga TV Hypermotion [ES]
-❌ KOSONG: TUDN 🇲🇽
-❌ KOSONG: Premier Sports Rugby
+✅ [RUMUS EXACT] TUDN 🇲🇽 -> TUDN
+✅ [RUMUS FUZZY] Premier Sports Rugby -> Premier Sports Rugby
 ❌ KOSONG: DSPORTS FIGHT
-❌ KOSONG: SporTV BR
+✅ [RUMUS FUZZY] SporTV BR -> SporTV
 ✅ [RUMUS FUZZY] SporTV 2 BR -> SporTV 2
 ❌ KOSONG: SportTV 3
 ❌ KOSONG: Premiere Sports 1 UK
@@ -3287,7 +3287,7 @@
 ❌ KOSONG: HGTV HD
 ❌ KOSONG: Fashion TV HD
 ❌ KOSONG: Cartoon Network
-❌ KOSONG: Moonbug Kids
+✅ [RUMUS EXACT] Moonbug Kids -> Moonbug Kids
 ❌ KOSONG: Nickelodeon
 ❌ KOSONG: Nick Jr
 ❌ KOSONG: ABC Australia
@@ -3299,10 +3299,10 @@
 ❌ KOSONG: CGTN Doc
 ❌ KOSONG: France 24
 ❌ KOSONG: NHK Japan
-❌ KOSONG: NBA
-❌ KOSONG: ELEVEN SPORTS 1
+✅ [RUMUS EXACT] NBA -> NBA
+✅ [RUMUS EXACT] ELEVEN SPORTS 1 -> Eleven Sports 1
 ✅ [RUMUS EXACT] ELEVEN SPORTS 2 -> Eleven Sports 2
-❌ KOSONG: ELEVEN SPORTS 3
+✅ [RUMUS EXACT] ELEVEN SPORTS 3 -> Eleven Sports 3
 ✅ [RUMUS EXACT] ELEVEN SPORTS 4 -> Eleven Sports 4
 ✅ [RUMUS EXACT] BEIN SPORTS 1 -> beIN Sports 1
 ❌ KOSONG: BEIN SPORTS 2
@@ -3313,8 +3313,8 @@
 ❌ KOSONG: BEIN SPORTS 7
 ❌ KOSONG: BEIN SPORTS 9
 ❌ KOSONG: ESPN 1 NL
-❌ KOSONG: ESPN 2 NL
-❌ KOSONG: ESPN 3 NL
+✅ [RUMUS FUZZY] ESPN 2 NL -> ESPN2 HD
+✅ [RUMUS FUZZY] ESPN 3 NL -> ESPN 3
 ❌ KOSONG: ESPN 4 NL
 ❌ KOSONG: FOX SPORTS 1
 ✅ [RUMUS EXACT] FOX SPORTS 2 -> FOX Sports 2 HD [AR]
@@ -3336,9 +3336,9 @@
 ✅ [RUMUS EXACT] NOW SPORTS 5 -> Now Sports 5
 ❌ KOSONG: NOW SPORTS 6
 ❌ KOSONG: NOW SPORTS 7
-❌ KOSONG: TNT SPORTS 1
-❌ KOSONG: TNT SPORTS 2
-❌ KOSONG: TNT SPORTS 3
+✅ [RUMUS EXACT] TNT SPORTS 1 -> TNT Sports 1 HD
+✅ [RUMUS EXACT] TNT SPORTS 2 -> TNT Sports 2 HD
+✅ [RUMUS EXACT] TNT SPORTS 3 -> TNT Sports 3 HD
 ✅ [RUMUS EXACT] TNT SPORTS 4 -> TNT Sports 4 HD
 ❌ KOSONG: TNT SPORTS 5
 ❌ KOSONG: 976-Jurassic World Rebirth
@@ -3458,7 +3458,7 @@
 ❌ KOSONG: Action-2-Little Dixie
 ❌ KOSONG: Action-2-Mad Max: Fury Road
 ❌ KOSONG: Action-1-Man of Steel
-❌ KOSONG: Action-Max
+✅ [RUMUS EXACT] Action-Max -> ActionMAX HD
 ❌ KOSONG: Action-2-Maximum Ride
 ❌ KOSONG: Action-2-Meg 2: The Trench
 ❌ KOSONG: Action-2-Meg
@@ -3616,7 +3616,7 @@
 ❌ KOSONG: Kids-Despicable Me
 ❌ KOSONG: Kids-Despicable Me 4
 ❌ KOSONG: Kids-Hugo
-❌ KOSONG: Kids-IF
+✅ [RUMUS FUZZY] Kids-IF -> Kids TV HD
 ❌ KOSONG: Kids-Mr. Bean is Holiday
 ❌ KOSONG: Kids-Detective Pikachu
 ❌ KOSONG: Kids-Tom & Jerry
@@ -3645,7 +3645,7 @@
 ❌ KOSONG: The Following
 ❌ KOSONG: Citizen of A Kind
 ❌ KOSONG: Memories of the Sword
-❌ KOSONG: Veteran
+✅ [RUMUS FUZZY] Veteran -> V Sport Extra [SE]
 ❌ KOSONG: Race to Freedom: Um Bok Dong
 ❌ KOSONG: Exhuma
 ❌ KOSONG: Bottom of the Water
@@ -3999,13 +3999,13 @@
 ❌ KOSONG: AMC
 ❌ KOSONG: tlc
 ❌ KOSONG: NTV
-❌ KOSONG: TNT
+✅ [RUMUS EXACT] TNT -> TNT
 ❌ KOSONG: Nickelodeon
 ❌ KOSONG: NationalGeographic
 ❌ KOSONG: NatGeoWild
 ❌ KOSONG: CartoonNetwork
 ❌ KOSONG: Showtime
-❌ KOSONG: TNTHD
+✅ [RUMUS FUZZY] TNTHD -> TNT
 ❌ KOSONG: Hallmark
 ❌ KOSONG: TBS
 ❌ KOSONG: NBATV
@@ -4015,7 +4015,7 @@
 ❌ KOSONG: OutdoorChannel
 ❌ KOSONG: cinemax
 ❌ KOSONG: ABC
-❌ KOSONG: foodnetwork
+✅ [RUMUS EXACT] foodnetwork -> Foodnetwork Hd
 ❌ KOSONG: SYFY
 ❌ KOSONG: HBO
 ✅ [RUMUS EXACT] tennis -> Tennis Channel HD
@@ -4029,7 +4029,7 @@
 ❌ KOSONG: bfmtv HD
 ❌ KOSONG: bravo
 ❌ KOSONG: cartoonnetwork
-❌ KOSONG: cbs
+✅ [RUMUS EXACT] cbs -> CBS Sports Network HD
 ❌ KOSONG: cherie25
 ❌ KOSONG: cnn
 ❌ KOSONG: cstar HD
@@ -4038,9 +4038,9 @@
 ❌ KOSONG: disneyjunior
 ❌ KOSONG: disneyxd
 ❌ KOSONG: e
-❌ KOSONG: espn HD
+✅ [RUMUS EXACT] espn HD -> ESPN HD
 ❌ KOSONG: euronews HD
-❌ KOSONG: foodnetwork
+✅ [RUMUS EXACT] foodnetwork -> Foodnetwork Hd
 ❌ KOSONG: fox
 ❌ KOSONG: foxnews
 ❌ KOSONG: france2 HD
@@ -4070,11 +4070,11 @@
 ❌ KOSONG: rts2 HD
 ❌ KOSONG: russiatoday HD
 ❌ KOSONG: starz
-❌ KOSONG: tf1 HD
+✅ [RUMUS EXACT] tf1 HD -> TF1
 ❌ KOSONG: tiji
 ❌ KOSONG: tlc
 ❌ KOSONG: tmc
-❌ KOSONG: tnt
+✅ [RUMUS EXACT] tnt -> TNT
 ❌ KOSONG: travel
 ✅ [RUMUS EXACT] tv3 -> TV3 Sport [DK]
 ❌ KOSONG: vh1
@@ -4095,9 +4095,9 @@
 ❌ KOSONG: Cine+ Classic
 ❌ KOSONG: ARTE HD
 ❌ KOSONG: Paris Premiere HD
-❌ KOSONG: AB1 HD
+✅ [RUMUS EXACT] AB1 HD -> AB1
 ❌ KOSONG: RTL 9 HD
-❌ KOSONG: TF1 HD
+✅ [RUMUS EXACT] TF1 HD -> TF1
 ❌ KOSONG: Teva HD
 ❌ KOSONG: Animaux
 ❌ KOSONG: National Geo HD
@@ -4158,7 +4158,7 @@
 ❌ KOSONG: Indian Cinema
 ❌ KOSONG: India
 ❌ KOSONG: Our New Cinema
-❌ KOSONG: Horror Movie
+✅ [RUMUS FUZZY] Horror Movie -> Horror Machine
 ❌ KOSONG: Film Series
 ❌ KOSONG: Film Date
 ❌ KOSONG: Cinema House Premium
@@ -4193,8 +4193,8 @@
 ❌ KOSONG: RTVI
 ❌ KOSONG: shant serial
 ❌ KOSONG: shant premium
-❌ KOSONG: Dar21
-❌ KOSONG: Mezzo
+✅ [RUMUS FUZZY] Dar21 -> DR2
+✅ [RUMUS EXACT] Mezzo -> Mezzo
 ❌ KOSONG: Muzzone
 ❌ KOSONG: Shant Music
 ❌ KOSONG: Baby TV
@@ -4208,7 +4208,7 @@
 ❌ KOSONG: Da Vinci
 ❌ KOSONG: Children's world
 ❌ KOSONG: UFC
-❌ KOSONG: Viasat sport
+✅ [RUMUS FUZZY] Viasat sport -> Viasat Sport HD SE
 ✅ [RUMUS FUZZY] Boxing TV -> Bowling TV
 ❌ KOSONG: Match! Planet
 ❌ KOSONG: KHL
@@ -4254,7 +4254,7 @@
 ❌ KOSONG: TVRI Sport
 ❌ KOSONG: MOTORVISION+
 ❌ KOSONG: Eurosport Asia
-❌ KOSONG: Sportstars 3ᴴᴰ
+✅ [RUMUS EXACT] Sportstars 3ᴴᴰ -> Sportstars 3
 ❌ KOSONG: Astro Premier League
 ❌ KOSONG: Astro Premier League 2
 ❌ KOSONG: Astro Football
@@ -4344,7 +4344,7 @@
 ❌ KOSONG: 001 TRAKTIR KOPI
 ❌ KOSONG: 002 Premier League
 ❌ KOSONG: DGS 1
-❌ KOSONG: DGS 2
+✅ [RUMUS FUZZY] DGS 2 -> RDS2
 ❌ KOSONG: DGS 3
 ❌ KOSONG: 01 TRAKTIR KOPI
 ❌ KOSONG: GARUDA TV
@@ -4390,7 +4390,7 @@
 ❌ KOSONG: GS SHOP
 ❌ KOSONG: GUGAK TV
 ❌ KOSONG: BBS TV 불교
-❌ KOSONG: 7 storia
+✅ [RUMUS FUZZY] 7 storia -> Historia HD
 ❌ KOSONG: Cafe TV24
 ❌ KOSONG: Rai 1
 ❌ KOSONG: Rai 2
@@ -4409,11 +4409,11 @@
 ❌ KOSONG: DOUYU 冰冰小剧场
 ❌ KOSONG: Channel 5
 ❌ KOSONG: Citra Drama
-❌ KOSONG: Citra Entertainment
+✅ [RUMUS EXACT] Citra Entertainment -> Citra Entertainment
 ❌ KOSONG: ARIRANG
 ❌ KOSONG: AJWA TV
 ❌ KOSONG: MyCinema
-❌ KOSONG: IMC ID
+✅ [RUMUS EXACT] IMC ID -> IMC
 ❌ KOSONG: Bioskop Indonesia ID
 ❌ KOSONG: CHINESE DRAMA ID
 ❌ KOSONG: CELESTIAL MOVIES HD FM
