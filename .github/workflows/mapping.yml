@@ -1,12 +1,16 @@
 name: Generate EPG Mapping
 
 on:
-  workflow_dispatch: # Tetap bisa dijalankan manual pakai tombol
+  workflow_dispatch: # FITUR MANUAL: Berjalan saat kamu menekan tombol "Run workflow" di GitHub
   push:
     branches:
-      - main # Berjalan otomatis setiap kali ada perubahan file di repositori (branch main)
+      - main # FITUR UPDATE REPO: Berjalan otomatis setiap kali kamu mengedit file (misal: kamus_mapping.txt) di branch main
   schedule:
-    - cron: '0 * * * *' # Berjalan otomatis setiap 1 jam
+    - cron: '0 * * * *' # FITUR OTOMATIS: Tetap berjalan setiap 1 jam untuk update jadwal EPG
+
+# PENTING: Izin agar bot GitHub Action diperbolehkan melakukan "git push" kembali ke repo
+permissions:
+  contents: write 
 
 jobs:
   build:
@@ -34,5 +38,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add playlist_termapping.m3u laporan_rumus.txt laporan_channel_m3u.txt
-          git commit -m "Update M3U ter-mapping dan laporan" || echo "Tidak ada perubahan"
+          git commit -m "Auto-update: M3U & Laporan EPG Terbaru" || echo "Tidak ada perubahan data"
           git push
