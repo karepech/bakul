@@ -26,9 +26,14 @@ M3U_URLS = [
     "https://bwifi.my.id/lokal",
     "https://bit.ly/KPL203"
 ]
+
+# PERBAIKAN: Penambahan EPG Super Premium untuk beIN, SPOTV, Astro, dll.
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
-    "https://epg.pw/xmltv/epg.xml.gz"
+    "https://epgshare01.online/epgshare01/epg_ripper_ID1.xml.gz",         # ID Premium (beIN ID, SPOTV)
+    "https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz",         # Astro & beIN MY
+    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS1.xml.gz", # Global Sports Premium
+    "https://epg.pw/xmltv/epg.xml.gz"                                     # Backup General
 ]
 
 OUTPUT_FILE = "playlist_termapping.m3u"
@@ -44,7 +49,8 @@ GLOBAL_SEEN_STREAM_URLS = set()
 def rumus_samakan_teks(teks):
     if not teks: return ""
     teks = teks.lower()
-    teks = re.sub(r'\b(sports|sport|tv|hd|fhd|sd|4k|ch|channel|network)\b', '', teks)
+    # PERBAIKAN: Buang embel-embel kualitas agar matching lebih murni ke nama channelnya
+    teks = re.sub(r'\b(sports|sport|tv|hd|fhd|sd|4k|ch|channel|network|1080p|720p|50fps|60fps|hevc|raw)\b', '', teks)
     teks = re.sub(r'\[.*?\]|\(.*?\)', '', teks)
     teks = re.sub(r'[^a-z0-9]', '', teks)
     return teks
@@ -67,6 +73,12 @@ REGEX_LIVE = re.compile(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\bla
 REGEX_VS = re.compile(r'\b(vs|v)\b')
 REGEX_NON_ALPHANUM = re.compile(r'[^a-z0-9]')
 REGEX_EVENT = re.compile(r'(?:^|[^0-9])(\d{2})[:\.](\d{2})\s*(?:WIB)?\s*[\-\|]?\s*(.+)', re.IGNORECASE)
+
+@lru_cache(maxsize=2000)
+def is_channel_olahraga(nama):
+    """Fungsi baru untuk memastikan hanya channel olahraga yang masuk log txt"""
+    kws = ['sport', 'bein', 'spotv', 'espn', 'astro', 'arena', 'ssc', 'alkass', 'premier', 'champions', 'fox', 'tsn', 'supersport', 'skysports', 'optus', 'sky', 'mola', 'vidio', 'soccer', 'football', 'nba', 'nfl', 'tennis', 'golf', 'moto', 'f1']
+    return any(k in nama.lower() for k in kws)
 
 @lru_cache(maxsize=5000)
 def bersihkan_judul_event(title):
@@ -139,32 +151,23 @@ def is_valid_time_continent(w, title, ch_name):
     return True
 
 def parse_time(ts):
-    """
-    PERBAIKAN: Membaca Timezone EPG dan mengkonversi mutlak ke WIB.
-    """
     if not ts: return None
     try:
-        # Cari 14 digit format waktu dan offset timezone-nya (cth: +0000)
         match = re.search(r'^(\d{14})\s*([+-]\d{4})?', ts.strip())
         if not match: return None
         
         time_str = match.group(1)
         tz_str = match.group(2)
-        
         dt = datetime.strptime(time_str, "%Y%m%d%H%M%S")
         
         if tz_str:
-            # Hitung offset bawaan dari EPG XMLTV
             sign = 1 if tz_str[0] == '+' else -1
             hours_offset = int(tz_str[1:3])
             mins_offset = int(tz_str[3:5])
             offset_delta = timedelta(hours=hours_offset, minutes=mins_offset)
-            
-            # Ubah ke UTC mutlak, baru ditambah 7 jam ke WIB
             dt_utc = dt - (sign * offset_delta)
             return dt_utc + timedelta(hours=7)
         else:
-            # Jika tidak ada timezone, asumsikan UTC -> Jadikan WIB
             return dt + timedelta(hours=7)
     except: return None
 
@@ -214,7 +217,6 @@ print("2. Memproses Data EPG...")
 for url, content in epg_contents.items():
     try:
         root = ET.fromstring(content)
-        # PERBAIKAN: Tangkap logo EPG dari element <channel>
         for ch in root.findall('channel'):
             id_asli = ch.get('id')
             nama_epg = ch.findtext('display-name') or id_asli
@@ -240,7 +242,6 @@ for url, content in epg_contents.items():
             ch_nama = epg_dict[cid]["nama"]
             if is_allowed_sport(title, durasi) and is_valid_time_continent(w, title, ch_nama):
                 if cid not in jadwal_dict: jadwal_dict[cid] = []
-                # Ambil logo program jika ada, jika tidak, kosongkan (nanti pakai logo channel)
                 logo_prog = pg.find("icon").get("src") if pg.find("icon") is not None else ""
                 jadwal_dict[cid].append({
                     "title": bersihkan_judul_event(title),
@@ -314,9 +315,11 @@ for url in M3U_URLS:
                             inf = f'#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="{orig_logo}", {judul}'
                             keranjang_match[key]["links"].append({"prio": 0, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                         
-                        audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Event Otomatis)")
+                        if is_channel_olahraga(m3u_name):
+                            audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Event Otomatis)")
                     else:
-                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Event Kadaluarsa)")
+                        if is_channel_olahraga(m3u_name):
+                            audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Event Kadaluarsa)")
                     continue
 
                 tvg_id_match = re.search(r'tvg-id="([^"]*)"', raw_attrs)
@@ -337,8 +340,9 @@ for url in M3U_URLS:
                         kandidat_id = kamus_rumus_epg[teks_m3u_dirumus]
                         metode = "RUMUS EXACT"
                     else:
+                        # PERBAIKAN: Fuzzy matching dibikin lebih agresif (cutoff 0.5) agar gampang cocok
                         if teks_m3u_dirumus not in CACHE_FUZZY:
-                            CACHE_FUZZY[teks_m3u_dirumus] = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=3, cutoff=0.8)
+                            CACHE_FUZZY[teks_m3u_dirumus] = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=5, cutoff=0.5)
                         
                         mirip = CACHE_FUZZY[teks_m3u_dirumus]
                         
@@ -373,7 +377,6 @@ for url in M3U_URLS:
                         if key not in keranjang_match: 
                             keranjang_match[key] = {"is_live": ev['live'], "sort": ev['start'].timestamp(), "vip": skor_vip, "links": []}
                         
-                        # PERBAIKAN: Prioritas Logo -> Logo Program > Logo Channel EPG > Logo M3U Asli
                         epg_ch_logo = epg_dict[id_epg_terpilih]["logo"]
                         final_logo = ev["logo"] or epg_ch_logo or orig_logo
                         
@@ -391,14 +394,17 @@ for url in M3U_URLS:
                     
                     if punya_jadwal_aktif:
                         log_rumus.append(f"✅ [{metode}] {m3u_name} -> {epg_dict[id_epg_terpilih]['nama']}")
-                        audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Cocok dengan: {epg_dict[id_epg_terpilih]['nama']})")
+                        if is_channel_olahraga(m3u_name):
+                            audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Cocok dengan: {epg_dict[id_epg_terpilih]['nama']})")
                     else:
-                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (EPG cocok, tapi jadwal kosong)")
+                        if is_channel_olahraga(m3u_name):
+                            audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (EPG cocok, tapi jadwal kosong)")
                 else:
-                    if id_epg_terpilih:
-                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (EPG cocok, tapi jadwal kosong/dihapus filter)")
-                    else:
-                        audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Tidak ada EPG yang cocok)")
+                    if is_channel_olahraga(m3u_name):
+                        if id_epg_terpilih:
+                            audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (EPG cocok, tapi jadwal kosong/dihapus filter)")
+                        else:
+                            audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Tidak ada EPG yang cocok)")
                     log_rumus.append(f"❌ KOSONG: {m3u_name}")
                     
     except Exception as e:
@@ -434,15 +440,19 @@ with open("laporan_rumus.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(log_rumus))
 
 with open("laporan_channel_m3u.txt", "w", encoding="utf-8") as f:
-    f.write("=== LAPORAN AUDIT CHANNEL BAKUL WIFI SPORTS ===\n")
+    f.write("=== LAPORAN AUDIT CHANNEL OLAHRAGA BAKUL WIFI ===\n")
     f.write(f"Diperbarui pada: {now_wib.strftime('%d-%m-%Y %H:%M WIB')}\n\n")
     
     for link, data in audit_m3u.items():
+        # Jangan cetak sumber jika tidak ada channel olahraga sama sekali di dalamnya
+        if not data["ada"] and not data["tidak"]:
+            continue
+            
         f.write(f"📁 SUMBER: {link.split('/')[-1] if not link.endswith('php') and not link.endswith('html') else link}\n")
         f.write("-" * 50 + "\n")
         for item in data["ada"]: f.write(f"  {item}\n")
         for item in data["tidak"]: f.write(f"  {item}\n")
         f.write("-" * 50 + "\n")
-        f.write(f"*Total dari sumber ini: {len(data['ada'])} channel sinkron, {len(data['tidak'])} channel kosong/mati.*\n\n")
+        f.write(f"*Total Olahraga: {len(data['ada'])} sinkron, {len(data['tidak'])} kosong/mati.*\n\n")
 
 print(f"SELESAI! Tiga file berhasil dibuat dengan mode Turbo!")
