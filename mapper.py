@@ -27,13 +27,12 @@ M3U_URLS = [
     "https://bit.ly/KPL203"
 ]
 
-# PERBAIKAN: Penambahan EPG Super Premium untuk beIN, SPOTV, Astro, dll.
 EPG_URLS = [
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
-    "https://epgshare01.online/epgshare01/epg_ripper_ID1.xml.gz",         # ID Premium (beIN ID, SPOTV)
-    "https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz",         # Astro & beIN MY
-    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS1.xml.gz", # Global Sports Premium
-    "https://epg.pw/xmltv/epg.xml.gz"                                     # Backup General
+    "https://epgshare01.online/epgshare01/epg_ripper_ID1.xml.gz",         
+    "https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz",         
+    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS1.xml.gz", 
+    "https://epg.pw/xmltv/epg.xml.gz"                                     
 ]
 
 OUTPUT_FILE = "playlist_termapping.m3u"
@@ -43,13 +42,58 @@ LINK_UPCOMING = "https://bwifi.my.id/5menit.mp4"
 GLOBAL_SEEN_STREAM_URLS = set()
 
 # ========================================================
-# 2. MESIN MAPPING CERDAS KITA (Kamus, Rumus & Cache)
+# 2. MESIN MAPPING & TRANSLATE BAHASA INDONESIA
 # ========================================================
+# KAMUS AUTO-TRANSLATE SUPER CEPAT
+KAMUS_INDO = {
+    # Jenis Olahraga
+    r'\b(?:nogomet|fudbal|piłka nożna|soccer|football|futebol)\b': 'Sepak Bola',
+    r'\b(?:košarka|basketball|koszykówka|básquetbol)\b': 'Bola Basket',
+    r'\b(?:odbojka|volleyball|vôlei|siatkówka)\b': 'Bola Voli',
+    r'\b(?:rukomet|handball|piłka ręczna)\b': 'Bola Tangan',
+    r'\b(?:tenis|tennis)\b': 'Tenis',
+    r'\b(?:boks|boxing|boxeo)\b': 'Tinju',
+    r'\b(?:hokej|hockey)\b': 'Hoki',
+    r'\b(?:atletika|athletics)\b': 'Atletik',
+    r'\b(?:plivanje|swimming)\b': 'Renang',
+    r'\b(?:biciklizam|cycling)\b': 'Balap Sepeda',
+    r'\b(?:moto trke|motorsport|motor racing)\b': 'Balap Motor',
+    
+    # Kompetisi & Liga (Sering muncul di EPG Balkan)
+    r'\b(?:engleska liga|premier league|premijer liga|ingleska liga)\b': 'Liga Inggris',
+    r'\b(?:španska liga|la liga|španjolska liga)\b': 'Liga Spanyol',
+    r'\b(?:italijanska liga|serie a|talijanska liga)\b': 'Liga Italia',
+    r'\b(?:francuska liga|ligue 1|francuske liga)\b': 'Liga Prancis',
+    r'\b(?:nemačka liga|bundesliga|njemačka liga)\b': 'Liga Jerman',
+    r'\b(?:liga šampiona|liga prvaka|champions league)\b': 'Liga Champions',
+    r'\b(?:evropa liga|europa league|liga evrope|europska liga)\b': 'Liga Europa',
+    r'\b(?:konferencijska liga|conference league)\b': 'Liga Konferensi',
+    r'\b(?:evroliga|euroleague)\b': 'EuroLeague',
+    r'\b(?:svetsko prvenstvo|svjetsko prvenstvo|world cup)\b': 'Piala Dunia',
+    r'\b(?:evropsko prvenstvo|europsko prvenstvo|euro)\b': 'Piala Eropa',
+    
+    # Istilah Fase
+    r'\b(?:finale|final)\b': 'Final',
+    r'\b(?:polufinale|semi-final|semifinal)\b': 'Semifinal',
+    r'\b(?:četvrtfinale|quarter-final|quarterfinal)\b': 'Perempat Final',
+    
+    # Gender & Lainnya
+    r'\b(?:žene|women|mulheres|kobiety|\(w\))\b': 'Wanita',
+    r'\b(?:muškarci|men|homens|mężczyźni|\(m\))\b': 'Pria',
+}
+
+@lru_cache(maxsize=5000)
+def translate_ke_indo(teks):
+    if not teks: return ""
+    teks_terjemahan = teks
+    for pola, pengganti in KAMUS_INDO.items():
+        teks_terjemahan = re.sub(pola, pengganti, teks_terjemahan, flags=re.IGNORECASE)
+    return teks_terjemahan
+
 @lru_cache(maxsize=10000)
 def rumus_samakan_teks(teks):
     if not teks: return ""
     teks = teks.lower()
-    # PERBAIKAN: Buang embel-embel kualitas agar matching lebih murni ke nama channelnya
     teks = re.sub(r'\b(sports|sport|tv|hd|fhd|sd|4k|ch|channel|network|1080p|720p|50fps|60fps|hevc|raw)\b', '', teks)
     teks = re.sub(r'\[.*?\]|\(.*?\)', '', teks)
     teks = re.sub(r'[^a-z0-9]', '', teks)
@@ -73,17 +117,18 @@ REGEX_LIVE = re.compile(r'(?i)(\(l\)|\[l\]|\(d\)|\[d\]|\(r\)|\[r\]|\blive\b|\bla
 REGEX_VS = re.compile(r'\b(vs|v)\b')
 REGEX_NON_ALPHANUM = re.compile(r'[^a-z0-9]')
 REGEX_EVENT = re.compile(r'(?:^|[^0-9])(\d{2})[:\.](\d{2})\s*(?:WIB)?\s*[\-\|]?\s*(.+)', re.IGNORECASE)
+REGEX_VS_EVENT = re.compile(r'(?i)\bvs\b')
 
 @lru_cache(maxsize=2000)
 def is_channel_olahraga(nama):
-    """Fungsi baru untuk memastikan hanya channel olahraga yang masuk log txt"""
     kws = ['sport', 'bein', 'spotv', 'espn', 'astro', 'arena', 'ssc', 'alkass', 'premier', 'champions', 'fox', 'tsn', 'supersport', 'skysports', 'optus', 'sky', 'mola', 'vidio', 'soccer', 'football', 'nba', 'nfl', 'tennis', 'golf', 'moto', 'f1']
     return any(k in nama.lower() for k in kws)
 
 @lru_cache(maxsize=5000)
 def bersihkan_judul_event(title):
     bersih = REGEX_LIVE.sub('', title)
-    return re.sub(r'^[\-\:\,\|]\s*', '', re.sub(r'\s+', ' ', bersih)).strip()
+    bersih = re.sub(r'^[\-\:\,\|]\s*', '', re.sub(r'\s+', ' ', bersih)).strip()
+    return translate_ke_indo(bersih) # Menerjemahkan judul ke Bahasa Indonesia
 
 def generate_event_key(title, timestamp):
     tc = re.sub(r'(?i)\#\s*\d+|\[.*?\]|\(.*?\)', '', title)
@@ -127,10 +172,10 @@ def is_allowed_sport(title, durasi_menit):
     haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
     if any(s in t for s in haram_simbol): return False
     
-    haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship", "golf", "snooker", "biliar", "billiard", "panahan", "archery", "renang", "swimming", "sepeda", "cycling", "gulat", "darts", "atletik", "athletics", "gymnastic"]
+    haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship", "golf", "snooker", "biliar", "billiard", "panahan", "archery", "renang", "swimming", "sepeda", "cycling", "gulat", "darts", "atletik", "athletics", "gymnastic", "snimka", "repriza", "reprise", "powtorka", "ismétlés", "ponovitev"]
     if re.search(r'\b(?:' + '|'.join(haram_kata) + r')\b', t): return False
     
-    target_kws = ['vs', 'liga', 'league', 'cup', 'copa', 'championship', 'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'motogp', 'moto2', 'moto3', 'f1', 'formula', 'wsbk', 'nba', 'nfl', 'mls', 'basket', 'voli', 'volley', 'tennis', 'tenis', 'rugby', 'baseball', 'afc', 'afcon', 'concacaf', 'sudamericana', 'libertadores', 'premier', 'serie a', 'bundesliga', 'la liga']
+    target_kws = ['vs', 'liga', 'league', 'cup', 'copa', 'championship', 'badminton', 'bwf', 'thomas', 'uber', 'sudirman', 'motogp', 'moto2', 'moto3', 'f1', 'formula', 'wsbk', 'nba', 'nfl', 'mls', 'basket', 'voli', 'volley', 'tennis', 'tenis', 'rugby', 'baseball', 'afc', 'afcon', 'concacaf', 'sudamericana', 'libertadores', 'premier', 'serie a', 'bundesliga', 'la liga', 'nogomet', 'fudbal', 'košarka']
     if not any(k in t for k in target_kws): return False
     
     return True
@@ -138,7 +183,7 @@ def is_allowed_sport(title, durasi_menit):
 @lru_cache(maxsize=5000)
 def is_valid_time_continent(w, title, ch_name):
     t = (title + " " + ch_name).lower()
-    if any(k in t for k in [' uk', 'england', 'sky', 'euro', 'uefa', 'champions league', 'la liga', 'serie a', 'bundesliga', 'prancis', 'epl', 'premier league']):
+    if any(k in t for k in [' uk', 'england', 'sky', 'euro', 'uefa', 'champions league', 'la liga', 'serie a', 'bundesliga', 'prancis', 'epl', 'premier league', 'engleska', 'španska', 'italijanska']):
         if 5.1 <= w <= 17.9: return False
     if any(k in t for k in ['us ', 'usa', 'america', 'mls', 'nba', 'nfl', 'concacaf', 'libertadores', 'sudamericana', 'copa', 'brasil', 'argentina', 'mexico']):
         if w > 14.0 or w < 5.0: return False
@@ -291,10 +336,13 @@ for url in M3U_URLS:
                 if not clean_attrs.upper().startswith("#EXTINF"):
                     clean_attrs = "#EXTINF:-1 " + clean_attrs.replace('#EXTINF:-1', '').replace('#EXTINF:0', '').strip()
 
+                # Cek tipe Event Berjam
                 ev_m = REGEX_EVENT.search(m3u_name)
                 if ev_m:
                     hh, mm = int(ev_m.group(1)), int(ev_m.group(2))
-                    ev_title = re.sub(r'(?i)\#\s*\d+|\[.*?\]|\(.*?\)', '', ev_m.group(3)).strip()
+                    ev_title_raw = re.sub(r'(?i)\#\s*\d+|\[.*?\]|\(.*?\)', '', ev_m.group(3)).strip()
+                    ev_title = translate_ke_indo(ev_title_raw) # Translate M3U Title Event
+                    
                     ev_start = now_wib.replace(hour=hh, minute=mm, second=0, microsecond=0)
                     if ev_start < now_wib - timedelta(hours=4): ev_start += timedelta(days=1)
                     ev_stop = ev_start + timedelta(hours=2) 
@@ -316,10 +364,27 @@ for url in M3U_URLS:
                             keranjang_match[key]["links"].append({"prio": 0, "data": [inf, f"{LINK_UPCOMING}?m={key}"]})
                         
                         if is_channel_olahraga(m3u_name):
-                            audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Event Otomatis)")
-                    else:
-                        if is_channel_olahraga(m3u_name):
-                            audit_m3u[url]["tidak"].append(f"{m3u_name} ➡️ [TIDAK] (Event Kadaluarsa)")
+                            audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Event Otomatis Berjadwal)")
+                    continue
+                
+                # Cek tipe Event Dadakan [LIVE] AS Roma vs Milan
+                if REGEX_VS_EVENT.search(m3u_name) and not any(k in m3u_name.lower() for k in ['sports', 'bein', 'spotv', 'astro', 'arena', 'skysports', 'supersport']):
+                    ev_title_raw = re.sub(r'(?i)\#\s*\d+|\[.*?\]|\(.*?\)', '', m3u_name).strip()
+                    ev_title = translate_ke_indo(ev_title_raw)
+                    ev_start = now_wib - timedelta(minutes=5)
+                    ev_stop = ev_start + timedelta(hours=2) 
+                    
+                    is_live = True
+                    key = generate_event_key(ev_title, ev_start.timestamp())
+                    if key not in keranjang_match: 
+                        keranjang_match[key] = {"is_live": is_live, "sort": ev_start.timestamp(), "vip": skor_vip, "links": []}
+                    
+                    judul = f"{get_flag(ev_title)} 🔴 LANGSUNG SEKARANG - {ev_title}"
+                    inf = f'{clean_attrs} group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="{orig_logo}", {judul}'
+                    keranjang_match[key]["links"].append({"prio": 0, "data": [inf] + extra_tags + [stream_url]})
+                    
+                    if is_channel_olahraga(m3u_name):
+                        audit_m3u[url]["ada"].append(f"{m3u_name} ➡️ [ADA] (Event Live Spesial)")
                     continue
 
                 tvg_id_match = re.search(r'tvg-id="([^"]*)"', raw_attrs)
@@ -340,9 +405,8 @@ for url in M3U_URLS:
                         kandidat_id = kamus_rumus_epg[teks_m3u_dirumus]
                         metode = "RUMUS EXACT"
                     else:
-                        # PERBAIKAN: Fuzzy matching dibikin lebih agresif (cutoff 0.5) agar gampang cocok
                         if teks_m3u_dirumus not in CACHE_FUZZY:
-                            CACHE_FUZZY[teks_m3u_dirumus] = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=5, cutoff=0.5)
+                            CACHE_FUZZY[teks_m3u_dirumus] = difflib.get_close_matches(teks_m3u_dirumus, daftar_teks_epg_dirumus, n=3, cutoff=0.75)
                         
                         mirip = CACHE_FUZZY[teks_m3u_dirumus]
                         
@@ -444,7 +508,6 @@ with open("laporan_channel_m3u.txt", "w", encoding="utf-8") as f:
     f.write(f"Diperbarui pada: {now_wib.strftime('%d-%m-%Y %H:%M WIB')}\n\n")
     
     for link, data in audit_m3u.items():
-        # Jangan cetak sumber jika tidak ada channel olahraga sama sekali di dalamnya
         if not data["ada"] and not data["tidak"]:
             continue
             
@@ -455,4 +518,4 @@ with open("laporan_channel_m3u.txt", "w", encoding="utf-8") as f:
         f.write("-" * 50 + "\n")
         f.write(f"*Total Olahraga: {len(data['ada'])} sinkron, {len(data['tidak'])} kosong/mati.*\n\n")
 
-print(f"SELESAI! Tiga file berhasil dibuat dengan mode Turbo!")
+print(f"SELESAI! Tiga file berhasil dibuat dengan mode Terjemahan Bahasa Indonesia!")
