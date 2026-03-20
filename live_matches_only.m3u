@@ -32,14 +32,36 @@ https://live1.pro2cdnlive.com/live/channel41.flv?wsSecret=600d8339f174553be8976a
 #EXTVLCOPT:http-origin=https://www.spindlersptown.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 https://live5.msrktz.app/live/87379114.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 06:52-08:42 WIB - Super League: Wakefield V Leigh
-https://bwifi.my.id/5menit.mp4?m=superleaguewakefieldleigh_1774075920.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 ⏳ 07:00 WIB - ATLETICO TUCUMAN VS GIMNASIA LA PLATA
-https://bwifi.my.id/5menit.mp4?m=atleticotucumangimnasialaplata_1774076400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 ⏳ 07:00 WIB - BANFIELD VS CLUB ATLETICO TIGRE
-https://bwifi.my.id/5menit.mp4?m=banfieldclubatleticotigre_1774076400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 ⏳ 07:00 WIB - NU TOLUCA VS NU CLUB NECAXA
-https://bwifi.my.id/5menit.mp4?m=nutolucanuclubnecaxa_1774076400.0
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 06:52-08:42 WIB - Super League: Wakefield V Leigh [SKY SPORTS Premier League DE]
+http://lunar.pm:8080/live/Mrdon/4782314540/100773.ts
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 06:52-08:42 WIB - Super League: Wakefield V Leigh [Sky Sports Premiere League]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ca4316630f56d6f33e9ff73b7ad211d1:72c54e5646055f444e99bc1123919e89
+https://a151aivottlinear-a.akamaihd.net/OTTB/lhr-nitro/live/clients/dash/enc/9o6jmlyjpm/out/v1/ad80a9bfecc6438f82f2af41c58d7fb8/cenc.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 06:52-08:42 WIB - Super League: Wakefield V Leigh [Sky Sport Premier League FHD]
+https://7pal.short.gy/skyspt8nz
+#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 06:52-08:42 WIB - Super League: Wakefield V Leigh [SKY SPORTS EPL]
+http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/9334/index.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 🔴 07:00 WIB - ATLETICO TUCUMAN VS GIMNASIA LA PLATA
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live1.pro2cdnlive.com/live/channel8.flv?wsSecret=22aaeb4e9822c2e5502dcffa8ffa2a8f&wsABSTime=1774090845
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 🔴 07:00 WIB - BANFIELD VS CLUB ATLETICO TIGRE
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live1.pro2cdnlive.com/live/channel28.flv?wsSecret=a502d45f65651d7b6f7b3c1362f9c543&wsABSTime=1774090846
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/e142922645466d58b5ad3a27570b5ac5.png!w80", 📺 🔴 07:00 WIB - ) Banfield vs Club Atletico Tigre
+#EXTVLCOPT:http-referrer=https://www.spindlersptown.com/
+#EXTVLCOPT:http-origin=https://www.spindlersptown.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+https://live5.msrktz.app/live/71426314.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 🔴 07:00 WIB - NU TOLUCA VS NU CLUB NECAXA
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live1.pro2cdnlive.com/live/channel17.flv?wsSecret=7d1c96414e4959971acaf6e83570f16e&wsABSTime=1774090846
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://img.colatv88xd.cc/football/team/65d05eaf7edc601ae236107417b01cbf.png!w80", 📺 ⏳ 07:15 WIB - ) San Lorenzo vs Deportivo Rincon
 https://bwifi.my.id/5menit.mp4?m=sanlorenzodeportivorincon_1774077300.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://img.colatv88xd.cc/football/team/05321a8272ff8e7ff2eb7eae2e0b72a6.png!w80", 📺 ⏳ 08:00 WIB - ) Necaxa vs Club Tijuana
