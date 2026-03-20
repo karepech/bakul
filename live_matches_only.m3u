@@ -67,10 +67,22 @@ https://live5.msrktz.app/live/43612277.m3u8
 #EXTVLCOPT:http-origin=https://www.spindlersptown.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 https://live5.msrktz.app/live/68848594.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X950533.jpg", 🇮🇩 ⏳ 19:00-21:00 WIB - UEFA Conference League 2025/26
-https://bwifi.my.id/5menit.mp4?m=uefaconferenceleague2025_1774033200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://img.colatv88xd.cc/football/team/7543134c669d639c3ff036bc215a3b62.png!w80", 📺 ⏳ 19:00 WIB - ) Guangxi Hengchen vs Ningbo Professional
-https://bwifi.my.id/5menit.mp4?m=guangxihengchenningboprofessional_1774033200.0
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X950533.jpg", 🇮🇩 🔴 19:00-21:00 WIB - UEFA Conference League 2025/26 [beIN Sports 2]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X950533.jpg", 🇮🇩 🔴 19:00-21:00 WIB - UEFA Conference League 2025/26 [Bein Sports 2 HD]
+http://moj.feniks.team:25461/411dariocacic/a1Uni9hC0D/1284
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X950533.jpg", 🇮🇩 🔴 19:00-21:00 WIB - UEFA Conference League 2025/26 [BEIN SPORTS 2]
+http://dragon1977.com:80/047306b75f/b5a06cc482d6/1178452
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/7543134c669d639c3ff036bc215a3b62.png!w80", 📺 🔴 19:00 WIB - ) Guangxi Hengchen vs Ningbo Professional
+#EXTVLCOPT:http-referrer=https://www.spindlersptown.com/
+#EXTVLCOPT:http-origin=https://www.spindlersptown.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+https://live5.msrktz.app/live/07808742.m3u8
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955243.jpg", 🇮🇩 ⏳ 19:05-21:00 WIB - LaLiga : Barcelona Vs Sevilla
 https://bwifi.my.id/5menit.mp4?m=laligabarcelonasevilla_1774033500.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://img.colatv88xd.cc/football/team/99dd3ac7267c0e3870d9ad785e6f9661.png!w80", 📺 ⏳ 19:15 WIB - ) Hồ Chí Minh vs Trường Tươi Đồng Nai
@@ -119,3 +131,5 @@ https://bwifi.my.id/5menit.mp4?m=lensangerssco_1774061100.0
 https://bwifi.my.id/5menit.mp4?m=laligavillarrealrealsociedad_1774061700.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://img.colatv88xd.cc/football/team/240b30d333c97d293752ab7afd77ccd6.png!w80", 📺 ⏳ 03:00 WIB - ) Bournemouth vs Manchester United
 https://bwifi.my.id/5menit.mp4?m=bournemouthmanchesterunited_1774062000.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://img.colatv88xd.cc/basketball/team/3f82122a48e98eaccc5e71307eba801a.png!w80", 📺 ⏳ 06:30 WIB - ) Detroit Pistons vs Golden State Warriors
+https://bwifi.my.id/5menit.mp4?m=detroitpistonsgoldenstatewarriors_1774074600.0
