@@ -1,12 +1,12 @@
 name: Generate EPG Mapping
 
 on:
-  workflow_dispatch: # Tombol Manual di Tab Actions
+  workflow_dispatch:
   push:
     branches:
-      - main # Jalan saat edit file di branch main
+      - main
   schedule:
-    - cron: '0 * * * *' # Jalan otomatis setiap 1 jam sekali
+    - cron: '0 * * * *'
 
 permissions:
   contents: write 
@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Mengambil seluruh histori agar rebase lancar
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -37,5 +39,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add playlist_termapping.m3u
+          # Ambil perubahan terbaru dari server dulu agar tidak bentrok
+          git pull origin main --rebase 
           git commit -m "Auto-update: M3U Bakul Wifi Sports Terbaru" || echo "Tidak ada perubahan data"
-          git push
+          git push origin main
