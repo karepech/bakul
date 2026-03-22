@@ -1,15 +1,12 @@
 name: Generate EPG Mapping
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Tetap bisa dijalankan manual pakai tombol
   push:
     branches:
-      - main
+      - main # Berjalan otomatis setiap kali ada perubahan file di repositori (branch main)
   schedule:
-    - cron: '0 * * * *'
-
-permissions:
-  contents: write 
+    - cron: '0 * * * *' # Berjalan otomatis setiap 1 jam
 
 jobs:
   build:
@@ -18,8 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -38,15 +33,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Tandai file yang berubah
-          git add playlist_termapping.m3u
-          
-          # Simpan perubahan (Commit)
-          git commit -m "Auto-update: M3U Bakul Wifi Sports Terbaru" || exit 0
-          
-          # Tarik update terbaru & gabungkan (Rebase)
-          git pull origin main --rebase
-          
-          # Kirim ke server GitHub (Push)
-          git push origin main
+          git add playlist_termapping.m3u laporan_rumus.txt laporan_channel_m3u.txt
+          git commit -m "Update M3U ter-mapping dan laporan" || echo "Tidak ada perubahan"
+          git push
