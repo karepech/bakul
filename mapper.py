@@ -27,7 +27,9 @@ M3U_URLS = [
 ]
 EPG_URLS = [
     "https://bwifi.my.id/epg.xml",
-    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"
+    "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
+    "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz",
+    "https://epg.pw/xmltv/epg.xml.gz"
 ]
 
 MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/map.txt"
@@ -82,22 +84,44 @@ def terjemahkan_bahasa(title):
 
 REGEX_EVENT = re.compile(r'(?:^|[^0-9])(\d{2})[:\.](\d{2})\s*(?:WIB)?\s*[\-\|]?\s*(.+)', re.IGNORECASE)
 
+# --- FILTER KETAT CHANNEL OLAHRAGA ---
 @lru_cache(maxsize=5000)
 def is_target_sport_channel(name):
     n = name.lower()
-    if any(x in n for x in ['movie', 'cinema', 'film', 'drama', 'kids', 'news', 'music', 'entertainment']): 
+    # 1. Daftar Haram Channel (Sub-channel hiburan dari provider besar)
+    haram_ch = ['movie', 'cinema', 'film', 'drama', 'kids', 'news', 'music', 'entertainment', 'berita', 'kabar', 'gossip', 'sinetron', 'ria', 'warna', 'awani', 'komedi', 'tv nasional']
+    if any(x in n for x in haram_ch): 
         return False
-    target = ['sport', 'bein', 'spotv', 'liga', 'league', 'champions', 'premier', 'motogp', 'f1', 'nba', 'tenis', 'afc', 'ssc', 'arena', 'astro', 'vidio']
+    # 2. Daftar Wajib Olahraga
+    target = ['sport', 'bein', 'spotv', 'liga', 'league', 'champions', 'premier', 'arena', 'supersport', 'ssc', 'rcti', 'inews', 'mola', 'tsn', 'espn', 'fox', 'optus', 'sky', 'euro', 'vidio']
     return any(t in n for t in target)
 
+# --- FILTER KETAT ACARA OLAHRAGA ---
 @lru_cache(maxsize=5000)
 def is_allowed_sport(title, durasi_menit):
     t = title.lower()
     if durasi_menit <= 30: return False
-    if any(k in t for k in ["replay", "delay", "classic", "rewind", "highlights", "review"]): 
+    
+    # 1. Daftar Haram Acara (Tayangan ulang & Non-Olahraga)
+    haram_acara = [
+        "replay", "delay", "classic", "rewind", "highlights", "review", "preview", 
+        "news", "berita", "kabar", "gossip", "talkshow", "studio", "magazine", 
+        "sorotan", "kilas", "jurnal", "obrolan", "podcast", "movie", "bioskop", 
+        "cinema", "film", "sinetron", "ftv", "dangdut", "religi", "quran", "kids", 
+        "cartoon", "spongebob", "re-run", "rerun", "recorded", "history", "retro", 
+        "tunda", "ulangan", "pemanasan", "warm up", "build-up", "post-match"
+    ]
+    if any(k in t for k in haram_acara): 
         return False
-    match_kws = ['vs', 'liga', 'league', 'cup', 'copa', 'bwf', 'motogp', 'f1', 'nba', 'tennis', 'afc', 'match']
-    return any(k in t for k in match_kws)
+        
+    # 2. Syarat Wajib Olahraga (Harus ada minimal satu kata ini)
+    wajib_olahraga = [
+        " vs ", " v ", "motogp", " gp ", "f1", "formula", "wsbk", "nba", "nfl", 
+        "wwe", "ufc", "wimbledon", "bwf", "badminton", "tennis", "tenis", 
+        "voli", "volley", "basket", "athletics", "golf", "snooker", "darts", 
+        "mma", "boxing", "liga", "league", "cup", "copa", "championship", "match", "race"
+    ]
+    return any(k in t for k in wajib_olahraga)
 
 def parse_time(ts, offset=0):
     try:
@@ -176,30 +200,34 @@ for url, content, is_e in results:
             if not raw_inf or ln in GLOBAL_SEEN_STREAM_URLS: continue
             
             m3u_name = raw_inf.split(",", 1)[1].strip() if "," in raw_inf else ""
-            if not REGEX_EVENT.search(m3u_name) and not is_target_sport_channel(m3u_name): continue
+            ev_m = REGEX_EVENT.search(m3u_name)
+            is_sport_channel = is_target_sport_channel(m3u_name)
+            
+            if not ev_m and not is_sport_channel: continue
             
             GLOBAL_SEEN_STREAM_URLS.add(ln)
             orig_logo = re.search(r'(?i)tvg-logo=["\']([^"\']*)["\']', raw_inf).group(1) if "tvg-logo" in raw_inf.lower() else ""
 
-            # Event Berjadwal
-            ev_m = REGEX_EVENT.search(m3u_name)
+            # Event Berjadwal dari nama channel
             if ev_m:
-                ev_title = re.sub(r'\[.*?\]|\(.*?\)', '', ev_m.group(3)).strip()
+                ev_title_raw = re.sub(r'\[.*?\]|\(.*?\)', '', ev_m.group(3)).strip()
+                if not is_allowed_sport(ev_title_raw, 60): continue # Pastikan judul event di channel juga lolos filter
+                
                 ev_st = now_wib.replace(hour=int(ev_m.group(1)), minute=int(ev_m.group(2)), second=0)
                 if ev_st < now_wib - timedelta(hours=4): ev_st += timedelta(days=1)
                 ev_sp = ev_st + timedelta(hours=2)
                 if ev_sp > now_wib:
                     is_l = (ev_st - timedelta(minutes=5)) <= now_wib < ev_sp
-                    k = f"{ev_title}_{ev_st.timestamp()}"
+                    k = f"{ev_title_raw}_{ev_st.timestamp()}"
                     if k not in keranjang_match: keranjang_match[k] = {"is_live": is_l, "sort": ev_st.timestamp(), "links": []}
                     jam = f"{ev_st.strftime('%H:%M')}-{ev_sp.strftime('%H:%M')}"
                     group = "🔴 SEDANG TAYANG" if is_l else "📅 JADWAL HARI INI"
-                    # TAMBAHKAN NAMA CHANNEL DI BELAKANG
-                    inf = f'#EXTINF:-1 group-title="{group}" tvg-logo="{orig_logo}", 🏆 {jam} WIB - {terjemahkan_bahasa(ev_title)} [{m3u_name}]'
+                    # NAMA CHANNEL M3U DITAMBAHKAN DI SINI
+                    inf = f'#EXTINF:-1 group-title="{group}" tvg-logo="{orig_logo}", 🏆 {jam} WIB - {terjemahkan_bahasa(ev_title_raw)} [{m3u_name}]'
                     keranjang_match[k]["links"].append({"prio": 0, "data": [inf] + (extra_tags if is_l else []) + [ln if is_l else f"{LINK_UPCOMING}?m={k}"]})
                 continue
 
-            # Mapping EPG
+            # Mapping EPG ke Channel Olahraga
             id_epg = kamus_rumus_epg.get(rumus_samakan_teks(m3u_name))
             if not id_epg:
                 mirip = difflib.get_close_matches(rumus_samakan_teks(m3u_name), daftar_epg_rumus, n=1, cutoff=0.80)
@@ -211,11 +239,11 @@ for url, content, is_e in results:
                     if k not in keranjang_match: keranjang_match[k] = {"is_live": ev['live'], "sort": ev['start'].timestamp(), "links": []}
                     jam = f"{ev['start'].strftime('%H:%M')}-{ev['stop'].strftime('%H:%M')}"
                     group = "🔴 SEDANG TAYANG" if ev["live"] else "📅 JADWAL HARI INI"
-                    # TAMBAHKAN NAMA CHANNEL DI BELAKANG
+                    # NAMA CHANNEL M3U DITAMBAHKAN DI SINI
                     inf = f'#EXTINF:-1 group-title="{group}" tvg-id="{id_epg}" tvg-logo="{ev["logo"] or orig_logo}", 🏆 {jam} WIB - {ev["title"]} [{m3u_name}]'
                     keranjang_match[k]["links"].append({"prio": 1, "data": [inf] + (extra_tags if ev["live"] else []) + [ln if ev["live"] else f"{LINK_UPCOMING}?m={k}"]})
 
-# Render M3U
+# Render M3U Final
 hasil_m3u = []
 for k, v in keranjang_match.items():
     uniq = { l["data"][-1]: l for l in v["links"] }.values()
@@ -228,4 +256,4 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write(f'#EXTM3U name="🔴 BAKUL WIFI SPORTS"\n')
     for it in hasil_m3u: f.write("\n".join(it["data"]) + "\n")
 
-print(f"SELESAI! {OUTPUT_FILE} diperbarui dengan nama channel di belakang.")
+print(f"SELESAI! {OUTPUT_FILE} diperbarui. 100% Sports dengan Nama Channel di belakang.")
