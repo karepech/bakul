@@ -29,7 +29,7 @@ EPG_URLS = [
     "https://bwifi.my.id/epg.xml",
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz",
-    "https://epg.pw/xmltv/epg.xml.gz"
+    "https://raw.githubusercontent.com/dbghelp/StarHub-TV-EPG/refs/heads/main/starhub.xml"
 ]
 
 MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/map.txt"
