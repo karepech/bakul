@@ -28,7 +28,6 @@ M3U_URLS = [
 EPG_URLS = [
     "https://bwifi.my.id/epg.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"
-    
 ]
 
 MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/map.txt"
