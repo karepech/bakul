@@ -10,6 +10,7 @@ from functools import lru_cache
 MAP_URL = "https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/map.txt"
 
 EPG_URLS = [
+   "https://bwifi.my.id/epg.xml",
     "https://raw.githubusercontent.com/AqFad2811/epg/main/indonesia.xml",
     "https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/astro.xml", 
     "https://epgshare01.online/epgshare01/epg_ripper_ALL_SPORTS.xml.gz"                   
@@ -119,17 +120,44 @@ def is_sports_channel(name):
     sports_kws = ['bein', 'spotv', 'sport', 'soccer', 'champions', 'espn', 'golf', 'tennis', 'motor', 'mola', 'vidio', 'cbs', 'sky', 'tnt', 'optus', 'hub', 'true premier', 'true sport', 'supersport', 'dazn', 'eleven', 'setanta', 'now sports', 'fox sport', 'tsn', 'ssc', 'alkass', 'abu dhabi', 'dubai']
     return any(x in n for x in sports_kws)
 
-def is_allowed_sport(title, ch_name, durasi_menit):
+def is_allowed_sport(title, ch_name, durasi_menit, desc="", subtitle=""):
     if not title: return False
     t = terjemahkan_nama(title)
+    d = desc.lower()
+    s = subtitle.lower()
     
     if REGEX_CYRILLIC_CJK.search(t) or durasi_menit <= 30: return False
     
     haram_simbol = ["(d)", "[d]", "(r)", "[r]", "(c)", "[c]", "hls", "hl ", "h/l", "rev ", "rep ", "del "]
-    if any(s in t for s in haram_simbol): return False
+    if any(sym in t for sym in haram_simbol): return False
     
-    haram_kata = ["replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", "encore", "highlights", "best of", "compilation", "collection", "pre-match", "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship"]
+    # 1. CEK JUDUL (Pertahanan Lapis Pertama)
+    haram_kata = [
+        "replay", "delay", "re-run", "rerun", "recorded", "archives", "classic", "rewind", 
+        "encore", "highlights", "best of", "compilation", "collection", "pre-match", 
+        "post-match", "build-up", "build up", "preview", "review", "road to", "kick-off show", 
+        "warm up", "magazine", "studio", "talk", "show", "update", "weekly", "planet", 
+        "mini match", "mini", "life", "documentary", "tunda", "siaran tunda", "tertunda", 
+        "ulang", "siaran ulang", "tayangan ulang", "ulangan", "rakaman", "cuplikan", "sorotan", 
+        "rangkuman", "ringkasan", "kilas", "lensa", "jurnal", "terbaik", "pilihan", "pemanasan", 
+        "menuju kick off", "pra-perlawanan", "pasca-perlawanan", "sepak mula", "dokumenter", 
+        "obrolan", "bincang", "berita", "news", "apa kabar", "religi", "quran", "mekkah", 
+        "masterchef", "cgtn", "arirang", "cnn", "lfctv", "mutv", "chelsea tv", "re-live", 
+        "relive", "history", "retro", "memories", "greatest", "wwe", "ufc", "mma", "boxing", 
+        "fight", "fightesport", "esport", "e-sport", "smackdown", "raw", "one championship"
+    ]
     if re.search(r'\b(?:' + '|'.join(haram_kata) + r')\b', t): return False
+
+    # 2. CEK DESKRIPSI & SUBTITLE (Pertahanan Lapis Kedua - Deep Scan)
+    haram_desc = ["siaran ulang", "tayangan ulang", "recorded", "replay", "re-live", "delay", "tunda", "first broadcast"]
+    if any(hd in d or hd in s for hd in haram_desc): return False
+
+    # 3. PERANGKAP DURASI SEPAK BOLA (Pertahanan Lapis Ketiga)
+    # Jika ada kata kunci liga bola tapi durasi di EPG kurang dari 100 menit, itu pasti siaran ulang!
+    liga_kws = ['premier league', 'liga', 'serie a', 'champions', 'bundesliga', 'world cup', 'euro', 'la liga', 'ligue 1', 'fa cup', 'copa']
+    if any(l in t for l in liga_kws) and durasi_menit < 100: 
+        return False
+
     return True
 
 def is_valid_time(start_dt, title):
@@ -252,12 +280,15 @@ def main():
                 
                 durasi = (sp - st).total_seconds() / 60
                 title = pg.findtext("title") or ""
+                desc = pg.findtext("desc") or ""            # AMBIL DATA DESKRIPSI XML
+                subtitle = pg.findtext("sub-title") or ""   # AMBIL DATA SUBTITLE XML
                 
-                # FITUR ANTI-FAKE MATCH BEIN (Jika EPG title cuma mengulang kata "bein sports", buang!)
+                # FITUR ANTI-FAKE MATCH BEIN 
                 if 'bein' in epg_chans[cid].lower() and 'bein sports' in title.lower():
                     continue
                 
-                if is_allowed_sport(title, epg_chans[cid], durasi) and is_valid_time(st, title):
+                # Masukkan title, desc, dan subtitle ke mesin filter
+                if is_allowed_sport(title, epg_chans[cid], durasi, desc, subtitle) and is_valid_time(st, title):
                     if cid not in match_data: match_data[cid] = []
                     match_data[cid].append({"title": bersihkan_judul_event(title), "start": st, "stop": sp, "live": (st - timedelta(minutes=5)) <= now_wib < sp, "logo": pg.find("icon").get("src") if pg.find("icon") is not None else ""})
         except: continue
@@ -296,12 +327,8 @@ def main():
                     raw_attrs, m3u_name = raw_extinf.split(",", 1)
                     m3u_name = m3u_name.strip()
                     
-                    # ==========================================================
-                    # SATPAM ANTI-BENDERA (Khusus SPOTV link error dari luar)
-                    # [\U0001F1E6-\U0001F1FF] adalah kode unicode untuk emoji bendera
-                    # ==========================================================
                     if 'spotv' in m3u_name.lower() and re.search(r'[\U0001F1E6-\U0001F1FF]', m3u_name):
-                        continue # Langsung buang tanpa sisa!
+                        continue 
                     
                     if stream_url in GLOBAL_SEEN_STREAM_URLS:
                         continue
@@ -386,7 +413,6 @@ def main():
         unique_links = { l["orig_url"]: l for l in links }.values() 
         sorted_links = sorted(unique_links, key=lambda x: x["prio"])
         
-        # KUOTA FLEKSIBEL: Badminton max 4, Lainnya max 3 (Jadwal Akan Datang tetap 1)
         if match["is_live"]:
             max_take = 4 if match["is_badminton"] else 3
         else:
@@ -410,6 +436,6 @@ def main():
             for it in hasil_render: 
                 f.write("\n".join(it["data"]) + "\n")
             
-    print(f"SELESAI! SPOTV Error berbendera berhasil dimusnahkan!")
+    print(f"SELESAI! Deep Scan EPG & Filter Durasi Berhasil Diterapkan!")
 
 if __name__ == "__main__": main()
