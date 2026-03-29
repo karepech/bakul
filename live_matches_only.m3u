@@ -14,8 +14,17 @@ https://012v4.goiptv.us.ci/stream/starhub/beinsports3hd/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
 https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X948148.jpg", 🇮🇩 ⏳ 16:00-17:50 WIB - Women's Super League 2025/26
-https://bwifi.my.id/5menit.mp4?m=womenssuperleague2025_1774800000.0
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X948148.jpg", 🇮🇩 🔴 16:00-17:50 WIB - Women's Super League 2025/26 [beIN Sports 2]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X948148.jpg", 🇮🇩 🔴 16:00-17:50 WIB - Women's Super League 2025/26 [BEIN SPORTS 2]
+http://dragon1977.com:80/047306b75f/b5a06cc482d6/1178452
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X948148.jpg", 🇮🇩 🔴 16:00-17:50 WIB - Women's Super League 2025/26 [beIN Sports 2 HD]
+https://012v4.goiptv.us.ci/stream/starhub/beinsports2hd/
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 17:00-18:50 WIB - Super Lig : Fenerbahce Vs Gaziantep
 https://bwifi.my.id/5menit.mp4?m=superligfenerbahcegaziantep_1774803600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X955527.jpg", 🇮🇩 ⏳ 17:20-19:20 WIB - UCI World Tour 2026
