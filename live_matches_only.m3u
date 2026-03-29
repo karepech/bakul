@@ -50,10 +50,22 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/ind
 http://dragon1977.com:80/047306b75f/b5a06cc482d6/1178451
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X957953.jpg", 🇮🇩 🔴 00:09-02:30 WIB - HSBC SVNS2 2026 [beIN Sports 3 HD]
 https://012v4.goiptv.us.ci/stream/starhub/beinsports3hd/
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X954794.jpg", 🇮🇩 ⏳ 01:00-03:00 WIB - TotalEnergies Africa Cup of Nations, Morocco (2025)
-https://bwifi.my.id/5menit.mp4?m=totalenergiesafricacupofnationsmorocco_1774832400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 🇬🇧 ⏳ 01:00 WIB - PETROJET VS ENPPI
-https://bwifi.my.id/5menit.mp4?m=petrojetenppi_1774832400.0
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X954794.jpg", 🇮🇩 🔴 01:00-03:00 WIB - TotalEnergies Africa Cup of Nations, Morocco (2025) [beIN Sports 2]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X954794.jpg", 🇮🇩 🔴 01:00-03:00 WIB - TotalEnergies Africa Cup of Nations, Morocco (2025) [BEIN SPORTS 2]
+http://dragon1977.com:80/047306b75f/b5a06cc482d6/1178452
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X954794.jpg", 🇮🇩 🔴 01:00-03:00 WIB - TotalEnergies Africa Cup of Nations, Morocco (2025) [beIN Sports 2 HD]
+https://012v4.goiptv.us.ci/stream/starhub/beinsports2hd/
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 🇬🇧 🔴 01:00 WIB - PETROJET VS ENPPI
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live1.pro2cdnlive.com/live/channel24.flv?wsSecret=dba01909e9ac32cb34b6ed4c106a8295&wsABSTime=1774850436
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955255.jpg", 🇮🇩 ⏳ 01:30-03:20 WIB - LaLiga Archive: Barcelona Vs Real Madrid - 2012/13
 https://bwifi.my.id/5menit.mp4?m=laligaarchivebarcelonarealmadrid2012_1774834200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 01:47-03:32 WIB - Super League: Hull KR V St Helens
@@ -74,10 +86,8 @@ https://bwifi.my.id/5menit.mp4?m=motogprd3redbullgrandprixoftheusmotogprace_1774
 https://bwifi.my.id/5menit.mp4?m=intermilanoroma_1774900800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://shorter.me/IxVCR", 📺 ⏳ 22:00 WIB - Zeren Spor vs Fenerbahce
 https://bwifi.my.id/5menit.mp4?m=zerensporfenerbahce_1774908000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 🇸🇦 ⏳ 22:15 WIB - MUAITHER SC VS AL ARABI SC
-https://bwifi.my.id/5menit.mp4?m=muaitherscalarabisc_1774908900.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 ⏳ 23:00 WIB - RODINA MOSCOW VS URAL OBLAST II
-https://bwifi.my.id/5menit.mp4?m=rodinamoscowuraloblastii_1774911600.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 🇸🇦 ⏳ 22:30 WIB - MUAITHER SC VS AL ARABI SC
+https://bwifi.my.id/5menit.mp4?m=muaitherscalarabisc_1774909800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 📺 ⏳ 23:30 WIB - NU FREIBURG VS NU HOFFENHEIM
 https://bwifi.my.id/5menit.mp4?m=nufreiburgnuhoffenheim_1774913400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/karepech/bakul/refs/heads/main/bw.png", 🇿🇦 ⏳ 23:30 WIB - REAL ZARAGOZA VS RACING SANTANDER
