@@ -13,43 +13,6 @@ http://202.80.222.20/cdn/iptv/Tvod/001/channel2000138/1024.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed
 https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/dr_spotv2hd/default/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 18:00-20:45 WIB - Challenge Cup: Exeter V Munster [Sky Sport Premier League FHD]
-https://7pal.short.gy/skyspt8nz
-#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 18:00-20:45 WIB - Challenge Cup: Exeter V Munster [SKY SPORTS EPL]
-http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/9334/index.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 18:00-20:45 WIB - Challenge Cup: Exeter V Munster [Sky Sports PremierLeague FHD]
-https://7pal.short.gy/ssportspl
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 18:52-21:00 WIB - LaLiga 2 '25/26: CAD Vs COR [beIN Sports 3]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 18:52-21:00 WIB - LaLiga 2 '25/26: CAD Vs COR [beIN Sports 3 HD]
-https://012v4.goiptv.us.ci/stream/starhub/beinsports3hd/
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 18:52-21:00 WIB - LaLiga 2 '25/26: CAD Vs COR [beIN Sports 3 HD]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 18:55-21:10 WIB - LaLiga 2025/26: RSO Vs LEV [beIN Sports 1]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 18:55-21:10 WIB - LaLiga 2025/26: RSO Vs LEV [beIN Sports 1 HD]
-https://012v4.goiptv.us.ci/stream/starhub/beinsportshd/
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 18:55-21:10 WIB - LaLiga : Real Sociedad Vs Levante [beIN Sports 1]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 18:55-21:10 WIB - LaLiga : Real Sociedad Vs Levante [beIN Sports 1 HD]
-https://012v4.goiptv.us.ci/stream/starhub/beinsportshd/
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://shorter.me/_bDcr", 📺 🔴 19:00 WIB - Persebaya Surabaya vs Persita
 #EXTVLCOPT:http-referrer=https://lxscore.com/
 #EXTVLCOPT:http-origin=https://lxscore.com/
@@ -123,14 +86,43 @@ http://202.80.222.20/cdn/iptv/Tvod/001/channel2000136/1024.m3u8
 http://202.80.222.20/cdn/iptv/Tvod/001/channel2000045/1024.m3u8
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 20:30-22:30 WIB - Bundesliga [TRACE Sport Stars]
 https://d29ecfnk3jwkp9.cloudfront.net/out/v1/9cc8f08dddb744dea58dbed4e07fb320/manifest.mpd
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 20:45-01:45 WIB - Champions Cup: Toulon V Stormers
-https://bwifi.my.id/5menit.mp4?m=championscuptoulonstormers_1775335500.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 ⏳ 21:00-23:00 WIB - UWCL 2025/26: BAR Vs RMA
-https://bwifi.my.id/5menit.mp4?m=uwcl202526barrma_1775336400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 21:10-23:25 WIB - LaLiga 2025/26: MLL Vs RMA
-https://bwifi.my.id/5menit.mp4?m=laliga202526mllrma_1775337000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 21:10-01:40 WIB - LaLiga : Mallorca Vs Real Madrid
-https://bwifi.my.id/5menit.mp4?m=laligamallorcarealmadrid_1775337000.0
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 20:45-01:45 WIB - Champions Cup: Toulon V Stormers [Sky Sport Premier League FHD]
+https://7pal.short.gy/skyspt8nz
+#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 20:45-01:45 WIB - Champions Cup: Toulon V Stormers [SKY SPORTS EPL]
+http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/9334/index.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 20:45-01:45 WIB - Champions Cup: Toulon V Stormers [Sky Sports PremierLeague FHD]
+https://7pal.short.gy/ssportspl
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 21:00-23:00 WIB - UWCL 2025/26: BAR Vs RMA [beIN Sports 3]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 21:00-23:00 WIB - UWCL 2025/26: BAR Vs RMA [beIN Sports 3 HD]
+https://012v4.goiptv.us.ci/stream/starhub/beinsports3hd/
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 21:00-23:00 WIB - UWCL 2025/26: BAR Vs RMA [beIN Sports 3 HD]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 21:10-23:25 WIB - LaLiga 2025/26: MLL Vs RMA [beIN Sports 1]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 21:10-23:25 WIB - LaLiga 2025/26: MLL Vs RMA [beIN Sports 1 HD]
+https://012v4.goiptv.us.ci/stream/starhub/beinsportshd/
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 21:10-01:40 WIB - LaLiga : Mallorca Vs Real Madrid [beIN Sports 1]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 21:10-01:40 WIB - LaLiga : Mallorca Vs Real Madrid [beIN Sports 1 HD]
+https://012v4.goiptv.us.ci/stream/starhub/beinsportshd/
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 21:55-01:30 WIB - Serie a Women 25/26
 https://bwifi.my.id/5menit.mp4?m=serieawomen25_1775339700.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 22:00 WIB - Strasbourg vs Nice
