@@ -10,13 +10,6 @@ https://a151aivottlinear-a.akamaihd.net/OTTB/lhr-nitro/live/clients/dash/enc/9o6
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
 https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X961441.jpg", 🇮🇩 🔴 21:07-23:40 WIB - LaLiga 2 : Huesca Vs Deportivo [beIN Sports 1]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
 #EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 21:10-01:30 WIB - LaLiga : Mallorca Vs Rayo Vallecano [beIN Sports 2]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -61,8 +54,13 @@ https://a122aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/q4u
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
 https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/1a7ca5b1-6597-43d7-8ee9-b50faf717a4e/master.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 23:55-01:55 WIB - Super Lig : Galatasaray Vs Kocaelispor
-https://bwifi.my.id/5menit.mp4?m=superliggalatasaraykocaelispor_1776038100.0
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 23:55-01:55 WIB - Super Lig : Galatasaray Vs Kocaelispor [beIN Sports 1]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 01:00-03:00 WIB - USL 25/26
 https://bwifi.my.id/5menit.mp4?m=usl25_1776042000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 01:45 WIB - Olympique Lyonnais vs Lorient
