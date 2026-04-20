@@ -1,13 +1,8 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 🔴 10:00-12:00 WIB - BRI Liga 1 [SPORTSTARS 3 B]
-##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-##https://fta4-cdn-flr.visionplus.id/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) MPF.Players/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72
-https://d84q7nw4qf3j3.cloudfront.net/out/v1/eb98aca0a1be41f7b9c05dac051a250e/index.mpd
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 15:30-17:00 WIB - Netball Super League 26
 https://bwifi.my.id/5menit.mp4?m=netballsuperleague_1776699000.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://shorter.me/_bDcr", 📺 ⏳ 15:30 WIB - Semen Padang vs Persijap
+https://bwifi.my.id/5menit.mp4?m=semenpadangpersijap_1776699000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 16:00-19:00 WIB - Longines Global Champions Tour
 https://bwifi.my.id/5menit.mp4?m=longinesglobalchampionstour_1776700800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 16:22-18:12 WIB - Super League: Huddersfield V Leeds
@@ -24,6 +19,8 @@ https://bwifi.my.id/5menit.mp4?m=wccbrupprechtmatsuda_1776708000.0
 https://bwifi.my.id/5menit.mp4?m=serieawomen25_1776708000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 ⏳ 18:30-20:30 WIB - Timnas Special: IDN Vs CAM
 https://bwifi.my.id/5menit.mp4?m=timnasspecialidncam_1776709800.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://shorter.me/_bDcr", 📺 ⏳ 19:00 WIB - Dewa United vs Persib
+https://bwifi.my.id/5menit.mp4?m=dewaunitedpersib_1776711600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 19:30-22:30 WIB - 2026 Senior PGA C'ship
 https://bwifi.my.id/5menit.mp4?m=2026seniorpgacship_1776713400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 20:00-22:00 WIB - ACL Elite
@@ -56,12 +53,6 @@ https://bwifi.my.id/5menit.mp4?m=superligtrabzonsporbasaksehir_1776720600.0
 https://bwifi.my.id/5menit.mp4?m=2026moto4northerncup_1776722400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 22:00-00:00 WIB - European Qualifiers
 https://bwifi.my.id/5menit.mp4?m=europeanqualifiers_1776722400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 22:15 WIB - Metz vs Paris
-https://bwifi.my.id/5menit.mp4?m=metzparis_1776723300.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 22:15 WIB - Nantes vs Brest
-https://bwifi.my.id/5menit.mp4?m=nantesbrest_1776723300.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://iili.io/FDOiPI4.jpg", 📺 ⏳ 22:15 WIB - Strasbourg vs Rennes
-https://bwifi.my.id/5menit.mp4?m=strasbourgrennes_1776723300.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 22:30-23:30 WIB - 2026 ITM Taupo Super 440 HL
 https://bwifi.my.id/5menit.mp4?m=2026itmtauposuper440hl_1776724200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 22:30-00:00 WIB - Tinju
