@@ -1,8 +1,4 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://shorter.me/_bDcr", 📺 🔴 19:00 WIB - PSBS Biak Numfor vs Malut United
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://xl365.livebytexscorez.com
-https://live1.pro2cdnlive.com/live/channel15.m3u8?wsSecret=796baabf373552b168b54380f98ae384&wsABSTime=1773517215
 #EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X948148.jpg", 🇮🇩 🔴 21:10-00:30 WIB - Women's Super League 2025/26 [beIN Sports 2]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -45,3 +41,7 @@ https://bwifi.my.id/5menit.mp4?m=uclpsgbayernsf1stleg_1777427700.0
 https://bwifi.my.id/5menit.mp4?m=malaysiannsl_1777428000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 02:52-04:42 WIB - Super Rugby: Crusaders V Waratahs
 https://bwifi.my.id/5menit.mp4?m=superrugbycrusaderswaratahs_1777431120.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGsdPvWoq0uKcEubcEnOJ6j3U1XA3GxAKW4Q&s", 📺 ⏳ 15:00 WIB - Thomas & Uber Cup Finals 2026
+https://bwifi.my.id/5menit.mp4?m=thomasubercupfinals_1777474800.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://shorter.me/_bDcr", 📺 ⏳ 19:45 WIB - PSBS Biak Numfor vs Malut United
+https://bwifi.my.id/5menit.mp4?m=psbsbiaknumformalutunited_1777491900.0
