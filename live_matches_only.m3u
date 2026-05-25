@@ -1,54 +1,27 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 12:32-14:22 WIB - Super Rugby: Crusaders V Chiefs [Premier Sports Rugby KitKat]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 16:12-18:02 WIB - Super Rugby: Moana Pasifika V Reds [Premier Sports Rugby KitKat]
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4751472d3ac45e95e44b5e75480e53de:5f989e3de354630ec7973980f129ed01
 https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fapyi0fj1o/out/v1/6fe7ef7bb5de4033a2b202d9ca62151a/cenc.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 12:45-13:20 WIB - F1 Academy Race 2026: Canada [beIN Sports 1 Love4vn-Test]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://raw.githubusercontent.com/jrpahe-del/Logo/refs/heads/main/motogp.png", 📺 🔴 17:00 WIB - MOTOGP+
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8?channel_name=MTRSPT1&content_genre=Drag%20Racing%2CMotor%20Racing%2CMotorsport%2CRacing%2CSport&ic=IAB17%2CIAB17-1&provider=FreeLiveSports&us_privacy=[US_PRIVACY]&gdpr=[GDPR]&gdpr_consent=[CONSENT_STRING]&coppa=0&content_livestream=1&p=sportstribal&url=[REF]&lmt=[LAT]&did=[DEVICE_ID]
+#EXTINF:-1tvg-url="https://www.bevy.be/bevyfiles/indonesia.xml" group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 17:30-19:00 WIB - 2026 Tyrepower Tasmania Super [SpoTV 2 Love4vn-Test]
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 12:45-13:20 WIB - F1 Academy Race 2026: Canada [beIN Sports 1 HD Love4vn-Test]
-https://012v4.goiptv.us.ci/stream/starhub/beinsportshd/
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 12:45-13:20 WIB - F1 Academy Race 2026: Canada [BEIN SPORT SP Qtrung]
-# ══════════════════════════════════════════
-# 🇪🇸 SPAIN — DAZN / BEIN (12 links)
-# ══════════════════════════════════════════
-http://planettvweb.com:8091/pablotorres/Ferpab8719/12051
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955181.jpg", 🇮🇩 🔴 12:45-13:20 WIB - F1 Academy Race 2026 [beIN Sports 1 Love4vn-Test]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 17:30-19:00 WIB - 2026 Tyrepower Tasmania Super [SPOTV 2 HD Love4vn-Test]
+################################ MOTO GP F1 ##############################################
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955181.jpg", 🇮🇩 🔴 12:45-13:20 WIB - F1 Academy Race 2026 [beIN Sports 1 HD Love4vn-Test]
-https://012v4.goiptv.us.ci/stream/starhub/beinsportshd/
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X955181.jpg", 🇮🇩 🔴 12:45-13:20 WIB - F1 Academy Race 2026 [BEIN SPORT SP Qtrung]
-# ══════════════════════════════════════════
-# 🇪🇸 SPAIN — DAZN / BEIN (12 links)
-# ══════════════════════════════════════════
-http://planettvweb.com:8091/pablotorres/Ferpab8719/12051
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 13:20-15:20 WIB - F1 Main Race 2026: GP Canada
-https://bwifi.my.id/5menit.mp4?m=f1mainrace2026gpcanada_1779715200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X967654.jpg", 🇮🇩 ⏳ 13:20-15:20 WIB - Formula 1 Main Race 2026
-https://bwifi.my.id/5menit.mp4?m=formula1mainrace_1779715200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 14:22-16:12 WIB - Super Rugby: Waratahs V Brumbies
-https://bwifi.my.id/5menit.mp4?m=superrugbywaratahsbrumbies_1779718920.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 15:00-16:15 WIB - 2026 Tyrepower Tasmania Super
-https://bwifi.my.id/5menit.mp4?m=2026tyrepowertasmaniasuper_1779721200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 15:30-17:30 WIB - AFC U17 Asian Cup Saudi Arabia
-https://bwifi.my.id/5menit.mp4?m=afcu17asiancupsaudiarabia_1779723000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 16:12-18:02 WIB - Super Rugby: Moana Pasifika V Reds
-https://bwifi.my.id/5menit.mp4?m=superrugbymoanapasifikareds_1779725520.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 16:15-17:30 WIB - 2026 Tyrepower Tasmania Super
-https://bwifi.my.id/5menit.mp4?m=2026tyrepowertasmaniasuper_1779725700.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://raw.githubusercontent.com/jrpahe-del/Logo/refs/heads/main/motogp.png", 📺 ⏳ 17:00 WIB - MOTOGP+
-https://bwifi.my.id/5menit.mp4?m=motogp_1779728400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 17:30-19:00 WIB - 2026 Tyrepower Tasmania Super
-https://bwifi.my.id/5menit.mp4?m=2026tyrepowertasmaniasuper_1779730200.0
+#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
+https://fta2-cdn-flr.visionplus.id/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 17:30-19:00 WIB - 2026 Tyrepower Tasmania Super [SPOTV 2 MAX KitKat]
+#EXTVLCOPT:http-referrer=https://www.indihometv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0a47994d99d44eeaba5e015a41dc3085:4aa9da8d82cb4edfc3f558857453d6ed
+https://cdn08jtedge.indihometv.com/dassdvr/130/beib2/manifest.mpd
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 18:00-20:00 WIB - BRI Liga 1
 https://bwifi.my.id/5menit.mp4?m=briliga_1779732000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/150x150fightsport.jpg", 📺 ⏳ 18:00-19:00 WIB - Mega Fights In 60
@@ -79,3 +52,7 @@ https://bwifi.my.id/5menit.mp4?m=2026mlbmillad_1779748200.0
 https://bwifi.my.id/5menit.mp4?m=tinju_1779748200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.fifaultimateteam.it/en/wp-content/uploads/2020/05/cover-totssf-csl-fifa-20.jpg", 📺 ⏳ 00:45 WIB - PAOK vs Celta de Vigo
 https://bwifi.my.id/5menit.mp4?m=paokceltadevigo_1779756300.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://st2.depositphotos.com/2219730/47349/i/450/depositphotos_473491512-stock-photo-manchester-lancashire-england-may-2021.jpg", 📺 ⏳ 02:00 WIB - EVENT BOLA+ 2026
+https://bwifi.my.id/5menit.mp4?m=eventbola_1779760800.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHsLJT7JewucYWENZdH5oF3w5bOfTXAPzhnt3_6OkpIzZNliTs", 📺 ⏳ 03:00 WIB - Celtic vs Stuttgart
+https://bwifi.my.id/5menit.mp4?m=celticstuttgart_1779764400.0
