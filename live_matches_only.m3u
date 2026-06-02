@@ -1,69 +1,37 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 🔴 08:00-10:00 WIB - AFC U17 Asian Cup 2026 [Sportstars 3ᴴᴰ Deccotech]
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0F
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_key=https://visplus.caranytv.workers.dev/drm?id=114&type=drm
-https://d2xz2v5wuvgur6.cloudfront.net/out/v1/6f5596513af749c19d0bcdac013dda3c/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 🔴 08:00-10:00 WIB - AFC U17 Asian Cup 2026 [SPORTSTARS 3 B KitKat]
-##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-##https://fta4-cdn-flr.visionplus.id/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) MPF.Players/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72
-https://d84q7nw4qf3j3.cloudfront.net/out/v1/eb98aca0a1be41f7b9c05dac051a250e/index.mpd
-#EXTINF:-1tvg-url="https://www.bevy.be/bevyfiles/indonesia.xml" group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 08:45-09:45 WIB - Formula E Driver [SpoTV 2 Love4vn-Test]
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 08:45-09:45 WIB - Formula E Driver [SPOTV 2 HD Love4vn-Test]
-################################ MOTO GP F1 ##############################################
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
-https://fta2-cdn-flr.visionplus.id/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 08:45-09:45 WIB - Formula E Driver [SPOTV 2 MAX KitKat]
-#EXTVLCOPT:http-referrer=https://www.indihometv.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0a47994d99d44eeaba5e015a41dc3085:4aa9da8d82cb4edfc3f558857453d6ed
-https://cdn08jtedge.indihometv.com/dassdvr/130/beib2/manifest.mpd
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 08:45-14:00 WIB - Polytron Indonesia Open '26 [Sportstars 4 HD Love4vn-Test]
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
 #https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd|referrer=https://visionplus.id
 http://cdn.nng.cloudns.us/live/m3u8/sprt/3b5901d4c8158d3.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 08:52-10:42 WIB - Super Rugby: Reds V Fijian Drua [Premier Sports Rugby KitKat]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEKCy9owN4JTMFsyDT9DukRtgE82p_4yP9A&s", 🇮🇩 🔴 09:00 WIB - POLYTRON Indonesia Open 2026
+https://052d33b4b506ff051775da149c5848eb.v.smtcdns.net/play.cbalive.weibisai.com/live/4216694894896061_AiSD.m3u8?txSecret=fe48dbfb1f7301d8c595a18d16c03ad3&txTime=6A1F6E80
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEKCy9owN4JTMFsyDT9DukRtgE82p_4yP9A&s", 🇮🇩 🔴 09:00 WIB - POLYTRON Indonesia Open 2026
+https://052d33b4b506ff051775da149c5848eb.v.smtcdns.net/play.cbalive.weibisai.com/live/4216695117267061_AiSD.m3u8?txSecret=2ed22d44729f50577f76da858d8708d0&txTime=6A1F6E80
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEKCy9owN4JTMFsyDT9DukRtgE82p_4yP9A&s", 🇮🇩 🔴 09:00 WIB - POLYTRON Indonesia Open 2026
+https://052d33b4b506ff051775da149c5848eb.v.smtcdns.net/play.cbalive.weibisai.com/live/4216695302673061_AiSD.m3u8?txSecret=11d4018afa8bb06e441bb413d260c9e0&txTime=6A1F6E80
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEKCy9owN4JTMFsyDT9DukRtgE82p_4yP9A&s", 🇮🇩 🔴 09:00 WIB - POLYTRON Indonesia Open 2026
+https://tfwe3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel61.m3u8?wsSession=e6658d81c1f79bee4ef5b0f3-178037932387442&wsIPSercert=4b3bb8ae455929bbb94d84cbb18f700e&wsBindIP=2&wsserid=1168278531255916870
+#EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/YdgZwPfkwYzG0WvanfyBqpezKGw=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5115004/841b8a.jpg", 📺 🔴 10:30 WIB - 03/06/26Women: Belgium vs Poland - Volleyball Nations League  CK TEST
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4751472d3ac45e95e44b5e75480e53de:5f989e3de354630ec7973980f129ed01
-https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fapyi0fj1o/out/v1/6fe7ef7bb5de4033a2b202d9ca62151a/cenc.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 08:52-10:42 WIB - Super Rugby: Reds V Fijian Drua [Sky Sport Premier League New Zealand Lalajo]
-https://pal6.short.gy/skyspt8nz
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 08:52-10:42 WIB - Super Rugby: Reds V Fijian Drua [Sky Sports Premier League United Kingdom Lalajo]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
-https://xemzi.short.gy/2000002
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 🔴 09:00-18:00 WIB - Polytron Indonesia Open '26 [Sportstars 2 Love4vn-Test]
+#KODIPROP:inputstream.adaptive.license_key=https://allautock.maling.pl/
+https://ayo.maling.pl/m3u/TOKEN/21603.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 14:00-19:00 WIB - Polytron Indonesia Open '26 [Sportstars 4 HD Love4vn-Test]
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd|Referer=https://www.visionplus.id
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 09:45-10:45 WIB - Formula E Driver
-https://bwifi.my.id/5menit.mp4?m=formulaedriver_1780393500.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 10:42-12:32 WIB - Super Rugby: Brumbies V Moana Pasifika
-https://bwifi.my.id/5menit.mp4?m=superrugbybrumbiesmoanapasifika_1780396920.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 14:00-19:00 WIB - Polytron Indonesia Open '26
-https://bwifi.my.id/5menit.mp4?m=polytronindonesiaopen_1780408800.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/959laOUQhqSJNgyNU79VEOoiBho=/640x360/filters:strip_icc():quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/21490/byon-madness-vol-4-2026-bb64a5.jpg", 📺 ⏳ 15:00 WIB - 06/06/26BYON Madness 4  CK TEST
-https://bwifi.my.id/5menit.mp4?m=060626byonmadness4cktest_1780412400.0
+#https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd|referrer=https://visionplus.id
+http://cdn.nng.cloudns.us/live/m3u8/sprt/3b5901d4c8158d3.m3u8
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/959laOUQhqSJNgyNU79VEOoiBho=/640x360/filters:strip_icc():quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/21490/byon-madness-vol-4-2026-bb64a5.jpg", 📺 ⏳ 15:00 WIB - 06/06/26BYON Madness  CK TEST
+https://bwifi.my.id/5menit.mp4?m=060626byonmadnesscktest_1780412400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/hrPUqWU9TuU7rgv3nJlkWVvkaxQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5113114/48fffa.jpg", 🇹🇭 ⏳ 15:30 WIB - 02/06/26Thailand vs Brunei Darussalam - ASEAN U19 Boys' Bank Sumut Championship  CK TEST
 https://bwifi.my.id/5menit.mp4?m=020626thailandbruneidarussalamaseanu19boysbanksumutchampionshipcktest_1780414200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/vSMUlubEY61gGT46MguUUcsRUQ8=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5111909/119e0d.jpg", 📺 ⏳ 15:45 WIB - 02/06/26Men's and Women's Singles Quarterfinals - Day 10  - Roland Garros 2026  CK TEST
-https://bwifi.my.id/5menit.mp4?m=020626mensandwomenssinglesquarterfinalsday10rolandgarros2026cktest_1780415100.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/5EPEMhVbgPVDfjtBRDTQ4ISaDGI=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5115001/e2eeab.jpg", 📺 ⏳ 15:45 WIB - 02/06/26Miraa Andreeva vs Sorana Cirstea - Women's Singles Quarterfinals | Roland Garros 2026  CK TEST
+https://bwifi.my.id/5menit.mp4?m=020626miraaandreevasoranacirsteawomenssinglesquarterfinalsrolandgarros2026cktest_1780415100.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/Xd_kB3TeLrEjHD2NIBFl2VFKo9c=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5111910/188c9a.jpg", 📺 ⏳ 15:55 WIB - 02/06/26Day 10  - Roland Garros 2026  CK TEST
 https://bwifi.my.id/5menit.mp4?m=020626day10rolandgarros2026cktest_1780415700.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 16:00-17:30 WIB - Mubadala New York Sail GP
@@ -72,6 +40,8 @@ https://bwifi.my.id/5menit.mp4?m=mubadalanewyorksailgp_1780416000.0
 https://bwifi.my.id/5menit.mp4?m=afcu17asiancup_1780416000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/DzXnocwMYJzN0JcfgfZANqYaiPs=/640x360/filters:strip_icc():quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/21485/tvod-nex-r3c-da3ab4.jpg", 📺 ⏳ 16:00 WIB - 05/06/26nex Road to Champion Vol. 3  CK TEST
 https://bwifi.my.id/5menit.mp4?m=050626nexroadtochampionvol3cktest_1780416000.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XMH31OofgsKuQn1SioWS_V2VYa6U7oSeRQ&s", 🇹🇭 ⏳ 16:00 WIB - Thailand U-19 vs Brunei U-19
+https://bwifi.my.id/5menit.mp4?m=thailandu19bruneiu_1780416000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 17:30-19:00 WIB - Mubadala New York Sail GP
 https://bwifi.my.id/5menit.mp4?m=mubadalanewyorksailgp_1780421400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 18:00-20:00 WIB - Proliga
@@ -82,6 +52,8 @@ https://bwifi.my.id/5menit.mp4?m=megafights_1780423200.0
 https://bwifi.my.id/5menit.mp4?m=2026mlbladphi_1780426800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 ⏳ 19:00-22:30 WIB - Roland Garros 2026: Day 10
 https://bwifi.my.id/5menit.mp4?m=rolandgarros2026day_1780426800.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/jK-QFfEf7rUOS5IaYrQNc_jq7UQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5115043/d339ff.jpg", 🇸🇬 ⏳ 19:00 WIB - 03/06/26Indonesia vs Singapore - FIFA Women's Matchday  CK TEST
+https://bwifi.my.id/5menit.mp4?m=030626indonesiasingaporefifawomensmatchdaycktest_1780426800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/8zu5Oo5kfOJo4mgCqubVGiHS18o=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5114960/643241.jpg", 📺 ⏳ 19:10 WIB - 06/06/26Rajadamnern 2026 Super Flyweight Title  CK TEST
 https://bwifi.my.id/5menit.mp4?m=060626rajadamnern2026superflyweighttitlecktest_1780427400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 ⏳ 19:15-21:15 WIB - ASEAN Hyundai: BRU Vs TLS
@@ -96,8 +68,14 @@ https://bwifi.my.id/5menit.mp4?m=rolandgarros2026day_1780430400.0
 https://bwifi.my.id/5menit.mp4?m=wstworldchampionship_1780430400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 ⏳ 20:00-22:00 WIB - Bundesliga
 https://bwifi.my.id/5menit.mp4?m=bundesliga_1780430400.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/U_BI-aXEPmoE8SmxIWfhrp427ck=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5115048/f1ee9d.jpg", 🇮🇩 ⏳ 20:00 WIB - 05/06/26Indonesia vs Oman - FIFA Matchday  CK TEST
+https://bwifi.my.id/5menit.mp4?m=050626indonesiaomanfifamatchdaycktest_1780430400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/BNW1TwnEwkEAG-VxzlVZzezNEXI=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5110887/59ae75.jpg", 📺 ⏳ 20:00 WIB - 02/06/26China vs DR Congo - Maurice Revello  CK TEST
 https://bwifi.my.id/5menit.mp4?m=020626chinadrcongomauricerevellocktest_1780430400.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 ⏳ 20:00 WIB - China PR U-20 vs Republik Demokratik Kongo U-20
+https://bwifi.my.id/5menit.mp4?m=chinapru20republikdemokratikkongou_1780430400.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XMH31OofgsKuQn1SioWS_V2VYa6U7oSeRQ&s", 🇲🇾 ⏳ 20:00 WIB - Malaysia U-19 vs Singapura U-19
+https://bwifi.my.id/5menit.mp4?m=malaysiau19singapurau_1780430400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_310.png", 🇮🇩 ⏳ 20:30-01:15 WIB - Roland Garros 2026: Day 10
 https://bwifi.my.id/5menit.mp4?m=rolandgarros2026day_1780432200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 ⏳ 21:30-00:30 WIB - 2026 MotoGP Brembo GP Italy
@@ -110,8 +88,10 @@ https://bwifi.my.id/5menit.mp4?m=profutsalleagueindonesia_1780437600.0
 https://bwifi.my.id/5menit.mp4?m=2026wtcsalghero_1780439400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_98.png", 📺 ⏳ 22:30-23:30 WIB - Tinju
 https://bwifi.my.id/5menit.mp4?m=tinju_1780439400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 ⏳ 23:30 WIB - Venezuela U-20 vs Kanada U-20
-https://bwifi.my.id/5menit.mp4?m=venezuelau20kanadau_1780443000.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 🇸🇦 ⏳ 23:30 WIB - Arab Saudi U-21 vs Kolombia U-19
+https://bwifi.my.id/5menit.mp4?m=arabsaudiu21kolombiau_1780443000.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/W6gzcVQqji0hMuobuIchdR3jv-M=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5115009/28a18e.jpg", 🇹🇭 ⏳ 01:00 WIB - 05/06/26Round 1 - the Memorial Tournament presented by Workday 2026  CK TEST
+https://bwifi.my.id/5menit.mp4?m=050626round1thememorialtournamentpresentedbyworkday2026cktest_1780448400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 01:12-03:02 WIB - Women's SOO: Queensland V New South Wales
 https://bwifi.my.id/5menit.mp4?m=womenssooqueenslandnewsouthwales_1780449120.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X968463.jpg", 🇮🇩 ⏳ 01:53-04:00 WIB - TotalEnergies U-17 Africa Cup of Nations, Morocco 2026
