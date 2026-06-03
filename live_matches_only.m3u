@@ -1,21 +1,22 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.srilankasports.com/wp-content/uploads/2024/02/friendly.png", 🇮🇩 🔴 19:00 WIB - Indonesia W vs Singapura W
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://xl365.buzzscorelinez.com/
-https://live2.pro2cdnlive.com/live/channel22.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XMH31OofgsKuQn1SioWS_V2VYa6U7oSeRQ&s", 🇦🇺 🔴 20:00 WIB - Filipina U-19 vs Australia U-19
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://xl365.buzzscorelinez.com/
-https://live2.pro2cdnlive.com/live/channel5.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 🔴 20:00 WIB - Jepang U-20 vs Portugal U-20
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://xl365.buzzscorelinez.com/
-https://live2.pro2cdnlive.com/live/channel12.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 ⏳ 23:30 WIB - Pantai Gading U-20 vs Venezuela U-20
-https://bwifi.my.id/5menit.mp4?m=pantaigadingu20venezuelau_1780529400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 23:42-01:32 WIB - Premiership Rugby: Newcastle V Sale
-https://bwifi.my.id/5menit.mp4?m=premiershiprugbynewcastlesale_1780530120.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 01:32-03:22 WIB - Premiership Rugby: Leicester V Exeter
-https://bwifi.my.id/5menit.mp4?m=premiershiprugbyleicesterexeter_1780536720.0
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 01:32-03:22 WIB - Premiership Rugby: Leicester V Exeter [Premier Sports Rugby KitKat]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4751472d3ac45e95e44b5e75480e53de:5f989e3de354630ec7973980f129ed01
+https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fapyi0fj1o/out/v1/6fe7ef7bb5de4033a2b202d9ca62151a/cenc.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:32-03:22 WIB - Premiership Rugby: Leicester V Exeter [Sky Sport Premier League New Zealand Lalajo]
+https://pal6.short.gy/skyspt8nz
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:32-03:22 WIB - Premiership Rugby: Leicester V Exeter [Sky Sports Premier League United Kingdom Lalajo]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+https://xemzi.short.gy/2000002
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEKCy9owN4JTMFsyDT9DukRtgE82p_4yP9A&s", 🇮🇩 ⏳ 09:00 WIB - POLYTRON Indonesia Open 2026
 https://bwifi.my.id/5menit.mp4?m=polytronindonesiaopen_1780563600.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 🇹🇭 ⏳ 14:00 WIB - Thailand v Serbia | Week 1 | Women's VNL 2026
+https://bwifi.my.id/5menit.mp4?m=thailandserbiaweek1womensvnl_1780581600.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.srilankasports.com/wp-content/uploads/2024/02/friendly.png", 🇮🇩 ⏳ 19:00 WIB - Indonesia W vs Singapura W
+https://bwifi.my.id/5menit.mp4?m=indonesiawsingapuraw_1780599600.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XMH31OofgsKuQn1SioWS_V2VYa6U7oSeRQ&s", 🇦🇺 ⏳ 20:00 WIB - Filipina U-19 vs Australia U-19
+https://bwifi.my.id/5menit.mp4?m=filipinau19australiau_1780603200.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 ⏳ 20:00 WIB - Jepang U-20 vs Portugal U-20
+https://bwifi.my.id/5menit.mp4?m=jepangu20portugalu_1780603200.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 ⏳ 23:30 WIB - Pantai Gading U-20 vs Venezuela U-20
+https://bwifi.my.id/5menit.mp4?m=pantaigadingu20venezuelau_1780615800.0
