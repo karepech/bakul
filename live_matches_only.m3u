@@ -1,104 +1,4 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X968333.jpg", 🇮🇩 🔴 19:45-01:30 WIB - Roland Garros (2026) [beIN Sports 2 France]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key={"85ac9362e89354ef5341fe4dbee0dd6a": "e556276599c55bdee169f39eab8e56bc", "71fcdcfd58c608662db317fcf4411c19": "eaf76e97b969a7d124a720a109acda61", "6c976caa628fde89aacedbd47059967e": "0d1e54565950c1e2f58d45c561a47187", "7a62a516c5d980553f497c6bfc469b19": "a0eeb97b4d14d6bb7a5c39755dd7c41c", "f81df5cf72bd43c3da84d04dc8691fcb": "4a60e4e009560c40766a0fa38770ef4e"}
-https://api-proxad.dc2.oqee.net/playlist/v1/live/970/1/live.mpd
-#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260519&channel_id=524174" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X968333.jpg", 🇮🇩 🔴 19:45-01:30 WIB - Roland Garros (2026) [beIN Sports 2 V+]
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000557X968333.jpg", 🇮🇩 🔴 19:45-01:30 WIB - Roland Garros (2026) [beIN Sports 2 🇹🇷]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
-#EXTVLCOPT:http-referrer=https://www.selcuksportshd.is
-https://dga1op10s1u3leo.6c2c54919ddfa1.click/live/sbeinsports-2/playlist.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 21:22-01:00 WIB - Premiership Rugby: Round 18 [Sky Sport Premier League New Zealand]
-https://pal6.short.gy/skyspt8nz
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 21:22-01:00 WIB - Premiership Rugby: Round 18 [Sky Sports Premier League United Kingdom]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
-https://xemzi.short.gy/2000002
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 21:22-01:00 WIB - Premiership Rugby: Round 18 [Max Sports]
-#EXTVLCOPT:http-referrer=https://maxstream.tv/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36
-https://cdnbal1.indihometv.com/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 22:00-01:00 WIB - Snow League 25/26 [Max Sports]
-#EXTVLCOPT:http-referrer=https://maxstream.tv/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36
-https://cdnbal1.indihometv.com/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 22:00-01:00 WIB - Snow League 25/26 [Max Sports]
-#EXTVLCOPT:http-user-agent=DRM Player/2.5.6 (Linux; Android 14; 24040RN64Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36 ExoPlayerLib/1.10.0-alpha01
-https://indihuy.streamized.net/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 22:00-01:00 WIB - Snow League 25/26 [W-Sport]
-#EXTVLCOPT:http-referrer=http://www.dens.tv/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h26/index.m3u8
-#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 22:35-01:00 WIB - HSBC SVNS World Championships 2026 [beIN Sports 3 France]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key={"4281ee112555097325058cb7355035b4": "1a88899547f7fd4a5c22ee8150d89208", "b4023d3a71316ed3cd06af7e43988d31": "91a96d592dd6e946b0f0074d15ac1168", "441100b7de65d7c582a9c71140e46f79": "ef37dadc14bdade17224ef4bc9f87ce6", "43faba2da98eeeeb42481dca873d3460": "f8b58939398e5a5574c18408d304d44e", "92e8cc9527c7f56a10777278cb801027": "4ce3f3e2234f00b21ba77006f197832a"}
-https://api-proxad.dc2.oqee.net/playlist/v1/live/971/1/live.mpd
-#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260519&channel_id=524066" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 22:35-01:00 WIB - HSBC SVNS World Championships 2026 [beIN Sports 3 V+]
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 22:35-01:00 WIB - HSBC SVNS World Championships 2026 [beIN Sports 3 HD]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 23:00-01:00 WIB - Wanda Diamond League 2026 [SPOTV 1 Cignal]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://cignalplay.com/
-#KODIPROP:inputstream.adaptive.livestream=false
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 23:00-01:00 WIB - Wanda Diamond League 2026 [SPOTV 1 V+]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 23:00-01:00 WIB - Wanda Diamond League 2026 [SPOTV MAX]
-#EXTVLCOPT:http-referrer=https://www.indihometv.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=593102163def4d25985baf7322d8a8dc:4d9def5cf7a8e57d71eea821e21d6580
-https://cdn08jtedge.indihometv.com/dassdvr/130/beib1/manifest.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 23:00-01:30 WIB - Polytron Indonesia Open [Sportstars]
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 23:00-01:30 WIB - Polytron Indonesia Open [TRACE Sport Stars]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
-https://d29ecfnk3jwkp9.cloudfront.net/out/v1/9cc8f08dddb744dea58dbed4e07fb320/manifest.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 23:00-01:30 WIB - Polytron Indonesia Open [TRACE Sport Stars]
-https://tracetv-tracesportstar-sportstribal.amagi.tv/hls/amagi_hls_data_tracetvAA-trace-sportstars-sportstribal/CDN/playlist.m3u8?channel_name=Trace%20Sports%20Stars&content_genre=Sport&ic=IAB17&provider=FreeLiveSports&us_privacy=[US_PRIVACY]&gdpr=[GDPR]&gdpr_consent=[CONSENT_STRING]&coppa=0&content_livestream=1&p=sportstribal&url=[REF]&lmt=[LAT]&did=[DEVICE_ID]
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 23:00-01:30 WIB - Polytron Indonesia Open [Sportstars]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
-https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd|Referer=https://www.visionplus.id
-#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 23:15-01:30 WIB - Sportacular Int'l Match [Soccer Channel]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 23:15-01:30 WIB - Sportacular Int'l Match [Soccer Channel]
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
-https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd|Referer=https://www.visionplus.id
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F26ad62c26986a5c17d4eb6831e617b2b.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Fdf36f9a62afd5ed5d09b0b1fde620c42.webp", 📺 🔴 00:00 WIB - • 08/06/2026)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
@@ -115,6 +15,24 @@ https://ayo.maling.pl/Ente/play/sd-6MvVdDMNVhwTUBbL6b.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://xl365.buzzscorelinez.com/
 https://live1.pro2cdnlive.com/live/channel82.m3u8?wsSecret=df260d3fc249dd5c785d85fc39425cba&wsABSTime=1780853007
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 01:00-05:30 WIB - 2026 NASCAR FireKeepers [SPOTV 2 Cignal]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cignalplay.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed
+https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/dr_spotv2hd/default/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 01:00-05:30 WIB - 2026 NASCAR FireKeepers [SPOTV 2 V+]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV2.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_308.png", 📺 🔴 01:00-05:30 WIB - 2026 NASCAR FireKeepers [SPOTV 2 MAX]
+#EXTVLCOPT:http-referrer=https://www.indihometv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0a47994d99d44eeaba5e015a41dc3085:4aa9da8d82cb4edfc3f558857453d6ed
+https://cdn08jtedge.indihometv.com/dassdvr/130/beib2/manifest.mpd
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:00-03:02 WIB - MLR: New England V Chicago [Sky Sport Premier League New Zealand]
 https://pal6.short.gy/skyspt8nz
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 01:00-03:02 WIB - MLR: New England V Chicago [Sky Sports Premier League United Kingdom]
@@ -124,31 +42,194 @@ https://xemzi.short.gy/2000002
 #EXTVLCOPT:http-referrer=https://maxstream.tv/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36
 https://cdnbal1.indihometv.com/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 01:00-01:55 WIB - Snow League 25/26 [Max Sports]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F5c068b27391f2920688ae7b407b8216d.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F9a6f0b6927a144eac6ead86a61df9c5b.webp", 📺 🔴 01:00 WIB - • 08/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/sd-6Mwe5jevdykuejcMfV.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F327368d0bd89e670a231bf92bb790675.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Fd95f60f58aac7368fb6659aa0f27cfbf.webp", 📺 🔴 01:00 WIB - • 08/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/sd-6Mwe5TJEdWJE6CPSHV.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Ff772b20418c5809e65bf731740e235e4.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F3a44e46e965a2a6d8ec5883bfde23ac6.webp", 📺 🔴 01:00 WIB - • 08/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/sd-6MvYqjft55e8qgWzP9.m3u8
+#EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/0zK-KvDVjbsVTbUVrF7IR4E7P7k=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124670/26ca7c.jpg", 📺 🔴 01:15 WIB - 08/06/26Women: United States vs Germany - Volleyball Nations League  CK TEST
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://allautock.maling.pl/
+https://ayo.maling.pl/m3u/TOKEN/21604.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 01:30-03:45 WIB - Sportacular Int'l Match [Sportstars]
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
+https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 01:30-03:45 WIB - Sportacular Int'l Match [TRACE Sport Stars]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+https://d29ecfnk3jwkp9.cloudfront.net/out/v1/9cc8f08dddb744dea58dbed4e07fb320/manifest.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_102.png", 📺 🔴 01:30-03:45 WIB - Sportacular Int'l Match [TRACE Sport Stars]
+https://tracetv-tracesportstar-sportstribal.amagi.tv/hls/amagi_hls_data_tracetvAA-trace-sportstars-sportstribal/CDN/playlist.m3u8?channel_name=Trace%20Sports%20Stars&content_genre=Sport&ic=IAB17&provider=FreeLiveSports&us_privacy=[US_PRIVACY]&gdpr=[GDPR]&gdpr_consent=[CONSENT_STRING]&coppa=0&content_livestream=1&p=sportstribal&url=[REF]&lmt=[LAT]&did=[DEVICE_ID]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F398fe0a0ed3c0dfb6a4afdfb8bc6cb7a.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Fde8b35be2ad3af138f74e9b8cb01d22c.webp", 📺 🔴 01:30 WIB - • 08/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/sd-6MvYqjftEN8s5DvWxo.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Fa538e46c36b06ba2434130bd24ff86c1.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F9a1ce30a4d491f205368bdca1a168c4f.webp", 📺 🔴 01:30 WIB - • 08/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/sd-6MvYqjft4vrDMmDKmZ.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Ff98c7a9f6542689c9790d6e354637faa.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Fa65cca29b3880587a13d4677414735f4.webp", 📺 🔴 01:30 WIB - • 08/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/sd-6MvVdDNrTaiQKsj8K1.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/809/762809-SNAPSHOT-m.jpg", 📺 🔴 01:30 WIB - • 08/06)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/Vision/drm.license?id=112&he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8YjA0NGUzN2ZlMTIzMDBkMWZiMGRhNjFjNzA5NTc3OTY=
+https://ayo.maling.pl/Vision/index.mpd?id=112&he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8YjA0NGUzN2ZlMTIzMDBkMWZiMGRhNjFjNzA5NTc3OTY=
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/809/762809-SNAPSHOT-m.jpg", 📺 🔴 01:30 WIB - • 08/06)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/V/vision/id=112.play?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8YjA0NGUzN2ZlMTIzMDBkMWZiMGRhNjFjNzA5NTc3OTY=
+https://ayo.maling.pl/V/vision/id=112.cok.mpd?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8YjA0NGUzN2ZlMTIzMDBkMWZiMGRhNjFjNzA5NTc3OTY=
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 🇺🇸 🔴 01:30 WIB - USA v Germany | Week 1 | Women's VNL 2026
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xl365.buzzscorelinez.com/
+https://live1.pro2cdnlive.com/live/channel84.m3u8?wsSecret=7385164d38cc287064cabb462db150eb&wsABSTime=1780853382
+#EXTINF:-1 tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/ApisTECH.xml" group-title="🔴 SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 01:45-04:00 WIB - Sportacular Int'l Match [Soccer Channel]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SoccerChannel.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_101.png", 📺 🔴 01:45-04:00 WIB - Sportacular Int'l Match [Soccer Channel]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd|Referer=https://www.visionplus.id
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/820/762820-SNAPSHOT-m.jpg", 📺 🔴 01:45 WIB - • 08/06)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/Vision/drm.license?id=115&he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8ODVjZDRjZTE2YjE3ZGNkYmJiOWEwNGI3ZDFkN2MzM2I=
+https://ayo.maling.pl/Vision/index.mpd?id=115&he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8ODVjZDRjZTE2YjE3ZGNkYmJiOWEwNGI3ZDFkN2MzM2I=
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/820/762820-SNAPSHOT-m.jpg", 📺 🔴 01:45 WIB - • 08/06)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/V/vision/id=115.play?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8ODVjZDRjZTE2YjE3ZGNkYmJiOWEwNGI3ZDFkN2MzM2I=
+https://ayo.maling.pl/V/vision/id=115.cok.mpd?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8ODVjZDRjZTE2YjE3ZGNkYmJiOWEwNGI3ZDFkN2MzM2I=
+#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260421&channel_id=464754" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 01:52-04:00 WIB - LaLiga 2 PO: LPM Vs MAL [beIN Sports United States]
+http://23.237.104.106:8080/USA_BEIN/index.m3u8
+#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 01:52-04:00 WIB - LaLiga 2 PO: LPM Vs MAL [beIN Sports 1 France]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"3acea01244785a6363fc04b25d696392": "f0b8f84dbd93407af6ab0b41fc774249", "9d8b1b819cfdcff845625b86cc4968f3": "480b03fe4476bc187c6a9d43ba85b9db", "3cf686dc4246f19bc4419c54da0f90bc": "b40f599266c8a262ccf4a384dadce08a", "b6362975ca29d0685b7cac721b6faa26": "da04d180e9028af27482b6a37c81e020", "6ca2f2c822444ff76d9570741dec7b2b": "9fc3d71ab30e8d33f09ee29e5e453608"}
+https://api-proxad.dc2.oqee.net/playlist/v1/live/966/1/live.mpd
+#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260519&channel_id=524189" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports1.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_309.png", 🇮🇩 🔴 01:52-04:00 WIB - LaLiga 2 PO: LPM Vs MAL [beIN Sports 1 V+]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260421&channel_id=464754" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 01:52-04:00 WIB - LaLiga 2 Playoffs : Las Palmas Vs Malaga [beIN Sports United States]
+http://23.237.104.106:8080/USA_BEIN/index.m3u8
+#EXTINF:-1 radio="false" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 01:52-04:00 WIB - LaLiga 2 Playoffs : Las Palmas Vs Malaga [beIN Sports 1 France]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"3acea01244785a6363fc04b25d696392": "f0b8f84dbd93407af6ab0b41fc774249", "9d8b1b819cfdcff845625b86cc4968f3": "480b03fe4476bc187c6a9d43ba85b9db", "3cf686dc4246f19bc4419c54da0f90bc": "b40f599266c8a262ccf4a384dadce08a", "b6362975ca29d0685b7cac721b6faa26": "da04d180e9028af27482b6a37c81e020", "6ca2f2c822444ff76d9570741dec7b2b": "9fc3d71ab30e8d33f09ee29e5e453608"}
+https://api-proxad.dc2.oqee.net/playlist/v1/live/966/1/live.mpd
+#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260519&channel_id=524189" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 01:52-04:00 WIB - LaLiga 2 Playoffs : Las Palmas Vs Malaga [beIN Sports 1 V+]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 02:00-05:00 WIB - U.S. Women's Open C'ship [SPOTV 1 Cignal]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cignalplay.com/
+#KODIPROP:inputstream.adaptive.livestream=false
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
+https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 02:00-05:00 WIB - U.S. Women's Open C'ship [SPOTV 1 V+]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="SPOTV.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_307.png", 📺 🔴 02:00-05:00 WIB - U.S. Women's Open C'ship [SPOTV MAX]
+#EXTVLCOPT:http-referrer=https://www.indihometv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=593102163def4d25985baf7322d8a8dc:4d9def5cf7a8e57d71eea821e21d6580
+https://cdn08jtedge.indihometv.com/dassdvr/130/beib1/manifest.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 🔴 02:00-04:00 WIB - AFC U17 Asian Cup 2026 [Sportstars 3]
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://boti.my.id/saya.suka?id=9999&type=fitnah
+##KODIPROP:inputstream.adaptive.license_key=https://visplus.caranytv.workers.dev/drm?id=114&type=drm
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/6f5596513af749c19d0bcdac013dda3c/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars4.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_88.png", 📺 🔴 02:00-04:00 WIB - AFC U17 Asian Cup 2026 [Sportstars 4]
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="Sportstars3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_99.png", 📺 🔴 02:00-04:00 WIB - AFC U17 Asian Cup 2026 [SPORTSTARS 3 B]
+##https://d2xz2v5wuvgur6.cloudfront.net/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
+##https://fta4-cdn-flr.visionplus.id/out/v1/9a06560796f441a3981cd5a27c7d917f/index.mpd
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) MPF.Players/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/eb98aca0a1be41f7b9c05dac051a250e/index.mpd
+#EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/u0qHDc9llXzsGw_Mhc33i9MfKdM=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124657/9938f5.jpg", 📺 🔴 02:00 WIB - 08/06/26U.S. Women's Open presented by Ally 2026 - Round 4  CK TEST
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://allautock.maling.pl/
+https://ayo.maling.pl/m3u/TOKEN/17139.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/506/763506-SNAPSHOT-m.jpg", 📺 🔴 02:00 WIB - • 08/06)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/Vision/drm.license?id=119&he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8MjNiZDViMTY1YjU4YjMwNmExY2M3ZjdhMjA2NzA4ZjY=
+https://ayo.maling.pl/Vision/index.mpd?id=119&he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8MjNiZDViMTY1YjU4YjMwNmExY2M3ZjdhMjA2NzA4ZjY=
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/506/763506-SNAPSHOT-m.jpg", 📺 🔴 02:00 WIB - • 08/06)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/V/vision/id=119.play?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8MjNiZDViMTY1YjU4YjMwNmExY2M3ZjdhMjA2NzA4ZjY=
+https://ayo.maling.pl/V/vision/id=119.cok.mpd?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDg4MDMwOHwyMC4xNjEuNjAuOTl8MjNiZDViMTY1YjU4YjMwNmExY2M3ZjdhMjA2NzA4ZjY=
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 02:10-04:10 WIB - USL 25/26 [Max Sports]
 #EXTVLCOPT:http-referrer=https://maxstream.tv/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Mobile Safari/537.36
 https://cdnbal1.indihometv.com/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 01:00-01:55 WIB - Snow League 25/26 [Max Sports]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 02:10-04:10 WIB - USL 25/26 [Max Sports]
 #EXTVLCOPT:http-user-agent=DRM Player/2.5.6 (Linux; Android 14; 24040RN64Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36 ExoPlayerLib/1.10.0-alpha01
 https://indihuy.streamized.net/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 01:00-01:55 WIB - Snow League 25/26 [W-Sport]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 02:10-04:10 WIB - USL 25/26 [W-Sport]
 #EXTVLCOPT:http-referrer=http://www.dens.tv/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
 http://op-group1-swiftservehd-1.dens.tv/h/h26/index.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/0zK-KvDVjbsVTbUVrF7IR4E7P7k=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124670/26ca7c.jpg", 📺 ⏳ 01:15 WIB - 08/06/26Women: United States vs Germany - Volleyball Nations League  CK TEST
-https://bwifi.my.id/5menit.mp4?m=080626womenunitedstatesgermanyvolleyballnationsleaguecktest_1780881300.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/809/762809-SNAPSHOT-m.jpg", 📺 ⏳ 01:30 WIB - • 08/06)
-https://bwifi.my.id/5menit.mp4?m=0806_1780882200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 🇺🇸 ⏳ 01:30 WIB - USA v Germany | Week 1 | Women's VNL 2026
-https://bwifi.my.id/5menit.mp4?m=usagermanyweek1womensvnl_1780882200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 01:52-04:00 WIB - LaLiga 2 Playoffs : Las Palmas Vs Malaga
-https://bwifi.my.id/5menit.mp4?m=laliga2playoffslaspalmasmalaga_1780883520.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/u0qHDc9llXzsGw_Mhc33i9MfKdM=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124657/9938f5.jpg", 📺 ⏳ 02:00 WIB - 08/06/26U.S. Women's Open presented by Ally 2026 - Round 4  CK TEST
-https://bwifi.my.id/5menit.mp4?m=080626uswomensopenpresentedbyally2026round4cktest_1780884000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/506/763506-SNAPSHOT-m.jpg", 📺 ⏳ 02:00 WIB - • 08/06)
-https://bwifi.my.id/5menit.mp4?m=0806_1780884000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:10-04:10 WIB - USL 25/26
-https://bwifi.my.id/5menit.mp4?m=usl25_1780884600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/XSNNvSwEuXJ_FTRbrpYtRxTOv0E=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124674/97cc39.jpg", 📺 ⏳ 03:45 WIB - 08/06/26Women: Bulgaria vs Turkey - Volleyball Nations League  CK TEST
 https://bwifi.my.id/5menit.mp4?m=080626womenbulgariaturkeyvolleyballnationsleaguecktest_1780890300.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 📺 ⏳ 04:00 WIB - Bulgaria v Türkiye | Week 1 | Women's VNL 2026
@@ -161,6 +242,8 @@ https://bwifi.my.id/5menit.mp4?m=lebanonhongkong_1780905600.0
 https://bwifi.my.id/5menit.mp4?m=kazakhstaniran_1780916400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/599/763599-SNAPSHOT-m.jpg", 📺 ⏳ 11:25 WIB - • 08/06)
 https://bwifi.my.id/5menit.mp4?m=0806_1780917900.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/TEtpldqRX14gD595x8tn2wUHmt8=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124658/f8b3cc.jpg", 📺 ⏳ 14:00 WIB - 08/06/26Valencia P1 Premier Padel - Day 1  CK TEST
+https://bwifi.my.id/5menit.mp4?m=080626valenciap1premierpadelday1cktest_1780927200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/512/763512-SNAPSHOT-m.jpg", 📺 ⏳ 14:00 WIB - • 08/06)
 https://bwifi.my.id/5menit.mp4?m=0806_1780927200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/hdVTJu-Hzn2V1lhyOm6QK59lzcI=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5120020/9afc95.jpg", 🇮🇩 ⏳ 15:00 WIB - 09/06/26Indonesia vs Cambodia - FIFA Women's Matchday  CK TEST
@@ -169,28 +252,20 @@ https://bwifi.my.id/5menit.mp4?m=090626indonesiacambodiafifawomensmatchdaycktest
 https://bwifi.my.id/5menit.mp4?m=130626rajadamnern2026femaleflyweighttitlecktest_1780945800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/NZdSQMjljWRhlcU0Kl1U4BJD6sQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5123859/2c5e8e.jpg", 🇲🇾 ⏳ 19:30 WIB - 08/06/26Thailand vs Malaysia - ASEAN U19 Boys' Bank Sumut Championship  CK TEST
 https://bwifi.my.id/5menit.mp4?m=080626thailandmalaysiaaseanu19boysbanksumutchampionshipcktest_1780947000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/x_JOwgEOtHYbHMBvS6ljsvo4aOg=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5123869/456171.jpg", 📺 ⏳ 19:45 WIB - 07/06/26Flavio Cobolli vs Alexander Zverev - Men's Singles Final | Roland Garros 2026  CK TEST
-https://bwifi.my.id/5menit.mp4?m=070626flaviocobollialexanderzverevmenssinglesfinalrolandgarros2026cktest_1780947900.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/ECpUZtAF_CODiRnn7yNAiHJ9F_Q=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5125054/cc4278.jpg", 🇦🇺 ⏳ 19:50 WIB - 08/06/26Chinese Taipei vs Australia - AVC Women's Volleyball Nations Cup  CK TEST
 https://bwifi.my.id/5menit.mp4?m=080626chinesetaipeiaustraliaavcwomensvolleyballnationscupcktest_1780948200.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/HqqGzPsjVdKsQK_I5t7kcMYb8Bw=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124660/6581aa.jpg", 📺 ⏳ 20:00 WIB - 08/06/26Ivory Coast vs Canada - Maurice Revello  CK TEST
+https://bwifi.my.id/5menit.mp4?m=080626ivorycoastcanadamauricerevellocktest_1780948800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/bfBnEjKzYuT-XAPi8JJ4fbnHKnQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5123856/b30963.jpg", 🇸🇬 ⏳ 20:00 WIB - 08/06/26Singapore vs Brunei Darussalam - ASEAN U19 Boys' Bank Sumut Championship  CK TEST
 https://bwifi.my.id/5menit.mp4?m=080626singaporebruneidarussalamaseanu19boysbanksumutchampionshipcktest_1780948800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/J7-G0xiALxEzPBMHVmEyJvQA7ag=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5120018/c9518c.jpg", 🇮🇩 ⏳ 20:00 WIB - 09/06/26Indonesia vs Mozambique - FIFA Matchday  CK TEST
 https://bwifi.my.id/5menit.mp4?m=090626indonesiamozambiquefifamatchdaycktest_1780948800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/L7iI6ZWL6WGqOkUpba22Xn3CAKQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5125571/6dfd53.jpg", 📺 ⏳ 22:00 WIB - 11/06/26Round 1 - Dow Championship 2026  CK TEST
 https://bwifi.my.id/5menit.mp4?m=110626round1dowchampionship2026cktest_1780956000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F99eb094c4965c9489832f2969e758024.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2Feebfebbbd9cbdf943db81b4537082a5b.webp", 📺 ⏳ 23:00 WIB - • 07/06/2026)
-https://bwifi.my.id/5menit.mp4?m=07062026_1780959600.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/894/762894-SNAPSHOT-m.jpg", 📺 ⏳ 23:15 WIB - • 07/06)
-https://bwifi.my.id/5menit.mp4?m=0706_1780960500.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/VZUaaQZbURATrhFpSKkD8WUiIFI=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124655/d12ec2.jpg", 📺 ⏳ 23:25 WIB - 07/06/26China vs Tunisia - Maurice Revello  CK TEST
-https://bwifi.my.id/5menit.mp4?m=070626chinatunisiamauricerevellocktest_1780961100.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/rfig_f_a3nt5kZsJhPt9EQgEPJw=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5113113/9b000f.jpg", 📺 ⏳ 23:30 WIB - 07/06/26Italy Major Premier Padel - Finals  CK TEST
 https://bwifi.my.id/5menit.mp4?m=070626italymajorpremierpadelfinalscktest_1780961400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/bHC2Sr-L9ty7apI6-pe_zici6Ho=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5124097/6f7568.jpg", 🇹🇭 ⏳ 23:30 WIB - 07/06/26Round 4 - the Memorial Tournament presented by Workday 2026  CK TEST
 https://bwifi.my.id/5menit.mp4?m=070626round4thememorialtournamentpresentedbyworkday2026cktest_1780961400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F27fb155171bf4aefaa173d5193b03e86.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F72903ae7e9032d1f49de1e539072163b.webp", 📺 ⏳ 23:30 WIB - • 07/06/2026)
-https://bwifi.my.id/5menit.mp4?m=07062026_1780961400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/580/762580-SNAPSHOT-m.jpg", 📺 ⏳ 23:30 WIB - • 07/06)
 https://bwifi.my.id/5menit.mp4?m=0706_1780961400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWbbOFvqPr7Js8ZPKTUfxgZXMd7bi8UWAiA&s", 📺 ⏳ 23:30 WIB - China PR U-19 vs Tunisia U-23
