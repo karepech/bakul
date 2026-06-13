@@ -4,151 +4,69 @@
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6317&ext=drm&x=1781387032&k=4de91aab7af80de70e9741fe4d6d097ac45db793b61b8fe77ff068282cba12f3
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=6317&ext=dash&x=1781387032&k=b36a6f1197bf0877573847d8fc0e6f5eb9c3fb067cbe7608298468a620fe0662
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6317&ext=drm&x=1781394956&k=42f6a05a743b2ce8060cdee821e77d4a2ab577e13c937d7195f830961dd0787e
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=6317&ext=dash&x=1781394956&k=a8f7cabf472c08af6afe7cef3ac1c972dba24bc83334b02db3b4a80a2a046748
 #EXTINF:-1 data-source="Manual" tvg-uid="3ebde9f5464b67857a2ff811ff1e958e" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 20:00-14:00 WIB - 24 Hours of Le Mans 2026 [beIN Sports 3 France]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ck.iptvbonekoe.workers.dev/?id=971
 https://api-proxad.dc2.oqee.net/playlist/v1/live/971/1/live.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 20:00-14:00 WIB - 24 Hours of Le Mans 2026 [beIN Sports 3 2]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260519&channel_id=524066" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS3_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 20:00-14:00 WIB - 24 Hours of Le Mans 2026 [beIN Sports 3 V+]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
-#EXTINF:-1 tvg-uid="a157abb5eecb7303b7b6c8a6db581776" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/W08g9zS7QaGtPMErcsZ81Va_dKc=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6412/euronews-795a60.jpg", 📺 🔴 00:00 WIB - - News
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://streamvididi.bonetvkoe.web.id/play.m3u8?q=6412&ext=hls&x=1781387032&k=7a52195ed4c381ed318664f6a4275b3dc6c5d5aadb5539c10bc2e274ca7f5876&sc=6412
-#EXTINF:-1 tvg-uid="94a34f6ab88ac7daf9c78cc11a677e25" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/nBRneLipjed0tzgVoHIft83fOYk=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6411/news-asia-31d4e8.jpg", 🇹🇭 🔴 00:00 WIB - - I Am Living With Pain  : On The Red Dot
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://streamvididi.bonetvkoe.web.id/play.m3u8?q=6411&ext=hls&x=1781387032&k=fc143ce7d0dfe02b82b1e2f0e01562ced82043a1dc1866cb2f8b77f928897e13&sc=6411
-#EXTINF:-1 tvg-uid="b308d78da1b3020b5780d3b4ff69f4c8" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/ncoNQ0L6tGMTXzFAJAW0apq0wWE=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6397/horee-0ed074.jpg", 📺 🔴 00:00 WIB - - Tim Penyelamat Tayo
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6397&ext=drm&x=1781387032&k=a9777a4a3ecab1a78c31d8d416b6dfcb08284895ad49c4722fc6aa0dc2f20a18
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=6397&ext=dash&x=1781387032&k=2170965e2f28de86074042e3ed9deae48534d27b1766eff45484960f490cdb5a&sc=6397
-#EXTINF:-1 tvg-uid="443a2b1c0b97e110b51315f923dee76f" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/1XiuB1Q4IrLfiS-JO5SIa5eP36I=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6362/tvn-40a16d.jpg", 📺 🔴 00:00 WIB - - Undercover Chef - Korea
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6362&ext=drm&x=1781387032&k=9fbb18452e58f13df8120a7aea5351cb3132f6ed94b78f35fed1c631fa53babc
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=6362&ext=dash&x=1781387032&k=21af2fcc5de9df70312f2616bf85f1341b34513dfcfdb5c0ee0cdcc544194f8d&sc=6362
-#EXTINF:-1 tvg-uid="7dbc06abd3b0c040ab0f15edfee3e5a6" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/VSLfEt8mGeljH8Ws8Glt9xFMX4c=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132029/462f84.jpg", 📺 🔴 00:00 WIB - - Finals: Portugal vs Tunisia - Maurice Revello
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6685&ext=drm&x=1781387032&k=b057f1032d97b98348246061f8c163466337547f04c28758f76fec129aaa5ebb
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=6685&ext=dash&x=1781387032&k=c8367fe5c0d9dc498c25485f91fcb4b0c15ea21803a51c09419bf835bfd373ff&sc=5132029
-#EXTINF:-1 tvg-uid="3be01d7b5906cdd9a32c673d9211581a" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/5myEo9YnoICk5nhgwG8m-euTCDg=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129478/677065.jpg", 📺 🔴 00:00 WIB - - Round 3 - RBC Canadian Open 2026
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=18189&ext=drm&x=1781387032&k=3674f7e00a1b0dd511dcb78af03295c3b32d1be0494fff18e2eeeecb5de5df52
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=18189&ext=dash&x=1781387032&k=f3fc700fb5d53600438b13ff0b3eccb2a6119019df3cb147a4f941402f38fe57&sc=5129478
-#EXTINF:-1 tvg-uid="56c543dcad7a727e032cb5c28786100c" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/nNXh7qb2ZgetCPk7CN7hyyoKqLo=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6410/aljazeera-f65dea.jpg", 📺 🔴 00:00 WIB - - Newshour
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://streamvididi.bonetvkoe.web.id/play.m3u8?q=6410&ext=hls&x=1781387032&k=c96c17812f0c6583d9b0aa0777998fbc3ef65ba6acb26b7a66ade4a2c5aeb64f&sc=6410
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="64d55277e1f28d7ff0504b05ca68cd68" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/x7lm7phk0z6m2wd/image/small", 📺 🔴 00:00 WIB - BO DAO NHA U20 VS TUNISIA U23
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel23.flv?auth_key=3000001781376255-0-0-5a48e3ae9c2ba2339c77ab6d74f97c62
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="ea6c761ee26070085c10d9c531b71fc8" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/8y39mp1h8g6mojx/image/small", 🇮🇩 🔴 00:00 WIB - FC SIONI BOLNISI VS MERANI MARTVILI
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live1.pro2cdnlive.com/live/channel18.flv?wsSecret=f5138d0aed045d61aa4e1596e5fdd944&wsABSTime=1781419455
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="1f6f0859e6387c475f927504670d9b91" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/vjxm8gh45k3r6od/image/small", 📺 🔴 00:00 WIB - JK WELCO ELEKTER VS FC ARARAT TALLINN
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel46.flv?auth_key=3000001781376254-0-0-562a46cd7a8c722de19912584e1cc2aa
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="7b07b2b2b6b3a71e874d9684b98da90b" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/y39mp1h51n9mojx/image/small", 📺 🔴 00:00 WIB - SAMGURALI TSKH VS TORPEDO KUTAISI
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel44.flv?auth_key=3000001781376254-0-0-9d459f0a43c134366f2f3a7fdd1d2539
-#EXTINF:-1 tvg-expire="1781377800" tvg-start="1781370000" tvg-uid="a334d6c6835e1eb2912347391277423b" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202feb5411fefc0a64f6a34c0c8c2f09dbb.png", 📺 🔴 00:00 WIB - ]  Samgurali Tskh vs Torpedo Kutaisi
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5368699_1.m3u8?auth_key=1781462593-0-0-6833e70a16a4832df461b3b929fb96d0
-#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781370000" tvg-uid="9167a3e891f9809cc3fd62754e0410ee" data-source="Colaanguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/a9bea85988465e9accfae7984ac850eb.png!w80", 📺 🔴 00:00 WIB - ]  Samgurali Tskh vs Torpedo Kutaisi
-#EXTVLCOPT:http-referrer=
-#EXTVLCOPT:http-origin=
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://live.egmdispatch.com/live/67912720_6ef88b3bfd2ce136cd3ab56e8f2067d2_autoChange.m3u8?auth_key=1781390697-0-0-be550f7263b2b6d6ff3ee199b68cb6ae
-#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781370000" tvg-uid="17c005a837cf0eb1a1d3db183a38a3c7" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/basketball/team/9k82re8tk91repz/image/small", 📺 🔴 00:00 WIB - ZASTAL ZIELONA GORA VS SK LEGIA WARSZAWA
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel72.flv?auth_key=3000001781376254-0-0-46c75a29e7264d4b2c74a8454cab7978
 #EXTINF:-1 tvg-uid="656bd8dadbf5377d84c2d142403b66f4" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/gJbl0muiFlsbo6NifKQbXyxlyZE=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5134739/a81809.jpg", 📺 🔴 00:00 WIB - - Round 4 - RBC Canadian Open 2026
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=18189&ext=drm&x=1781387032&k=3674f7e00a1b0dd511dcb78af03295c3b32d1be0494fff18e2eeeecb5de5df52
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=18189&ext=dash&x=1781387032&k=f3fc700fb5d53600438b13ff0b3eccb2a6119019df3cb147a4f941402f38fe57&sc=5134739
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="91291bf925a0ad3f7828019c48df2533" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/1404_16575015021.png", 📺 🔴 00:00 WIB - ] 14/06 Portugal U20 vs Tunisia U23
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://hls.cdnfaster-a.live/live/HEINEKEN/index.m3u8?expire=2530639860&sign=03a2e74c3447f79f8c6e80a8fa2ee0b6
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="91291bf925a0ad3f7828019c48df2533" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260612/7f09d0f0dc5ccaee16571a6295892517.gif", 📺 🔴 00:00 WIB - ] 14/06 Portugal U20 vs Tunisia U23
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1781378961-0-0-789f45e20d46f2fb669beb75e38583d3
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="91291bf925a0ad3f7828019c48df2533" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260612/7f09d0f0dc5ccaee16571a6295892517.gif", 📺 🔴 00:00 WIB - ] 14/06 Portugal U20 vs Tunisia U23
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niur.live/live/stream-9912117_lsd.flv?txSecret=0ce44f19640ab5c078243dec87a17ca3&txTime=6a2df5e0
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="986f7f5a893196b81e22359169b2bf00" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/14134_1h71mssksq22.png", 📺 🔴 00:00 WIB - ] 14/06 Samgurali Tskh vs Torpedo Kutaisi
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://hls.cdnfaster-a.live/live/NGUOITHEP/index.m3u8?expire=2556118740&sign=6d80f4e33c3761371f29a8ca0645fee5
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="986f7f5a893196b81e22359169b2bf00" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/14134_1h71mssksq22.png", 📺 🔴 00:00 WIB - ] 14/06 Samgurali Tskh vs Torpedo Kutaisi
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://flv.cdnfaster-a.live/live/NGUOITHEP.flv?expire=2556118740&sign=6d80f4e33c3761371f29a8ca0645fee5
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="986f7f5a893196b81e22359169b2bf00" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/f29ebd8098c3aa119dbcd1fc00b6902d.png", 📺 🔴 00:00 WIB - ] 14/06 Samgurali Tskh vs Torpedo Kutaisi
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-536185_lsd.flv?auth_key=1781378961-0-0-bd04d773f56c8440473714103b43ef6a
-#EXTINF:-1 tvg-expire="1781377200" tvg-start="1781370000" tvg-uid="8b5fc9caae1ca919827c74766a485f77" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/a9bea85988465e9accfae7984ac850eb.png!w80", 📺 🔴 00:00 WIB - ] 14/06 Samgurali vs Torpedo Kutaisi
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://live05.msdht.app/live/99121525.m3u8
-#EXTINF:-1 tvg-expire="1781377800" tvg-start="1781370000" tvg-uid="3d2940b96dfeec0edab8b8d500f96ac5" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202f0251e43c19fb55b919e836dcc2a677f.png", 📺 🔴 00:00 WIB - ]  JK Welco Elekter vs Tallinna FC Ararat TTU
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5462178_1.m3u8?auth_key=1781462593-0-0-8c9b29fdb679397d4a83777d7a69393e
-#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781370000" tvg-uid="1cf096914a81e05566c90cb48d03228b" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/db37b08b778cff15854d3d3bc71a426c.png", 📺 🔴 00:00 WIB - ]  JK Welco Elekter vs Tallinna FC Ararat TTU
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvVNfSTSbkACJyzDT/index.m3u8
-#EXTINF:-1 tvg-expire="1781377800" tvg-start="1781370000" tvg-uid="52cccb6c379ddfc7863cfb2afb6c69dc" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/201f8be8c7754ea5801a47d786aeeb75a92.png", 🇬🇧 🔴 00:00 WIB - ]  Stelmet Enea Bc Zielona Góra vs SK Legia Warszawa
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/201_5433216_1.m3u8?auth_key=1781462593-0-0-270afe47c2a4a653c0d86369d672ed73
-#EXTINF:-1 tvg-expire="1781377800" tvg-start="1781370000" tvg-uid="bf60a5e9e5df90fcd5cb7b9bd8b9d2e1" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/201a4b6a3c1ac60398ccabeb19adff5052b.png", 📺 🔴 00:00 WIB - ]  Fenerbahçe Beko Istanbul vs Besiktas GAIN
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/201_5458684_1.m3u8?auth_key=1781462593-0-0-3127a84571deca07d4a5728f5bb4fb58
-#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781370000" tvg-uid="396700c7974740034634cc1d25fbdf0d" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/7421513831e839a215c3bea5f9333d0a.png", 📺 🔴 00:00 WIB - ]  Portugal U20 vs Tunisia U23
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MwdadekZZYnxBFoXK/index.m3u8
-#EXTINF:-1 tvg-expire="1781377800" tvg-start="1781370000" tvg-uid="74a5efa9a0e1d4b643a55bedc1ffbcf3" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2025e921f9841b8d9a9e35f81c4aa37d2bb.png", 📺 🔴 00:00 WIB - ]  Portugal U20 vs Tunisia U23
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5195260_2.m3u8?auth_key=1781462593-0-0-eaae1aa7f9b9617c34a009ef73527bd2
-#EXTINF:-1 tvg-expire="1781377800" tvg-start="1781370000" tvg-uid="3a3de29726403b66ededd1b794d94c76" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2025e921f9841b8d9a9e35f81c4aa37d2bb.png", 📺 🔴 00:00 WIB - ]  Portugal U20 vs Tunisia U23
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5195260_1.m3u8?auth_key=1781462593-0-0-529524c96cd5e1e84799b085a5c65079
-#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781370000" tvg-uid="9627c1118856581329562f77a2168807" data-source="Center" tvg-chno="20" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png", 📺 🔴 00:00 WIB - ]  Tommy Fury vs Eddie Hall
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=18189&ext=drm&x=1781394956&k=b74fa9a0d6274fc68e2c57c239d109ca00934e35d98bfe583b25a92391793b4a
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=18189&ext=dash&x=1781394956&k=8b0da21289796de2ff400de740c25b3f0897640cbb723eb31471bb4158781633&sc=5134739
+#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781370000" tvg-uid="60a972affbd2b947e854dba2da13d97a" data-source="Footystream" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn.img4every1.org/league/boxing-streams/logo.webp", 📺 🔴 00:00 WIB - ]  Eddie Hall
+https://lb9.strmd.st/secure/GpBYXJfcjhvRZsjasbNiDGajUCEVouGU/rtmp/stream/QEvj0Me2664XRyENssfihJdOUwbWMTfLL627mjJs7tg1jO0lsplLlhabveXXktZ2zI6s_vToF-ZylOCbHA/1/playlist.m3u8|Referer=https://embed.st/&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781370000" tvg-uid="60a5fb97a831c1da15784129b4ad1d5b" data-source="Footystream" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn.img4every1.org/league/boxing-streams/logo.webp", 📺 🔴 00:00 WIB - ]  Eddie Hall
+https://lb5.strmd.st/secure/ZLxuNtNPHYSxWaTbTxhvmRWLLzzoPgCb/rtmp/stream/PUP1Wve5UKPrOqCFhnMAiRBXXYJCz9q--c1QnJOQwosnG6iBez-YcULrD_sXYycvvRjGCJUNjXmGO4SCDA6ATQs/1/playlist.m3u8|Referer=https://embed.st/&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781370000" tvg-uid="9627c1118856581329562f77a2168807" data-source="Center" tvg-chno="24" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png", 📺 🔴 00:00 WIB - ]  Tommy Fury vs Eddie Hall
 #EXTVLCOPT:http-referrer=https://streamcenter.xyz/
 #EXTVLCOPT:http-origin=https://streamcenter.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
-https://edgestreams.pro/hls/oeenzgezcz47.m3u8?st=rvosOv9Pzj2FGk1SOi7561EEICkzVnAFDNvXJYt5yTI&e=1781386902
+https://mainstreams.pro/hls/oeenzgezcz47.m3u8?st=g015RHJxJw7d9Ss8l34-xd3sN6AUzY-OsV5_97ryLP8&e=1781394748
 #EXTINF:-1 tvg-expire="1781388000" tvg-start="1781370000" tvg-uid="9775ee236d5a29aa433f834838ff665c" data-source="Footystream" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn.img4every1.org/league/darts--stream-free/logo.webp", 📺 🔴 00:00 WIB - ]  Darts
-https://dz5.bhalocast.pro:7059/hls/dadosky3.m3u8?md5=elrXt4V4VrLfJ4XPbINiWA&expires=1781380877&ch=dadosky3&s=e313ef51a6b0851b9e7170d78dfe4e7b|Referer=https://bhalocast.pro/&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://dz5.bhalocast.pro:7059/hls/dadosky3.m3u8?md5=-0A-mAHBp6nSp1vemFqo-w&expires=1781388711&ch=dadosky3&s=257cca3a32f03311ff05a9495f1122d2|Referer=https://bhalocast.pro/&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-uid="a157abb5eecb7303b7b6c8a6db581776" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/W08g9zS7QaGtPMErcsZ81Va_dKc=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6412/euronews-795a60.jpg", 📺 🔴 00:00 WIB - - News
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://streamvididi.bonetvkoe.web.id/play.m3u8?q=6412&ext=hls&x=1781394956&k=294bfd02d72d99fe11969016216b3a098bea0712f09dfb77772cba67e6421ada&sc=6412
+#EXTINF:-1 tvg-uid="b7df3854ea2c7910647ad407f97689bd" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/vBkDnbjwDEKLttqx3W_KYVyq9hw=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-film/uploads/film/image_landscape/8039/antiks-ff054d.png", 📺 🔴 00:00 WIB - - Antiks
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6397&ext=drm&x=1781394956&k=92bfd84c2cc80a2da6660239f634220145de4bee04c862737ec0cbab0c6dc4d3
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=6397&ext=dash&x=1781394956&k=d057e545a7da9e202a3a23b5468f88a5e91dbdfa3ba58f8ee8ab3f2578485f61&sc=6397
+#EXTINF:-1 tvg-uid="ddb83c19c0c3db05a9e54385a9bad07f" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/nBRneLipjed0tzgVoHIft83fOYk=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6411/news-asia-31d4e8.jpg", 📺 🔴 00:00 WIB - - It's A Doll's Life  : Hobsessions
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://streamvididi.bonetvkoe.web.id/play.m3u8?q=6411&ext=hls&x=1781394956&k=0948d9c1bdefed10b222635e86506916e464d87998a09c532037f2f926ccf9af&sc=6411
+#EXTINF:-1 tvg-uid="b9849166498b72dbaaad6be35bf93fbd" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/1XiuB1Q4IrLfiS-JO5SIa5eP36I=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6362/tvn-40a16d.jpg", 📺 🔴 00:00 WIB - - Painfully Delicious!
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6362&ext=drm&x=1781394956&k=0f7a5116fc2fd79a31f8384401858da5775b0dea0270c997097e34c54afac75a
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=6362&ext=dash&x=1781394956&k=933241c5ea743dbd2e92be40af837dfefdd7aa2d3ae191dca5838c96cd80bf20&sc=6362
+#EXTINF:-1 tvg-uid="3be01d7b5906cdd9a32c673d9211581a" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/5myEo9YnoICk5nhgwG8m-euTCDg=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129478/677065.jpg", 📺 🔴 00:00 WIB - - Round 3 - RBC Canadian Open 2026
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=18189&ext=drm&x=1781394956&k=b74fa9a0d6274fc68e2c57c239d109ca00934e35d98bfe583b25a92391793b4a
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=18189&ext=dash&x=1781394956&k=8b0da21289796de2ff400de740c25b3f0897640cbb723eb31471bb4158781633&sc=5129478
+#EXTINF:-1 tvg-uid="219976701a808056ab916ae4048fe907" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/nNXh7qb2ZgetCPk7CN7hyyoKqLo=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6410/aljazeera-f65dea.jpg", 🇹🇭 🔴 00:00 WIB - - The Bottom Line
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://streamvididi.bonetvkoe.web.id/play.m3u8?q=6410&ext=hls&x=1781394956&k=470620b4613ad635a15a0f0f6643f12788ffffb1842531566cd2350d4a0f9c27&sc=6410
 #EXTINF:-1 tvg-uid="2f0a5a90195d6c3a539e93b69d8bb339" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1945520203653165057/BRp76d7W_400x400.jpg", 📺 🔴 00:00 WIB - ]  Darts World Cup
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
@@ -159,14 +77,16 @@ http://193.47.62.43/hls/CACACACA.m3u8
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.59/hls/fooozQ.m3u8
+#EXTINF:-1 tvg-uid="ad5f4e97f821efc726dd1188344055b0" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/683411718987476993/lZKQkOal_400x400.jpg", 📺 🔴 00:00 WIB - ]  Portugal U20 vs Tunisia U23
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/foooz.m3u8
 #EXTINF:-1 tvg-uid="ee6539fb32df06f3afb0b9a90d421f0e" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1838828164295864320/wNv3wpY7_400x400.jpg", 📺 🔴 00:00 WIB - ]  Fenerbahce vs Besiktas
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.59/hls/fooozQQ.m3u8
-#EXTINF:-1 tvg-uid="389f1dadf06cb1dcab3ffb73a767c2cd" data-source="Piala Dunia 2026 Zhubo" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://wsrv.nl/?url=mbg.full.diskon.cloud%2Fwc2026%2Fimg.php%3Fh%3Dhttps%253A%252F%252Foss.yalla-shoot-admin.com%252Fteam%252F2020523c79e8671f74cc97ec09876e5cd79.png%26a%3Dhttps%253A%252F%252Foss.yalla-shoot-admin.com%252Fteam%252F202ffd327c7aaf639ce6652b62116750e23.png", 📺 🔴 00:00 WIB - 
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
-https://bonetvbumper.ahmadadityaberdikari.workers.dev/bokep.m3u8
 #EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/5myEo9YnoICk5nhgwG8m-euTCDg=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129478/677065.jpg", 📺 🔴 00:00 WIB - 14/06/26Round 3 - RBC Canadian Open 2026  CK TEST
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -174,103 +94,28 @@ https://bonetvbumper.ahmadadityaberdikari.workers.dev/bokep.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://allautock.maling.pl/
 https://ayo.maling.pl/m3u/TOKEN/18189.mpd
-#EXTINF:-1 tvg-uid="54c31d2eafcd9145e0c322c31321c3fb" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/NtYMeVNZhPNyxZukYP38ohlF988=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/8237/mentari-tv-01d2b0.jpg", 📺 🔴 00:01 WIB - - Bedul
+#EXTINF:-1 tvg-uid="7b7a9225c9b054df7152f0a210b5eb27" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/NtYMeVNZhPNyxZukYP38ohlF988=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/8237/mentari-tv-01d2b0.jpg", 📺 🔴 00:01 WIB - - ODDBODS
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=8237&ext=drm&x=1781387032&k=5489a928aa6b07d2a46a68950df476a746eb1ec0d3aa03abfeb55d0eea03d2a6
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=8237&ext=dash&x=1781387032&k=0117acfdc8e4c1a720eca7aa4c80ea81b33f9e34e0f92ad5d626b77c7095361f&sc=8237
-#EXTINF:-1 tvg-uid="0d9a99b42e49e01d4b0ce1e898e2f3bb" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/HyJOKvUu7_oA8wWozEtI-3W1v1s=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/5075/dw-english-4aa968.jpg", 📺 🔴 00:02 WIB - - DW News
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=8237&ext=drm&x=1781394956&k=9f21495ec16fc534974f05306699766370f6bae6c4c2df5d5cd0bfe02b72c133
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=8237&ext=dash&x=1781394956&k=e821122c0fed644e42d154c099d6dcbdc715ff56b443d922442d6fa9fe197180&sc=8237
+#EXTINF:-1 tvg-uid="7f9e27742743d54b3d19c65045bd5bf7" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/HyJOKvUu7_oA8wWozEtI-3W1v1s=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/5075/dw-english-4aa968.jpg", 📺 🔴 00:02 WIB - - Afrimaxx
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://streamvididi.bonetvkoe.web.id/play.m3u8?q=5075&ext=hls&x=1781387032&k=6117d10c756d519e3562526cb5a63dc2f1341238ff70a3ee3920482f15d8fea4&sc=5075
+https://streamvididi.bonetvkoe.web.id/play.m3u8?q=5075&ext=hls&x=1781394956&k=03fcb73949963a962211bd4e47c638b6cea33b885d0f8e621db6716c314876ba&sc=5075
 #EXTINF:-1 tvg-uid="33f89d0b00cc683ad845e8a664f8b16c" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/irlT27LuXDvNtV4pkYihCgvL5TU=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5133180/b3de00.jpg", 📺 🔴 00:15 WIB - - Men: Bulgaria vs Serbia - Volleyball Nations League
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21648&ext=drm&x=1781387032&k=30508163a2f81ce54da892c526e0303b59e1d4845cc7b17b9fb5cddd93d3f58a
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=21648&ext=dash&x=1781387032&k=2dd0562659c08683bc199d285f39faa71e526aaf79fa48589aecd55b94927952&sc=5133180
-#EXTINF:-1 tvg-expire="1781379000" tvg-start="1781371800" tvg-uid="288d17a789330439ba42c34633597281" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/zp5rzghjndeq82w/image/small", 📺 🔴 00:30 WIB - FERROCARRIL MIDLAND VS ATLETICO ATLANTA
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel45.flv?auth_key=3000001781376256-0-0-68eddf95fc2b10676451bcace8fe2c9a
-#EXTINF:-1 tvg-expire="1781389800" tvg-start="1781371800" tvg-uid="bb8e335e8f5474ee4621de015cf93acc" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/a0384799afdbb817eb5f9071fc65fab1.png", 📺 🔴 00:30 WIB - ]  Ferrocarril Midland vs Atletico Atlanta
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvYqjgeEKpFZJDbxR/index.m3u8
-#EXTINF:-1 tvg-expire="1781379600" tvg-start="1781371800" tvg-uid="348487e6afef3694a336762b83143129" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202b4c08b7afd1b0a95a8467ebfb25ec26f.png", 📺 🔴 00:30 WIB - ]  Ferrocarril Midland vs Atletico Atlanta
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5236482_1.m3u8?auth_key=1781462593-0-0-55de5915a4fbb607c60db2029f72aaa8
-#EXTINF:-1 tvg-expire="1781379000" tvg-start="1781371800" tvg-uid="cdcc85d50c0c5d32dc33dd5459556ab7" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/l7oqdeh6086r510/image/small", 📺 🔴 00:30 WIB - VILLA SAN CARLOS VS UAI URQUIZA
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel47.flv?auth_key=3000001781376256-0-0-6a510082a43ee7835e80aed823f84118
-#EXTINF:-1 tvg-expire="1781379600" tvg-start="1781371800" tvg-uid="007a3892681b5409fa2b5b3b883b54e4" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202d82b4a1d0dd3480f197d168f4a28d48c.png", 📺 🔴 00:30 WIB - ]  Villa San Carlos vs UAI Urquiza
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045238_1.m3u8?auth_key=1781462593-0-0-0781f1c242c9f9d043d31c19a0922325
-#EXTINF:-1 tvg-expire="1781379000" tvg-start="1781371800" tvg-uid="570382f6257b1cf6d71a0f50c186ec2d" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/6254b0c70ba366a49aa8c59a34b72192.png", 📺 🔴 00:30 WIB - ] 14/06 Ferrocarril Midland vs Atletico Atlanta
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niur.live/live/stream-485739_lsd.flv?txSecret=afce404d0d37545d0bcf7e423274b8ec&txTime=6a2df5e1
-#EXTINF:-1 tvg-expire="1781379000" tvg-start="1781371800" tvg-uid="570382f6257b1cf6d71a0f50c186ec2d" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/6254b0c70ba366a49aa8c59a34b72192.png", 📺 🔴 00:30 WIB - ] 14/06 Ferrocarril Midland vs Atletico Atlanta
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niur.live/live/stream-485739_lsd.m3u8?txSecret=afce404d0d37545d0bcf7e423274b8ec&txTime=6a2df5e1
-#EXTINF:-1 tvg-expire="1781379000" tvg-start="1781371800" tvg-uid="570382f6257b1cf6d71a0f50c186ec2d" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/6254b0c70ba366a49aa8c59a34b72192.png", 📺 🔴 00:30 WIB - ] 14/06 Ferrocarril Midland vs Atletico Atlanta
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niur.live/live/stream-598119_lsd.flv?txSecret=aa1b51930c48ecf83464b04b3e1fc156&txTime=6a2df749
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21648&ext=drm&x=1781394956&k=294dc7d1d93088b9bab147835df4138fcf7dc9d7a6769b193814271c64e31d3d
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=21648&ext=dash&x=1781394956&k=54d894908b4536f00080be16a23d3c436dbe03039e47aa5df19a6c7dfadd1062&sc=5133180
 #EXTINF:-1 tvg-uid="125b3601ebc3e812134a401580632da5" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1404378291599937536/b-r3SWlW_400x400.jpg", 📺 🔴 00:30 WIB - ]  West Indies W vs New Zealand W
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.43/hls/JJJJF.m3u8
-#EXTINF:-1 tvg-uid="722a06e739218bd1d71ff07b6e3bb4ee" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/2016027627778383872/KrzKijtT_400x400.jpg", 📺 🔴 00:30 WIB - ]  Golf Curtis Cup
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-http://193.47.62.41/hls/OFFF.m3u8
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="31e3840e7ff268c6865103c6fec46f21" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/pxwrxlhg1n0ryk0/image/small", 🇸🇦 🔴 00:45 WIB - AL ARABI CLUB KUW VS AL QADISIYA SC
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel48.flv?auth_key=3000001781376256-0-0-5b8ef48361410eae0c5640010e6508f0
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="7c6406218c7a3202758b8c3071956c96" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/3glrw7hwzo8qdyj/image/small", 📺 🔴 00:45 WIB - AL TTADAMON VS AL FAHAHEEL SC
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel49.flv?auth_key=3000001781376256-0-0-c922872b593c0f4d6ca4562f8ae031cf
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781372700" tvg-uid="809d0a309383fb29b8db85830bd08d9e" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2020bdb215b0413b7fcc69cdeb55bc25eb7.png", 📺 🔴 00:45 WIB - ]  Al-Ttadamon vs Al Fahaheel SC
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_4860241_1.m3u8?auth_key=1781462593-0-0-df87b26e700a1b23ef1ad06b18338814
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="627a9fdb4cf305678ba3da21ad5d4735" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/16693d06291b8ebe6ccea29259c7c3a6.png", 🇸🇦 🔴 00:45 WIB - ] 14/06 Al-Arabi Club  vs Al Qadisiya SC
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-273736_lsd.flv?auth_key=1781379321-0-0-5af3027ffde56e203a72e42e2c81d1cf
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="627a9fdb4cf305678ba3da21ad5d4735" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/16693d06291b8ebe6ccea29259c7c3a6.png", 🇸🇦 🔴 00:45 WIB - ] 14/06 Al-Arabi Club  vs Al Qadisiya SC
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-273736_lsd.m3u8?auth_key=1781379321-0-0-c1ce2ba5764e4fe35f0aade84101fcea
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="627a9fdb4cf305678ba3da21ad5d4735" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/16693d06291b8ebe6ccea29259c7c3a6.png", 🇸🇦 🔴 00:45 WIB - ] 14/06 Al-Arabi Club  vs Al Qadisiya SC
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-612980_lsd.flv?auth_key=1781379321-0-0-456f6eece2e78cf6e39a5b35cc6dcdd9
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="4621140c20bd58f3e7b4373a5d3ba81e" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/3083_1gr5dy718s1w.png", 🇸🇦 🔴 00:45 WIB - ] 14/06 Al-Arabi Club  vs Al-Qadsia SC
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://hls.cdnfaster-a.live/live/FERNANDO/index.m3u8?expire=1924930980&sign=bab24fb93b0be5c98af9138659989bcb
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="4621140c20bd58f3e7b4373a5d3ba81e" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/3083_1gr5dy718s1w.png", 🇸🇦 🔴 00:45 WIB - ] 14/06 Al-Arabi Club  vs Al-Qadsia SC
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://flv.cdnfaster-a.live/live/FERNANDO.flv?expire=1924930980&sign=bab24fb93b0be5c98af9138659989bcb
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="9c984ee5f134f7b3c13adc2227c49a95" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/3086_1gqgp6phb3y.png", 📺 🔴 00:45 WIB - ] 14/06 Al-Ttadamon vs Al Fahaheel SC
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://hls.cdnfaster-a.live/live/TAYMONKHANH/index.m3u8?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="9c984ee5f134f7b3c13adc2227c49a95" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/3086_1gqgp6phb3y.png", 📺 🔴 00:45 WIB - ] 14/06 Al-Ttadamon vs Al Fahaheel SC
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://flv.cdnfaster-a.live/live/TAYMONKHANH.flv?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da
-#EXTINF:-1 tvg-expire="1781379900" tvg-start="1781372700" tvg-uid="9c984ee5f134f7b3c13adc2227c49a95" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/d37ba934e4c5666d3cc53b1f195d70bb.png", 📺 🔴 00:45 WIB - ] 14/06 Al-Ttadamon vs Al Fahaheel SC
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-602153_lsd.flv?auth_key=1781378961-0-0-db11ade8a7eef8b283ed68c7ecf05360
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781372700" tvg-uid="e9f46c5572f764b4fdedc4278a25f7ce" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202dae137909b12d420ad735d874778e902.png", 🇸🇦 🔴 00:45 WIB - ]  Al-Arabi Club  vs Al Qadisiya SC
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_4860245_1.m3u8?auth_key=1781462593-0-0-d78e452d0a4c7a55218c3d40b53b8ed2
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://www.visionplus.id/images/repository/185/764185-SNAPSHOT-m.jpg", 📺 🔴 00:45 WIB - • 10/06)
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -288,251 +133,40 @@ https://ayo.maling.pl/V/vision/id=113.cok.mpd?he_he_he_mau_ngapin_kamu_kalau_kam
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=18190&ext=drm&x=1781387032&k=764c41ec62c708b5bb4c1cb4d0bfae55e4d33f13b1f26e909d9b6763d07b4f65
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=18190&ext=dash&x=1781387032&k=fb619c026029b442d9d360651fe13fc7db4398f37415090ba68beaab3d01cd14&sc=5129503
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="acb41acbf6487926cb6d29743227032a" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/3glrw7h1zdkqdyj/image/small", 📺 🔴 01:00 WIB - COLEGIALES VS SAN MARTIN TUCUMAN
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel54.flv?auth_key=3000001781376257-0-0-5540c12973d2583194d66ed307257e72
-#EXTINF:-1 tvg-expire="1781391600" tvg-start="1781373600" tvg-uid="753db618ed2455d9bd3ec8929bb80f36" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/d22566a52f9dc6784a88e3f1f1685231.png", 📺 🔴 01:00 WIB - ]  Colegiales vs San Martin Tucuman
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvYqjgeE6dNLRG733/index.m3u8
-#EXTINF:-1 tvg-expire="1781381400" tvg-start="1781373600" tvg-uid="cb05351c71e3b74a02435fe3e3011e65" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202b1fdf2aff897a45c220df862c76fab22.webp", 📺 🔴 01:00 WIB - ]  Colegiales vs San Martin Tucuman
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5397084_1.m3u8?auth_key=1781462593-0-0-590f8d118b6d81495b5f27880668264a
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="e687101bdf9a96871647ded1ef48b661" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/y0or5jh40jyqwzv/image/small", 📺 🔴 01:00 WIB - CORINTHIANS PAULISTA Y VS PORTUGUESA SANTISTA U20
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel53.flv?auth_key=3000001781376257-0-0-8ffe7a474134f727a27a01cb0b94e5c7
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="5c48efd7d9b1e7eb2728eb52378e6193" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/9vjxm8ghnl6r6od/image/small", 📺 🔴 01:00 WIB - DINAMO BREST VS NEMAN GRODNO
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel50.flv?auth_key=3000001781376256-0-0-976ebeb05f96643b3f2371fbc4b9e3e3
-#EXTINF:-1 tvg-expire="1781391600" tvg-start="1781373600" tvg-uid="68f9cd1177ad4d58699f7d688d697ccc" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/d46c60ef33fd6351d4e0868d7231c3cb.png", 📺 🔴 01:00 WIB - ]  Dinamo Brest vs Neman Grodno
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6Mwd5hbBDJQNw7HEqs/index.m3u8
-#EXTINF:-1 tvg-expire="1781381400" tvg-start="1781373600" tvg-uid="048dbb48892409159c39973fd9a12f50" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202ef6f44dae01f99dd30dc31ebcc5517ca.png", 📺 🔴 01:00 WIB - ]  Dinamo Brest vs Neman Grodno
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5072612_1.m3u8?auth_key=1781462593-0-0-c63d53496ed57b9fc2e3a2280f618826
-#EXTINF:-1 tvg-expire="1781382000" tvg-start="1781373600" tvg-uid="810cee0aebbe3ad7382715231480edc4" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/basketball/team/4zp5rzktkjyr82w/image/small", 📺 🔴 01:00 WIB - ISLA DE TENERIFE CANARIAS VS BARCELONA
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel26.flv?auth_key=3000001781376254-0-0-f2bef46edc3aec37069c082162db702f
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="3d35a5c69a8f11a23c362ea673d73711" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/6ypq3nh56kpmd7o/image/small", 📺 🔴 01:00 WIB - NSI RUNAVIK VS B36 TORSHAVN
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel51.flv?auth_key=3000001781376256-0-0-0326886a3fcd85336ef97583908b3db7
-#EXTINF:-1 tvg-expire="1781392200" tvg-start="1781373600" tvg-uid="54e17deb91686cdc42be1295a4ceef2d" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/basketball/team/j1l4rjztp72m7vx/image/small", 📺 🔴 01:00 WIB - OLIMPIA MILANO VS REYER VENEZIA
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel74.flv?auth_key=3000001781376254-0-0-540fe51af0d7385c2aa53c75dd470c0b
-#EXTINF:-1 tvg-expire="1781381400" tvg-start="1781373600" tvg-uid="0a3021e6d9692f4f3104b7fbd3a22fc4" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/201a5ec2bfc41620abfb2aec5b281f1b330.png", 📺 🔴 01:00 WIB - ]  Olimpia Milano vs Reyer Venezia
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/201_5446088_1.m3u8?auth_key=1781462593-0-0-6983a29083635e32bd6513e349c1a358
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="593a13e6b36c55ba777d0f237da6887d" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/dn1m1gh4jw6moep/image/small", 🇦🇺 🔴 01:00 WIB - PALMEIRAS U20 VS GREMIO AUDAX Y
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel55.flv?auth_key=3000001781376257-0-0-f803c030ba8ac3824f6f76df11b1a920
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="34f8a87c8019fe39ac27d389ca1821fa" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/965mkyh764lr1ge/image/small", 📺 🔴 01:00 WIB - SAO PAULO U20 VS BANDEIRANTE SP Y
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel52.flv?auth_key=3000001781376257-0-0-d1409f4645a3d0d94b7e5fb026df7549
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="3604c4388bbd944d6e0feb307510a77c" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/2033_1gtqm2wp9jh.png", 📺 🔴 01:00 WIB - ] 14/06 Dinamo Brest vs Neman Grodno
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://hls.cdnfaster-a.live/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="3604c4388bbd944d6e0feb307510a77c" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/2033_1gtqm2wp9jh.png", 📺 🔴 01:00 WIB - ] 14/06 Dinamo Brest vs Neman Grodno
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
-https://flv.cdnfaster-a.live/live/LYUNG1.flv?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d
-#EXTINF:-1 tvg-expire="1781380800" tvg-start="1781373600" tvg-uid="3604c4388bbd944d6e0feb307510a77c" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/4470912f0cdc3194f2b41d1d95c6c16d.png", 📺 🔴 01:00 WIB - ] 14/06 Dinamo Brest vs Neman Grodno
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-557845_lsd.flv?auth_key=1781378601-0-0-47f5975e0f8ac79fe9654ab821387767
-#EXTINF:-1 tvg-expire="1781381400" tvg-start="1781373600" tvg-uid="f2c5f0a2aae4f318f8d1d09f4335c8f2" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20278ccfe00afb9f6cbd25dcb7d0c6a3b28.png", 📺 🔴 01:00 WIB - ]  Mogi Mirim U23 vs Santacruzense SP U23
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5465050_1.m3u8?auth_key=1781462593-0-0-d754dbfa72f2b276c23bbc257ff9e98d
-#EXTINF:-1 tvg-expire="1781391600" tvg-start="1781373600" tvg-uid="253bb9be6eb5fb8f90fa48f935043780" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/3d8fede633a03bdc3e42f80185053c92.png", 📺 🔴 01:00 WIB - ]  Corinthians Paulista Youth vs Portuguesa Santista U20
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6Mwe5jeB9cfouMYgS9/index.m3u8
-#EXTINF:-1 tvg-expire="1781391600" tvg-start="1781373600" tvg-uid="21174017e1916092296be61ed9f6d363" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/0d47118e5ec162002c4655cf74b0b586.png", 📺 🔴 01:00 WIB - ]  Sao Paulo Youth vs Bandeirante SP Youth
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6Mwe5jeB9esHmqNbb3/index.m3u8
-#EXTINF:-1 tvg-expire="1781381400" tvg-start="1781373600" tvg-uid="0ca4625cabbfd43a39d542314d825c2d" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20199c6ed693c67c267faf35b51634234b0.png", 📺 🔴 01:00 WIB - ]  Lenovo Tenerife vs Barça
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/201_5445590_1.m3u8?auth_key=1781462593-0-0-51cfd4d6a065a88b0d94e35ada79a567
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=18190&ext=drm&x=1781394956&k=8b18277572728bafc740fe3bd3069b3ddefef1934228051ccd86ebb34e331681
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=18190&ext=dash&x=1781394956&k=a319a2bcfad115d46a4ba0958074cdb146fd1770627f99bb6ce14183a3c789d6&sc=5129503
 #EXTINF:-1 tvg-uid="bcb65d7062fe6595b5bf8405232122c3" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1469076834/125px-Flag_of_Belarus_400x400.png", 📺 🔴 01:00 WIB - ]  Dynamo Brest vs Neman
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.59/hls/fooozQQQQ.m3u8
-#EXTINF:-1 tvg-uid="ea93dd3ae32675a8eec1bfef8fcd752a" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1665698199661600769/nxoC7o2Q_400x400.jpg", 📺 🔴 01:00 WIB - ]  Golf LPGA Women Golf Open
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-http://193.47.62.43/hls/SSSS.m3u8
 #EXTINF:-1 tvg-uid="0d8776d821248337ba2188e9589f3c4a" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/2026588845379080192/mWY6CM61_400x400.jpg", 📺 🔴 01:00 WIB - ]  Olimpia Milano vs Venezia
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.59/hls/fooozQQQQQQ.m3u8
-#EXTINF:-1 tvg-expire="1781382000" tvg-start="1781373600" tvg-uid="07e945d59f922bec40a07fcaa201f38b" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/2028394125469331456/oIc6aE12_400x400.jpg", 📺 🔴 01:00 WIB - ]  Tenerife vs Barcelona
+#EXTINF:-1 tvg-uid="07e945d59f922bec40a07fcaa201f38b" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/2028394125469331456/oIc6aE12_400x400.jpg", 📺 🔴 01:00 WIB - ]  Tenerife vs Barcelona
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.59/hls/fooozQQQQQ.m3u8
-#EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/IcS1HsYJAw5CHhW8Fv9sgSdJEpw=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129503/dd2580.jpg", 📺 🔴 01:00 WIB - 14/06/26Round 3 - Dow Championship 2026  CK TEST
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://allautock.maling.pl/
-https://ayo.maling.pl/m3u/TOKEN/18190.mpd
-#EXTINF:-1 tvg-expire="1781392800" tvg-start="1781374200" tvg-uid="4df40a83c08b08f7b24f035c22918817" data-source="Center" tvg-chno="19" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 01:10 WIB - ]  St. Louis Cardinals at Minnesota Twins
+#EXTINF:-1 tvg-expire="1781392800" tvg-start="1781374200" tvg-uid="4df40a83c08b08f7b24f035c22918817" data-source="Center" tvg-chno="23" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 01:10 WIB - ]  St. Louis Cardinals at Minnesota Twins
 #EXTVLCOPT:http-referrer=https://streamcenter.xyz/
 #EXTVLCOPT:http-origin=https://streamcenter.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
-https://mainstreams.pro/hls/dazhfiach15.m3u8?st=HQ533wFsbKnvP8TO5XgCbhlm7ByjxGmqtWmX8UTXCLA&e=1781386901
+https://edge2caster.pro/hls/dazhfiach15.m3u8?st=f5vHZVurR7AxbRf4nAqyMPr-CsB160HJzUH0R67cDIY&e=1781394747
 #EXTINF:-1 tvg-expire="1781392800" tvg-start="1781374200" tvg-uid="7de4275eb1270261cbde23153f268ec4" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 01:10 WIB - ]  Minnesota Twins vs St Louis Cardinals
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.59/hls/yhhh.m3u8
-#EXTINF:-1 tvg-uid="624676050ed94e509c960f14da127d68" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/dkbht0ENYZOga5lRSrONA60y8Ik=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132046/20eeb5.jpg", 📺 🔴 01:15 WIB - - Men: Bulgaria vs Argentina - Volleyball Nations League
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21648&ext=drm&x=1781387032&k=30508163a2f81ce54da892c526e0303b59e1d4845cc7b17b9fb5cddd93d3f58a
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=21648&ext=dash&x=1781387032&k=2dd0562659c08683bc199d285f39faa71e526aaf79fa48589aecd55b94927952&sc=5132046
-#EXTINF:-1 tvg-expire="1781381700" tvg-start="1781374500" tvg-uid="b614ca357edfcead10f938d9e5d414b8" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/zp5rzgh7g6xq82w/image/small", 📺 🔴 01:15 WIB - CARLOS MANNUCCI VS ALIANZA ATLETICO
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel56.flv?auth_key=3000001781376258-0-0-c77145634402dd29c83a8c7022624d3a
-#EXTINF:-1 tvg-expire="1781381700" tvg-start="1781374500" tvg-uid="459f24fd8ed91adb07e43cd368138257" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/dj2ryoh250dq1zp/image/small", 📺 🔴 01:15 WIB - NU FLAMENGO FBC VS KILLAS W
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel57.flv?auth_key=3000001781376258-0-0-820bbae3a200e890077d8d87842eee09
 #EXTINF:-1 tvg-uid="ec09259356740a320987d9a617533abf" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/OHpHS4SHK2dz5cS7UGPbVQzmL-0=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5133182/743bab.jpg", 📺 🔴 01:15 WIB - - Men: Canada vs Turkey - Volleyball Nations League
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21647&ext=drm&x=1781387032&k=41f0e15c4e709f1f39f5690a7d57c8e35a7d14284a7df2079c03723b8cd1222a
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=21647&ext=dash&x=1781387032&k=2362d523ada0ade9cdba5062082a687a30a9f20152cce05fc15c14b4967688be&sc=5133182
-#EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/dkbht0ENYZOga5lRSrONA60y8Ik=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132046/20eeb5.jpg", 📺 🔴 01:15 WIB - 14/06/26Men: Bulgaria vs Argentina - Volleyball Nations League  CK TEST
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://allautock.maling.pl/
-https://ayo.maling.pl/m3u/TOKEN/21648.mpd
-#EXTINF:-1 tvg-expire="1781382600" tvg-start="1781375400" tvg-uid="e972a8e6ac85f50242d7658c3da8f3c2" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/p3glrw7h859qdyj/image/small", 📺 🔴 01:30 WIB - ALMAGRO VS AGROPECUARIO
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel59.flv?auth_key=3000001781376258-0-0-85cda2f1448dffc70a03d8156d05c583
-#EXTINF:-1 tvg-expire="1781382600" tvg-start="1781375400" tvg-uid="357f348f1f7035639a441a33fdf1ab69" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/4jwq2gh42yem0ve/image/small", 📺 🔴 01:30 WIB - DEF DE BELGRANO VS C A COLON
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel58.flv?auth_key=3000001781376258-0-0-e86a736614452fc2c272706c0057f6e3
-#EXTINF:-1 tvg-uid="0d8db7b9a0a858c56c8bde8d2b8dabf1" data-source="voliball xoilacztv" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/volleyball/team/kdj2rydhz1zr1zp/image/small", 📺 🔴 01:30 WIB - 14/06 - BULGARIA VS ARGENTINA
-#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
-#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel80.flv?auth_key=3000001781376402-0-0-b38978181d6389780be9772701110c5b
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="692687261c9d01fc44c87fcb13a52a6f" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2025c2a97b7db91fc65d1428c05ee8d174c.png", 📺 🔴 01:30 WIB - ]  Comunicaciones BsAs vs Deportivo Laferrere
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045247_1.m3u8?auth_key=1781462593-0-0-d323f0df12eaf365dfc173682155057e
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="eb879381b4a85728d2910dd1e85fa074" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/27471fce495bec5e33bc83b508eba608.png", 📺 🔴 01:30 WIB - ]  Comunicaciones BsAs vs Deportivo Laferrere
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvVdDMNzYa8oHJ5Ju/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="92ef13f2eab05b30d15d4ba672d74fe3" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2025b858c7ddd60c36a5e07e34ad2bc5f74.png", 📺 🔴 01:30 WIB - ]  Defensores Unidos vs CA Brown Adrogue
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045246_1.m3u8?auth_key=1781462593-0-0-2d004568bcb5ade2dabb9a3a5015a725
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="cf311476cdac92f82b3784829357f220" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/3576f17f7ccee443d87e690bcfbb6b83.png", 📺 🔴 01:30 WIB - ]  Defensores Unidos vs CA Brown Adrogue
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvVdDMNzfAaQimpmb/index.m3u8
-#EXTINF:-1 tvg-expire="1781383500" tvg-start="1781375400" tvg-uid="c1cf6c4f2f924204cce8d073f2273ed9" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20240d9297f357a1cfce2f0b66920e201b5.png", 📺 🔴 01:30 WIB - ]  Deportivo Camioneros vs Arsenal de Sarandi
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045244_1.m3u8?auth_key=1781462593-0-0-0e0d6317a92aab04c582ddac0c5b77de
-#EXTINF:-1 tvg-expire="1781383500" tvg-start="1781375400" tvg-uid="20ce7e97b8ac6323491fb7e2ff337cad" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/dfa2b4934544cbcf20f9f633097ca339.png", 📺 🔴 01:30 WIB - ]  Deportivo Camioneros vs Arsenal de Sarandi
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvVdDMNzjZY9gRf5P/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="d88b244857cc9032d1d35fdac00a7fde" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20290b3588f19ef8e7c4f8289563493b839.png", 📺 🔴 01:30 WIB - ]  Flandria vs Ituzaingo
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045242_1.m3u8?auth_key=1781462593-0-0-c46714c29ef54a9e500a84cfffae3b11
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="58d5177ddadcd7c38c292fcd4a9fb078" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/05a860fe9e31d945862cdc8ff324c091.png", 📺 🔴 01:30 WIB - ]  Flandria vs Ituzaingo
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvVdDMNzoxVte5VPB/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="dfe0128e2e9bc5677f0c745d76cafa55" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20224389c1ba54b978c208043905aecbbb7.png", 📺 🔴 01:30 WIB - ]  Sportivo Dock Sud vs Talleres Rem de Escalada
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045243_1.m3u8?auth_key=1781462593-0-0-37806a20da32243c65de039669be361a
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="459b0a545e08dd9a204f0ccc252de41b" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/eb27b95f48803f4f3d7aa9b40b24853b.png", 📺 🔴 01:30 WIB - ]  Sportivo Dock Sud vs Talleres Rem de Escalada
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvVdDMNzhN4HCbjvV/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="997fe988fa446c256948d6b7994579b6" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20214a14b77db7cd4f8599ecf4fb3e8d0d1.png", 📺 🔴 01:30 WIB - ]  Sportivo Italiano vs Excursionistas
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045239_1.m3u8?auth_key=1781462593-0-0-fd829307f22025d4642fb61c7ee16169
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="d35c443a3821b968b2b404759c6904e5" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202b855d67506c37376fe8166fce0073364.png", 📺 🔴 01:30 WIB - ]  El Porvenir vs CA Atlas
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5045255_1.m3u8?auth_key=1781462593-0-0-f476ab83a9dfbe35f855ec37024e08f4
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="a2ebdc4056f5c0465557176bfdabe24a" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/5aa2bfcecb2a876978c5455fb086d2b3.png", 📺 🔴 01:30 WIB - ]  Almagro vs Agropecuario de Carlos Casares
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvYqjgePx6JdA4Nv9/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="222b72e974cf01ad03f32832e0d3d87f" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20296f09d951b00fc4946d819476d446ebe.png", 📺 🔴 01:30 WIB - ]  Almagro vs Agropecuario de Carlos Casares
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5236491_1.m3u8?auth_key=1781462593-0-0-a0cc27c3127eebd1616890ce4d19b5df
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="171a227bb20a36e01cc4741b3f8c796d" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/3dbef4dd6f246b25cf691758ef391094.png", 📺 🔴 01:30 WIB - ]  Defensores de Belgrano vs Colon de Santa Fe
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvYqjgeE4RtTwSBt9/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="eee16da383a87cb5654480a8ff5ac61b" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202d04f4647b381c52eef5da84eea841191.png", 📺 🔴 01:30 WIB - ]  Defensores de Belgrano vs Colon de Santa Fe
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5236489_1.m3u8?auth_key=1781462593-0-0-97ac49a50b83f9f90306c055da269860
-#EXTINF:-1 tvg-expire="1781393400" tvg-start="1781375400" tvg-uid="4c1f8d8b4823836d4c053361eafa04b9" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/6b4a5eb452bf0ce6bcbeed86685ca363.png", 📺 🔴 01:30 WIB - ]  Nueva Chicago vs Chacarita juniors
-#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
-#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvYqjgeEHcmgpPgoX/index.m3u8
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="4386aa71b79d80cbd7129f6c686595c9" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2023d1a5d729dd36b650963610b374fc83d.png", 📺 🔴 01:30 WIB - ]  Nueva Chicago vs Chacarita junior
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5236486_1.m3u8?auth_key=1781462593-0-0-d48878e373b7a1b7b35a1b66663b68eb
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="46381dcacd623b2154b89744bbe93b5b" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2020582fbd44a4dfb1ba3aba6dbbe5d15a7.png", 📺 🔴 01:30 WIB - ]  Guarani MG vs EC Mamore MG
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5446010_1.m3u8?auth_key=1781462593-0-0-8916617f67dc6ae645dff60786749f93
-#EXTINF:-1 tvg-expire="1781383200" tvg-start="1781375400" tvg-uid="d789e5dcf4a9137cf472f8dc02a4faef" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/201f9c5d4795d7ea7f8f6fd0b32164e2ca6.jpeg", 📺 🔴 01:30 WIB - ]  Juvecaserta 2021 vs MiroRadici Finance Vigevano
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/201_5464845_1.m3u8?auth_key=1781462593-0-0-1afd4fe551dd1e6767f6a9817eac442b
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21647&ext=drm&x=1781394956&k=34682f6b2be8bfb1aad1ae891547a13e76a4b1b37f31ab6ed49fb84c6ad91386
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=21647&ext=dash&x=1781394956&k=b62fe2bdcdcfd23b255c138b515dea43da8822a743cd2157fc499d97a5a07d4d&sc=5133182
 #EXTINF:-1 tvg-uid="ee18015bec812b8046c4b3077a06e6dc" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1532678058993393666/vPvaWD6G_400x400.jpg", 📺 🔴 01:30 WIB - ]  Bulgaria vs Argentina
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
@@ -552,49 +186,108 @@ https://ayo.maling.pl/Vision/index.mpd?id=115&he_he_he_mau_ngapin_kamu_kalau_kam
 https://ayo.maling.pl/V/vision/id=115.cok.mpd?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDk0MTk2OHwxMDMuMjQ3LjguNzB8M2MwNDBhOWQ2ZTRhZmQwMmRjYzE4YTUxZWFiNWY5ODU=
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 📺 🔴 01:30 WIB - Bulgaria v Argentina | Week 1 | Men's VNL 2026
 https://livecdn.euw1-0008.jwplive.com/live/sites/fM9jRrkn/media/hZqsMQ1A/live.isml/.m3u8
-#EXTINF:-1 tvg-uid="5aee45824071783098c5cfdf16b54af2" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/MO29LQSLBb-CrxAR-emGtTfpxs8=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/7052/hip-hip-horee-bd851f.jpg", 📺 🔴 02:00 WIB - - Numberblocks
+#EXTINF:-1 tvg-uid="ba4f5c2d359e73deac3ed2439b1ed1b4" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/MO29LQSLBb-CrxAR-emGtTfpxs8=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/7052/hip-hip-horee-bd851f.jpg", 📺 🔴 02:00 WIB - - Poyo Show
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=7052&ext=drm&x=1781387032&k=bfd1a18c2adcb29e7d6f9d6d49013fcc3d166012323b6ace6720b38ed180ef4e
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=7052&ext=dash&x=1781387032&k=c4726a206bb70d1c2450b86378ff3ec54bfc8d6651f5b7d4e213666e6859dd25&sc=7052
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=7052&ext=drm&x=1781394956&k=5ff1f8e64c63ee9dc8134e0d1938daab7a9caa48d5ee874ca70241d1a5ab054d
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=7052&ext=dash&x=1781394956&k=41e02f22d654902ddbaca60e754fb7ce3938c53c19e34d04aa89a434c5251ea1&sc=7052
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="665f0875cf5052eb3be1185e1d311d98" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/x7lm7phwg05m2wd/image/small", 📺 🔴 02:00 WIB - AMAZONAS FC VS ANAPOLIS FC
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel39.flv?auth_key=3000001781384115-0-0-253917ffae915bbb0b356ea8cec86356
+#EXTINF:-1 tvg-expire="1781385000" tvg-start="1781377200" tvg-uid="0843005f8518c67c5b1e4534bf311f37" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2024c69a2b5c115a0462517aa195f2913c1.png", 📺 🔴 02:00 WIB - ]  Amazonas FC vs Anapolis FC
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+https://yallavoide.yalla-shoot-zhubo.com/sport/202_5400611_1.m3u8?auth_key=1781470513-0-0-bedcd010dedcf4f5db906e6fdffc6ec7
+#EXTINF:-1 tvg-expire="1781395200" tvg-start="1781377200" tvg-uid="35e2001befd4d1f09cd8c01fe00dec8e" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/4b9cb6b7a76b4b37983f9a6c7c818a51.png", 📺 🔴 02:00 WIB - ]  Amazonas FC vs Anapolis FC
+#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
+#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://stream.streamoke.net/live/sd-6Mwd5eJher7rBg2LVj/index.m3u8
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="89b959fa093c8e6d4e5f2f06a19134a0" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/4jwq2ghxo9lm0ve/image/small", 📺 🔴 02:00 WIB - CIUDAD BOLIVAR VS DEPORTIVO MORON
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel37.flv?auth_key=3000001781384106-0-0-6a8e852cfd75e8942d62634a9f24603e
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="c636ad9e1a16f774c3d00ea58a0f259e" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/23xmvkh3y9nqg8n/image/small", 📺 🔴 02:00 WIB - CLUB GUABIRA VS REAL ORURO
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel35.flv?auth_key=3000001781384105-0-0-892d528de8d2dcf196e6aad7db21cf7c
+#EXTINF:-1 tvg-expire="1781385300" tvg-start="1781377200" tvg-uid="5315a149a433eed8c04396a03f0adcaa" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/jednm9whnvxryox/image/small", 📺 🔴 02:00 WIB - EVERTON CD VS PALESTINO
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel38.flv?auth_key=3000001781384115-0-0-2bddbd0a836a84dab0bd76f21fe30a26
+#EXTINF:-1 tvg-expire="1781385300" tvg-start="1781377200" tvg-uid="49acb92551e68a7e4de0967851525aed" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2023f6893d39dc57728e0ea67040274eb60.png", 📺 🔴 02:00 WIB - ]  Everton CD vs Palestino
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+https://yallavoide.yalla-shoot-zhubo.com/sport/202_5367618_1.m3u8?auth_key=1781470513-0-0-67c564da3a631a56bd6945456131c819
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="ee47eb7632b8d10786243c96372fb711" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/dn1m1gh47yxmoep/image/small", 📺 🔴 02:00 WIB - FERROVIARIO CE VS FLUMINENSE PI
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel40.flv?auth_key=3000001781384115-0-0-84d410f6192f62b2183a16747afd890e
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="6aa67f7c472f77fdbcf958ca66ab66e9" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/4wyrn4hdo39q86p/image/small", 📺 🔴 02:00 WIB - IN PETROLERO VS REAL POTOSI
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel36.flv?auth_key=3000001781384105-0-0-128c2a58d8d96c83c26438bdab386426
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="6214c55d2fee25192b64cd6a8b7c015f" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/jw2r09hl246rz84/image/small", 📺 🔴 02:00 WIB - PIAUIPI VS TIROL
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel41.flv?auth_key=3000001781384116-0-0-c52a3d890ec4118d944a21f961a4422d
 #EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="daf8d6ccce5c6ad5196928eec2575777" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/d23xmvkh1y9qg8n/image/small", 🇹🇭 🔴 02:00 WIB - QATAR VS THUY SI
 #EXTVLCOPT:http-origin=https://xlz.livecdnem.com
 #EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://live3.procdnlive.com/livecdn/channel1.flv?auth_key=3000001781376254-0-0-6db1a7f1d90f8d8e7177b6a2d76b39c3
-#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="babfdab10d18f34dc4b2579aff04b409" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260608/8f68ecbdb8df2c474a3c5693b6b42ef0.png", 📺 🔴 02:00 WIB - 14/06 Qatar vs Switzerland
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niur.live/live/stream-414317_lsd.flv?txSecret=f4f1bcfca08fd555cf894309c2a249c5&txTime=6a2df479
-#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="babfdab10d18f34dc4b2579aff04b409" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260608/8f68ecbdb8df2c474a3c5693b6b42ef0.png", 📺 🔴 02:00 WIB - 14/06 Qatar vs Switzerland
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niur.live/live/stream-9912060_lsd.m3u8?txSecret=2bf7f23595453f779303da518f1741a6&txTime=6a2df478
-#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="babfdab10d18f34dc4b2579aff04b409" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260608/8f68ecbdb8df2c474a3c5693b6b42ef0.png", 📺 🔴 02:00 WIB - 14/06 Qatar vs Switzerland
-#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-595335_lsd.flv?auth_key=1781378601-0-0-dd57eb8cf79c10de57471fa4ab5302e0
-#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="16665fd8b6d9744604e60d5ced59f63c" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/7303a103c93fea0445384d6ff3f3d1b9.png!w80", 🇹🇭 🔴 02:00 WIB - 14/06 Qatar vs Thụy Sĩ
+https://live3.procdnlive.com/livecdn/channel1.flv?auth_key=3000001781384105-0-0-83906df1993e7daa3bd37679b8a5035b
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="9a504f497e149ac9e12a4afd34cca39b" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/913_1hpqqzvjn52f.png", 📺 🔴 02:00 WIB - ] 14/06 Everton CD vs Palestino
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LUUBI/index.m3u8?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="9a504f497e149ac9e12a4afd34cca39b" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/913_1hpqqzvjn52f.png", 📺 🔴 02:00 WIB - ] 14/06 Everton CD vs Palestino
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/LUUBI.flv?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="9a504f497e149ac9e12a4afd34cca39b" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/913_1hpqqzvjn52f.png", 📺 🔴 02:00 WIB - ] 14/06 Everton CD vs Palestino
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LYQUY/index.m3u8?expire=1891408380&sign=4eb9451ad0178fa8207d583db7d469e3
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="00cfa0a9b099cb593aa88124416f57ad" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/789_166968529845.png", 📺 🔴 02:00 WIB - ] 14/06 Qatar vs Switzerland
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/KEVILL/index.m3u8?expire=1788427256&sign=189afcf7f800d4c6c8a5aa97649a110799
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="00cfa0a9b099cb593aa88124416f57ad" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/789_166968529845.png", 📺 🔴 02:00 WIB - ] 14/06 Qatar vs Switzerland
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/HANTIN.flv?expire=1898537700&sign=546f072aa0beee54643020b57b8be5df
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="00cfa0a9b099cb593aa88124416f57ad" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://cdn-img.cdnokvip.com/logos/789_166968529845.png", 📺 🔴 02:00 WIB - ] 14/06 Qatar vs Switzerland
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6
+#EXTINF:-1 tvg-expire="1781384400" tvg-start="1781377200" tvg-uid="d47e9d40ef494059dee9f0336efb2854" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/7303a103c93fea0445384d6ff3f3d1b9.png!w80", 🇹🇭 🔴 02:00 WIB - ] 14/06 Qatar vs Thụy Sĩ
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
 https://live05.msdht.app/live/14830711.m3u8
-#EXTINF:-1 tvg-expire="1781385000" tvg-start="1781377200" tvg-uid="8801d13d0fa5ebd8044ddfae76fddae8" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20243e7699315e749a5f78e77e667fcd5f9.png", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland
+#EXTINF:-1 tvg-expire="1781385000" tvg-start="1781377200" tvg-uid="1cc6339b4eac97c36f3b46dfab9b1de4" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202ec0a14fa6343ed7aba82e7dc56949766.webp", 📺 🔴 02:00 WIB - ]  Club Ciudad de Bolivar vs Deportivo Moron
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5198524_5.m3u8?auth_key=1781462593-0-0-197656d7b56c5d3327a8c3560f46d8f3
-#EXTINF:-1 tvg-expire="1781385000" tvg-start="1781377200" tvg-uid="83ff1e3c7d00a31b425715f1ea3ab4a5" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20243e7699315e749a5f78e77e667fcd5f9.png", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5198524_1.m3u8?auth_key=1781462593-0-0-e9af9d9ef437f0932aa4f4c30f93f2ad
-#EXTINF:-1 tvg-expire="1781385000" tvg-start="1781377200" tvg-uid="63f1ea99dd4c0e0cd602b727131679b4" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/20243e7699315e749a5f78e77e667fcd5f9.png", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
-https://yallavoide.yalla-shoot-zhubo.com/sport/202_5198524_4.m3u8?auth_key=1781462593-0-0-9338bebb4600e9404f790647a1e2e631
-#EXTINF:-1 tvg-uid="38970296b69c370bec82792bf551881d" data-source="pildunNobar" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/336e1c9ab6894a3b893c1ef45235a164.png", 📺 🔴 02:00 WIB - ]  Canada vs Bosnia and Herzegovina
+https://yallavoide.yalla-shoot-zhubo.com/sport/202_5236483_1.m3u8?auth_key=1781470513-0-0-da952037ae0ad2e0b3102e6ff390a962
+#EXTINF:-1 tvg-expire="1781395200" tvg-start="1781377200" tvg-uid="12b6955842df5ee28d5a77e3e5e4196f" data-source="Colaanguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://img.colatv88xd.cc/football/team/7303a103c93fea0445384d6ff3f3d1b9.png!w80", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland
+#EXTVLCOPT:http-referrer=
+#EXTVLCOPT:http-origin=
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://live.egmdispatch.com/live/66456918_db879f17a78f3f28d9590c88f7e08633_autoChange.m3u8?auth_key=1781398355-0-0-f499fa379b685038fe69a6d1245e5adc
+#EXTINF:-1 tvg-uid="83ce3cb3f62714ba349029497083600d" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/efa8ac06cc6747b1835520f01650a0ab.png", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland
 #EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
 #EXTVLCOPT:http-origin=https://stream.livenobarseru.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/hd-en-6MvYMRTHSSLxbv8pSR/index.m3u8
-#EXTINF:-1 tvg-uid="3ebfa2ca592dd8419e9fe878a354528b" data-source="pildunNobar" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/336e1c9ab6894a3b893c1ef45235a164.png", 📺 🔴 02:00 WIB - ]  Canada vs Bosnia and Herzegovina
+https://stream.streamoke.net/live/hd-en-6MvZ6BDgJ68ghcnpYm/index.m3u8
+#EXTINF:-1 tvg-uid="198670d97ce3ecf29c347dbb70032774" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/efa8ac06cc6747b1835520f01650a0ab.png", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland
 #EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
 #EXTVLCOPT:http-origin=https://stream.livenobarseru.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://stream.streamoke.net/live/sd-6MvYMRTHSSLxbv8pSR/index.m3u8
+https://stream.streamoke.net/live/sd-6MvZ6BDgJ68ghcnpYm/index.m3u8
+#EXTINF:-1 tvg-expire="1781385000" tvg-start="1781377200" tvg-uid="7cda998442fa41e20397c9b44ef57934" data-source="gate" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://i.postimg.cc/59Sb7W9D/Combat-Sports2.png", 📺 🔴 02:00 WIB - ]  Tommy Fury vs Eddie Hall
+#EXTVLCOPT:http-referrer=https://instream.click/jwp-us.php?stream=NFLHD29
+#EXTVLCOPT:http-origin=https://instream.click
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+https://instreams.pro/US/NFLHD29/index.m3u8
 #EXTINF:-1 tvg-expire="1781385300" tvg-start="1781377200" tvg-uid="8bd4203221a3fd82ceb8e119b9c2114e" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1897743697929740288/9-yBKTUL_400x400.jpg", 📺 🔴 02:00 WIB - ]  Everton vs Palestino
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
@@ -650,6 +343,16 @@ http://193.47.62.45/hls/PPPPQ.m3u8
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://193.47.62.49/hls/PPPPQ.m3u8
+#EXTINF:-1 tvg-uid="6ddabe583861774b5b8b02576fc68ed0" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1747638026832887808/ZCUr0JdI_400x400.jpg", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland --- HD 1
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+https://pul-tenm.nbs3g.com/live/hd-en-1-4460941.m3u8?txSecret=8c77a59cec37ed2534af90093c95dbf1&txTime=6A2EF761
+#EXTINF:-1 tvg-uid="e662346944418213219ac88266179e82" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1747638026832887808/ZCUr0JdI_400x400.jpg", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland --- HD 2
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+https://live12.xiazhix1.top/live/658534551.m3u8
 #EXTINF:-1 tvg-uid="3f156a8cce769c667820c57eaa95834e" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1747638026832887808/ZCUr0JdI_400x400.jpg", 📺 🔴 02:00 WIB - ]  Qatar vs Switzerland --- SWAHILI
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
@@ -692,21 +395,43 @@ https://ayo.maling.pl/Vision/index.mpd?id=112&he_he_he_mau_ngapin_kamu_kalau_kam
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://ayo.maling.pl/V/vision/id=112.play?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDk0MTk2OHwxMDMuMjQ3LjguNzB8NDk4NmU4Zjg4NGQ0ZDY4OWUwZTM4YjQ0NjZlMmUwNWY=
 https://ayo.maling.pl/V/vision/id=112.cok.mpd?he_he_he_mau_ngapin_kamu_kalau_kamu_modal_comot_bongkar_gak_akan_maju_pemikiranmu=MTc4MDk0MTk2OHwxMDMuMjQ3LjguNzB8NDk4NmU4Zjg4NGQ0ZDY4OWUwZTM4YjQ0NjZlMmUwNWY=
-#EXTINF:-1 tvg-uid="b8239885329e1c7b43565056f4e1d5b3" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X967704.jpg", 🇮🇩 🔴 02:15-04:30 WIB - 24-Hr Nurburgring Race 2026 [BeIN Sports 1]
+#EXTINF:-1 tvg-uid="908bf6f2a3638e87459a2cb623fa7757" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1660209856731643905/f1K1xeM7_400x400.jpg", 📺 🔴 02:05 WIB - ]  Section Paloise vs Racing 92
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/yhhhqqQ.m3u8
+#EXTINF:-1 tvg-expire="1781396220" tvg-start="1781377620" tvg-uid="99781cb1b35d5325580ee3f6a7cbd159" data-source="Center" tvg-chno="21" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 02:07 WIB - ]  New York Yankees at Toronto Blue Jays
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edge2caster.pro/hls/16yuitzaerghbhc16.m3u8?st=1jufgjUw-6BZKXZG9g1b9b1EVajcgU9lMZSSP00bXnQ&e=1781394745
+#EXTINF:-1 tvg-expire="1781396220" tvg-start="1781377620" tvg-uid="ceb1557fe29323e93ef37156d3b0e5ca" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 02:07 WIB - ]  Toronto Blue Jays vs New York Yankees
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/yhhhqqQQ.m3u8
+#EXTINF:-1 tvg-expire="1781386200" tvg-start="1781379000" tvg-uid="fe1fdf8851cbd8135ce8c4549a7bc1c7" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/1l4rjnh148gm7vx/image/small", 🇺🇸 🔴 02:30 WIB - BOSTON CITY FC USA VS BLACKWATCH RUSH
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel42.flv?auth_key=3000001781384116-0-0-9825803f2021f4f2ff6c4644f2ae0daa
+#EXTINF:-1 tvg-expire="1781386200" tvg-start="1781379000" tvg-uid="f0ffbf26d2235bf1442a6ce48db68885" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/4jwq2gh7keym0ve/image/small", 📺 🔴 02:30 WIB - NU HUACHIPATO VS MAGALLANES W
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel43.flv?auth_key=3000001781384116-0-0-1228e5c918a0b1943f2e4224feb4f295
+#EXTINF:-1 tvg-expire="1781386200" tvg-start="1781379000" tvg-uid="062b44a62fc7d0e7f0a24fe3a68e0644" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/23xmvkho1enqg8n/image/small", 📺 🔴 02:30 WIB - NU UNION ESPANOLA VS NU CONCEPCION
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel44.flv?auth_key=3000001781384118-0-0-9847273fbe62e4e851ee6041bfe85628
+#EXTINF:-1 tvg-uid="9f08d965c1a358950fe9f5ac41e280fb" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/l43l4V5xVK0kACQo7QqAaG-JkHo=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132032/e9e52b.jpg", 📺 🔴 02:45 WIB - - Men: Canada vs United States - Volleyball Nations League
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=6299&ext=drm&x=1781387032&k=b285cac789e45eba9ed09e2932d8475cf8169178996f5d712f787b148093bcae
-https://streamvididi.bonetvkoe.web.id/index.mpd?q=6299&ext=dash&x=1781387032&k=b8ab90aa160590fbe1bc5e29bbd199f9e43291fbaeded9d37cf5be5e52eecbc8
-#EXTINF:-1 data-source="Manual" tvg-uid="c4f10758d737669eb0bb8597895fa728" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X967704.jpg", 🇮🇩 🔴 02:15-04:30 WIB - 24-Hr Nurburgring Race 2026 [beIN Sports 1 France]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://ck.iptvbonekoe.workers.dev/?id=966
-https://api-proxad.dc2.oqee.net/playlist/v1/live/966/1/live.mpd
-#EXTINF:-1 tvg-uid="346ef834c11a630dab29ab9d96e71fde" data-source="tvbangladesh" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X967704.jpg", 🇮🇩 🔴 02:15-04:30 WIB - 24-Hr Nurburgring Race 2026 [Bein Sports 1🎯]
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21647&ext=drm&x=1781394956&k=34682f6b2be8bfb1aad1ae891547a13e76a4b1b37f31ab6ed49fb84c6ad91386
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=21647&ext=dash&x=1781394956&k=b62fe2bdcdcfd23b255c138b515dea43da8822a743cd2157fc499d97a5a07d4d&sc=5132032
 #EXTINF:-1 group-logo="https://static-web.prod.vidiocdn.com/_next/static/logo/vidio.png" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/l43l4V5xVK0kACQo7QqAaG-JkHo=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132032/e9e52b.jpg", 📺 🔴 02:45 WIB - 14/06/26Men: Canada vs United States - Volleyball Nations League  CK TEST
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -726,18 +451,208 @@ http://maxotts.maxdigitaltv.com/x-media/C412/master.m3u8
 #KODIPROP:inputstream.adaptive.license_key=https://cubmu.mediaflow.workers.dev/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 https://cdnjkt913.transvision.co.id:1000/live/master/1/4028c6857fe540a1018060afdef540bc/manifest.mpd
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="83d137533c8137e9f02b49c800baf4e4" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/318q66ho9z4qo9j/image/small", 📺 🔴 03:00 WIB - AYACUCHO CLUB VS LOS CHANKAS
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel46.flv?auth_key=3000001781384119-0-0-805bd21bafae90c3adfa9975d45d3352
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="0a4881a51676c433d055f942aa56114b" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/jw2r09hxev1rz84/image/small", 📺 🔴 03:00 WIB - COMERCIANTES FC VS SPORTING CRISTAL
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel48.flv?auth_key=3000001781384119-0-0-9c9cc7cf24b22caa9acba3d8a6152998
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="f1354c1fd24eb6c72e63f770d06fa998" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/y0or5jhgxynqwzv/image/small", 📺 🔴 03:00 WIB - MEDELLIN CITY FC VS REAL SANTUARIO
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel64.flv?auth_key=3000001781384119-0-0-ace2ca06fb7e411ce790ede56911e31e
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="16e8662fa98345f7ac245f5682b70c1c" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/n54qllhxynpqvy9/image/small", 📺 🔴 03:00 WIB - MIAMI AC VS FORT LAUDERDALE
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel47.flv?auth_key=3000001781384118-0-0-ec2ed597b69e3cf7d44f799330dd2510
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="ffb00cae1980078798b8721f4de58319" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/gy0or5jhkg5qwzv/image/small", 📺 🔴 03:00 WIB - QUILMES VS GIMNASIA YTIRO
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel45.flv?auth_key=3000001781384118-0-0-ff4a9480b5bcb9165a3a275b63097672
+#EXTINF:-1 tvg-expire="1781398800" tvg-start="1781380800" tvg-uid="761efaeceb9bb58a86a7af380212a61f" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/17e9ee0a347f67c16baa94333f4bd4e6.png", 📺 🔴 03:00 WIB - ]  Quilmes vs Gimnasia yTiro
+#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
+#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://stream.streamoke.net/live/sd-6MvYqjgeDkr3W6prey/index.m3u8
+#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781380800" tvg-uid="c4641934348abc1598806d2f53a450be" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/2023408bb20545992918cd7ee942a8c949e.png", 📺 🔴 03:00 WIB - ]  Quilmes vs Gimnasia yTiro
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+https://yallavoide.yalla-shoot-zhubo.com/sport/202_5236481_1.m3u8?auth_key=1781470513-0-0-536171e2e93fb5059d27678a1ebc4559
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="13c525b38c9d1f418a2878a4abd0eb8f" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/2y8m4zh14j1ql07/image/small", 📺 🔴 03:00 WIB - TACNA HEROICA VS FBC MELGAR
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live1.pro2cdnlive.com/live/channel4.flv?wsSecret=957dd9b51dd701fa510eb7b560ce028f&wsABSTime=1781427318
+#EXTINF:-1 tvg-uid="76e7d93c870459bb44eeb772d6511155" data-source="voliball xoilacztv" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/volleyball/team/d23xmvzhneeqg8n/image/small", 🇺🇸 🔴 03:00 WIB - 14/06 - CANADA VS USA
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel81.flv?auth_key=3000001781384209-0-0-d26cc2a89d1ec885ae59d41456771341
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="20871c99b85031fb7faaa55b511eb77b" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/d98cb45526dd5a4a9e7fa9f947436814.png", 📺 🔴 03:00 WIB - ] 14/06 Quilmes vs Gimnasia y Tiro
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-511367_lsd.flv?auth_key=1781386880-0-0-4fbe006146e27ca7bded1fbd82c5c834
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="20871c99b85031fb7faaa55b511eb77b" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/d98cb45526dd5a4a9e7fa9f947436814.png", 📺 🔴 03:00 WIB - ] 14/06 Quilmes vs Gimnasia y Tiro
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-511367_lsd.m3u8?auth_key=1781386880-0-0-fbf79b6faf81a4efafb586291568a51a
+#EXTINF:-1 tvg-expire="1781388000" tvg-start="1781380800" tvg-uid="20871c99b85031fb7faaa55b511eb77b" data-source="Notnguyen" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://sta.vnres.co/file/common/20260610/d98cb45526dd5a4a9e7fa9f947436814.png", 📺 🔴 03:00 WIB - ] 14/06 Quilmes vs Gimnasia y Tiro
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-607552_lsd.flv?auth_key=1781386880-0-0-e9060f0c7fb861f61b603cda16e70bf6
+#EXTINF:-1 tvg-expire="1781398800" tvg-start="1781380800" tvg-uid="e039d7c3ae047a46d64008c5cbba70dc" data-source=" Event Seru" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://api.cdnsport.xyz/proxy/img/football/team/6ff153501d7dddbfefe49c9a0130b4de.png", 📺 🔴 03:00 WIB - ]  Point Michel FC vs Bath Estate
+#EXTVLCOPT:http-referrer=https://stream.livenobarseru.com/
+#EXTVLCOPT:http-origin=https://stream.livenobarseru.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://stream.streamoke.net/live/sd-6MwdpuNavzkfYo67sK/index.m3u8
+#EXTINF:-1 tvg-expire="1781388600" tvg-start="1781380800" tvg-uid="c05b62bc09576190dbaebb981ae85175" data-source="Shoot LiveEvent" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://oss.yalla-shoot-admin.com/team/202d4989adf4e3d70b01a826f8d1a1d52af.png", 📺 🔴 03:00 WIB - ]  Point Michel FC vs Bath Estate
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+https://yallavoide.yalla-shoot-zhubo.com/sport/202_5465063_1.m3u8?auth_key=1781470513-0-0-ee97e829983c2b94dde96a217140fa93
+#EXTINF:-1 tvg-uid="6d5095b8a3f337625010968787c288e8" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1532678058993393666/vPvaWD6G_400x400.jpg", 🇺🇸 🔴 03:00 WIB - ]  Canada vs USA
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/yhhhqqQQQ.m3u8
+#EXTINF:-1 tvg-uid="8b52b28d46a85de99eb8770963dd710d" data-source="Piala Dunia 2026 Zhubo" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://wsrv.nl/?url=mbg.full.diskon.cloud%2Fwc2026%2Fimg.php%3Fh%3Dhttps%253A%252F%252Foss.yalla-shoot-admin.com%252Fteam%252F202f36c053985c6e2eb1f2135b461cd9656.png%26a%3Dhttps%253A%252F%252Foss.yalla-shoot-admin.com%252Fteam%252F202c02a2d7fbfc4750b17764366ab9bc9d8.png", 📺 🔴 03:00 WIB - 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+https://bonetvbumper.ahmadadityaberdikari.workers.dev/bokep.m3u8
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 🇺🇸 🔴 03:00 WIB - Canada v USA | Week 1 | Men's VNL 2026
 https://livecdn.euw1-0008.jwplive.com/live/sites/fM9jRrkn/media/uSryQu60/live.isml/.m3u8
+#EXTINF:-1 tvg-expire="1781399700" tvg-start="1781381100" tvg-uid="0251776b7b9b9ea0adaa93dedbf319a0" data-source="Center" tvg-chno="18" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:05 WIB - ]  Miami Marlins at Pittsburgh Pirates
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edge2caster.pro/hls/ihfazugfyjcazich17.m3u8?st=USX6xx0d9rSJlfVbtBnwypreiorZS8Sb54GwVFI5CT4&e=1781394743
+#EXTINF:-1 tvg-expire="1781399700" tvg-start="1781381100" tvg-uid="72a85982269aa8ff61e1a00ca5986c15" data-source="Center" tvg-chno="19" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:05 WIB - ]  San Diego Padres at Baltimore Orioles
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edge2caster.pro/hls/Czajafjihafch18.m3u8?st=i8dVKFz4beJeIYL2dXY2qsguiBxR2BCCwnMQ5iGg620&e=1781394744
+#EXTINF:-1 tvg-expire="1781399700" tvg-start="1781381100" tvg-uid="807b248dce370b3a50628b9bda894537" data-source="Center" tvg-chno="20" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:05 WIB - ]  Seattle Mariners at Washington Nationals
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/bzagLHzach19.m3u8?st=ENcelC_57Xry5-FVZek3_2B6fVBtIKNwUXXNLsCcVQM&e=1781394745
+#EXTINF:-1 tvg-expire="1781399700" tvg-start="1781381100" tvg-uid="3cab8aadf5061c9b10df3aeb2c3d928c" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:05 WIB - ]  Baltimore Orioles vs San Diego Padres
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFF.m3u8
+#EXTINF:-1 tvg-expire="1781399700" tvg-start="1781381100" tvg-uid="18fbf1b39446f2308e8dab5020c02ea5" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:05 WIB - ]  Pittsburgh Pirates vs Miami Marlins
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFS.m3u8
+#EXTINF:-1 tvg-expire="1781399700" tvg-start="1781381100" tvg-uid="5e3061b5ac3d368b5d15eddfb74b9413" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:05 WIB - ]  Washington Nationals vs Seattle Mariners
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFSS.m3u8
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="38dc9b00c70bd57c92e4a15d1c24545c" data-source="Center" tvg-chno="13" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:10 WIB - ]  Arizona Diamondbacks at Cincinnati Reds
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/jkzahzadach20.m3u8?st=ZDB6IpCznbasIjFpCBDlcbaQpVHQmyeFZu4-_tfqlWM&e=1781394738
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="a1ad562dd8b6db8081496eee27816604" data-source="Center" tvg-chno="14" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:10 WIB - ]  Atlanta Braves at New York Mets
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/ojzkajnach21.m3u8?st=g9ZvfGhuOR06rSlDnd06VQbuftRGZvCpmlUIwAlVO1E&e=1781394739
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="f292fe06edfdd366a2b6e86eb2a59fc4" data-source="Center" tvg-chno="15" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:10 WIB - ]  Detroit Tigers at Cleveland Guardians
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/ijfnakfidch22.m3u8?st=h4Npuiz44fzk12jvTuNszw_kcJTHBlS9hNPh2D_Vt_U&e=1781394740
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="fefac841d8f3a7fd53818cd5d8198e8c" data-source="Center" tvg-chno="17" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:10 WIB - ]  Los Angeles Dodgers at Chicago White Sox
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://mainstreams.pro/hls/fskjanach24.m3u8?st=oAjmlpDIpn8G1RGfEhelSWxIjGE4gooEr8ufeihkgpU&e=1781394742
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="de52a666bb43d0388a4fb949c89980e4" data-source="Center" tvg-chno="16" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png", 📺 🔴 03:10 WIB - ]  Texas Rangers at Boston Red Sox
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz/
+#EXTVLCOPT:http-origin=https://streamcenter.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/jnzkdzjfanch23.m3u8?st=8_8TGoFLPduOYDiF4qKbzQDcFl90M_DmdcF6uYcRgzw&e=1781394741
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="7972dc96c32cea98a62f681eb56749e8" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:10 WIB - ]  Boston Red Sox vs Texas Rangers
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFSSS.m3u8
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="6d9b536d03c3cf96ea21c68c63f22e2f" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:10 WIB - ]  Chicago White Sox vs Los Angeles Dodgers
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFSSQS.m3u8
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="508ef0ce6a6cac558a6715e12237ff12" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:10 WIB - ]  Cincinnati Reds vs Arizona Diamondbacks
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFSSQSQ.m3u8
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="13ba7add814e243b3ac544ced1b737a9" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:10 WIB - ]  Cleveland Guardians vs Detroit Tigers
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFSSQSQQ.m3u8
+#EXTINF:-1 tvg-expire="1781400000" tvg-start="1781381400" tvg-uid="96a84495de13228bd817a1ff275b1265" data-source="Fawa Event" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://pbs.twimg.com/profile_images/1979034974964559874/E0AdeiBy_400x400.jpg", 📺 🔴 03:10 WIB - ]  New York Mets vs Atlanta Braves
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://193.47.62.59/hls/AFFFSSQSQQQ.m3u8
+#EXTINF:-1 tvg-expire="1781389800" tvg-start="1781382600" tvg-uid="bcc505a76d462d74da80d5a5b9aab878" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/4jwq2ghkvwwm0ve/image/small", 📺 🔴 03:30 WIB - NU UNI DEPORTES VS NU UNSAAC
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel49.flv?auth_key=3000001781384119-0-0-c4491929a10c46d6558658bfb0211cf2
 #EXTINF:-1 tvg-uid="dd2a03c0b71b9ff1d6bb8bacbc17d48d" data-source="TV_Amrik" tvg-chno="114" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 03:42-05:32 WIB - NRL: Dolphins V Roosters [Sky Sports Premier League]
 http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2182.ts
 #EXTINF:-1 x-source="PL Malaysia astro ada" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 03:42-05:32 WIB - NRL: Dolphins V Roosters [PremierSports]
 http://uutvs.cc/46b9gmvm/6931
 #EXTINF:-1 tvg-uid="22f4d41e97c159fe80ead212f0ec507b" data-source="tvbangladesh" group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 03:42-05:32 WIB - NRL: Dolphins V Roosters [Sport]
 https://stream8.cinerama.uz/1004/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 04:30-06:20 WIB - Super Lig : Antalyaspor Vs Fenerbahce
-https://bwifi.my.id/5menit.mp4?m=superligantalyasporfenerbahce_1781411400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F051be0a9b61dedb583315fb75eaa8308.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F20bd29045f9e765f9162647ec74b9d75.webp", 📺 ⏳ 05:00 WIB - • 09/06/2026)
-https://bwifi.my.id/5menit.mp4?m=09062026_1781413200.0
+#EXTINF:-1 tvg-uid="c80f0905a90b5391c14a3a48b19c58e3" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://thumbor.prod.vidiocdn.com/IsCC-oGyoj3Ci5zwU3e5_m04wU4=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5133181/b46536.jpg", 📺 🔴 03:45 WIB - - Men: Brazil vs Argentina - Volleyball Nations League
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=21648&ext=drm&x=1781394956&k=294dc7d1d93088b9bab147835df4138fcf7dc9d7a6769b193814271c64e31d3d
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=21648&ext=dash&x=1781394956&k=54d894908b4536f00080be16a23d3c436dbe03039e47aa5df19a6c7dfadd1062&sc=5133181
+#EXTINF:-1 tvg-expire="1781391600" tvg-start="1781384400" tvg-uid="9e85b11f6b14ddf6fee3e09785bedf53" data-source="Xoilacz" group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://imgts.sportpulseapiz.com/football/team/965mkyhnp94r1ge/image/small", 📺 🔴 04:00 WIB - BROOKE HOUSE FC VS SHARK COAST
+#EXTVLCOPT:http-origin=https://xlz.livecdnem.com
+#EXTVLCOPT:http-referrer=https://xlz.livecdnem.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://live3.procdnlive.com/livecdn/channel50.flv?auth_key=3000001781384120-0-0-2c546426bc736303d6e2a3c05b76bb0d
+#EXTINF:-1 tvg-uid="8708872dec6c7991d0d0a80663ec742b" data-source="Vididi Combi Termux" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:30-06:20 WIB - Super Lig : Antalyaspor Vs Fenerbahce [BeIN Sports 2]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://streamvididi.koe.web.id/index.mpd?q=17875&ext=drm&x=1781394956&k=71029de0effed68a4ec386d19c449cbb78f862c12b9159a8fb7d993ff6293fe6
+https://streamvididi.bonetvkoe.web.id/index.mpd?q=17875&ext=dash&x=1781394956&k=22c3369f44177e9aeb452dda9c8e5280b3eac6ad1b8a704768b36ea074cf22e9
+#EXTINF:-1 data-source="Manual" tvg-uid="a9f9376b65c080dc40ce686c02021bac" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:30-06:20 WIB - Super Lig : Antalyaspor Vs Fenerbahce [beIN Sports 2 France]
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://ck.iptvbonekoe.workers.dev/?id=970
+https://api-proxad.dc2.oqee.net/playlist/v1/live/970/1/live.mpd
+#EXTINF:-1 tvg-url="https://epg.pw/api/epg.xml?lang=en&date=20260519&channel_id=524174" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:30-06:20 WIB - Super Lig : Antalyaspor Vs Fenerbahce [beIN Sports 2 V+]
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:30-06:20 WIB - Super Lig : Antalyaspor Vs Fenerbahce [beIN Sports 2 🇹🇷]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+#EXTVLCOPT:http-referrer=https://www.selcuksportshd.is
+https://dga1op10s1u3leo.6c2c54919ddfa1.click/live/sbeinsports-2/playlist.m3u8
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://ayo.maling.pl/Ente/combine_logo.php?home=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F051be0a9b61dedb583315fb75eaa8308.webp&away=https%3A%2F%2Fr2.goalsense.ai%2Fbagol%2Fteam%2F20bd29045f9e765f9162647ec74b9d75.webp", 📺 🔴 05:00 WIB - • 09/06/2026)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://stream-sg.bagoltv.com/
+#EXTVLCOPT:http-origin=https://stream-sg.bagoltv.com
+https://ayo.maling.pl/Ente/play/.m3u8
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 06:20-08:10 WIB - Super Lig : Basaksehir Vs Goztepe
 https://bwifi.my.id/5menit.mp4?m=superligbasaksehirgoztepe_1781418000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 06:45-07:45 WIB - Formula 1 Practice 2026
@@ -768,30 +683,16 @@ https://bwifi.my.id/5menit.mp4?m=formula1qualifying_1781440200.0
 https://bwifi.my.id/5menit.mp4?m=140626racefiaformula3championshipbarcelonagrandprix2026cktest_1781443800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/512/763512-SNAPSHOT-m.jpg", 📺 ⏳ 14:00 WIB - • 08/06)
 https://bwifi.my.id/5menit.mp4?m=0806_1781445600.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/OPmLYShwke18-wx98A8cqqY3j7Q=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5134545/8e9d7e.jpg", 📺 ⏳ 14:30 WIB - - Ranking 3-4: Kazakhstan vs Vietnam - AVC Women's Cup
-https://bwifi.my.id/5menit.mp4?m=ranking34kazakhstanvietnamavcwomenscup_1781447400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/dqu2d5vovPKc448pBIc6ihswPTU=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/7968/nhk-world-japan-bd94ce.jpg", 📺 ⏳ 14:33 WIB - - Documentary 360
-https://bwifi.my.id/5menit.mp4?m=documentary_1781447580.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/B1To-hhjPLw2tRNLKQzs3R_3Q6w=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5128070/04bb61.jpg", 📺 ⏳ 14:55 WIB - - Race - FIA Formula 2 Championship Barcelona Grand Prix 2026
-https://bwifi.my.id/5menit.mp4?m=racefiaformula2championshipbarcelonagrandprix_1781448900.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://www.visionplus.id/images/repository/039/764039-SNAPSHOT-m.jpg", 📺 ⏳ 14:55 WIB - • 12/06)
 https://bwifi.my.id/5menit.mp4?m=1206_1781448900.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://cdn.img4every1.org/league/formula-1--stream/logo.webp", 📺 ⏳ 15:00 WIB - ]  Formula 1
-https://bwifi.my.id/5menit.mp4?m=formula_1781449200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/zE793GEKRyoy_BJxLu-Db2tsz1k=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/18622/daystar-tv-4eddcd.jpg", 📺 ⏳ 15:00 WIB - - Owlegories
-https://bwifi.my.id/5menit.mp4?m=owlegories_1781449200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS_2022_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 15:05-15:45 WIB - Porsche Mobil 1 Supercup Race 2026
 https://bwifi.my.id/5menit.mp4?m=porschemobil1supercuprace_1781449500.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/iBVc1p9QujSvVnfuUsM11YbGA7M=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132034/4b0476.jpg", 📺 ⏳ 15:15 WIB - - Men: China vs Cuba - Volleyball Nations League
-https://bwifi.my.id/5menit.mp4?m=menchinacubavolleyballnationsleague_1781450100.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 15:30-17:00 WIB - Netball Super League 26
 https://bwifi.my.id/5menit.mp4?m=netballsuperleague_1781451000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/goYe0fMQl_fE1ELTCKiXvRzYHwI=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/21681/nex-road-to-champion-vol-4-f2ee29.jpg", 📺 ⏳ 15:30 WIB - - nex Road to Champion Vol. 4
-https://bwifi.my.id/5menit.mp4?m=nexroadtochampionvol_1781451000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 15:32-17:22 WIB - Super Rugby: Semi-Final
 https://bwifi.my.id/5menit.mp4?m=superrugbysemifinal_1781451120.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/YMONijGwzaZJSqIYXFnswSZVves=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/21179/citra-drama-9342a3.jpg", 📺 ⏳ 16:54 WIB - - Bidadari Surgamu
-https://bwifi.my.id/5menit.mp4?m=bidadarisurgamu_1781456040.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/YMONijGwzaZJSqIYXFnswSZVves=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/21179/citra-drama-9342a3.jpg", 📺 ⏳ 16:54 WIB - - Lu Bijak Sama Gue Sekarang Neng Basreng
+https://bwifi.my.id/5menit.mp4?m=lubijaksamaguesekarangnengbasreng_1781456040.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/SH20K1ugqv0ECizSew4CrBw4w1s=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129501/47244f.jpg", 📺 ⏳ 17:00 WIB - - Final - WTA 250: Libema Open 2026
 https://bwifi.my.id/5menit.mp4?m=finalwta250libemaopen_1781456400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/SH20K1ugqv0ECizSew4CrBw4w1s=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129501/47244f.jpg", 📺 ⏳ 17:00 WIB - 14/06/26Final - WTA 250: Libema Open 2026  CK TEST
@@ -818,8 +719,8 @@ https://bwifi.my.id/5menit.mp4?m=bensheltontaylorfritzfinalatp250bossopen_178146
 https://bwifi.my.id/5menit.mp4?m=valenciap1premierpadelfinals_1781463600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/uyQ4DSnHtTWmJQD9OTs5liQDeBs=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6852/al-quran-al-kareem-tv-62095c.jpg", 📺 ⏳ 19:00 WIB - - Makkah TV
 https://bwifi.my.id/5menit.mp4?m=makkahtv_1781463600.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/ylbaeruDsVWau2s0PNo5jyEL9XE=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/7150/abc-australia-694ecd.jpg", 📺 ⏳ 19:00 WIB - - Annabel Crabb's Civic Duty - Fairness
-https://bwifi.my.id/5menit.mp4?m=annabelcrabbscivicdutyfairness_1781463600.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/ylbaeruDsVWau2s0PNo5jyEL9XE=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/7150/abc-australia-694ecd.jpg", 📺 ⏳ 19:00 WIB - - World Series Cricket - Episode 2
+https://bwifi.my.id/5menit.mp4?m=worldseriescricketepisode_1781463600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/eH8tul_-Ul3Rpmcr_NskXjiFvWQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5134738/520637.jpg", 📺 ⏳ 19:00 WIB - 14/06/26Ben Shelton vs Taylor Fritz - Final | ATP 250: BOSS Open 2026  CK TEST
 https://bwifi.my.id/5menit.mp4?m=140626bensheltontaylorfritzfinalatp250bossopen2026cktest_1781463600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/HQteJlZOYqeRE6QIfezBoldCshA=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129499/6ffd02.jpg", 📺 ⏳ 19:00 WIB - 14/06/26Valencia P1 Premier Padel - Finals  CK TEST
@@ -846,6 +747,8 @@ https://bwifi.my.id/5menit.mp4?m=day1wta500vandapharmaceuticalsberlintennisopen_
 https://bwifi.my.id/5menit.mp4?m=serieawomen25_1781470200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/iN0-U5ShKRfZZ2JYBSXcQwG45jQ=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132036/97d695.jpg", 📺 ⏳ 21:00 WIB - - Men: Belgium vs Iran - Volleyball Nations League
 https://bwifi.my.id/5menit.mp4?m=menbelgiumiranvolleyballnationsleague_1781470800.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/iN0-U5ShKRfZZ2JYBSXcQwG45jQ=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132036/97d695.jpg", 📺 ⏳ 21:00 WIB - 14/06/26Men: Belgium vs Iran - Volleyball Nations League  CK TEST
+https://bwifi.my.id/5menit.mp4?m=140626menbelgiumiranvolleyballnationsleaguecktest_1781470800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 21:32-00:32 WIB - Champions Cup: Leinster V Bordeaux
 https://bwifi.my.id/5menit.mp4?m=championscupleinsterbordeaux_1781472720.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/WwZkCGXJobF52ybCVyeP0Tl9IL8=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5132047/01cab1.jpg", 📺 ⏳ 21:45 WIB - - Men: Germany vs France - Volleyball Nations League
@@ -854,30 +757,16 @@ https://bwifi.my.id/5menit.mp4?m=mengermanyfrancevolleyballnationsleague_1781473
 https://bwifi.my.id/5menit.mp4?m=chequeredflag_1781474400.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://cdn.img4every1.org/league/pga-tour/logo.webp", 📺 ⏳ 22:00 WIB - ]  PGA Tour
 https://bwifi.my.id/5menit.mp4?m=pgatour_1781474400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/2020878171302682624/jp8LCE0_.jpg", 📺 ⏳ 22:00 WIB - ]  Glory Collision 9
-https://bwifi.my.id/5menit.mp4?m=glorycollision_1781474400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/1766404207723032576/t5cxyxlX_400x400.jpg", 📺 ⏳ 22:00 WIB - ]  Olympiacos vs Panathinaikos
-https://bwifi.my.id/5menit.mp4?m=olympiacospanathinaikos_1781474400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/2028501406919876608/9vKL_LMT_400x400.jpg", 🇦🇺 ⏳ 22:00 WIB - ]  Auda vs Jelgava
-https://bwifi.my.id/5menit.mp4?m=audajelgava_1781474400.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/637495443774140416/Ek5Gmtj2_400x400.jpg", 📺 ⏳ 22:30 WIB - ]  JKT Tanzania vs Singida Black Stars
-https://bwifi.my.id/5menit.mp4?m=jkttanzaniasingidablackstars_1781476200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/cqM8vf1xK3YG5E3XF4DiuQ6LxR0=/640x360/filters:strip_icc:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6898/u-channel-tv-cd4f34.jpg", 📺 ⏳ 22:33 WIB - - U-Channel TV
 https://bwifi.my.id/5menit.mp4?m=uchanneltv_1781476380.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 22:45-23:35 WIB - WCS 26 HL
 https://bwifi.my.id/5menit.mp4?m=wcs26hl_1781477100.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/qji9MI3JkNJkW6uWqwV9dojegQE=/640x360/filters:strip_icc:quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129504/1fd678.jpg", 📺 ⏳ 23:00 WIB - - Round 4 - Dow Championship 2026
 https://bwifi.my.id/5menit.mp4?m=round4dowchampionship_1781478000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/1469076834/125px-Flag_of_Belarus_400x400.png", 📺 ⏳ 23:00 WIB - ]  Dinamo Minsk vs FC Gomel
-https://bwifi.my.id/5menit.mp4?m=dinamominskfcgomel_1781478000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/1899023717914583041/rxluldzO_400x400.jpg", 📺 ⏳ 23:00 WIB - ]  Lahti vs SJK
-https://bwifi.my.id/5menit.mp4?m=lahtisjk_1781478000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/1899023717914583041/rxluldzO_400x400.jpg", 📺 ⏳ 23:00 WIB - ]  Mariehamn vs Gnistan
-https://bwifi.my.id/5menit.mp4?m=mariehamngnistan_1781478000.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://thumbor.prod.vidiocdn.com/qji9MI3JkNJkW6uWqwV9dojegQE=/640x360/filters:strip_icc():quality(70)/vidio-media-production/uploads/livestreaming/schedule/thumbnail/5129504/1fd678.jpg", 📺 ⏳ 23:00 WIB - 14/06/26Round 4 - Dow Championship 2026  CK TEST
+https://bwifi.my.id/5menit.mp4?m=140626round4dowchampionship2026cktest_1781478000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://cdn.img4every1.org/league/pga-tour/logo.webp", 📺 ⏳ 23:30 WIB - ]  PGA Tour
 https://bwifi.my.id/5menit.mp4?m=pgatour_1781479800.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://pbs.twimg.com/profile_images/1897743697929740288/9-yBKTUL_400x400.jpg", 📺 ⏳ 23:30 WIB - ]  Coquimbo vs O Higgins
-https://bwifi.my.id/5menit.mp4?m=coquimboohiggins_1781479800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 23:35-01:00 WIB - Malaysian NSL 26
 https://bwifi.my.id/5menit.mp4?m=malaysiannsl_1781480100.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X963427.jpg", 🇮🇩 ⏳ 23:52-01:52 WIB - UCI Women's World Tour 2026
