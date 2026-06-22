@@ -1,6 +1,4 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 🇦🇺 🔴 00:00 WIB - Argentina vs Austria
-https://rxne77juptdeyke3tytvgqwyh.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 04:00-08:30 WIB - Tour Down Under 26 [Max Sports]
 #EXTVLCOPT:http-user-agent=DRM Player/2.5.6 (Linux; Android 14; 24040RN64Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36 ExoPlayerLib/1.10.0-alpha01
 https://cdnbal1.indihometv.com/atm/DASH/useesport/manifest.mpd
@@ -18,50 +16,23 @@ https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.m
 #EXTVLCOPT:http-referrer=https://www.indihometv.com/
 #EXTVLCOPT:http-user-agent=IndiHomeTV/8.7.12 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 https://cdnbal1.indihometv.com/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:20-06:10 WIB - Super Lig : Konyaspor Vs Trabzonspor [beIN Sports 2]
+#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [beIN Sports 2]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
-#EXTINF:-1 data-source="Manual" tvg-uid="a9f9376b65c080dc40ce686c02021bac" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:20-06:10 WIB - Super Lig : Konyaspor Vs Trabzonspor [beIN Sports 2 France]
+#EXTINF:-1 data-source="Manual" tvg-uid="a9f9376b65c080dc40ce686c02021bac" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [beIN Sports 2 France]
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ck.iptvbonekoe.workers.dev/?id=970
 https://api-proxad.dc2.oqee.net/playlist/v1/live/970/1/live.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:20-06:10 WIB - Super Lig : Konyaspor Vs Trabzonspor [BeiN FR Sports 2]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [BeiN FR Sports 2]
 https://raw.githubusercontent.com/jrpahe-del/M3U8/refs/heads/main/beInfr2.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 04:20-06:10 WIB - Super Lig : Konyaspor Vs Trabzonspor [beIN Sports 2 2]
+#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [beIN Sports 2 2]
 https://1nyaler.streamhostingcdn.top/stream/4/index.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 04:42-06:32 WIB - NRL: Bulldogs V Sea Eagles [SKY SPORTS Premier League DE]
-#https://qw.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/uiffe4jhf0/out/v1/3534efafca8c4815adbb4d2e9a1fe003/cenc.mpd
-https://cdn-2.ttvb.eu.org/api/Sky-Sports-EPL/index.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 04:42-06:32 WIB - NRL: Bulldogs V Sea Eagles [PREMIER SPORTS]
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 🔴 04:42-06:32 WIB - NRL: Bulldogs V Sea Eagles [Max Sports]
-#EXTVLCOPT:http-user-agent=DRM Player/2.5.6 (Linux; Android 14; 24040RN64Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36 ExoPlayerLib/1.10.0-alpha01
-https://cdnbal1.indihometv.com/atm/DASH/useesport/manifest.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 05:05-06:15 WIB - Ferrari Challenge 2026 [beIN Sports 3]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
-#EXTINF:-1 data-source="Manual" tvg-uid="3ebde9f5464b67857a2ff811ff1e958e" group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 05:05-06:15 WIB - Ferrari Challenge 2026 [beIN Sports 3 France]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://ck.iptvbonekoe.workers.dev/?id=971
-https://api-proxad.dc2.oqee.net/playlist/v1/live/971/1/live.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beInSports3.id" tvg-logo="https://mncvision.id/userfiles/image/channel/channel_311.png", 🇮🇩 🔴 05:05-06:15 WIB - Ferrari Challenge 2026 [BeiN FR Sports 3]
-https://raw.githubusercontent.com/jrpahe-del/M3U8/refs/heads/main/beInfr3.m3u8
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 ⏳ 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk
-https://bwifi.my.id/5menit.mp4?m=superligbesiktaskaragumruk_1782195000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 10:00-11:30 WIB - Netball Super League 26
 https://bwifi.my.id/5menit.mp4?m=netballsuperleague_1782208800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X938338.jpg", 🇮🇩 ⏳ 10:40-12:30 WIB - Super Lig : Fenerbahce Vs Galatasaray
