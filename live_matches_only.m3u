@@ -1,65 +1,31 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 04:00-08:30 WIB - Tour Down Under 26 [Max Sports]
-#EXTVLCOPT:http-user-agent=DRM Player/2.5.6 (Linux; Android 14; 24040RN64Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36 ExoPlayerLib/1.10.0-alpha01
-https://cdnbal1.indihometv.com/atm/DASH/useesport/manifest.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 04:00-08:30 WIB - Tour Down Under 26 [W-Sport]
-#EXTVLCOPT:http-referrer=http://www.dens.tv/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h26/index.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 04:00-08:30 WIB - Tour Down Under 26 [W-SPORTS]
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9e8888ac964d430cbfef9c922ee6714b:9b1dbd9f59a39a9ebaf1fb8e665a3ef3
-https://tglmp02.akamaized.net/out/v1/1063ebb215c14312ba9d4e415ac706d2/manifest.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="W-Sport" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 🔴 04:00-08:30 WIB - Tour Down Under 26 [MAX SPORT]
-#https://gooo.blog/opix/genx.m3u8?id=tvrisport&cyev=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NDk4MjUyODgsImV4cCI6MTc0OTgzNjA4OCwiZGF0YSI6eyJ1c2VyIjoiYmFkc2kiLCJjbGllbnRfaXAiOiIxODIuMi40Ny4yNDQifX0.mEa4egyO_TJd6jQSisnDlhhGrGqTg19FN9oTnsikoAs
-#EXTVLCOPT:http-referrer=https://www.indihometv.com/
-#EXTVLCOPT:http-user-agent=IndiHomeTV/8.7.12 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
-https://cdnbal1.indihometv.com/atm/DASH/useesport/useesport-avc1_2500000=7-3277707030000000.mpd
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [beIN Sports 2]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
-#EXTINF:-1 data-source="Manual" tvg-uid="a9f9376b65c080dc40ce686c02021bac" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [beIN Sports 2 France]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://ck.iptvbonekoe.workers.dev/?id=970
-https://api-proxad.dc2.oqee.net/playlist/v1/live/970/1/live.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [BeiN FR Sports 2]
-https://raw.githubusercontent.com/jrpahe-del/M3U8/refs/heads/main/beInfr2.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports2" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/beINSPORTS2_IVP_LAND_1280x720.jpg", 🇮🇩 🔴 06:10-08:00 WIB - Super Lig : Besiktas Vs Karagumruk [beIN Sports 2 2]
-https://1nyaler.streamhostingcdn.top/stream/4/index.m3u8
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 10:00-11:30 WIB - Netball Super League 26
 https://bwifi.my.id/5menit.mp4?m=netballsuperleague_1782208800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X938338.jpg", 🇮🇩 ⏳ 10:40-12:30 WIB - Super Lig : Fenerbahce Vs Galatasaray
 https://bwifi.my.id/5menit.mp4?m=superligfenerbahcegalatasaray_1782211200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 11:30-13:00 WIB - Netball Super League 26
 https://bwifi.my.id/5menit.mp4?m=netballsuperleague_1782214200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 11:42-13:32 WIB - Super League: Warrington V Leeds
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 11:42-13:32 WIB - Super League: Warrington V Leeds
 https://bwifi.my.id/5menit.mp4?m=superleaguewarringtonleeds_1782214920.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 17:42-19:32 WIB - State of Origin: New South Wales V Queensland
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 17:42-19:32 WIB - State of Origin: New South Wales V Queensland
 https://bwifi.my.id/5menit.mp4?m=stateoforiginnewsouthwalesqueensland_1782236520.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 19:00-20:00 WIB - Paris Marathon 2026 26 HL
 https://bwifi.my.id/5menit.mp4?m=parismarathon202626hl_1782241200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgeY8Cr3f19g1oydfUqSxAZK852nEkVG-T8A&s", 🇮🇩 ⏳ 19:30 WIB - Qatar vs Indonesia
 https://bwifi.my.id/5menit.mp4?m=qatarindonesia_1782243000.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 19:32-21:22 WIB - Super Rugby: Grand Final
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 19:32-21:22 WIB - Super Rugby: Grand Final
 https://bwifi.my.id/5menit.mp4?m=superrugbygrandfinal_1782243120.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X963648.jpg", 🇮🇩 ⏳ 20:00-01:00 WIB - ONE Friday Fights 2026
 https://bwifi.my.id/5menit.mp4?m=onefridayfights_1782244800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 20:00-21:30 WIB - Jump Saudi 25
 https://bwifi.my.id/5menit.mp4?m=jumpsaudi_1782244800.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 21:22-23:52 WIB - Premiership Rugby: Grand Final
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 21:22-23:52 WIB - Premiership Rugby: Grand Final
 https://bwifi.my.id/5menit.mp4?m=premiershiprugbygrandfinal_1782249720.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/W-Sport_V1_IVP_LAND_1280x720.jpg", 📺 ⏳ 22:00-01:00 WIB - Netball Super League 26
 https://bwifi.my.id/5menit.mp4?m=netballsuperleague_1782252000.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgeY8Cr3f19g1oydfUqSxAZK852nEkVG-T8A&s", 📺 ⏳ 22:30 WIB - India vs Chinese
 https://bwifi.my.id/5menit.mp4?m=indiachinese_1782253800.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 23:52-02:22 WIB - AFL: GWS Giants V Carlton
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 23:52-02:22 WIB - AFL: GWS Giants V Carlton
 https://bwifi.my.id/5menit.mp4?m=aflgwsgiantscarlton_1782258720.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971565.jpg", 🇮🇩 ⏳ 01:00-03:00 WIB - TotalEnergies CAF Champions League : Stade Malien Vs Simba SC
 https://bwifi.my.id/5menit.mp4?m=totalenergiescafchampionsleaguestademaliensimbasc_1782262800.0
@@ -67,5 +33,5 @@ https://bwifi.my.id/5menit.mp4?m=totalenergiescafchampionsleaguestademaliensimba
 https://bwifi.my.id/5menit.mp4?m=usl25_1782262800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000286X941679.jpg", 🇮🇩 ⏳ 01:40-03:30 WIB - UYL : Union Saint-Gilloise Vs Inter - MD3
 https://bwifi.my.id/5menit.mp4?m=uylunionsaintgilloiseintermd_1782265200.0
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 02:22-03:22 WIB - NRL Try Time
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 📺 ⏳ 02:22-03:22 WIB - NRL Try Time
 https://bwifi.my.id/5menit.mp4?m=nrltrytime_1782267720.0
