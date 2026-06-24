@@ -1,32 +1,4 @@
 #EXTM3U name="🔴 BAKUL WIFI SPORTS"
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971566.jpg", 🇮🇩 🔴 08:20-10:10 WIB - Women's Super League : Arsenal Vs London City Lionesses [AR | BEIN SPORT FRENCH 3 FHD]
-http://185.160.192.64:80/mangin15/85784/151988
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971566.jpg", 🇮🇩 🔴 08:20-10:10 WIB - Women's Super League : Arsenal Vs London City Lionesses [AR | BEIN SPORTS 3 HD]
-http://185.160.192.64:80/mangin15/85784/13678
-#EXTINF:-1 tvg-url="https://bit.ly/AstroEpg" group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971566.jpg", 🇮🇩 🔴 08:20-10:10 WIB - Women's Super League : Arsenal Vs London City Lionesses [beIN Sports 3]
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="beINSports3" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971566.jpg", 🇮🇩 🔴 08:20-10:10 WIB - Women's Super League : Arsenal Vs London City Lionesses [BEIN SPORTS 3 2]
-#KODIPROP:inputstream.adaptive.stream_headers=origin=https://www.vidio.com&referer=https://www.vidio.com/&user-agent=Vidio/6.43.9-8ec34856ef (Linux;Android 11) ExoPlayerLib/2.19.1
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://ratuvidio.adptv.workers.dev/index.mpd?id=6317&type=drm
-https://ratuvidio.adptv.workers.dev/index.mpd?id=6317&type=dash
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 08:42-10:32 WIB - Super League: Hull KR V Leigh [SKY SPORTS PREMIER LEAGUE]
-http://hs.234003.xyz:8080/sitkierel01/QSbyTXxWJF/234481
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 08:42-10:32 WIB - Super League: Hull KR V Leigh [SKY SPORTS Premier League DE]
-#https://qw.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/uiffe4jhf0/out/v1/3534efafca8c4815adbb4d2e9a1fe003/cenc.mpd
-https://cdn-2.ttvb.eu.org/api/Sky-Sports-EPL/index.m3u8
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 08:42-10:32 WIB - Super League: Hull KR V Leigh [SkySports Premier League vip]
-http://vipapyenhmw.top:8080/VIP01881758874935836/b8b40c183edb/147074
-#EXTINF:-1 group-title="🔴 SEDANG TAYANG" tvg-id="PremierSports" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 🔴 08:42-10:32 WIB - Super League: Hull KR V Leigh [SkySports Premier Liguea]
-http://tv.cloudcdn.me:80/live.ts?channelId=286&uid=15301&deviceMac=00:1A:79:1D:53:3F
-#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971567.jpg", 🇮🇩 ⏳ 10:10-12:00 WIB - Super Lig : Kocaelispor Vs Genclerbirligi
-https://bwifi.my.id/5menit.mp4?m=superligkocaelisporgenclerbirligi_1782295800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X971371.jpg", 🇮🇩 ⏳ 14:20-16:10 WIB - TotalEnergies CAF Champions League : Saint-Eloi Lupopo Vs Al Hilal Club
 https://bwifi.my.id/5menit.mp4?m=totalenergiescafchampionsleaguesainteloilupopoalhilalclub_1782310800.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 18:02-19:52 WIB - International Rugby: Barbarians V South Africa
@@ -43,6 +15,8 @@ https://bwifi.my.id/5menit.mp4?m=serieawomen25_1782336600.0
 https://bwifi.my.id/5menit.mp4?m=sailingtothegameslosangelesedition_1782340200.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgeY8Cr3f19g1oydfUqSxAZK852nEkVG-T8A&s", 📺 ⏳ 22:30 WIB - India vs Bahrain
 https://bwifi.my.id/5menit.mp4?m=indiabahrain_1782340200.0
+#EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 📺 ⏳ 00:00 WIB - Portugal vs Uzbekistan
+https://bwifi.my.id/5menit.mp4?m=portugaluzbekistan_1782345600.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/PremierSports_IVP_LAND_1280x720.jpg", 🇬🇧 ⏳ 00:02-01:52 WIB - NRL: Bulldogs V Sea Eagles
 https://bwifi.my.id/5menit.mp4?m=nrlbulldogsseaeagles_1782345720.0
 #EXTINF:-1 group-title="📅 JADWAL HARI INI" tvg-logo="https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/images/10000347X947191.jpg", 🇮🇩 ⏳ 01:00-03:00 WIB - TotalEnergies CAF Champions League : Al Ahly SC Vs Young Africans
